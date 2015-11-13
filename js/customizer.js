@@ -3,7 +3,7 @@
  *
  * Reloads changes on Theme Customizer Preview asynchronously for better usability
  *
- * @package Neptune
+ * @package Poseidon
  */
 
 ( function( $ ) {

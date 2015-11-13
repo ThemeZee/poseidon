@@ -2,7 +2,7 @@
 /**
  * The template for displaying articles in the loop with full content
  *
- * @package Neptune
+ * @package Poseidon
  */
 ?>
 
@@ -10,7 +10,7 @@
 
 		<header class="entry-header">
 			
-			<?php neptune_post_image_archives(); ?>
+			<?php poseidon_post_image_archives(); ?>
 		
 			<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
@@ -18,13 +18,13 @@
 
 		<div class="entry-content clearfix">
 			
-			<?php the_content( esc_html__( 'Continue reading &raquo;', 'neptune' ) ); ?>
+			<?php the_content( esc_html__( 'Continue reading &raquo;', 'poseidon' ) ); ?>
 		
 		</div><!-- .entry-content -->
 		
 		<footer class="entry-footer">
 			
-			<?php neptune_entry_meta(); ?>
+			<?php poseidon_entry_meta(); ?>
 			
 		</footer><!-- .entry-footer -->
 

@@ -4,7 +4,7 @@
  *
  * Uses sane defaults in case the user has not configured any theme options yet.
  *
- * @package Neptune
+ * @package Poseidon
  */
 
 
@@ -13,16 +13,16 @@
  *
  * @return array
  */
-function neptune_theme_options() {
+function poseidon_theme_options() {
     
 	// Merge Theme Options Array from Database with Default Options Array
 	$theme_options = wp_parse_args( 
 		
 		// Get saved theme options from WP database
-		get_option( 'neptune_theme_options', array() ), 
+		get_option( 'poseidon_theme_options', array() ), 
 		
 		// Merge with Default Options if setting was not saved yet
-		neptune_default_options() 
+		poseidon_default_options() 
 		
 	);
 
@@ -37,7 +37,7 @@ function neptune_theme_options() {
  *
  * @return array
  */
-function neptune_default_options() {
+function poseidon_default_options() {
 
 	$default_options = array(
 		'layout' 							=> 'right-sidebar',

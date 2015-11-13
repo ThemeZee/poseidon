@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Neptune\n"
+"Project-Id-Version: Poseidon\n"
 "Report-Msgid-Bugs-To: http://themezee.com/\n"
 "POT-Creation-Date: 2015-11-02 21:55+0100\n"
 "PO-Revision-Date: 2015-11-02 21:55+0100\n"
@@ -151,7 +151,7 @@ msgstr ""
 #: inc/back-compat.php:49 inc/back-compat.php:61
 #, php-format
 msgid ""
-"Neptune requires at least WordPress version 4.2. You are running version %s. "
+"Poseidon requires at least WordPress version 4.2. You are running version %s. "
 "Please upgrade and try again."
 msgstr ""
 

@@ -2,16 +2,16 @@
 /**
  * Custom functions that are not template related
  *
- * @package Neptune
+ * @package Poseidon
  */
 
  
-if ( ! function_exists( 'neptune_default_menu' ) ) :
+if ( ! function_exists( 'poseidon_default_menu' ) ) :
 /**
  * Display default page as navigation if no custom menu was set
  *
  */
-function neptune_default_menu() {
+function poseidon_default_menu() {
 	
 	echo '<ul id="menu-main-navigation" class="main-navigation-menu menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
 	
@@ -25,10 +25,10 @@ endif;
  * @param array $classes Classes for the body element.
  * @return array
  */
-function neptune_body_classes( $classes ) {
+function poseidon_body_classes( $classes ) {
 	
 	// Get Theme Options from Database
-	$theme_options = neptune_theme_options();
+	$theme_options = poseidon_theme_options();
 		
 	// Switch Sidebar Layout to left
 	if ( 'left-sidebar' == $theme_options['layout']  ) :
@@ -37,7 +37,7 @@ function neptune_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'neptune_body_classes' );
+add_filter( 'body_class', 'poseidon_body_classes' );
 
 
 /**
@@ -46,10 +46,10 @@ add_filter( 'body_class', 'neptune_body_classes' );
  * @param int $length Length of excerpt in number of words
  * @return int
  */
-function neptune_excerpt_length($length) {
+function poseidon_excerpt_length($length) {
 	
 	// Get Theme Options from Database
-	$theme_options = neptune_theme_options();
+	$theme_options = poseidon_theme_options();
 
 	// Return Excerpt Text
 	if ( isset($theme_options['excerpt_length']) and $theme_options['excerpt_length'] >= 0 ) :
@@ -58,7 +58,7 @@ function neptune_excerpt_length($length) {
 		return 30; // number of words
 	endif;
 }
-add_filter('excerpt_length', 'neptune_excerpt_length');
+add_filter('excerpt_length', 'poseidon_excerpt_length');
 
 
 /**
@@ -67,6 +67,6 @@ add_filter('excerpt_length', 'neptune_excerpt_length');
  * @param int $length Length of excerpt in number of words
  * @return int
  */
-function neptune_category_posts_excerpt_length($length) {
+function poseidon_category_posts_excerpt_length($length) {
     return 15;
 }

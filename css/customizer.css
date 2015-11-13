@@ -3,15 +3,15 @@
  *
  * Adjusts styling for theme option controls in the Customizer
  *
- * @package Neptune
+ * @package Poseidon
  */
 
-#customize-control-neptune_control_post_images_headline,
-#customize-control-neptune_control_post_meta_headline {
+#customize-control-poseidon_control_post_images_headline,
+#customize-control-poseidon_control_post_meta_headline {
 	margin-top: 12px;
 }
 
-#customize-control-neptune_control_post_images_headline,
-#customize-control-neptune_control_post_meta_headline {
+#customize-control-poseidon_control_post_images_headline,
+#customize-control-poseidon_control_post_meta_headline {
 	margin-bottom: 0;
 }

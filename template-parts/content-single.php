@@ -2,7 +2,7 @@
 /**
  * The template for displaying single posts
  *
- * @package Neptune
+ * @package Poseidon
  */
 ?>
 
@@ -10,7 +10,7 @@
 		
 		<header class="entry-header">
 			
-			<?php neptune_post_image_single(); ?>
+			<?php poseidon_post_image_single(); ?>
 
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
@@ -23,13 +23,13 @@
 			
 			<div class="page-links"><?php wp_link_pages(); ?></div>
 			
-			<?php neptune_entry_tags(); ?>
+			<?php poseidon_entry_tags(); ?>
 			
 		</div><!-- .entry-content -->
 		
 		<footer class="entry-footer">
 			
-			<?php neptune_entry_meta(); ?>
+			<?php poseidon_entry_meta(); ?>
 			
 		</footer><!-- .entry-footer -->
 

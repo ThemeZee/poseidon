@@ -4,13 +4,13 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Neptune
+ * @package Poseidon
  */
  
 get_header(); 
 
 // Get Theme Options from Database
-$theme_options = neptune_theme_options();
+$theme_options = poseidon_theme_options();
 ?>
 
 	<section id="primary" class="content-area">
@@ -18,7 +18,7 @@ $theme_options = neptune_theme_options();
 		
 			<header class="page-header">
 				
-				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'neptune' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'poseidon' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				
 			</header><!-- .page-header -->
 			
@@ -40,7 +40,7 @@ $theme_options = neptune_theme_options();
 			endwhile;
 
 			// Display Pagination	
-			neptune_pagination();
+			poseidon_pagination();
 
 		else : ?>
 
@@ -48,13 +48,13 @@ $theme_options = neptune_theme_options();
 				
 				<header class="entry-header">
 		
-					<h1 class="page-title"><?php esc_html_e( 'No matches', 'neptune' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'No matches', 'poseidon' ); ?></h1>
 					
 				</header><!-- .entry-header -->
 				
 				<div class="entry-content">
 					
-					<p><?php esc_html_e( 'Please try again, or use the navigation menus to find what you search for.', 'neptune' ); ?></p>
+					<p><?php esc_html_e( 'Please try again, or use the navigation menus to find what you search for.', 'poseidon' ); ?></p>
 					
 					<?php get_search_form(); ?>
 				

@@ -9,7 +9,7 @@
  *
  * Author: Thomas Weichselbaumer (themezee.com)
  *
- * @package Neptune
+ * @package Poseidon
  */
 
 (function($) {

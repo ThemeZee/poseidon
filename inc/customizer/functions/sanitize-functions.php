@@ -4,7 +4,7 @@
  *
  * Used to validate the user input of the theme settings
  *
- * @package Neptune
+ * @package Poseidon
  */
 
 
@@ -14,7 +14,7 @@
  * @param string $value / Value of the setting
  * @return bool
  */
-function neptune_sanitize_checkbox( $value ) {
+function poseidon_sanitize_checkbox( $value ) {
 
 	if ( $value == 1) :
         return 1;
@@ -30,7 +30,7 @@ function neptune_sanitize_checkbox( $value ) {
  * @param string $value / Value of the setting
  * @return string
  */
-function neptune_sanitize_layout( $value ) {
+function poseidon_sanitize_layout( $value ) {
 
 	if ( ! in_array( $value, array( 'left-sidebar', 'right-sidebar' ), true ) ) :
         $value = 'right-sidebar';
@@ -46,7 +46,7 @@ function neptune_sanitize_layout( $value ) {
  * @param string $value / Value of the setting
  * @return string
  */
-function neptune_sanitize_post_content( $value ) {
+function poseidon_sanitize_post_content( $value ) {
 
 	if ( ! in_array( $value, array( 'index', 'excerpt' ), true ) ) :
         $value = 'excerpt';

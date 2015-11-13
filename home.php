@@ -4,13 +4,13 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Neptune
+ * @package Poseidon
  */
  
 get_header(); 
 
 // Get Theme Options from Database
-$theme_options = neptune_theme_options();
+$theme_options = poseidon_theme_options();
 
 ?>
 		
@@ -24,7 +24,7 @@ $theme_options = neptune_theme_options();
 				endwhile;
 
 				// Display Pagination	
-				neptune_pagination();
+				poseidon_pagination();
 
 			endif; ?>
 			

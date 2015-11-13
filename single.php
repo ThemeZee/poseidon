@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package Neptune
+ * @package Poseidon
  */
 
 get_header(); ?>

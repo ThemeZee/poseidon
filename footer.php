@@ -4,14 +4,14 @@
  *
  * Contains all content after the main content area and sidebar
  *
- * @package Neptune
+ * @package Poseidon
  */
  
 ?>
 	
 	</div><!-- #content -->
 	
-	<?php do_action( 'neptune_before_footer' ); ?>
+	<?php do_action( 'poseidon_before_footer' ); ?>
 
 	<footer id="colophon" class="site-footer clearfix" role="contentinfo">
 		
@@ -19,7 +19,7 @@
 			
 			<div id="footer-text" class="site-info">
 				
-				<?php do_action('neptune_footer_text'); ?>
+				<?php do_action('poseidon_footer_text'); ?>
 			
 			</div><!-- .site-info -->
 			

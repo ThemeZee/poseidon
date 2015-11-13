@@ -2,7 +2,7 @@
 /**
  * Custom Controls for the Customizer
  *
- * @package Neptune
+ * @package Poseidon
  */
 
 
@@ -16,7 +16,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	 * Displays a bold label text. Used to create headlines for radio buttons and description sections.
 	 *
 	 */
-	class Neptune_Customize_Header_Control extends WP_Customize_Control {
+	class Poseidon_Customize_Header_Control extends WP_Customize_Control {
 
 		public function render_content() {  ?>
 			
