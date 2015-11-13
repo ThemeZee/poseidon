@@ -1,0 +1,563 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Neptune\n"
+"Report-Msgid-Bugs-To: http://themezee.com/\n"
+"POT-Creation-Date: 2015-11-02 21:55+0100\n"
+"PO-Revision-Date: 2015-11-02 21:55+0100\n"
+"Last-Translator: \n"
+"Language-Team: ThemeZee <support@themezee.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:17
+msgid "404: Page not found"
+msgstr ""
+
+#: 404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try a search or one "
+"of the links below?"
+msgstr ""
+
+#: comments.php:30 inc/template-tags.php:236
+msgid "One comment"
+msgstr ""
+
+#: comments.php:30 inc/template-tags.php:236
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: comments.php:38 comments.php:60
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:41 comments.php:63
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:42 comments.php:64
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:76
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:80
+msgid "Leave a Reply"
+msgstr ""
+
+#: functions.php:43
+msgid "Main Navigation"
+msgstr ""
+
+#: functions.php:44
+msgid "Top Navigation"
+msgstr ""
+
+#: functions.php:45
+msgid "Footer Navigation"
+msgstr ""
+
+#: functions.php:46
+msgid "Social Icons"
+msgstr ""
+
+#: functions.php:90 sidebar.php:20
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:92
+msgid ""
+"Appears on posts and pages except Magazine Homepage and Fullwidth template."
+msgstr ""
+
+#: functions.php:100
+msgid "Header"
+msgstr ""
+
+#: functions.php:102
+msgid "Appears on header area. You can use a search or ad widget here."
+msgstr ""
+
+#: functions.php:110
+msgid "Magazine Homepage"
+msgstr ""
+
+#: functions.php:112
+msgid ""
+"Appears on Magazine Homepage template only. You can use the Category Posts "
+"widgets here."
+msgstr ""
+
+#: header.php:29
+msgid "Skip to content"
+msgstr ""
+
+#: search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:51
+msgid "No matches"
+msgstr ""
+
+#: search.php:57
+msgid ""
+"Please try again, or use the navigation menus to find what you search for."
+msgstr ""
+
+#: searchform.php:4
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:5
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: sidebar.php:22
+msgid ""
+"Please go to Appearance &#8594; Widgets and add some widgets to your sidebar."
+msgstr ""
+
+#: template-magazine.php:42
+msgid ""
+"Please go to Appearance &#8594; Widgets and add at least one widget to the "
+"\"Magazine Homepage\" widget area. You can use the Category Posts widgets to "
+"set up the theme like the demo website."
+msgstr ""
+
+#: inc/back-compat.php:40
+msgid ""
+"%$1s requires at least WordPress version 4.2. You are running version %$2s. "
+"Please upgrade and try again."
+msgstr ""
+
+#: inc/back-compat.php:49 inc/back-compat.php:61
+#, php-format
+msgid ""
+"Neptune requires at least WordPress version 4.2. You are running version %s. "
+"Please upgrade and try again."
+msgstr ""
+
+#: inc/template-tags.php:159
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:175 inc/template-tags.php:284
+#: inc/widgets/widget-category-posts-boxed.php:368
+#: inc/widgets/widget-category-posts-columns.php:276
+#: inc/widgets/widget-category-posts-grid.php:337
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: inc/template-tags.php:179
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:236
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/template-tags.php:306 template-parts/content.php:22
+msgid "Read more"
+msgstr ""
+
+#: inc/template-tags.php:353
+#, php-format
+msgid "Powered by %1$s and %2$s."
+msgstr ""
+
+#: inc/theme-info.php:20 inc/theme-info.php:43
+#, php-format
+msgid "Welcome to %1$s %2$s"
+msgstr ""
+
+#: inc/theme-info.php:21
+msgid "Theme Info"
+msgstr ""
+
+#: inc/theme-info.php:49
+msgid "Important Links:"
+msgstr ""
+
+#: inc/theme-info.php:50
+msgid "Theme Page"
+msgstr ""
+
+#: inc/theme-info.php:51
+msgid "Changelog"
+msgstr ""
+
+#: inc/theme-info.php:52
+msgid "Theme Demo"
+msgstr ""
+
+#: inc/theme-info.php:53 inc/theme-info.php:68
+msgid "Theme Documentation"
+msgstr ""
+
+#: inc/theme-info.php:54
+msgid "Rate this theme"
+msgstr ""
+
+#: inc/theme-info.php:65
+#, php-format
+msgid "Getting Started with %s"
+msgstr ""
+
+#: inc/theme-info.php:71
+msgid ""
+"You need help to setup and configure this theme? We got you covered with an "
+"extensive theme documentation on our website."
+msgstr ""
+
+#: inc/theme-info.php:75
+#, php-format
+msgid "View %s Documentation"
+msgstr ""
+
+#: inc/theme-info.php:81 inc/customizer/customizer.php:34
+msgid "Theme Options"
+msgstr ""
+
+#: inc/theme-info.php:84
+#, php-format
+msgid ""
+"%s makes use of the Customizer for all theme settings. Click on \"Customize "
+"Theme\" to open the Customizer now."
+msgstr ""
+
+#: inc/theme-info.php:87
+msgid "Customize Theme"
+msgstr ""
+
+#: inc/theme-info.php:92 inc/customizer/sections/customizer-upgrade.php:23
+msgid "Pro Version"
+msgstr ""
+
+#: inc/theme-info.php:95
+msgid ""
+"You need more features? Purchase the Pro Version to get additional features "
+"and advanced customization options."
+msgstr ""
+
+#: inc/theme-info.php:99 inc/customizer/sections/customizer-upgrade.php:71
+#, php-format
+msgid "Learn more about %s Pro"
+msgstr ""
+
+#: inc/theme-info.php:120
+#, php-format
+msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
+msgstr ""
+
+#: inc/theme-info.php:123
+msgid "rate it"
+msgstr ""
+
+#: inc/customizer/customizer.php:44
+msgid "Background"
+msgstr ""
+
+#: inc/customizer/default-options.php:45
+#: inc/customizer/sections/customizer-post.php:28
+msgid "Latest Posts"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:98
+#: inc/widgets/widget-category-posts-boxed.php:492
+#: inc/widgets/widget-category-posts-columns.php:403
+#: inc/widgets/widget-category-posts-columns.php:424
+#: inc/widgets/widget-category-posts-grid.php:463
+msgid "All Categories"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:20
+msgid "General Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:35
+msgid "Theme Layout"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:41
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:42
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:57
+msgid "Sticky Navigation"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:72
+msgid "Enable sticky menu on large screens"
+msgstr ""
+
+#: inc/customizer/sections/customizer-images.php:20
+msgid "Post Images"
+msgstr ""
+
+#: inc/customizer/sections/customizer-images.php:35
+msgid "Post Images (archive pages)"
+msgstr ""
+
+#: inc/customizer/sections/customizer-images.php:41
+msgid "Show featured image beside content."
+msgstr ""
+
+#: inc/customizer/sections/customizer-images.php:42
+msgid "Show featured image above content."
+msgstr ""
+
+#: inc/customizer/sections/customizer-images.php:43
+msgid "Hide featured image."
+msgstr ""
+
+#: inc/customizer/sections/customizer-images.php:58
+msgid "Post Image (single posts)"
+msgstr ""
+
+#: inc/customizer/sections/customizer-images.php:73
+msgid "Show featured image on single posts."
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:20
+msgid "Post Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:35
+msgid "Title above Latest Posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:52
+msgid "Post length on archives"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:58
+msgid "Show full posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:59
+msgid "Show post excerpts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:73
+msgid "Excerpt Length"
+msgstr ""
+
+#: inc/customizer/sections/customizer-postmeta.php:20
+#: inc/customizer/sections/customizer-postmeta.php:36
+msgid "Post Meta"
+msgstr ""
+
+#: inc/customizer/sections/customizer-postmeta.php:51
+msgid "Display post date"
+msgstr ""
+
+#: inc/customizer/sections/customizer-postmeta.php:66
+msgid "Display post author"
+msgstr ""
+
+#: inc/customizer/sections/customizer-postmeta.php:84
+msgid "Post Footer"
+msgstr ""
+
+#: inc/customizer/sections/customizer-postmeta.php:99
+msgid "Display post categories and comments on archive pages"
+msgstr ""
+
+#: inc/customizer/sections/customizer-postmeta.php:114
+msgid "Display post categories and comments on single posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-postmeta.php:129
+msgid "Display post tags on single posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:20
+msgid "Post Slider"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:36
+msgid "Activate Post Slider"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:51
+msgid "Show Slider on Magazine Homepage"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:66
+msgid "Show Slider on posts page"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:84
+msgid "Slider Category"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:102
+msgid "Number of Posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:120
+msgid "Slider Animation"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:127
+msgid "Slide Effect"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:128
+msgid "Fade Effect"
+msgstr ""
+
+#: inc/customizer/sections/customizer-upgrade.php:39
+msgid "You need more features?"
+msgstr ""
+
+#: inc/customizer/sections/customizer-upgrade.php:55
+msgid ""
+"Purchase the Pro Version to get additional features and advanced "
+"customization options."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:21
+msgid ""
+"Displays your posts from a selected category in a boxed layout. Please use "
+"this widget ONLY in the Magazine Homepage widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:23
+#, php-format
+msgid "Category Posts: Boxed (%s)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:427
+#: inc/widgets/widget-category-posts-columns.php:335
+#: inc/widgets/widget-category-posts-grid.php:396
+#, php-format
+msgid "View all posts from category %s"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:483
+#: inc/widgets/widget-category-posts-grid.php:454
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:489
+#: inc/widgets/widget-category-posts-grid.php:460
+msgid "Category:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:504
+msgid "Post Layout:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:506
+msgid "Horizontal Arrangement"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:507
+msgid "Vertical Arrangement"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:514
+#: inc/widgets/widget-category-posts-grid.php:498
+msgid "Link Widget Title to Category Archive page"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:521
+#: inc/widgets/widget-category-posts-columns.php:458
+#: inc/widgets/widget-category-posts-grid.php:505
+msgid "Display post date and author"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:21
+msgid ""
+"Displays your posts from two selected categories. Please use this widget "
+"ONLY in the Magazine Homepage widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:23
+#, php-format
+msgid "Category Posts: 2 Columns (%s)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:394
+msgid "Left Category Title:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:400
+msgid "Left Category:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:415
+msgid "Right Category Title:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:421
+msgid "Right Category:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:436
+#: inc/widgets/widget-category-posts-grid.php:483
+msgid "Number of posts:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:444
+msgid "Highlight first post (big image + excerpt)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:451
+msgid "Link Category Titles to Category Archive pages"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:21
+msgid ""
+"Displays your posts from a selected category in a grid layout. Please use "
+"this widget ONLY in the Magazine Homepage widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:23
+#, php-format
+msgid "Category Posts: Grid (%s)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:475
+msgid "Grid Layout:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:477
+msgid "Two Columns Grid"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:478
+msgid "Three Columns Grid"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:491
+msgid "Display post excerpt and read more button"
+msgstr ""

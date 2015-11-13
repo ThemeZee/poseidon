@@ -1,0 +1,17 @@
+/*
+ * Customizer CSS
+ *
+ * Adjusts styling for theme option controls in the Customizer
+ *
+ * @package Neptune
+ */
+
+#customize-control-neptune_control_post_images_headline,
+#customize-control-neptune_control_post_meta_headline {
+	margin-top: 12px;
+}
+
+#customize-control-neptune_control_post_images_headline,
+#customize-control-neptune_control_post_meta_headline {
+	margin-bottom: 0;
+}

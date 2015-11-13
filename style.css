@@ -1,0 +1,2261 @@
+/*
+Theme Name: Neptune
+Theme URI: http://themezee.com/themes/neptune/
+Author: ThemeZee
+Author URI: http://themezee.com
+Description: Neptune is a beautiful designed Magazine WordPress theme with a responsive layout. The theme comes with a gorgeous Post Slider, Magazine Homepage template and a Header Widget area. Settings can be configured easily in the Customizer. 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: neptune
+Tags: two-columns, light, orange, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, blue, silver, white, green, gray
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Neptune is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Normalize
+2.0 - Typography
+3.0 - Elements
+4.0 - Forms
+5.0 - Accessibility
+6.0 - Alignments
+7.0 - Clearings
+8.0 - Layout Structure
+9.0 - Header
+10.0 - Navigation
+	10.1 - Top Navigation
+	10.2 - Main Navigation
+11.0 - Widgets
+12.0 - Posts and pages
+11.0 - Comments
+12.0 - Footer
+13.0 - Media
+	13.1 - Captions
+	13.2 - Galleries
+14.0 - Media Queries
+	14.1 - Desktop Large ( < 1120px )
+	14.2 - Desktop Medium ( < 1040px )
+	14.3 - Desktop Small ( < 960px )
+	14.4 - Tablet Large ( < 880px )
+	14.5 - Tablet Medium ( < 800px )
+	14.6 - Tablet Small ( < 720px )
+	14.7 - Mobile Extra Large ( < 640px )
+	14.8 - Mobile Large ( < 560px )
+	14.9 - Mobile Medium ( < 480px )
+	14.10 - Mobile Small ( < 320px )
+15.0 - Theme Option Styles
+	15.1 - Sidebar Left Layout
+16.0 - Media Query Fixes
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# 1.0 - Normalize
+--------------------------------------------------------------*/
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+}
+
+body {
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+pre {
+	overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input {
+	line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+# 2.0 - Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: 'Titillium Web', Tahoma, Arial;
+	font-size: 17px;
+	font-size: 1.0625rem;
+	line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# 3.0 - Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #eee; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "" "";
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+a {
+	color: #22aadd;
+	text-decoration: none;
+}
+
+a:link,
+a:visited {
+	color: #22aadd;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #303030;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# 4.0 - Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	padding: 0.6em 1em;
+	font-size: 16px;
+	font-size: 1rem;
+	color: #fff;
+	background: #22aadd;
+	border: none;
+	text-decoration: none;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	background: #303030;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	background: #303030;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	max-width: 100%;
+	padding: 0.3em 0.6em;
+	color: #666;
+	border: 1px solid #ddd;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	color: #111;
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# 5.0 - Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/*--------------------------------------------------------------
+# 6.0 - Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# 7.0 - Clearings
+--------------------------------------------------------------*/
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# 8.0 - Layout Structure
+--------------------------------------------------------------*/
+.site {
+	width: 100%;
+	margin: 0;
+}
+
+.container {
+	max-width: 1290px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 3em;
+}
+
+.site-content {
+	padding-top: 3em;
+}
+
+.content-area {
+	float: left;
+	width: 68%;
+	padding-right: 3em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.sidebar {
+	float: right;
+	width: 32%;
+}
+
+/* Fullwidth Template */
+.site-content .fullwidth-content-area {
+	float: none;
+	width: 100%;
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+# 9.0 - Header
+--------------------------------------------------------------*/
+.site-header {
+	background: #fff;
+}
+
+.header-main {
+	
+}
+
+.site-branding {
+	float: left;
+	max-width: 100%;
+	margin: 0.65em 0;
+}
+
+.site-branding a:link, 
+.site-branding a:visited, 
+.site-branding a:hover {
+	text-decoration: none;
+	padding: 0;
+}
+
+.site-title {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	color: #22aadd;
+	font-family: 'Amaranth', Tahoma, Arial;
+	font-size: 24px;
+	font-size: 1.5rem;
+	text-decoration: none;
+}
+
+.site-branding a:hover .site-title {
+	color: #444;
+}
+
+/* Custom Header Image */
+.header-image {
+	text-align: center;
+}
+
+.header-image img {
+	max-width: 100%;
+	vertical-align: top;
+	width: 100%;
+	height: auto;
+}
+
+
+/*--------------------------------------------------------------
+# 10.0 - Navigation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## 10.1 - Top Navigation
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+## 10.2 - Main Navigation
+--------------------------------------------------------------*/
+.primary-navigation {
+	float: right;
+}
+
+.main-navigation-toggle,
+.sidebar-navigation-toggle {
+	display: none;
+}
+
+.main-navigation-menu {
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	list-style-position: outside;
+	position: relative;	
+}
+
+.main-navigation-menu li {
+	float: left;
+	position: relative;
+	margin: 0 1em;
+}
+
+.main-navigation-menu a {
+	display: block;
+	font-size: 16px;
+	font-size: 1rem;
+	padding: 1em 0;
+	text-decoration: none;
+}
+
+.main-navigation-menu a:link, 
+.main-navigation-menu a:visited {
+	color: #444;
+	text-decoration: none;
+}
+
+.main-navigation-menu a:hover {
+	color: #22aadd;
+}
+
+.main-navigation-menu ul {
+	position: absolute;
+	display: none;
+	z-index: 99;
+	margin: 0;
+	padding: 0 1em;
+	list-style-type: none;
+	list-style-position: outside;
+	background: #fff;
+}
+
+.main-navigation-menu ul li{
+	margin: 0;
+}
+
+.main-navigation-menu ul a {
+	width: 250px;
+	width: 16rem;
+	margin: 0;
+	padding: 0.9em 0;
+	float: left;
+	font-size: 14px;
+	font-size: 0.875rem;
+	color: #303030;
+	border-bottom: 1px solid #ddd;
+}
+
+.main-navigation-menu ul li:last-child a {
+	border-bottom: none;
+}
+
+.main-navigation-menu ul a:link, 
+.main-navigation-menu ul a:visited {
+	color: #303030;
+	text-decoration: none;
+}
+
+.main-navigation-menu ul a:hover {
+	color: #22aadd;
+}
+
+.main-navigation-menu li ul ul {
+	margin-left: 250px;
+	margin-left: 16rem;
+}
+
+.main-navigation-menu li:hover ul ul, 
+.main-navigation-menu li:hover ul ul ul, 
+.main-navigation-menu li:hover ul ul ul ul {
+	display:none;
+}
+
+.main-navigation-menu li:hover ul, 
+.main-navigation-menu li li:hover ul, 
+.main-navigation-menu li li li:hover ul, 
+.main-navigation-menu li li li li:hover ul {
+	display:block;
+}
+
+.main-navigation-menu li.current-menu-item a {
+	border-bottom: 3px solid #fff;
+}
+
+.main-navigation-menu li.current-menu-item ul li a,
+.main-navigation-menu ul li.current-menu-item ul li a {
+	text-decoration: none;
+}
+
+.main-navigation-menu ul li.current-menu-item a {
+	text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+## 10.3 - Social Icons Menu
+--------------------------------------------------------------*/
+.header-bar .social-icons-navigation {
+	float: right;
+}
+
+.social-icons-navigation-toggle {
+	display: none;
+}
+
+.social-icons-menu {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	list-style-position: outside;
+	line-height: 1;
+}
+
+.social-icons-menu li {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.social-icons-menu li a {
+	position: relative;
+	display: inline-block;
+	padding: 0.6em;
+	text-decoration: none;
+}
+
+.social-icons-menu li a:before {
+	color: #fff;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 24px;
+	line-height: 1;
+	font-family: 'Genericons';
+	text-decoration: inherit;
+	vertical-align: top;
+}
+
+/* Add Genericons */
+.social-icons-menu li a:before { content: '\f408'; color: #333; } /* Default Icon */
+.social-icons-menu li a[href*="codepen.io"]:before  { content: '\f216'; color: #222; }
+.social-icons-menu li a[href*="digg.com"]:before { content: '\f221'; color: #151515; }
+.social-icons-menu li a[href*="dribbble.com"]:before { content: '\f201'; color: #ea4c89; }
+.social-icons-menu li a[href*="facebook.com"]:before { content: '\f204'; color: #3b5998; }
+.social-icons-menu li a[href*="flickr.com"]:before { content: '\f211'; color: #ff0084; }
+.social-icons-menu li a[href*="plus.google.com"]:before { content: '\f218'; color: #dd4b39; }
+.social-icons-menu li a[href*="github.com"]:before { content: '\f200'; color: #171515; }
+.social-icons-menu li a[href*="instagram.com"]:before { content: '\f215'; color: #3f729b; }
+.social-icons-menu li a[href*="linkedin.com"]:before { content: '\f207'; color: #007bb6; }
+.social-icons-menu li a[href*="pinterest.com"]:before { content: '\f209'; color: #cb2027; }
+.social-icons-menu li a[href*="polldaddy.com"]:before { content: '\f217'; color: #bc0b0b; }
+.social-icons-menu li a[href*="getpocket.com"]:before { content: '\f224'; color: #ee4056; }
+.social-icons-menu li a[href*="reddit.com"]:before { content: '\f222'; color: #ff4500; }
+.social-icons-menu li a[href*="spotify.com"]:before { content: '\f515'; color: #81b71a; }
+.social-icons-menu li a[href*="skype.com"]:before,
+.social-icons-menu li a[href*="skype:"]:before { content: '\f220'; color: #00aff0; }
+.social-icons-menu li a[href*="stumbleupon.com"]:before { content: '\f223'; color: #f74425; }
+.social-icons-menu li a[href*="tumblr.com"]:before { content: '\f214'; color: #32506d; }
+.social-icons-menu li a[href*="twitch.tv"]:before { content: '\f516'; color: #6441A5; }
+.social-icons-menu li a[href*="twitter.com"]:before { content: '\f202'; color: #00aced; }
+.social-icons-menu li a[href*="vimeo.com"]:before  { content: '\f212'; color: #aad450; }
+.social-icons-menu li a[href*="wordpress.org"]:before { content: '\f205'; color: #21759b; }
+.social-icons-menu li a[href*="wordpress.com"]:before { content: '\f205'; color: #1e8cbe; }
+.social-icons-menu li a[href*="youtube.com"]:before { content: '\f213'; color: #c4302b; }
+.social-icons-menu li a[href*="/feed"]:before,
+.social-icons-menu li a[href*="/feed/"]:before,
+.social-icons-menu li a[href*="?feed=rss2"]:before,
+.social-icons-menu li a[href*="feedburner.google.com"]:before,
+.social-icons-menu li a[href*="feedburner.com"]:before { content: '\f413'; color: #ee802f; }
+
+.social-icons-menu li a:hover:before {
+	text-decoration: none;
+	color: #222;
+}
+
+.social-icons-menu li a .screen-reader-text {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+## Post Navigation Menu
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# 11.0 - Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 3em 0;
+	padding: 1.5em;
+	background: #fff;
+	color: #303030;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.widget-header {
+	margin: 0 0 1em 0;
+}
+
+.widget-title {
+	display: block;
+	margin: 0;
+	padding: 0.3em 0.6em;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: bold;
+	color: #fff;
+	background: #22aadd;
+}
+
+.widget ul {
+	margin: 0;
+	padding: 0 0.3em;
+	list-style: circle inside;
+}
+
+.widget ul .children,
+.widget ul .sub-menu {
+	padding: 0;
+	margin: 0.5em 0 0.5em 1em;
+}
+
+.widget-title a:link, 
+.widget-title a:visited  {
+	color: #fff;
+}
+
+.widget-title a:hover, 
+.widget-title a:active  {
+	text-decoration: underline;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## 11.1 - Default Widgets
+--------------------------------------------------------------*/
+
+/* Default Archive & Category Wigdets */
+.widget_archive ul, 
+.widget_categories ul {
+	list-style: none;
+}
+
+.widget_archive ul li:before, 
+.widget_categories ul li:before {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 18px 'Genericons';
+	vertical-align: middle;
+	color: #555;
+	margin: 0 0.3em 0 0;
+}
+
+.widget_archive ul li:before {
+	content: '\f307';
+}
+
+.widget_categories ul li:before {
+	content: '\f301';
+}
+
+/* Default Recent Posts & Comments Wigdets */
+.widget_recent_entries ul, 
+.widget_recent_comments ul {
+	list-style: none;
+}
+
+.widget_recent_entries ul li .post-date {
+	color: #888;
+	font-size: 12px;
+	font-size: 0.75rem;
+	font-style: italic;
+}
+
+.widget_recent_entries ul li:before, 
+.widget_recent_comments ul li:before {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px 'Genericons';
+	vertical-align: middle;
+	color: #555;
+	margin: 0 0.2em 0 0;
+}
+
+.widget_recent_entries ul li:before {
+	content: '\f303';
+}
+
+.widget_recent_comments ul li:before {
+	content: '\f300';
+}
+
+/* Default Meta & Pages Wigdets */
+.widget_meta ul, 
+.widget_pages ul, 
+.widget_nav_menu ul {
+	list-style: none;
+}
+
+.widget_meta ul li a:before, 
+.widget_pages ul li a:before ,
+.widget_nav_menu ul li a:before {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 18px 'Genericons';
+	vertical-align: middle;
+	color: #555;
+	margin: 0 0.1em 0 0;
+	content: '\f432';
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+}
+
+/* Tagcloud Widget */
+.widget_tag_cloud .tagcloud {
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+}
+
+.widget_tag_cloud .tagcloud:before,
+.widget_tag_cloud .tagcloud:after {
+	content: "";
+	display: table;
+}
+
+.widget_tag_cloud .tagcloud:after {
+	clear: both;
+}
+
+.widget_tag_cloud .tagcloud a {
+	float: left;
+	display: inline-block;
+	margin: 0 3px 3px 0;
+	padding: 0.3em 0.6em;
+	text-decoration: none;
+	font-size: 1.0em !important;
+	border: 1px solid #ddd;
+}
+
+.widget_tag_cloud .tagcloud a:link, 
+.widget_tag_cloud .tagcloud a:visited {
+	color: #303030;
+}
+
+.widget_tag_cloud .tagcloud a:hover, 
+.widget_tag_cloud .tagcloud a:active {
+	color: #22aadd;
+}
+
+/* Theme Search Widget */
+.search-form {
+	display: block;
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.search-form .screen-reader-text {
+	display: none;
+}
+
+.search-form .search-field {
+	display: inline-block;
+	margin: 0;
+	width: 100%;
+	padding: 0.5em 1.5em 0.5em 0.7em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+}
+
+.search-form .search-submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	background: #22aadd;
+	padding: 0.6em 0.6em 0 0;
+	cursor: pointer;
+}
+
+.search-form .search-submit .genericon-search {
+	display: inline-block;
+	padding: 0.05em 0 0.55em 0.45em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 24px;
+	line-height: 1;
+	font-family: 'Genericons';
+	text-decoration: inherit;
+	font-weight: normal;
+	font-style: normal;
+	vertical-align: middle;
+	color: #fff;
+	content: '\f400';
+}
+
+.search-form .search-submit:hover {
+	background: #303030;
+}
+
+
+/*--------------------------------------------------------------
+# 12.0 - Posts and pages
+--------------------------------------------------------------*/
+.type-post, 
+.type-page, 
+.type-attachment  {
+	margin: 0 0 3em 0;
+	padding: 3em;
+	background: #fff;
+	max-width: 100%;
+}
+
+.page-title, 
+.entry-title {
+	font-family: 'Amaranth', Tahoma, Arial;
+	font-size: 36px;
+	font-size: 2.25rem;
+	padding: 0;
+	margin: 0;
+	color: #22aadd;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.page-title {
+	color: #303030;
+}
+
+.entry-title a:link, 
+.entry-title a:visited {
+	color: #22aadd;
+	text-decoration: none;
+}
+
+.entry-title a:hover, 
+.entry-title a:active{
+	color: #303030;
+}
+
+.entry-thumbnail {
+	margin: -3em -3em 2em;
+}
+
+.sticky {
+
+}
+	
+/* Page Links | wp_link_pages() */
+.page-links {
+	margin: 0;
+	word-spacing: 1em;
+	font-weight: bold;
+}
+
+/* Entry Meta */
+.entry-meta {
+	margin: 2em -3em -3em;
+	padding: 1.5em 2em;
+	color: #303030;
+	border-top: 1px solid #ddd;
+}
+
+.entry-meta .meta-date, 
+.entry-meta .meta-author, 
+.entry-meta .meta-category, 
+.entry-meta .meta-comments {
+	margin-right: 1.5em;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+.entry-meta span:before {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 24px 'Genericons';
+	vertical-align: middle;
+	color: #333;
+}
+
+.entry-meta .meta-date:before{
+	content: '\f307';
+}
+
+.entry-meta .meta-author:before{
+	content: '\f304';
+}
+
+.entry-meta .meta-category:before{
+	content: '\f301';
+}
+
+.entry-meta .meta-comments:before{
+	content: '\f300';
+}
+
+/* Entry Tags */
+.entry-tags {
+	clear: both;
+	margin: 2.5em 0 0.5em;
+}
+
+.entry-tags .meta-tags {
+	display: block;
+	margin: 0;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+}
+
+.entry-tags .meta-tags a {
+	float: left;
+	display: inline-block;
+	margin: 0 3px 3px 0;
+	padding: 0.3em 0.6em;
+	text-decoration: none;
+	border: 1px solid #ddd;
+}
+
+.entry-tags .meta-tags a:link, 
+.entry-tags .meta-tags a:visited {
+	color: #303030;
+}
+
+.entry-tags .meta-tags a:hover, 
+.entry-tags .meta-tags a:active {
+	color: #22aadd;
+}
+
+/* Post Navigation */
+.post-navigation {
+	margin-top: 1.5em;
+}
+
+.post-navigation .nav-links:before,
+.post-navigation .nav-links:after {
+	content: "";
+	display: table;
+}
+
+.post-navigation .nav-links:after {
+	clear: both;
+}
+
+.post-navigation .nav-links .nav-previous {
+	float: left;
+}
+
+.post-navigation .nav-links .nav-next {
+	float: right;
+}
+
+/* Read more Link */
+.more-link {
+	display: inline-block;
+	margin: 0 0 1em;
+	padding: 0.6em 1em;
+	font-size: 16px;
+	font-size: 1rem;
+	color: #fff;
+	background: #22aadd;
+	text-decoration: none;
+}
+
+.more-link:link, 
+.more-link:visited  {
+	color: #fff;
+}
+
+.more-link:hover, 
+.more-link:active {
+	background: #303030;
+	text-decoration: none;
+}
+
+/* Archives and Search Heading */
+.page-header {
+	margin: 0 0 2em 0;
+	padding: 1em 1.5em 1.2em;
+	background: #fff;
+}
+
+.page-header .archive-title {
+	display: inline-block;
+	margin: 0;
+	padding: 0 0 0.1em;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: bold;
+	border-bottom: 3px solid #22aadd;
+}
+
+/* Theme Pagination */
+.post-pagination {
+	margin: 0 0 3em 0;
+}
+
+.post-pagination a,
+.post-pagination .current {
+	display: inline-block;
+	margin: 0 3px 3px 0;
+	padding: 0.4em 1em;
+    text-align: center;
+	text-decoration: none;
+	color: #333;
+	background: #fff;
+}
+
+.post-pagination a:link, 
+.post-pagination a:visited {
+	color: #333;
+}
+
+.post-pagination a:hover,
+.post-pagination .current {
+	color: #fff;
+	background: #22aadd;
+}
+
+/*--------------------------------------------------------------
+# 11.0 - Comments
+--------------------------------------------------------------*/
+
+.comments-area {
+	margin: 0 0 3em 0;
+	padding: 1em 1.5em;
+	background: #fff;
+	max-width: 100%;
+}
+
+/* Comment Header */
+.comments-header,
+.comment-reply-title {
+	margin: 0 0 1em 0;
+}
+
+.comments-header .comments-title,
+.comment-reply-title span {
+	display: inline-block;
+	margin: 0;
+	padding: 0 0 0.1em;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: bold;
+	border-bottom: 3px solid #22aadd;
+}
+
+/* Comment List */
+.comment-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.comment {
+	padding: 0.8em 0;
+	border-top: 1px solid #ddd;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.comment-meta {
+	float: left;
+	width: 100%;
+	padding: 0.2em 0 0.6em;
+}
+
+.comment-meta .comment-author img {
+	float: left;
+	margin-right: 1em;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+.comment-meta .comment-metadata {
+	margin-top: 0.3em;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.comment-meta .comment-metadata a {
+	margin-right: 1em;
+}
+
+.comment-content {
+	clear: left;
+	padding: 0.3em 0 0;
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.comment .reply {
+	margin-bottom: 1em;
+}
+
+.comment ol.children {
+	list-style: none;
+}
+
+/* Comment Pagination */
+.comment-navigation {
+	margin: 2em 0;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.comment-navigation a {
+	display: inline-block;
+}
+
+.comment-navigation .nav-previous {
+	float: left;
+}
+
+.comment-navigation .nav-next {
+	float: right;
+}
+
+/* Comment Form */
+.comment-form {
+	padding: 0 0.5em;
+}
+.comment-form label {
+	display: inline-block;
+	min-width: 150px;
+	font-weight: bold;
+}
+
+.comment-form textarea {
+	margin-top: 0.4em;
+}
+
+.comment-reply-title small a {
+	margin-left: 1em;
+	text-decoration: underline;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: normal;
+}
+
+/*--------------------------------------------------------------
+# 12.0 - Footer
+--------------------------------------------------------------*/
+.site-footer {
+	padding: 1.5em 0;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	background: #fff;
+}
+
+.site-footer a:link,
+.site-footer a:visited {
+	color: #666;
+	border-bottom: 1px dotted #aaa;
+}
+
+.site-footer a:hover,
+.site-footer a:focus,
+.site-footer a:active {
+	color: #333;
+}
+
+.site-footer .site-info {
+	float: left;
+}
+
+/* Footer Navigation Menu */
+.footer-navigation {
+	float: right;
+}
+
+.footer-navigation-toggle {
+	display: none;
+}
+
+.footer-navigation-menu {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	list-style-position: outside;
+	position: relative;
+}
+
+.footer-navigation-menu li {
+	float: left;
+	position: relative;
+	margin: 0 1em;
+}
+
+.footer-navigation-menu a {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# 13.0 - Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## 13.1 - Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+/*--------------------------------------------------------------
+## 13.2 - Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# 14.0 - Media Queries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## 14.1 - Desktop X-Large ( < 1120px )
+--------------------------------------------------------------*/
+@media only screen and (max-width: 80em) {
+	
+	.container {
+		max-width: 100%;
+		margin: 0;
+		padding: 0 2.5em;
+	}
+	
+	.site-content {
+		padding-top: 2.5em;
+	}
+	
+	.content-area {
+		padding-right: 2.5em;
+	}
+	
+	.widget,
+	.type-post, 
+	.type-page, 
+	.type-attachment,
+	.post-pagination, 
+	.comments-area {
+		margin: 0 0 2.5em 0;
+	}
+	
+	.type-post, 
+	.type-page, 
+	.type-attachment  {
+		padding: 2.5em;
+	}
+	
+	.entry-thumbnail {
+		margin: -2.5em -2.5em 1.5em;
+	}
+	
+	.entry-meta {
+		margin: 1.5em -2.5em -2.5em;
+		padding: 1.25em 1.5em;
+	}
+	
+}
+
+/*--------------------------------------------------------------
+## 14.1 - Desktop Large ( < 1120px )
+--------------------------------------------------------------*/
+@media only screen and (max-width: 70em) {
+	
+	.container {
+		padding: 0 2em;
+	}
+	
+	.site-content {
+		padding-top: 2em;
+	}
+	
+	.content-area {
+		width: 66%;
+		padding-right: 2em;
+	}
+	
+	.sidebar {
+		width: 34%;
+	}
+	
+	.widget,
+	.type-post, 
+	.type-page, 
+	.type-attachment,
+	.post-pagination,
+	.comments-area {
+		margin: 0 0 2em 0;
+	}
+	
+	.type-post, 
+	.type-page, 
+	.type-attachment  {
+		padding: 2em;
+	}
+	
+	.entry-thumbnail {
+		margin: -2em -2em 1em;
+	}
+	
+	.entry-meta {
+		margin: 1em -2em -2em;
+		padding: 1em 1.25em;
+	}
+	
+	.main-navigation-menu li {
+		margin: 0 0.8em;
+	}
+
+	.main-navigation-menu a {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+	
+}
+
+/*--------------------------------------------------------------
+## 14.2 - Desktop Medium ( < 1040px )
+--------------------------------------------------------------*/
+@media only screen and (max-width: 65em) {
+
+
+}
+
+/*--------------------------------------------------------------
+## 14.3 - Desktop Small ( < 960px )
+--------------------------------------------------------------*/
+@media only screen and (max-width: 60em) {
+	
+	.site-branding {
+		float: none;
+		text-align: center;
+		margin: 1em 0;
+	}
+	
+	.page-title,
+	.entry-title {
+		font-size: 32px;
+		font-size: 2rem;
+	}
+	
+	.site-content {
+		position: relative;
+	}
+	
+	.content-area, 
+	.site-content .fullwidth-content-area {
+		float: none;
+		width: 100%;
+		padding: 0;
+	}
+	
+	.header-main {
+		position: relative;
+	}
+	
+	.sidebar {
+		float: none;
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 1.5em;
+		background: #fff;
+		box-shadow: 0 0 5px #aaa;
+		width: 80%;
+		height: 100%;
+		overflow: auto;
+		z-index: 200;
+	}
+	
+	/* Sidebar Toggle */
+	.sidebar-navigation-toggle {
+		position: absolute;
+		top: 1em;
+		right: 1em;
+		display: inline-block;
+		padding: 1.25em 1.5em;
+		background: none;
+	}
+	
+	.sidebar-navigation-toggle:hover,
+	.sidebar-navigation-toggle:active {
+		cursor: pointer;
+	}
+	
+	.sidebar-navigation-toggle:after {
+		float: left;
+		display: inline-block;
+		font-size: 32px;
+		line-height: 1;
+		font-family: 'Genericons';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-decoration: inherit;
+		vertical-align: middle;
+		content: '\f510';
+		color: #fff;
+	}
+	
+	.sidebar-navigation-toggle:hover:after,
+	.sidebar-navigation-toggle:active:after {
+		color: #bbb;
+	}
+
+	/*** Mobile Main Navigation ***/
+	
+	/* Reset */
+	.primary-navigation {
+		float: none;
+		margin-top: 0;
+	}
+
+	.main-navigation-menu li {
+		float: none;
+		position: static;
+	}
+	
+	.main-navigation-menu ul {
+		position: static;
+		display: block;
+	}
+	
+	.main-navigation-menu ul a {
+		width: auto;
+		float: none;
+	}
+	
+	.main-navigation-menu li ul ul {
+		margin-left: 0;
+	}
+	
+	.main-navigation-menu li:hover ul ul, 
+	.main-navigation-menu li:hover ul ul ul, 
+	.main-navigation-menu li:hover ul ul ul ul,
+	.main-navigation-menu li:hover ul, 
+	.main-navigation-menu li li:hover ul, 
+	.main-navigation-menu li li li:hover ul,
+	.main-navigation-menu li li li li:hover ul {
+		display: inline;
+	}
+	
+	
+	/* Main Navigation Toggle */
+	.main-navigation-toggle {
+		position: absolute;
+		top: 1em;
+		left: 1em;
+		display: inline-block;
+		margin: 0;
+		padding: 1.25em 1.5em;
+		background: none;
+	}
+	
+	.main-navigation-toggle:hover,
+	.main-navigation-toggle:active {
+		cursor: pointer;
+	}
+	
+	.main-navigation-toggle:after {
+		float: left;
+		display: inline-block;
+		font-size: 32px;
+		line-height: 1;
+		font-family: 'Genericons';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-decoration: inherit;
+		vertical-align: middle;
+		content: '\f419';
+		color: #fff;
+	}
+	
+	.main-navigation-toggle:hover:after,
+	.main-navigation-toggle:active:after {
+		color: #bbb;
+	}
+	
+	/* Main Navigation Menu */
+	.main-navigation-menu {
+		float: left;
+		width: 100%;
+		display: none;
+		border-top: 1px solid rgba(255,255,255,0.1);
+	}
+	
+	.main-navigation-menu li {
+		margin: 0;
+	}
+	
+	.main-navigation-menu a {
+		display: block;
+		clear: left;
+		font-size: 16px;
+		font-size: 1rem;
+		font-weight: bold;
+		margin: 0;
+		padding: 0.8em 0;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+
+	.main-navigation-menu ul {
+		width: 100%;
+	}
+	
+	.main-navigation-menu ul a {
+		display: block;
+		width: 100%;
+	}
+	
+	.main-navigation-menu li.current-menu-item a {
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+		text-decoration: underline;
+	}
+	
+	/* Mobile Submenu Dropdowns */
+	.main-navigation-menu .submenu-dropdown-toggle {
+		float: right;
+		display: block;
+		margin: 0;
+		padding: 0.6em 1.2em;
+	}
+	
+	.main-navigation-menu .submenu-dropdown-toggle:hover {
+		cursor: pointer;
+	}
+	
+	.main-navigation-menu .submenu-dropdown-toggle:before {
+		font-size: 32px;
+		line-height: 1;
+		font-family: 'Genericons';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-decoration: inherit;
+		vertical-align: middle;
+		content: '\f431';
+		color: #fff;
+	}
+	
+	.main-navigation-menu .submenu-dropdown-toggle:hover:before {
+		color: #bbb;
+	}
+	
+	.main-navigation-menu .submenu-dropdown-toggle.active:before {
+		content: '\f432';
+	}
+	
+	.main-navigation-menu ul .submenu-dropdown-toggle {
+		padding: 0.55em 1.2em;
+	}
+	
+	.main-navigation-menu ul .submenu-dropdown-toggle:before {
+		font-size: 24px;
+		color: #333;
+	}
+	
+	.main-navigation-menu ul .submenu-dropdown-toggle:hover:before {
+		color: #666;
+	}
+	
+}
+
+/*--------------------------------------------------------------
+## 14.4 - Tablet Large ( < 880px )
+--------------------------------------------------------------*/
+@media only screen and (max-width: 55em) {
+	
+
+	
+}
+
+/*--------------------------------------------------------------
+## 14.5 - Tablet Medium ( < 800px )
+--------------------------------------------------------------*/
+@media only screen and (max-width: 50em) {
+	
+	.page-title,
+	.entry-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+	
+	/*** Mobile Footer Navigation ***/
+	
+	.site-footer {
+		padding: 0;
+	}
+	
+	.site-footer .site-info {
+		padding: 2em 0;
+	}
+	
+	.footer-navigation {
+		display: block;
+		width: 100%;
+
+	}
+	
+	/* Footer Navigation Toggle */
+	.footer-navigation-toggle {
+		float: right;
+		display: inline-block;
+		background: none;
+		padding: 0;
+		margin-top: -3.8em;
+	}
+	
+	.footer-navigation-toggle:hover,
+	.footer-navigation-toggle:active,
+	.footer-navigation-toggle:focus {
+		cursor: pointer;
+		background: none;
+	}
+	
+	.footer-navigation-toggle:after {
+		float: left;
+		display: inline-block;
+		font-family: 'Genericons';
+		font-size: 24px;
+		font-weight: normal;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-decoration: inherit;
+		vertical-align: middle;
+		content: '\f419';
+		color: #fff;
+	}
+	
+	.footer-navigation-toggle:hover:after {
+		color: #bbb;
+	}
+	
+	/* Footer Navigation Menu */
+	.footer-navigation-menu {
+		float: left;
+		width: 100%;
+		display: none;
+		margin: 0;
+		padding: 2em 0;
+		border-top: 1px solid rgba(255,255,255,0.1);
+	}
+	
+	.footer-navigation-menu li{
+		margin: 0 2em 0 0;
+	}
+}
+
+/*--------------------------------------------------------------
+## 14.6 - Tablet Small ( < 720px )
+--------------------------------------------------------------*/
+@media only screen and (max-width: 45em) {
+	
+	.site-title {
+		font-size: 32px;
+		font-size: 2rem;
+	}
+
+	.main-navigation-toggle,
+	.sidebar-navigation-toggle {
+		padding: 1em 1.25em;
+	}
+	
+	.sidebar {
+		padding: 1em;
+	}
+	
+}
+
+/*--------------------------------------------------------------
+## 14.7 - Mobile Extra Large ( < 640px )
+--------------------------------------------------------------*/
+@media only screen and (max-width: 40em) {
+	
+	.container {
+		padding: 0 1.5em;
+	}
+	
+	.site-content {
+		padding-top: 1.5em;
+	}
+	
+	.widget,
+	.type-post, 
+	.type-page, 
+	.type-attachment,
+	.post-pagination,
+	.comments-area {
+		margin: 0 0 1.5em 0;
+	}
+	
+	.type-post, 
+	.type-page, 
+	.type-attachment  {
+		padding: 1.5em;
+	}
+	
+	.entry-thumbnail {
+		margin: -1.5em -1.5em 0.8em;
+	}
+	
+	.entry-meta {
+		margin: 0.8em -1.5em -1.5em;
+		padding: 0.75em 1em;
+	}
+	
+	.page-title,
+	.entry-title {
+		font-size: 26px;
+		font-size: 1.625rem;
+	}
+	
+}
+
+/*--------------------------------------------------------------
+## 14.8 - Mobile Large ( < 560px )
+--------------------------------------------------------------*/
+@media only screen and (max-width: 35em) {
+
+	.site-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	.main-navigation-toggle,
+	.sidebar-navigation-toggle {
+		padding: 1em;
+	}
+	
+	.main-navigation-toggle:after,
+	.sidebar-navigation-toggle:after {
+		font-size: 28px;
+	}
+	
+	.entry-meta .meta-date, 
+	.entry-meta .meta-author, 
+	.entry-meta .meta-category, 
+	.entry-meta .meta-comments {
+		display: block;
+		margin-right: 0;
+	}
+	
+}
+
+/*--------------------------------------------------------------
+## 14.9 - Mobile Medium ( < 480px )
+--------------------------------------------------------------*/
+@media only screen and (max-width: 30em) {
+	
+	.sidebar {
+		padding: 0;
+	}
+	
+	.main-navigation-toggle:after,
+	.sidebar-navigation-toggle:after {
+		font-size: 24px;
+	}
+	
+	.page-title,
+	.entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+	
+	.alignright, .alignleft {
+		float: none;
+		margin: 1em 0;
+	}
+	
+}
+
+/*--------------------------------------------------------------
+## 14.10 - Mobile Small ( < 320px )
+--------------------------------------------------------------*/
+@media only screen and (max-width: 20em) {
+	
+	.header-main {
+		padding: 1em 1.2em;
+	}
+	
+	.site-branding .site-title {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+	
+	.page-title,
+	.entry-title {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+	
+}
+
+
+/*--------------------------------------------------------------
+# 15.0 - Theme Option Styles
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## 15.1 - Sidebar Left Layout
+--------------------------------------------------------------*/
+.sidebar-left .content-area {
+	float: right;
+	padding-right: 0;
+	padding-left: 3em;
+}
+	
+.sidebar-left .sidebar {
+	float: left;
+}
+
+@media only screen and (max-width: 55em) {
+	
+	.sidebar-left .content-area {
+		float: none;
+		width: 100%;
+		padding: 1.5em;
+	}
+	
+	.sidebar-left .sidebar {
+		float: none;
+		left: 0;
+		right: auto;
+		width: 80%;
+	}
+	
+}
+
+/*--------------------------------------------------------------
+# 16.0 - Media Query Fixes
+--------------------------------------------------------------*/
+
+/* Ensure navigation is visible on desktop view */
+@media only screen and (min-width: 60em) {
+	
+	.main-navigation-menu {
+		display: block !important;
+	}
+	
+	.sidebar {
+		display: block;
+		width: 34%;
+		position: static;
+	}
+	
+}
+
+@media only screen and (min-width: 70em) {
+	
+	.sidebar {
+		width: 32%;
+	}
+	
+}
+
+/* Ensure .footer-navigation-menu is visible on desktop view */
+@media only screen and (min-width: 50em) {
+	
+	.footer-navigation-menu {
+		display: block !important;
+	}
+	
+}
