@@ -36,12 +36,14 @@ function poseidon_setup() {
 	add_theme_support( 'post-thumbnails' );
 	
 	// Set detfault Post Thumbnail size
-	set_post_thumbnail_size( 900, 400, true );
+	set_post_thumbnail_size( 820, 410, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Main Navigation', 'poseidon' ),
-		'footer' => esc_html__( 'Footer Navigation', 'poseidon' )
+		'secondary' => esc_html__( 'Top Navigation', 'poseidon' ),
+		'footer' => esc_html__( 'Footer Navigation', 'poseidon' ),
+		'social' => esc_html__( 'Social Icons', 'poseidon' ),
 	) );
 
 	// Switch default core markup for search form, comment form, and comments to output valid HTML5.
@@ -50,15 +52,18 @@ function poseidon_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'poseidon_custom_background_args', array('default-color' => 'bbe5ff') ) );
+	add_theme_support( 'custom-background', apply_filters( 'poseidon_custom_background_args', array('default-color' => 'e5e5e5') ) );
 	
 	// Set up the WordPress core custom header feature.
 	add_theme_support('custom-header', apply_filters( 'poseidon_custom_header_args', array(
 		'header-text' => false,
-		'width'	=> 2500,
+		'width'	=> 1190,
 		'height' => 250,
 		'flex-height' => true
 	) ) );
+	
+	// Add Theme Support for wooCommerce
+	add_theme_support( 'woocommerce' );
 	
 }
 endif; // poseidon_setup
@@ -92,6 +97,26 @@ function poseidon_widgets_init() {
 		'after_widget' => '</aside>',
 		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
 		'after_title' => '</h3></div>',
+	));
+	
+	register_sidebar( array(
+		'name' => esc_html__( 'Header', 'poseidon' ),
+		'id' => 'header',
+		'description' => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'poseidon' ),
+		'before_widget' => '<aside id="%1$s" class="header-widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h4 class="header-widget-title">',
+		'after_title' => '</h4>',
+	));
+	
+	register_sidebar( array(
+		'name' => esc_html__( 'Magazine Homepage', 'poseidon' ),
+		'id' => 'magazine-homepage',
+		'description' => esc_html__( 'Appears on Magazine Homepage template only. You can use the Category Posts widgets here.', 'poseidon' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget-header"><h2 class="widget-title">',
+		'after_title' => '</h2></div>',
 	));
 	
 } // poseidon_widgets_init
@@ -138,7 +163,7 @@ add_action( 'wp_enqueue_scripts', 'poseidon_scripts' );
 function poseidon_google_fonts_url() {
     
 	// Set default Fonts
-	$font_families = array( 'Titillium Web', 'Amaranth' );
+	$font_families = array('Roboto', 'Hammersmith One');
 
 	// Build Fonts URL
 	$query_args = array(
@@ -152,9 +177,35 @@ function poseidon_google_fonts_url() {
 
 
 /**
+ * Add custom sizes for featured images
+ */
+function poseidon_add_image_sizes() {
+	
+	// Add image size for small post thumbnais
+	add_image_size( 'poseidon-thumbnail-small', 360, 270, true );
+	
+	// Add Custom Header Image Size
+	add_image_size( 'poseidon-header-image', 1190, 250, true );
+	
+	// Add Slider Image Size
+	add_image_size( 'poseidon-slider-image', 880, 440, true );
+	
+	// Add Category Post Widget image sizes
+	add_image_size( 'poseidon-category-posts-widget-small', 135, 75, true );
+	add_image_size( 'poseidon-category-posts-widget-medium', 270, 150, true );
+	add_image_size( 'poseidon-category-posts-widget-large', 585, 325, true );
+	
+}
+add_action( 'after_setup_theme', 'poseidon_add_image_sizes' );
+
+
+/**
  * Include Files
  */
  
+// include Theme Info page
+require get_template_directory() . '/inc/theme-info.php';
+
 // include Theme Customizer Options
 require get_template_directory() . '/inc/customizer/customizer.php';
 require get_template_directory() . '/inc/customizer/default-options.php';
@@ -164,3 +215,14 @@ require get_template_directory() . '/inc/extras.php';
 
 // include Template Functions
 require get_template_directory() . '/inc/template-tags.php';
+
+// Include support functions for Theme Addons
+require get_template_directory() . '/inc/addons.php';
+
+// Include Post Slider Setup
+require get_template_directory() . '/inc/slider.php';
+
+// include Widget Files
+require get_template_directory() . '/inc/widgets/widget-category-posts-boxed.php';
+require get_template_directory() . '/inc/widgets/widget-category-posts-columns.php';
+require get_template_directory() . '/inc/widgets/widget-category-posts-grid.php';

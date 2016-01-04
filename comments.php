@@ -16,8 +16,7 @@
 if ( post_password_required() ) {
 	return;
 }
-
-if ( comments_open() or have_comments() ) : ?>
+?>
 
 <div id="comments" class="comments-area">
 
@@ -84,5 +83,3 @@ if ( comments_open() or have_comments() ) : ?>
 	); ?>
 
 </div><!-- #comments -->
-
-<?php endif; ?>

@@ -15,6 +15,8 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		
+			<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
+			
 			<?php while (have_posts()) : the_post();
 
 				get_template_part( 'template-parts/content', 'page' );

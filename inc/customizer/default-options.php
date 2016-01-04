@@ -40,16 +40,27 @@ function poseidon_theme_options() {
 function poseidon_default_options() {
 
 	$default_options = array(
+		'custom_header_link'				=> '',
+		'custom_header_hide'				=> false,
 		'layout' 							=> 'right-sidebar',
+		'sticky_nav'						=> false,
+		'latest_posts_title'				=> esc_html__( 'Latest Posts', 'poseidon' ),
 		'post_content' 						=> 'excerpt',
 		'excerpt_length' 					=> 30,
-		'post_thumbnail_archives'			=> true,
-		'post_thumbnail_single'				=> true,
 		'meta_date'							=> true,
 		'meta_author'						=> true,
-		'meta_category'						=> true,
-		'meta_comments'						=> false,
-		'meta_tags'							=> true
+		'footer_meta_archives'				=> true,
+		'footer_meta_single'				=> true,
+		'meta_tags'							=> true,
+		'post_layout_archives'				=> 'left',
+		'post_image_single' 				=> true,
+		'post_navigation'					=> true,
+		'slider_magazine' 					=> false,
+		'slider_blog' 						=> false,
+		'slider_category' 					=> 0,
+		'slider_limit' 						=> 8,
+		'slider_animation' 					=> 'slide',
+		'slider_speed' 						=> 7000,
 	);
 	
 	return $default_options;

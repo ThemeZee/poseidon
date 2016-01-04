@@ -161,12 +161,59 @@
 			maxWidth: "60em"
 		});
 		
+		/* Setup Top Navigation */
+		$("#top-navigation").responsiveMenu({
+			menuClass: "top-navigation-menu",
+			toggleID: "top-navigation-toggle-tablet",
+			toggleClass: "top-navigation-toggle",
+			maxWidth: "65em"
+		});
+		
+		
+		/* Add flipMenu for social icons menu */
+		$("#header-social-icons").flipMenu({
+			menuClass: "social-icons-navigation",
+			flipMenuClass: "top-navigation-menu",
+			toggleClass: "social-icons-navigation-toggle"
+		});
+		
+		/* Add flipMenu for top navigation */
+		$("#top-navigation").flipMenu({
+			menuClass: "top-navigation-menu",
+			flipMenuClass: "social-icons-navigation",
+			toggleID: "top-navigation-toggle-phone",
+			toggleClass: "top-navigation-toggle"
+		});
+		
+		
 		/* Setup Footer Navigation */
 		$('.footer-navigation-menu').before('<button id=\"footer-links-toggle\" class=\"footer-navigation-toggle\"></button>');
 		
 		$('#footer-links-toggle').on('click', function(){
 			$('.footer-navigation-menu').slideToggle();
 			$(this).toggleClass('active');
+		});
+		
+		
+		/* Setup Sticky Menu for main navigation menu */
+		var menu = $( '#main-navigation' );
+		var stickyNavTop = menu.offset().top;
+			
+		stickyMenu = function() {
+		
+			scrollTop = $(window).scrollTop();
+			
+			/* Add Sticky class */
+			if (scrollTop > stickyNavTop) { 
+				menu.addClass('sticky-nav-menu');
+			} else {
+				menu.removeClass('sticky-nav-menu'); 
+			}
+			
+		}
+		stickyMenu();
+		$(window).scroll(function() {
+			stickyMenu();
 		});
 
 	} );

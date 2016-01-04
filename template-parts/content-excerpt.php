@@ -8,24 +8,24 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		
+		<?php poseidon_post_image_archives(); ?>
+		
 		<header class="entry-header">
-			
-			<?php poseidon_post_image_archives(); ?>
-			
+
 			<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+			
+			<?php poseidon_entry_meta(); ?>
 		
 		</header><!-- .entry-header -->
 
 		<div class="entry-content clearfix">
-			
 			<?php the_excerpt(); ?>
 			<?php poseidon_more_link(); ?>
-		
 		</div><!-- .entry-content -->
 		
 		<footer class="entry-footer">
 			
-			<?php poseidon_entry_meta(); ?>
+			<?php poseidon_entry_footer(); ?>
 			
 		</footer><!-- .entry-footer -->
 

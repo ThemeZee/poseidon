@@ -14,6 +14,10 @@ require( get_template_directory() . '/inc/customizer/functions/callback-function
 // Load Customizer Section Files
 require( get_template_directory() . '/inc/customizer/sections/customizer-general.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-post.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-postmeta.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-images.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-slider.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-upgrade.php' );
 
 
 /**
@@ -35,6 +39,44 @@ function poseidon_customize_register_options( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	
+	// Change default background section
+	$wp_customize->get_control( 'background_color'  )->section   = 'background_image';
+	$wp_customize->get_section( 'background_image'  )->title     = esc_html__( 'Background', 'poseidon' );
+	
+	// Add Header Image Link
+	$wp_customize->add_setting( 'poseidon_theme_options[custom_header_link]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_url'
+		)
+	);
+    $wp_customize->add_control( 'poseidon_control_custom_header_link', array(
+        'label'    => esc_html__( 'Header Image Link', 'poseidon' ),
+        'section'  => 'header_image',
+        'settings' => 'poseidon_theme_options[custom_header_link]',
+        'type'     => 'url',
+		'priority' => 10
+		)
+	);
+	
+	// Add Custom Header Hide Checkbox
+	$wp_customize->add_setting( 'poseidon_theme_options[custom_header_hide]', array(
+        'default'           => false,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'poseidon_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'poseidon_control_custom_header_hide', array(
+        'label'    => esc_html__( 'Hide header image on front page', 'poseidon' ),
+        'section'  => 'header_image',
+        'settings' => 'poseidon_theme_options[custom_header_hide]',
+        'type'     => 'checkbox',
+		'priority' => 15
+		)
+	);
+	
 } // poseidon_customize_register_options()
 add_action( 'customize_register', 'poseidon_customize_register_options' );
 
@@ -44,9 +86,33 @@ add_action( 'customize_register', 'poseidon_customize_register_options' );
  *
  */
 function poseidon_customize_preview_js() {
-	wp_enqueue_script( 'poseidon-customizer-js', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20150723', true );
+	wp_enqueue_script( 'poseidon-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151202', true );
 }
 add_action( 'customize_preview_init', 'poseidon_customize_preview_js' );
+
+
+/**
+ * Embed JS file for Customizer Controls
+ *
+ */
+function poseidon_customize_controls_js() {
+	
+	wp_enqueue_script( 'poseidon-customizer-controls', get_template_directory_uri() . '/js/customizer-controls.js', array(), '20151202', true );
+	
+	// Localize the script
+	wp_localize_script( 'poseidon-customizer-controls', 'poseidon_theme_links', array(
+		'title'	=> esc_html__( 'Theme Links', 'poseidon' ),
+		'themeURL'	=> esc_url( poseidon_theme_links( 'theme_page' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=poseidon&utm_content=theme-page' ),
+		'themeLabel'	=> esc_html__( 'Theme Page', 'poseidon' ),
+		'docuURL'	=> esc_url( poseidon_theme_links( 'documentation' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=poseidon&utm_content=documentation' ),
+		'docuLabel'	=>  esc_html__( 'Theme Documentation', 'poseidon' ),
+		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/poseidon?filter=5' ),
+		'rateLabel'	=> esc_html__( 'Rate this theme', 'poseidon' ),
+		)
+	);
+
+}
+add_action( 'customize_controls_enqueue_scripts', 'poseidon_customize_controls_js' );
 
 
 /**
@@ -54,6 +120,6 @@ add_action( 'customize_preview_init', 'poseidon_customize_preview_js' );
  *
  */
 function poseidon_customize_preview_css() {
-	wp_enqueue_style( 'poseidon-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20150723' );
+	wp_enqueue_style( 'poseidon-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20151202' );
 }
 add_action( 'customize_controls_print_styles', 'poseidon_customize_preview_css' );

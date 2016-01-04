@@ -1,0 +1,266 @@
+/*
+ * Themezee Related Posts CSS
+ * https://themezee.com/plugins/replated-posts/
+ *
+ * Copyright(C) 2015, ThemeZee.com - support@themezee.com
+ * License: GPL v3
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+ *
+ * @package Poseidon
+ */
+
+/*--------------------------------------------------------------
+# General Styling
+---------------------------------------------------------------- */
+.related-posts .entry-meta .meta-author {
+	margin-left: 0.5em;
+}
+
+.related-posts .entry-meta span:before {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px 'Genericons';
+	vertical-align: middle;
+	color: #555;
+}
+
+.related-posts .entry-meta .meta-date:before{
+	content: '\f303';
+	margin-right: 0.2em;
+}
+
+.related-posts .entry-meta .meta-author:before{
+	content: '\f411';
+}
+
+/*--------------------------------------------------------------
+# List Layout
+---------------------------------------------------------------- */
+ul.related-posts-list {
+	margin: 1em 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.related-posts-list li {
+	margin: 0 0 1em;
+	padding: 0;
+	list-style: none;
+}
+
+.related-posts-list li .entry-header {
+	margin-top: 0.25em;
+}
+
+.related-posts-list li .entry-title {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.related-posts-list li .entry-meta {
+	padding: 0.5em;
+	border: none;
+}
+
+.related-posts-list li .wp-post-image {
+	float: left;
+	margin: 0 1em 0 0;
+	padding: 0;
+	border: none;
+	max-width: 20%;
+	height: auto;
+}
+
+
+/*--------------------------------------------------------------
+# Grid Layouts
+---------------------------------------------------------------- */
+.related-posts-grid {
+	margin: 1em 0 0;
+}
+
+.related-posts-columns {
+	margin-right: -1em;
+}
+
+.related-posts-columns .related-post-column {
+	float: left;
+	margin-bottom: 1em;
+	padding-right: 1em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.related-posts-two-columns .related-post-column {
+	width: 50%;
+}
+
+.related-posts-three-columns .related-post-column {
+	width: 33.3333333333333%;
+}
+
+.related-posts-four-columns .related-post-column {
+	width: 25%;
+}
+
+.related-posts-two-columns .related-post-column:nth-child(2n + 1) {
+	clear: left;
+}
+
+.related-posts-three-columns .related-post-column:nth-child(3n + 1) {
+	clear: left;
+}
+
+.related-posts-four-columns .related-post-column:nth-child(4n + 1) {
+	clear: left;
+}
+
+.related-posts-two-columns .related-post-column .entry-title {
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+	
+.related-posts-three-columns .related-post-column .entry-title {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.related-posts-four-columns .related-post-column .entry-title {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+.related-posts-four-columns .related-post-column .entry-meta .meta-date,
+.related-posts-four-columns .related-post-column .entry-meta .meta-author  {
+	display: block;
+	margin: 0;
+}
+
+.related-posts-columns .related-post-column .wp-post-image {
+	margin: 0 0 0.5em 0;
+	padding: 0;
+	border: none;
+}
+
+/*--------------------------------------------------------------
+# Media Queries
+---------------------------------------------------------------- */
+
+@media only screen and (max-width: 60em) {
+	
+	/* Columns */
+	.related-posts-two-columns .related-post-column .entry-title {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+	
+	.related-posts-three-columns .related-post-column .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	.related-posts-four-columns .related-post-column .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+	
+}
+
+@media only screen and (max-width: 50em) {
+	
+	/* Columns */
+	.related-posts-four-columns .related-post-column {
+		width: 50%;
+	}
+	
+	.related-posts-four-columns .related-post-column:nth-child(2n + 1) {
+		clear: left;
+	}
+	
+	.related-posts-two-columns .related-post-column .entry-title,
+	.related-posts-four-columns .related-post-column .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+	
+	/* List */
+	.related-posts-list li .wp-post-image {
+		max-width: 25%;
+	}
+	
+	.related-posts-list li .entry-header {
+		margin-top: 0;
+	}
+	
+	.related-posts-list li .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
+
+@media only screen and (max-width: 35em) {
+
+	/* Columns */
+	.related-posts-three-columns {
+		margin: 0;
+	}
+	
+	.related-posts-three-columns .related-post-column {
+		float: none;
+		width: 100%;
+		padding-right: 0;
+	}
+	
+	.related-posts-three-columns .related-post-column .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+
+	.related-posts-two-columns .related-post-column .entry-title,
+	.related-posts-four-columns .related-post-column .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+}
+
+@media only screen and (max-width: 25em) {
+
+	/* Columns */
+	.related-posts-two-columns,
+	.related-posts-four-columns {
+		margin: 0;
+	}
+	
+	.related-posts-two-columns .related-post-column,
+	.related-posts-four-columns .related-post-column {
+		float: none;
+		width: 100%;
+		padding-right: 0;
+	}
+	
+	.related-posts-three-columns .related-post-column .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	
+	/* List */
+	.related-posts-list li .wp-post-image {
+		float: none;
+		margin: 0 0 0.5em 0;
+		max-width: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 20em) {
+
+	.related-posts .entry-meta .meta-date,
+	.related-posts .entry-meta .meta-author  {
+		display: block;
+		margin: 0;
+	}
+
+}

@@ -10,10 +10,6 @@
 		
 		<header class="entry-header">
 			
-			<div class="entry-thumbnail">
-				<?php the_post_thumbnail(); ?>
-			</div>
-			
 			<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 			
 		</header><!-- .entry-header -->

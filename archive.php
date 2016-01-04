@@ -16,14 +16,15 @@ $theme_options = poseidon_theme_options();
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		
+		<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
+			
 		<?php if ( have_posts() ) : ?>
 		
 			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="archive-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
+				<?php the_archive_title( '<h1 class="archive-title">', '</h1>' ); ?>
 			</header><!-- .page-header -->
+			
+			<?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
 
 			<?php /* Start the Loop */ 
 			while ( have_posts() ) : the_post();

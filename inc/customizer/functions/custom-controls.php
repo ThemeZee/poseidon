@@ -11,7 +11,6 @@
  */
 if ( class_exists( 'WP_Customize_Control' ) ) :
 
-
 	/**
 	 * Displays a bold label text. Used to create headlines for radio buttons and description sections.
 	 *
@@ -27,6 +26,122 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 			<?php
 		}
 	}
+
+	/**
+	 * Displays a description text in gray italic font
+	 *
+	 */
+	class Poseidon_Customize_Description_Control extends WP_Customize_Control {
+
+		public function render_content() {  ?>
+			
+			<span class="description"><?php echo wp_kses_post( $this->label ); ?></span>
+			
+			<?php
+		}
+	}
+
+	/**
+	 * Creates a category dropdown control for the Customizer
+	 *
+	 */
+	class Poseidon_Customize_Category_Dropdown_Control extends WP_Customize_Control {
+		
+		public function render_content() {
+				
+			$categories = get_categories( array( 'hide_empty' => false ) );
+			
+			if( !empty( $categories ) ) : ?>
+					
+					<label>
+					
+						<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+						
+						<select <?php $this->link(); ?>>
+							<option value="0"><?php esc_html_e( 'All Categories', 'poseidon' ); ?></option>
+						<?php
+							foreach ( $categories as $category ) :
+								
+								printf(	'<option value="%s" %s>%s</option>', 
+									$category->term_id, 
+									selected( $this->value(), $category->term_id, false ), 
+									$category->name . ' (' . $category->count . ')'
+								);
+								
+							endforeach;
+						?>
+						</select>
+					  
+					</label>
+					
+				<?php
+			endif;
+		
+		}
+		
+	}
 	
+	/**
+	 * Displays the upgrade teasers in thhe Pro Version / More Features section.
+	 *
+	 */
+	class Poseidon_Customize_Upgrade_Control extends WP_Customize_Control {
+	
+		public function render_content() {  ?>
+			
+			<div class="upgrade-pro-version">
+			
+				<span class="customize-control-title"><?php esc_html_e( 'Pro Version', 'poseidon' ); ?></span>
+				
+				<span class="textfield">
+					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'poseidon' ), 'Poseidon'); ?>
+				</span>
+				
+				<p>
+					<a href="<?php echo esc_url( poseidon_theme_links( 'pro_version' ) . '?utm_source=customizer&utm_medium=button&utm_campaign=poseidon&utm_content=pro-version' ); ?>" target="_blank" class="button button-secondary">
+						<?php printf( esc_html__( 'Learn more about %s Pro', 'poseidon' ), 'Poseidon'); ?>
+					</a>
+				</p>
+				
+			</div>
+			
+			<div class="upgrade-toolkit">
+			
+				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Toolkit', 'poseidon' ); ?></span>
+				
+				<span class="textfield">
+					<?php esc_html_e( 'The ThemeZee Toolkit add-on is a collection of useful small modules and features, neatly bundled into a single plugin.', 'poseidon' ); ?>
+				</span>
+				
+				<p>
+					<a href="<?php echo esc_url( poseidon_theme_links( 'toolkit' ) . '?utm_source=customizer&utm_medium=button&utm_campaign=poseidon&utm_content=toolkit' ); ?>" target="_blank" class="button button-secondary">
+						<?php printf( esc_html__( 'View Details', 'poseidon' ), 'Poseidon'); ?>
+					</a>
+					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
+						<?php esc_html_e( 'Install now', 'poseidon' ); ?>
+					</a>
+				</p>
+			
+			</div>
+			
+			<div class="upgrade-plugins">
+			
+				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Plugins', 'poseidon' ); ?></span>
+				
+				<span class="textfield">
+					<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'poseidon' ); ?>
+				</span>
+
+				<p>
+					<a href="<?php echo esc_url( poseidon_theme_links( 'plugins' ) . '?utm_source=customizer&utm_medium=button&utm_campaign=poseidon&utm_content=plugins' ); ?>" target="_blank" class="button button-secondary">
+						<?php esc_html_e( 'Browse Plugins', 'poseidon' ); ?>
+					</a>
+				</p>
+				
+			</div>
+			
+			<?php
+        }
+	}
 	
 endif;
