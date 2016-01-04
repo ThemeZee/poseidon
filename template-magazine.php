@@ -7,23 +7,10 @@
  * @package Poseidon
  */
  
-get_header(); 
-
-// Get Theme Options from Database
-$theme_options = poseidon_theme_options();
-
-// Display Featured Post Slideshow if activated
-if ( isset($theme_options['slider_magazine']) and $theme_options['slider_magazine'] == true ) :
-
-	get_template_part( 'template-parts/post-slider' );
-
-endif;
-?>
+get_header(); ?>
 		
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		
-		<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
 			
 		<?php // Display Magazine Homepage Widgets
 		if( is_active_sidebar('magazine-homepage') ) : ?>

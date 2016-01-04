@@ -36,7 +36,7 @@ function poseidon_setup() {
 	add_theme_support( 'post-thumbnails' );
 	
 	// Set detfault Post Thumbnail size
-	set_post_thumbnail_size( 820, 410, true );
+	set_post_thumbnail_size( 840, 560, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -163,7 +163,7 @@ add_action( 'wp_enqueue_scripts', 'poseidon_scripts' );
 function poseidon_google_fonts_url() {
     
 	// Set default Fonts
-	$font_families = array('Roboto', 'Hammersmith One');
+	$font_families = array('Ubuntu:200,400,600,800', 'Raleway:100,200,300,400,500,600,700,800');
 
 	// Build Fonts URL
 	$query_args = array(
@@ -182,18 +182,15 @@ function poseidon_google_fonts_url() {
 function poseidon_add_image_sizes() {
 	
 	// Add image size for small post thumbnais
-	add_image_size( 'poseidon-thumbnail-small', 360, 270, true );
+	add_image_size( 'poseidon-thumbnail-small', 330, 220, true );
 	
 	// Add Custom Header Image Size
-	add_image_size( 'poseidon-header-image', 1190, 250, true );
-	
-	// Add Slider Image Size
-	add_image_size( 'poseidon-slider-image', 880, 440, true );
+	add_image_size( 'poseidon-header-image', 2500, 500, true );
 	
 	// Add Category Post Widget image sizes
-	add_image_size( 'poseidon-category-posts-widget-small', 135, 75, true );
-	add_image_size( 'poseidon-category-posts-widget-medium', 270, 150, true );
-	add_image_size( 'poseidon-category-posts-widget-large', 585, 325, true );
+	add_image_size( 'poseidon-category-posts-widget-small', 85, 85, true );
+	add_image_size( 'poseidon-category-posts-widget-medium', 360, 240, true );
+	add_image_size( 'poseidon-category-posts-widget-large', 600, 400, true );
 	
 }
 add_action( 'after_setup_theme', 'poseidon_add_image_sizes' );

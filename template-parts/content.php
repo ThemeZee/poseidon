@@ -21,12 +21,5 @@
 		<div class="entry-content clearfix">
 			<?php the_content( esc_html__( 'Read more', 'poseidon' ) ); ?>
 		</div><!-- .entry-content -->
-		
-		<footer class="entry-footer">
-			
-			<?php poseidon_entry_footer(); ?>
-			
-		</footer><!-- .entry-footer -->
-
 
 	</article>

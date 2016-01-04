@@ -11,7 +11,7 @@
 		<?php // Display Post Thumbnail or default thumbnail
 		if( '' != get_the_post_thumbnail() ) :
 
-			the_post_thumbnail('poseidon-slider-image', array('class' => 'slide-image'));
+			the_post_thumbnail('poseidon-header-image', array('class' => 'slide-image'));
 
 		else: ?>
 
@@ -19,16 +19,15 @@
 
 		<?php endif;?>
 	
-		<div class="slide-content clearfix">
+		<div class="slide-post clearfix">
+		
+			<div class="slide-content container clearfix">
 
-			<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+				<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+				
+				<?php poseidon_entry_meta_slider(); ?>
 			
-			<?php poseidon_entry_meta_slider(); ?>
-											
-			<div class="entry-content clearfix">
-				<?php the_excerpt(); ?>
-				<?php poseidon_more_link(); ?>
-			</div><!-- .entry-content -->
+			</div>
 						
 		</div>
 

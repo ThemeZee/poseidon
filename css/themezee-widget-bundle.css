@@ -152,7 +152,7 @@
 	display: block;
 	margin: 0 2px 2px 0;
 	padding: 0.5em 0.8em;
-	font-family: 'Hammersmith One', Tahoma, Arial;
+	font-family: 'Raleway', Tahoma, Arial;
 	font-size: 14px;
 	font-size: 0.875rem;
 	color: #fff;
@@ -172,13 +172,13 @@
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover, 
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
-	background: #2299cc;
+	background: #22aadd;
 	text-decoration: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
 	color: #fff;
-	background: #2299cc;
+	background: #22aadd;
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -313,7 +313,7 @@
 	padding: 0.3em 0.6em;
 	text-decoration: none;
 	font-size: 1.0em !important;
-	border: 1px solid #2299cc;
+	border: 1px solid #22aadd;
 }
 
 .tzwb-tabcontent-tagcloud a:link, 
@@ -328,7 +328,7 @@
 .tzwb-tabcontent-tagcloud a:hover, 
 .tzwb-tabcontent-tagcloud a:active {
 	color: #fff;
-	background-color: #2299cc;
+	background-color: #22aadd;
 }
 
 /*--------------------------------------------------------------

@@ -48,7 +48,7 @@ function poseidon_slider_excerpt_length($length) {
 }
 
 
- /**
+/**
  * Sets slider animation effect
  *
  * Passes parameters from theme options to the javascript files (js/slider.js)
@@ -72,3 +72,24 @@ function poseidon_slider_options() {
 	
 } // poseidon_slider_options
 add_action('wp_enqueue_scripts', 'poseidon_slider_options');
+
+
+/**
+ * Display Post Slider
+ */
+function poseidon_slider() { 
+	
+	// Get Theme Options from Database
+	$theme_options = poseidon_theme_options();
+
+	// Display Featured Post Slideshow if activated
+	if ( is_page_template( 'template-slider.php' )
+		or ( true == $theme_options['slider_blog'] and is_home() ) 
+		or ( true == $theme_options['slider_magazine'] and is_page_template( 'template-magazine.php' ) )
+	) { 
+
+		get_template_part( 'template-parts/post-slider' );
+
+	}
+
+}

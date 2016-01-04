@@ -30,13 +30,7 @@ $theme_options = poseidon_theme_options();
 		
 		<header id="masthead" class="site-header clearfix" role="banner">
 			
-			<div id="header-top" class="header-bar-wrap">
-				
-				<?php get_template_part( 'template-parts/header-bar' ); ?>
-				
-			</div>
-			
-			<div class="header-main clearfix">
+			<div class="header-main container clearfix">
 						
 				<div id="logo" class="site-branding clearfix">
 				
@@ -44,36 +38,27 @@ $theme_options = poseidon_theme_options();
 				
 				</div><!-- .site-branding -->
 				
-				<div class="header-widgets clearfix">
-					
-					<?php // Display Header Widgets
-					if( is_active_sidebar('header') ) : 
-			
-						dynamic_sidebar('header');
-						
-					endif; ?>
-					
-				</div><!-- .header-widgets -->
+				<nav id="main-navigation" class="primary-navigation navigation clearfix" role="navigation">
+					<?php 
+						// Display Main Navigation
+						wp_nav_menu( array(
+							'theme_location' => 'primary', 
+							'container' => false, 
+							'menu_class' => 'main-navigation-menu', 
+							'echo' => true, 
+							'fallback_cb' => 'poseidon_default_menu')
+						);
+					?>
+				</nav><!-- #main-navigation -->
 			
 			</div><!-- .header-main -->
-			
-			<nav id="main-navigation" class="primary-navigation navigation clearfix" role="navigation">
-				<?php 
-					// Display Main Navigation
-					wp_nav_menu( array(
-						'theme_location' => 'primary', 
-						'container' => false, 
-						'menu_class' => 'main-navigation-menu', 
-						'echo' => true, 
-						'fallback_cb' => 'poseidon_default_menu')
-					);
-				?>
-			</nav><!-- #main-navigation -->
-			
-			<?php // Display Custom Header Image
-			poseidon_header_image(); ?>
 		
 		</header><!-- #masthead -->
 		
-		<div id="content" class="site-content container clearfix">
+		<?php poseidon_header_image(); ?>
 		
+		<?php poseidon_slider(); ?>
+		
+		<?php poseidon_breadcrumbs(); ?>
+			
+		<div id="content" class="site-content container clearfix">

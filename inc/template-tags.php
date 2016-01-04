@@ -36,11 +36,11 @@ function poseidon_header_image() {
 		return;
 	}
 		
-	// Check if page is displayed and featured header image is used
-	if( is_page() && has_post_thumbnail() ) : ?>
+	// Check if single post or page is displayed and featured header image is used
+	if( is_singular() && has_post_thumbnail() ) : ?>
 		
 		<div id="headimg" class="header-image featured-image-header">
-			<?php the_post_thumbnail('poseidon-header-image'); ?>
+			<?php the_post_thumbnail( 'poseidon-header-image' ); ?>
 		</div>
 	
 	<?php
@@ -142,14 +142,14 @@ function poseidon_entry_meta() {
 		<?php // Display Date unless user has deactivated it via settings
 		if ( true == $theme_options['meta_date'] ) :
 		
-			poseidon_posted_on();
+			poseidon_meta_date();
 		
 		endif; 
 
 		// Display Author unless user has deactivated it via settings
 		if ( true == $theme_options['meta_author'] ) :
 		
-			poseidon_posted_by();
+			poseidon_meta_author();
 		
 		endif; ?>
 		
@@ -161,11 +161,11 @@ function poseidon_entry_meta() {
 endif;
 
 
-if ( ! function_exists( 'poseidon_posted_on' ) ):
+if ( ! function_exists( 'poseidon_meta_date' ) ):
 /**
  * Displays the post date
  */
-function poseidon_posted_on() { 
+function poseidon_meta_date() { 
 
 	$time_string = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
 		esc_url( get_permalink() ),
@@ -174,19 +174,17 @@ function poseidon_posted_on() {
 		esc_html( get_the_date() )
 	);
 
-	$posted_on = sprintf( esc_html_x( 'Posted on %s', 'post date', 'poseidon' ), $time_string );
-	
-	echo '<span class="meta-date">' . $posted_on . '</span>';
+	echo '<span class="meta-date">' . $time_string . '</span>';
 
-}  // poseidon_posted_on()
+}  // poseidon_meta_date()
 endif;
 
 
-if ( ! function_exists( 'poseidon_posted_by' ) ):
+if ( ! function_exists( 'poseidon_meta_author' ) ):
 /**
  * Displays the post author
  */
-function poseidon_posted_by() {  
+function poseidon_meta_author() {  
 	
 	$author_string = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
@@ -194,11 +192,9 @@ function poseidon_posted_by() {
 		esc_html( get_the_author() )
 	);
 	
-	$byline = sprintf( esc_html_x( 'by %s', 'post author', 'poseidon' ), $author_string );
-	
-	echo '<span class="meta-author"> ' . $byline . '</span>';
+	echo '<span class="meta-author"> ' . $author_string . '</span>';
 
-}  // poseidon_posted_by()
+}  // poseidon_meta_author()
 endif;
 
 
@@ -300,43 +296,6 @@ function poseidon_entry_meta_slider() {
 endif;
 
 
-if ( ! function_exists( 'poseidon_meta_date' ) ):
-/**
- * Displays the post date
- */
-function poseidon_meta_date() { 
-
-	$time_string = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
-		esc_url( get_permalink() ),
-		esc_attr( get_the_time() ),
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() )
-	);
-
-	echo '<span class="meta-date">' . $time_string . '</span>';
-
-}  // poseidon_meta_date()
-endif;
-
-
-if ( ! function_exists( 'poseidon_meta_author' ) ):
-/**
- * Displays the post author
- */
-function poseidon_meta_author() {  
-	
-	$author_string = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 
-		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( esc_html__( 'View all posts by %s', 'poseidon' ), get_the_author() ) ),
-		esc_html( get_the_author() )
-	);
-	
-	echo '<span class="meta-author"> ' . $author_string . '</span>';
-
-}  // poseidon_meta_author()
-endif;
-
-
 if ( ! function_exists( 'poseidon_more_link' ) ):
 /**
  * Displays the more link on posts
@@ -365,6 +324,24 @@ function poseidon_post_navigation() {
 			
 	}
 	
+}	
+endif;
+
+
+if ( ! function_exists( 'poseidon_breadcrumbs' ) ):
+/**
+ * Displays ThemeZee Breadcrumbs plugin
+ */	
+function poseidon_breadcrumbs() { 
+	
+	if ( function_exists( 'themezee_breadcrumbs' ) ) {
+
+		themezee_breadcrumbs( array( 
+			'before' => '<div class="breadcrumbs-container container clearfix">',
+			'after' => '</div>'
+		) );
+		
+	}
 }	
 endif;
 

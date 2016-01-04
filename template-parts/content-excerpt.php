@@ -22,12 +22,5 @@
 			<?php the_excerpt(); ?>
 			<?php poseidon_more_link(); ?>
 		</div><!-- .entry-content -->
-		
-		<footer class="entry-footer">
-			
-			<?php poseidon_entry_footer(); ?>
-			
-		</footer><!-- .entry-footer -->
-
 
 	</article>

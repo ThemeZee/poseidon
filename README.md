@@ -101,11 +101,11 @@ G) Licenses of bundled resources
 	License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 	Copyright: 2015 WooThemes, http://www.woothemes.com
 	
-	5. Roboto Font - https://www.google.com/fonts/specimen/Roboto
+	5. Ubuntu Font - https://www.google.com/fonts/specimen/Ubuntu
 	License: Distributed under the terms of the Apache License (http://www.apache.org/licenses/LICENSE-2.0.html)
 	Copyright: 2015 Christian Robertson
 	
-	6. Hammersmith One Font - https://www.google.com/fonts/specimen/Hammersmith+One
+	6. Raleway Font - https://www.google.com/fonts/specimen/Hammersmith+One
 	License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
 	Copyright: 2015 Sorkin Type
 	
