@@ -611,14 +611,14 @@ textarea {
 }
 
 .site-content {
-	padding-top: 2em;
+	padding-top: 3em;
 	background: #fff;
 }
 
 .content-area {
 	float: left;
 	width: 70%;
-	padding-right: 2em;
+	padding-right: 4em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -925,14 +925,14 @@ textarea {
 # 11.0 - Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.8em 0;
+	margin: 0 0 3em 0;
 	color: #333;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 
 .widget-header {
-	margin: 0 0 1em 0;
+	margin: 0 0 1.5em 0;
 }
 
 .widget-title {
@@ -1410,7 +1410,7 @@ textarea {
 .type-post, 
 .type-page, 
 .type-attachment  {
-	margin: 0 0 1.8em 0;
+	margin: 0 0 3em 0;
 	max-width: 100%;
 }
 
@@ -1418,8 +1418,8 @@ textarea {
 .entry-title {
 	display: inline;
 	font-family: 'Raleway', sans-serif;
-	font-size: 48px;
-	font-size: 3rem;
+	font-size: 40px;
+	font-size: 2.5rem;
 	font-weight: bold;
 	padding: 0;
 	margin: 0;
@@ -1448,28 +1448,32 @@ textarea {
 	margin: 0 0 0.5em;
 }
 
-.type-post .post-thumbnail-small .wp-post-image {
-	float: left;
-	max-width: 40%;
-	margin: 0 1.8em 0.5em 0;
-	padding: 0.3em 0 0;
-}
-
-.type-post .post-thumbnail-small + .entry-header .entry-title {
-	font-size: 28px;
-	font-size: 1.75rem;
-}
-
-.type-post .post-thumbnail-small + .entry-content {
-	font-size: 16px;
-	font-size: 0.5rem;
-}
-
 .entry-content {
 	font-size: 18px;
 	font-size: 1.125rem;
 }
 
+/* Small Post Layout */
+.post-layout-small .type-post .wp-post-image {
+	float: left;
+	max-width: 40%;
+	margin: 0 1.5em 1.5em 0;
+	padding: 0.3em 0 0;
+}
+
+.post-layout-small .type-post .entry-title {
+	font-size: 28px;
+	font-size: 1.75rem;
+}
+
+.post-layout-small .type-post .entry-content {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.post-layout-small .type-post .entry-excerpt p {
+	margin-bottom: 1em;
+}
 
 /* Page Links | wp_link_pages() */
 .page-links {
@@ -1490,6 +1494,11 @@ textarea {
 .entry-meta a:link, 
 .entry-meta a:visited {
 	color: #aaa;
+}
+
+.entry-meta a:hover, 
+.entry-meta a:active {
+	color: #777;
 }
 
 .entry-meta span:after {
@@ -1599,15 +1608,14 @@ textarea {
 
 /* Read more Link */
 .more-link {
-	display: inline-block;
-	margin: 0 0 1em;
-	padding: 0.4em 0.8em;
+	display: inline;
+	margin: 0;
+	padding: 0;
 	font-family: 'Raleway', Tahoma, Arial;
-	font-size: 13px;
-	font-size: 0.8125rem;
+	font-size: 14px;
+	font-size: 0.875rem;
 	font-weight: bold;
-	color: #fff;
-	background: #22aadd;
+	color: #22aadd;
 	text-transform: uppercase;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
@@ -1617,20 +1625,9 @@ textarea {
 	transition: all 0.2s ease;
 }
 
-.more-link:link, 
-.more-link:visited  {
-	color: #fff;
-}
-
-.more-link:hover, 
-.more-link:active {
-	background: #444;
-	text-decoration: none;
-}
-
 /* Archives and Search Heading */
 .page-header {
-	margin: 0 0 2em 0;
+	margin: 0 0 1.5em 0;
 }
 
 .page-header .archive-title {
@@ -2881,19 +2878,23 @@ object {
 }
 
 /*--------------------------------------------------------------
-## 15.2 - Sticky Navigation
+## 15.2 - Sticky Header
 --------------------------------------------------------------*/
 @media only screen and (min-width: 60em) {
-	.sticky-navigation .sticky-nav-menu {
-		position: fixed;
+	
+	.sticky-header {
+		position: relative;
+	}
+	
+	.sticky-header .site-header {
+		position: -webkit-sticky;
+		position: sticky;
 		z-index: 100;
 		top: 0;
 		width: 100%;
-		max-width: 1190px;
-		border-bottom: 1px solid #fff;
 	}
 
-	.sticky-navigation.admin-bar .sticky-nav-menu {
+	.sticky-header.admin-bar .site-header {
 		top: 32px;
 	}
 }

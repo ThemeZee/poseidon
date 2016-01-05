@@ -13,11 +13,11 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			
 		<?php // Display Magazine Homepage Widgets
-		if( is_active_sidebar('magazine-homepage') ) : ?>
+		if( is_active_sidebar( 'magazine-homepage' ) ) : ?>
 
 			<div id="magazine-homepage-widgets" class="widget-area clearfix">
 
-				<?php dynamic_sidebar('magazine-homepage'); ?>
+				<?php dynamic_sidebar( 'magazine-homepage' ); ?>
 
 			</div><!-- #magazine-homepage-widgets -->
 

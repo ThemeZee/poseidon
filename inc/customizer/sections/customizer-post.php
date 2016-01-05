@@ -79,6 +79,88 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	
+	// Add Post Meta Settings
+	$wp_customize->add_setting( 'poseidon_theme_options[postmeta_headline]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Poseidon_Customize_Header_Control(
+        $wp_customize, 'poseidon_theme_options[postmeta_headline]', array(
+            'label' => esc_html__( 'Post Meta', 'poseidon' ),
+            'section' => 'poseidon_section_post',
+            'settings' => 'poseidon_theme_options[postmeta_headline]',
+            'priority' => 4
+            )
+        )
+    );
+	
+	$wp_customize->add_setting( 'poseidon_theme_options[meta_date]', array(
+        'default'           => true,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'poseidon_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'poseidon_theme_options[meta_date]', array(
+        'label'    => esc_html__( 'Display post date', 'poseidon' ),
+        'section'  => 'poseidon_section_post',
+        'settings' => 'poseidon_theme_options[meta_date]',
+        'type'     => 'checkbox',
+		'priority' => 5
+		)
+	);
+	
+	$wp_customize->add_setting( 'poseidon_theme_options[meta_author]', array(
+        'default'           => true,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'poseidon_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'poseidon_theme_options[meta_author]', array(
+        'label'    => esc_html__( 'Display post author', 'poseidon' ),
+        'section'  => 'poseidon_section_post',
+        'settings' => 'poseidon_theme_options[meta_author]',
+        'type'     => 'checkbox',
+		'priority' => 6
+		)
+	);
+	
+	$wp_customize->add_setting( 'poseidon_theme_options[meta_category]', array(
+        'default'           => true,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'poseidon_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'poseidon_theme_options[meta_category]', array(
+        'label'    => esc_html__( 'Display post categories', 'poseidon' ),
+        'section'  => 'poseidon_section_post',
+        'settings' => 'poseidon_theme_options[meta_category]',
+        'type'     => 'checkbox',
+		'priority' => 7
+		)
+	);
+
+	$wp_customize->add_setting( 'poseidon_theme_options[meta_tags]', array(
+        'default'           => true,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'poseidon_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'poseidon_theme_options[meta_tags]', array(
+        'label'    => esc_html__( 'Display post tags', 'poseidon' ),
+        'section'  => 'poseidon_section_post',
+        'settings' => 'poseidon_theme_options[meta_tags]',
+        'type'     => 'checkbox',
+		'priority' => 8
+		)
+	);
+	
 	// Add Post Footer Settings
 	$wp_customize->add_setting( 'poseidon_theme_options[post_footer_headline]', array(
         'default'           => '',
@@ -92,7 +174,7 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
             'label' => esc_html__( 'Post Footer', 'poseidon' ),
             'section' => 'poseidon_section_post',
             'settings' => 'poseidon_theme_options[post_footer_headline]',
-            'priority' => 5
+            'priority' => 9
             )
         )
     );
@@ -108,7 +190,7 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
         'section'  => 'poseidon_section_post',
         'settings' => 'poseidon_theme_options[post_navigation]',
         'type'     => 'checkbox',
-		'priority' => 6
+		'priority' => 10
 		)
 	);
 	

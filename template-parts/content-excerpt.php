@@ -18,7 +18,7 @@
 		
 		</header><!-- .entry-header -->
 
-		<div class="entry-content clearfix">
+		<div class="entry-content entry-excerpt clearfix">
 			<?php the_excerpt(); ?>
 			<?php poseidon_more_link(); ?>
 		</div><!-- .entry-content -->

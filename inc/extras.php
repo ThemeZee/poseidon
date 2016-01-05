@@ -20,7 +20,7 @@ endif;
 
 
 /**
- * Adds custom theme layout and sticky navigation class to the array of body classes.
+ * Adds custom classes to the array of body classes.
  *
  * @param array $classes Classes for the body element.
  * @return array
@@ -31,14 +31,19 @@ function poseidon_body_classes( $classes ) {
 	$theme_options = poseidon_theme_options();
 		
 	// Switch Sidebar Layout to left
-	if ( isset($theme_options['layout']) and $theme_options['layout'] == 'left-sidebar' ) :
+	if ( 'left-sidebar' == $theme_options['layout'] ) {
 		$classes[] = 'sidebar-left';
-	endif;
+	}
 	
-	// Add Sticky Navigation class
-	if ( isset($theme_options['sticky_nav']) and $theme_options['sticky_nav'] == true ) :
-		$classes[] = 'sticky-navigation';
-	endif;
+	// Add Sticky Header class
+	if ( true == $theme_options['sticky_header'] ) {
+		$classes[] = 'sticky-header';
+	}
+	
+	// Add Small Post Layout class
+	if ( ( is_archive() or is_home() ) and 'left' == $theme_options['post_layout_archives'] ) {
+		$classes[] = 'post-layout-small';
+	}
 
 	return $classes;
 }

@@ -27,25 +27,32 @@ if ( ! function_exists( 'poseidon_header_image' ) ):
  * Displays the custom header image below the navigation menu
  */
 function poseidon_header_image() {
-		
-	// Get theme options from database
-	$theme_options = poseidon_theme_options();
 	
-	// Hide header image on front page
-	if ( true == $theme_options['custom_header_hide'] and is_front_page() ) {
-		return;
-	}
-		
-	// Check if single post or page is displayed and featured header image is used
-	if( is_singular() && has_post_thumbnail() ) : ?>
+	// Get theme options from database
+	$theme_options = poseidon_theme_options();	
+	
+	// Display featured image as header image on static pages
+	if( is_page() && has_post_thumbnail() ) : ?>
 		
 		<div id="headimg" class="header-image featured-image-header">
 			<?php the_post_thumbnail( 'poseidon-header-image' ); ?>
 		</div>
 	
-	<?php
-	// Check if there is a custom header image
-	elseif( get_header_image() ) : ?>
+	<?php // Display Header Image on Single Posts
+	elseif( is_single() && has_post_thumbnail() && 'header' == $theme_options['post_layout_single'] ) : ?>
+		
+		<div id="headimg" class="header-image featured-image-header">
+			<?php the_post_thumbnail( 'poseidon-header-image' ); ?>
+		</div>
+	
+	<?php // Display default header image set on Appearance > Header
+	elseif( get_header_image() ) : 
+
+		// Hide header image on front page
+		if ( true == $theme_options['custom_header_hide'] and is_front_page() ) {
+			return;
+		}
+		?>
 		
 		<div id="headimg" class="header-image">
 			
@@ -80,12 +87,12 @@ function poseidon_post_image_archives() {
 	$theme_options = poseidon_theme_options();
 	
 	// Return early if no featured image should be displayed
-	if ( isset($theme_options['post_layout_archives']) and $theme_options['post_layout_archives'] == 'none' ) :
+	if ( 'none' == $theme_options['post_layout_archives'] ) :
 		return;
 	endif;
 	
 	// Display Featured Image beside post content
-	if ( isset($theme_options['post_layout_archives']) and $theme_options['post_layout_archives'] == 'left' ) : ?>
+	if ( 'left' == $theme_options['post_layout_archives'] ) : ?>
 
 		<a class="post-thumbnail-small" href="<?php esc_url( the_permalink() ); ?>" rel="bookmark">
 			<?php the_post_thumbnail( 'poseidon-thumbnail-small' ); ?>
@@ -116,7 +123,7 @@ function poseidon_post_image_single() {
 	$theme_options = poseidon_theme_options();
 	
 	// Display Post Thumbnail if activated
-	if ( isset($theme_options['post_image_single']) and $theme_options['post_image_single'] == true ) :
+	if ( 'top' == $theme_options['post_layout_single'] ) :
 
 		the_post_thumbnail();
 
@@ -125,9 +132,10 @@ function poseidon_post_image_single() {
 } // poseidon_post_image_single()
 endif;
 
+
 if ( ! function_exists( 'poseidon_entry_meta' ) ):	
 /**
- * Displays the date and author of posts
+ * Displays the date, author and categories of a post
  */
 function poseidon_entry_meta() {
 
@@ -135,21 +143,28 @@ function poseidon_entry_meta() {
 	$theme_options = poseidon_theme_options();
 	
 	// Display Postmeta
-	if ( true == $theme_options['meta_date'] or true == $theme_options['meta_author'] ) : ?>
+	if ( true == $theme_options['meta_date'] or true == $theme_options['meta_author'] or true == $theme_options['meta_category'] ) : ?>
 	
 		<div class="entry-meta">
 		
-		<?php // Display Date unless user has deactivated it via settings
+		<?php // Display date unless user has deactivated it via settings
 		if ( true == $theme_options['meta_date'] ) :
 		
 			poseidon_meta_date();
 		
 		endif; 
 
-		// Display Author unless user has deactivated it via settings
+		// Display author unless user has deactivated it via settings
 		if ( true == $theme_options['meta_author'] ) :
 		
 			poseidon_meta_author();
+		
+		endif;
+		
+		// Display categories unless user has deactivated it via settings
+		if ( true == $theme_options['meta_category'] ) :
+		
+			poseidon_meta_category();
 		
 		endif; ?>
 		
@@ -198,6 +213,18 @@ function poseidon_meta_author() {
 endif;
 
 
+if ( ! function_exists( 'poseidon_meta_category' ) ):
+/**
+ * Displays the category of posts
+ */	
+function poseidon_meta_category() { 
+
+	echo '<span class="meta-category"> ' . get_the_category_list(', ') . '</span>';
+	
+} // poseidon_meta_category()
+endif;
+
+
 if ( ! function_exists( 'poseidon_entry_tags' ) ):
 /**
  * Displays the post tags on single post view
@@ -222,77 +249,6 @@ function poseidon_entry_tags() {
 	endif;
 
 } // poseidon_entry_tags()
-endif;
-
-
-if ( ! function_exists( 'poseidon_entry_footer' ) ):
-/**
- * Displays the category on comments on posts
- */	
-function poseidon_entry_footer() { 
-
-	// Get Theme Options from Database
-	$theme_options = poseidon_theme_options();
-	
-	// Display Postmeta
-	if ( ( is_single() && $theme_options['footer_meta_single'] ) or ( ! is_single() && $theme_options['footer_meta_archives'] ) ) : ?>
-	
-		<div class="entry-footer-meta">
-		
-			<span class="meta-category">
-				<?php echo get_the_category_list(' / '); ?>
-			</span>
-
-		<?php // Display comments
-		if ( comments_open() ) : ?>
-		
-			<span class="meta-comments">
-				<?php comments_popup_link( esc_html__( 'Leave a comment', 'poseidon' ), esc_html__( 'One comment', 'poseidon' ), esc_html__( '% comments', 'poseidon' ) ); ?>
-			</span>
-	
-		<?php endif; ?>
-		
-		</div>
-		
-	<?php endif;
-	
-} // poseidon_entry_footer()
-endif;
-
-
-if ( ! function_exists( 'poseidon_entry_meta_slider' ) ):
-/**
- * Displays date and author on slideshow posts
- */	
-function poseidon_entry_meta_slider() { 
-
-	// Get Theme Options from Database
-	$theme_options = poseidon_theme_options();
-	
-	// Display Postmeta
-	if ( true == $theme_options['meta_date'] or true == $theme_options['meta_author'] ) : ?>
-	
-		<div class="entry-meta">
-		
-		<?php // Display Date unless user has deactivated it via settings
-		if ( true == $theme_options['meta_date'] ) :
-		
-			poseidon_meta_date();
-		
-		endif; 
-
-		// Display Author unless user has deactivated it via settings
-		if ( true == $theme_options['meta_author'] ) :
-		
-			poseidon_meta_author();
-		
-		endif; ?>
-		
-		</div>
-		
-	<?php endif; 
-
-} // poseidon_entry_meta_slider()
 endif;
 
 
