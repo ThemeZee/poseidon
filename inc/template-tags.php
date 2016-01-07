@@ -142,35 +142,34 @@ function poseidon_entry_meta() {
 	// Get Theme Options from Database
 	$theme_options = poseidon_theme_options();
 	
-	// Display Postmeta
-	if ( true == $theme_options['meta_date'] or true == $theme_options['meta_author'] or true == $theme_options['meta_category'] ) : ?>
+	$postmeta = '';
 	
-		<div class="entry-meta">
+	// Display date unless user has deactivated it via settings
+	if ( true == $theme_options['meta_date'] ) {
 		
-		<?php // Display date unless user has deactivated it via settings
-		if ( true == $theme_options['meta_date'] ) :
+		$postmeta .= poseidon_meta_date();
 		
-			poseidon_meta_date();
-		
-		endif; 
+	}
 
-		// Display author unless user has deactivated it via settings
-		if ( true == $theme_options['meta_author'] ) :
+	// Display author unless user has deactivated it via settings
+	if ( true == $theme_options['meta_author'] ) {
+	
+		$postmeta .= poseidon_meta_author();
+	
+	}
+	
+	// Display categories unless user has deactivated it via settings
+	if ( true == $theme_options['meta_category'] ) {
+	
+		$postmeta .= poseidon_meta_category();
+	
+	}
 		
-			poseidon_meta_author();
+	if( $postmeta ) {
 		
-		endif;
-		
-		// Display categories unless user has deactivated it via settings
-		if ( true == $theme_options['meta_category'] ) :
-		
-			poseidon_meta_category();
-		
-		endif; ?>
-		
-		</div>
-		
-	<?php endif;
+		echo '<div class="entry-meta">' . $postmeta . '</div>';
+			
+	}
 
 } // poseidon_entry_meta()
 endif;
@@ -189,7 +188,7 @@ function poseidon_meta_date() {
 		esc_html( get_the_date() )
 	);
 
-	echo '<span class="meta-date">' . $time_string . '</span>';
+	return '<span class="meta-date">' . $time_string . '</span>';
 
 }  // poseidon_meta_date()
 endif;
@@ -207,7 +206,7 @@ function poseidon_meta_author() {
 		esc_html( get_the_author() )
 	);
 	
-	echo '<span class="meta-author"> ' . $author_string . '</span>';
+	return '<span class="meta-author"> ' . $author_string . '</span>';
 
 }  // poseidon_meta_author()
 endif;
@@ -219,7 +218,7 @@ if ( ! function_exists( 'poseidon_meta_category' ) ):
  */	
 function poseidon_meta_category() { 
 
-	echo '<span class="meta-category"> ' . get_the_category_list(', ') . '</span>';
+	return '<span class="meta-category"> ' . get_the_category_list(', ') . '</span>';
 	
 } // poseidon_meta_category()
 endif;

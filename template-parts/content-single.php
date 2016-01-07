@@ -27,9 +27,8 @@
 		<footer class="entry-footer">
 			
 			<?php poseidon_entry_tags(); ?>
+			<?php poseidon_post_navigation(); ?>
 			
 		</footer><!-- .entry-footer -->
-		
-		<?php poseidon_post_navigation(); ?>
 
 	</article>

@@ -99,7 +99,7 @@ msgstr "Magazin Startseite"
 
 #: functions.php:115
 msgid ""
-"Appears on Magazine Homepage template only. You can use the Category Posts "
+"Appears on Magazine Homepage template only. You can use the Magazine Posts "
 "widgets here."
 msgstr ""
 "Erscheint nur auf dem Magazine Homepage Template. Du kannst hier die "
@@ -144,7 +144,7 @@ msgstr ""
 #: template-magazine.php:44
 msgid ""
 "Please go to Appearance &#8594; Widgets and add at least one widget to the "
-"\"Magazine Homepage\" widget area. You can use the Category Posts widgets to "
+"\"Magazine Homepage\" widget area. You can use the Magazine Posts widgets to "
 "set up the theme like the demo website."
 msgstr ""
 "Bitte gehe zu Design &#8594; Widgets und füge mindestens ein Widget dem "
@@ -175,9 +175,9 @@ msgid "Posted on %s"
 msgstr "Veröffentlicht am %s"
 
 #: inc/template-tags.php:193 inc/template-tags.php:302
-#: inc/widgets/widget-category-posts-boxed.php:368
-#: inc/widgets/widget-category-posts-columns.php:276
-#: inc/widgets/widget-category-posts-grid.php:337
+#: inc/widgets/widget-magazine-posts-boxed.php:368
+#: inc/widgets/widget-magazine-posts-columns.php:276
+#: inc/widgets/widget-magazine-posts-grid.php:337
 #, php-format
 msgid "View all posts by %s"
 msgstr "Alle Beiträge von %s ansehen"
@@ -316,10 +316,10 @@ msgid "Latest Posts"
 msgstr "Letzte Beiträge"
 
 #: inc/customizer/functions/custom-controls.php:61
-#: inc/widgets/widget-category-posts-boxed.php:492
-#: inc/widgets/widget-category-posts-columns.php:403
-#: inc/widgets/widget-category-posts-columns.php:424
-#: inc/widgets/widget-category-posts-grid.php:463
+#: inc/widgets/widget-magazine-posts-boxed.php:492
+#: inc/widgets/widget-magazine-posts-columns.php:403
+#: inc/widgets/widget-magazine-posts-columns.php:424
+#: inc/widgets/widget-magazine-posts-grid.php:463
 msgid "All Categories"
 msgstr "Alle Kategorien"
 
@@ -503,7 +503,7 @@ msgstr "Fade Effekt"
 msgid "More Features"
 msgstr "Mehr Features"
 
-#: inc/widgets/widget-category-posts-boxed.php:21
+#: inc/widgets/widget-magazine-posts-boxed.php:21
 msgid ""
 "Displays your posts from a selected category in a boxed layout. Please use "
 "this widget ONLY in the Magazine Homepage widget area."
@@ -511,52 +511,52 @@ msgstr ""
 "Zeigt die Beiträge einer gewählten Kategorie in einem Box Layout. Bitte "
 "verwende dieses Widget NUR in dem Magazin Startseite Widgetbereich."
 
-#: inc/widgets/widget-category-posts-boxed.php:23
+#: inc/widgets/widget-magazine-posts-boxed.php:23
 #, php-format
-msgid "Category Posts: Boxed (%s)"
+msgid "Magazine Posts: Boxed (%s)"
 msgstr "Kategorie Beiträge: Box (%s)"
 
-#: inc/widgets/widget-category-posts-boxed.php:427
-#: inc/widgets/widget-category-posts-columns.php:335
-#: inc/widgets/widget-category-posts-grid.php:396
+#: inc/widgets/widget-magazine-posts-boxed.php:427
+#: inc/widgets/widget-magazine-posts-columns.php:335
+#: inc/widgets/widget-magazine-posts-grid.php:396
 #, php-format
 msgid "View all posts from category %s"
 msgstr "Alle Beiträge in der Kategorie %s ansehen"
 
-#: inc/widgets/widget-category-posts-boxed.php:483
-#: inc/widgets/widget-category-posts-grid.php:454
+#: inc/widgets/widget-magazine-posts-boxed.php:483
+#: inc/widgets/widget-magazine-posts-grid.php:454
 msgid "Title:"
 msgstr "Titel:"
 
-#: inc/widgets/widget-category-posts-boxed.php:489
-#: inc/widgets/widget-category-posts-grid.php:460
+#: inc/widgets/widget-magazine-posts-boxed.php:489
+#: inc/widgets/widget-magazine-posts-grid.php:460
 msgid "Category:"
 msgstr "Kategorie:"
 
-#: inc/widgets/widget-category-posts-boxed.php:504
+#: inc/widgets/widget-magazine-posts-boxed.php:504
 msgid "Post Layout:"
 msgstr "Beitrags-Layout:"
 
-#: inc/widgets/widget-category-posts-boxed.php:506
+#: inc/widgets/widget-magazine-posts-boxed.php:506
 msgid "Horizontal Arrangement"
 msgstr "Horizontale Anordnung"
 
-#: inc/widgets/widget-category-posts-boxed.php:507
+#: inc/widgets/widget-magazine-posts-boxed.php:507
 msgid "Vertical Arrangement"
 msgstr "Vertikale Anordnung"
 
-#: inc/widgets/widget-category-posts-boxed.php:514
-#: inc/widgets/widget-category-posts-grid.php:498
+#: inc/widgets/widget-magazine-posts-boxed.php:514
+#: inc/widgets/widget-magazine-posts-grid.php:498
 msgid "Link Widget Title to Category Archive page"
 msgstr "Verlinke den Widget Titel zur Kategorie Archiv Seite"
 
-#: inc/widgets/widget-category-posts-boxed.php:521
-#: inc/widgets/widget-category-posts-columns.php:458
-#: inc/widgets/widget-category-posts-grid.php:505
+#: inc/widgets/widget-magazine-posts-boxed.php:521
+#: inc/widgets/widget-magazine-posts-columns.php:458
+#: inc/widgets/widget-magazine-posts-grid.php:505
 msgid "Display post date and author"
 msgstr "Zeige Beitragsdatum und Autor"
 
-#: inc/widgets/widget-category-posts-columns.php:21
+#: inc/widgets/widget-magazine-posts-columns.php:21
 msgid ""
 "Displays your posts from two selected categories. Please use this widget "
 "ONLY in the Magazine Homepage widget area."
@@ -564,41 +564,41 @@ msgstr ""
 "Zeigt die Beiträge von zwei gewählten Kategorien in zwei Spalten. Bitte "
 "verwende dieses Widget NUR in dem Magazin Startseite Widgetbereich."
 
-#: inc/widgets/widget-category-posts-columns.php:23
+#: inc/widgets/widget-magazine-posts-columns.php:23
 #, php-format
-msgid "Category Posts: 2 Columns (%s)"
+msgid "Magazine Posts: 2 Columns (%s)"
 msgstr "Kategorie Beiträge: 2 Spalten (%s)"
 
-#: inc/widgets/widget-category-posts-columns.php:394
+#: inc/widgets/widget-magazine-posts-columns.php:394
 msgid "Left Category Title:"
 msgstr "Titel der linken Kategorie:"
 
-#: inc/widgets/widget-category-posts-columns.php:400
+#: inc/widgets/widget-magazine-posts-columns.php:400
 msgid "Left Category:"
 msgstr "Linke Kategorie:"
 
-#: inc/widgets/widget-category-posts-columns.php:415
+#: inc/widgets/widget-magazine-posts-columns.php:415
 msgid "Right Category Title:"
 msgstr "Titel der rechten Kategorie:"
 
-#: inc/widgets/widget-category-posts-columns.php:421
+#: inc/widgets/widget-magazine-posts-columns.php:421
 msgid "Right Category:"
 msgstr "Rechte Kategorie:"
 
-#: inc/widgets/widget-category-posts-columns.php:436
-#: inc/widgets/widget-category-posts-grid.php:483
+#: inc/widgets/widget-magazine-posts-columns.php:436
+#: inc/widgets/widget-magazine-posts-grid.php:483
 msgid "Number of posts:"
 msgstr "Anzahl der Beiträge:"
 
-#: inc/widgets/widget-category-posts-columns.php:444
+#: inc/widgets/widget-magazine-posts-columns.php:444
 msgid "Highlight first post (big image + excerpt)"
 msgstr "Ersten Beitrag hervorheben (großes Bild + Textauszug)"
 
-#: inc/widgets/widget-category-posts-columns.php:451
+#: inc/widgets/widget-magazine-posts-columns.php:451
 msgid "Link Category Titles to Category Archive pages"
 msgstr "Verlinke die Kategorie Titel zu den Kategorie Archiv Seiten"
 
-#: inc/widgets/widget-category-posts-grid.php:21
+#: inc/widgets/widget-magazine-posts-grid.php:21
 msgid ""
 "Displays your posts from a selected category in a grid layout. Please use "
 "this widget ONLY in the Magazine Homepage widget area."
@@ -606,24 +606,24 @@ msgstr ""
 "Zeigt die Beiträge einer gewählten Kategorie in einem Raster Layout. Bitte "
 "verwende dieses Widget NUR in dem Magazin Startseite Widgetbereich."
 
-#: inc/widgets/widget-category-posts-grid.php:23
+#: inc/widgets/widget-magazine-posts-grid.php:23
 #, php-format
-msgid "Category Posts: Grid (%s)"
+msgid "Magazine Posts: Grid (%s)"
 msgstr "Kategorie Beiträge: Raster (%s)"
 
-#: inc/widgets/widget-category-posts-grid.php:475
+#: inc/widgets/widget-magazine-posts-grid.php:475
 msgid "Grid Layout:"
 msgstr "Raster Layout:"
 
-#: inc/widgets/widget-category-posts-grid.php:477
+#: inc/widgets/widget-magazine-posts-grid.php:477
 msgid "Two Columns Grid"
 msgstr "Zweispaltiges Raster"
 
-#: inc/widgets/widget-category-posts-grid.php:478
+#: inc/widgets/widget-magazine-posts-grid.php:478
 msgid "Three Columns Grid"
 msgstr "Dreispaltiges Raster"
 
-#: inc/widgets/widget-category-posts-grid.php:491
+#: inc/widgets/widget-magazine-posts-grid.php:491
 msgid "Display post excerpt and read more button"
 msgstr "Textauszug und Weiterlesen Button anzeigen"
 
@@ -1292,7 +1292,7 @@ msgstr "Textauszug und Weiterlesen Button anzeigen"
 #~ "Zeigt einen einzelnen Beitrag einer gewählten Kategorie. Bitte verwende "
 #~ "dieses Widget NUR in dem Magazin Startseite Widgetbereich."
 
-#~ msgid "Category Posts: Horizontal (%s)"
+#~ msgid "Magazine Posts: Horizontal (%s)"
 #~ msgstr "Kategorie Beiträge: Horizontal (%s)"
 
 #~ msgid "Welcome to %s"
@@ -1301,7 +1301,7 @@ msgstr "Textauszug und Weiterlesen Button anzeigen"
 #~ msgid "Pro Version License"
 #~ msgstr "Pro Version Lizenz"
 
-#~ msgid "Category Posts: Single (%s)"
+#~ msgid "Magazine Posts: Single (%s)"
 #~ msgstr "Kategorie Beiträge: Single (%s)"
 
 #~ msgid "Site Logo"

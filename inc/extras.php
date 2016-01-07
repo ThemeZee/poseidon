@@ -77,7 +77,7 @@ add_filter('excerpt_length', 'poseidon_excerpt_length');
  * @param int $length Length of excerpt in number of words
  * @return int
  */
-function poseidon_category_posts_excerpt_length($length) {
+function poseidon_magazine_posts_excerpt_length($length) {
     return 15;
 }
 

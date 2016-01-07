@@ -40,9 +40,9 @@ Version 1.0.7
 Version 1.0.6
 -----------------------------------
 [improved] structure of post meta functions for better re-usability
-[added] postmeta setting to Category Posts Boxed widget
-[added] postmeta setting to Category Posts Columns widget
-[added] postmeta setting to Category Posts Grid widget
+[added] postmeta setting to Magazine Posts Boxed widget
+[added] postmeta setting to Magazine Posts Columns widget
+[added] postmeta setting to Magazine Posts Grid widget
 
 Version 1.0.5
 -----------------------------------
@@ -65,7 +65,7 @@ Version 1.0.2
 
 Version 1.0.1
 -----------------------------------
-[fixed] Poseidon Category Posts Widgets causing some warnings on post edit screen
+[fixed] Poseidon Magazine Posts Widgets causing some warnings on post edit screen
 
 Version 1.0
 -----------------------------------

@@ -38,7 +38,7 @@ Poseidon is a beautiful designed Magazine WordPress theme with a responsive layo
 * fixed deprecating PHP4 style constructors notices in WordPress 4.3
 
 = 1.0.1 - July 30 2015 =
-* fixed Poseidon Category Posts Widgets causing some warnings on post edit screen
+* fixed Poseidon Magazine Posts Widgets causing some warnings on post edit screen
 
 = 1.0 - July 25 2015 =
 * Initial release

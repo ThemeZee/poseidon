@@ -1,6 +1,6 @@
 <?php
 /***
- * Category Posts Boxed Widget
+ * Magazine Posts Boxed Widget
  *
  * Display the latest posts from a selected category in a boxed layout. 
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
@@ -8,7 +8,7 @@
  * @package Poseidon
  */
 
-class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
+class Poseidon_Magazine_Posts_Boxed_Widget extends WP_Widget {
 
 	/**
 	 * Widget Constructor
@@ -17,10 +17,10 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 		
 		// Setup Widget
 		parent::__construct(
-			'poseidon_category_posts_boxed', // ID
-			sprintf( esc_html__( 'Category Posts: Boxed (%s)', 'poseidon' ), wp_get_theme()->Name ), // Name
+			'poseidon-magazine-posts-boxed', // ID
+			sprintf( esc_html__( 'Magazine Posts: Boxed (%s)', 'poseidon' ), wp_get_theme()->Name ), // Name
 			array( 
-				'classname' => 'poseidon_category_posts_boxed', 
+				'classname' => 'poseidon_magazine_posts_boxed', 
 				'description' => esc_html__( 'Displays your posts from a selected category in a boxed layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'poseidon' ) 
 			) // Args
 		);
@@ -42,8 +42,8 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 			'title'				=> '',
 			'category'			=> 0,
 			'layout'			=> 'horizontal',
-			'category_link'		=> false,
-			'postmeta'			=> true
+			'meta_date'			=> true,
+			'meta_author'		=> false,
 		);
 		
 		return $defaults;
@@ -65,7 +65,7 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 				
 		// Get Widget Object Cache
 		if ( ! $this->is_preview() ) {
-			$cache = wp_cache_get( 'widget_poseidon_category_posts_boxed', 'widget' );
+			$cache = wp_cache_get( 'widget_poseidon_magazine_posts_boxed', 'widget' );
 		}
 		if ( ! is_array( $cache ) ) {
 			$cache = array();
@@ -86,12 +86,12 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 		// Output
 		echo $args['before_widget'];
 	?>
-		<div class="widget-category-posts-boxed widget-category-posts clearfix">
+		<div class="widget-magazine-posts-boxed widget-magazine-posts clearfix">
 
 			<?php // Display Title
 			$this->widget_title( $args, $settings ); ?>
 			
-			<div class="widget-category-posts-content">
+			<div class="widget-magazine-posts-content">
 			
 				<?php $this->render( $settings ); ?>
 				
@@ -104,7 +104,7 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 		// Set Cache
 		if ( ! $this->is_preview() ) {
 			$cache[ $this->id ] = ob_get_flush();
-			wp_cache_set( 'widget_poseidon_category_posts_boxed', $cache, 'widget' );
+			wp_cache_set( 'widget_poseidon_magazine_posts_boxed', $cache, 'widget' );
 		} else {
 			ob_end_flush();
 		}
@@ -117,7 +117,7 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 	 *
 	 * Switches between horizontal and vertical layout style based on widget settings
 	 * 
-	 * @uses this->category_posts_horizontal() or this->category_posts_vertical()
+	 * @uses this->magazine_posts_horizontal() or this->magazine_posts_vertical()
 	 * @used-by this->widget()
 	 *
 	 * @param array $instance / Settings for this widget instance
@@ -126,17 +126,17 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 		
 		if( 'horizontal' == $settings['layout'] ) : ?>
 		
-			<div class="category-posts-boxed-horizontal clearfix">
+			<div class="magazine-posts-boxed-horizontal clearfix">
 			
-				<?php $this->category_posts_horizontal( $settings ); ?>
+				<?php $this->magazine_posts_horizontal( $settings ); ?>
 
 			</div>
 		
 		<?php else: ?>
 			
-			<div class="category-posts-boxed-vertical clearfix">
+			<div class="magazine-posts-boxed-vertical clearfix">
 			
-				<?php $this->category_posts_vertical( $settings ); ?>
+				<?php $this->magazine_posts_vertical( $settings ); ?>
 
 			</div>
 		
@@ -147,13 +147,13 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 	
 	
 	/**
-	 * Display Category Posts in Horizontal Layout
+	 * Display Magazine Posts in Horizontal Layout
 	 *
 	 * @used-by this->render()
 	 *
 	 * @param array $instance / Settings for this widget instance
 	 */
-	function category_posts_horizontal( $settings ) {
+	function magazine_posts_horizontal( $settings ) {
 		
 		// Get latest posts from database
 		$query_arguments = array(
@@ -168,7 +168,7 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 		if( $posts_query->have_posts() ) :
 		
 			// Limit the number of words for the excerpt
-			add_filter( 'excerpt_length', 'poseidon_category_posts_excerpt_length' );
+			add_filter( 'excerpt_length', 'poseidon_magazine_posts_excerpt_length' );
 			
 			// Display Posts
 			while( $posts_query->have_posts() ) :
@@ -179,7 +179,7 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post clearfix' ); ?>>
 
-						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-category-posts-widget-large' ); ?></a>
+						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-magazine-posts-widget-large' ); ?></a>
 						
 						<div class="post-content">
 
@@ -187,9 +187,7 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 			
 								<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 							
-								<div class="entry-meta">
-									<?php $this->entry_meta( $settings ); ?>
-								</div><!-- .entry-meta -->
+								<?php $this->entry_meta( $settings ); ?>
 						
 							</header><!-- .entry-header -->
 							
@@ -209,16 +207,14 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'medium-post clearfix' ); ?>>
 
 						<?php if ( has_post_thumbnail() ) : ?>
-							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-category-posts-widget-medium' ); ?></a>
+							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-magazine-posts-widget-medium' ); ?></a>
 						<?php endif; ?>
 
 						<div class="medium-post-content">
 							
 							<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>						
 							
-							<div class="entry-meta">
-								<?php $this->entry_date( $settings ); ?>
-							</div><!-- .entry-meta -->
+							<?php $this->entry_meta( $settings ); ?>
 						
 						</div>
 
@@ -233,24 +229,24 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 				
 			<?php
 			// Remove excerpt filter
-			remove_filter( 'excerpt_length', 'poseidon_category_posts_excerpt_length' );
+			remove_filter( 'excerpt_length', 'poseidon_magazine_posts_excerpt_length' );
 			
 		endif;
 		
 		// Reset Postdata
 		wp_reset_postdata();
 
-	} // category_posts_horizontal()
+	} // magazine_posts_horizontal()
 	
 	
 	/**
-	 * Displays Category Posts in Vertical Layout
+	 * Displays Magazine Posts in Vertical Layout
 	 *
 	 * @used-by this->render()
 	 *
 	 * @param array $instance / Settings for this widget instance
 	 */
-	function category_posts_vertical( $settings ) {
+	function magazine_posts_vertical( $settings ) {
 		
 		// Get latest posts from database
 		$query_arguments = array(
@@ -265,7 +261,7 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 		if( $posts_query->have_posts() ) :
 		
 			// Limit the number of words for the excerpt
-			add_filter( 'excerpt_length', 'poseidon_category_posts_excerpt_length' );
+			add_filter( 'excerpt_length', 'poseidon_magazine_posts_excerpt_length' );
 			
 			// Display Posts
 			while( $posts_query->have_posts() ) :
@@ -278,13 +274,11 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 
 						<header class="entry-header">
 			
-							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-category-posts-widget-large' ); ?></a>
+							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-magazine-posts-widget-large' ); ?></a>
 
 							<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 						
-							<div class="entry-meta">
-								<?php $this->entry_meta( $settings ); ?>
-							</div><!-- .entry-meta -->
+							<?php $this->entry_meta( $settings ); ?>
 					
 						</header><!-- .entry-header -->
 						
@@ -302,16 +296,14 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'small-post clearfix' ); ?>>
 
 						<?php if ( has_post_thumbnail() ) : ?>
-							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-category-posts-widget-small' ); ?></a>
+							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-magazine-posts-widget-small' ); ?></a>
 						<?php endif; ?>
 
 						<div class="small-post-content">
 							
 							<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>						
 							
-							<div class="entry-meta">
-								<?php $this->entry_date( $settings ); ?>
-							</div><!-- .entry-meta -->
+							<?php $this->entry_meta( $settings ); ?>
 							
 						</div>
 
@@ -326,14 +318,14 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 				
 			<?php
 			// Remove excerpt filter
-			remove_filter( 'excerpt_length', 'poseidon_category_posts_excerpt_length' );
+			remove_filter( 'excerpt_length', 'poseidon_magazine_posts_excerpt_length' );
 			
 		endif;
 		
 		// Reset Postdata
 		wp_reset_postdata();
 
-	} // category_posts_vertical()
+	} // magazine_posts_vertical()
 	
 	
 	/**
@@ -341,29 +333,27 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 	 */
 	function entry_meta( $settings ) { 
 
-		if( true == $settings['postmeta'] ) :
+		$postmeta = '';
 		
-			poseidon_meta_date();
-			poseidon_meta_author();
+		if( true == $settings['meta_date'] ) {
+		
+			$postmeta .= poseidon_meta_date();
 			
-		endif;
+		}
+		
+		if( true == $settings['meta_author'] ) {
+		
+			$postmeta .= poseidon_meta_author();
+			
+		}
+		
+		if( $postmeta ) {
+		
+			echo '<div class="entry-meta">' . $postmeta . '</div>';
+			
+		}
 	
-
 	} // entry_meta()
-	
-	
-	/**
-	 * Displays Entry Date of Posts
-	 */
-	function entry_date( $settings ) { 
-
-		if( true == $settings['postmeta'] ) :
-		
-			poseidon_meta_date();
-			
-		endif;
-
-	} // entry_date()
 	
 	
 	/**
@@ -385,8 +375,7 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 				
 				// Display Widget Title with link to category archive
 				echo '<div class="widget-header">';
-				echo '<a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '"><h3 class="widget-title">'. $widget_title . '</h3></a>';
-				echo '<a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '"><span class="category-archive-icon"></span></a>';
+				echo '<h1 class="widget-title"><a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '">'. $widget_title . '</a></h1>';
 				echo '</div>';
 			
 			else:
@@ -414,8 +403,8 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 		$instance['title'] = sanitize_text_field($new_instance['title']);
 		$instance['category'] = (int)$new_instance['category'];
 		$instance['layout'] = esc_attr($new_instance['layout']);
-		$instance['category_link'] = !empty($new_instance['category_link']);
-		$instance['postmeta'] = !empty($new_instance['postmeta']);
+		$instance['meta_date'] = !empty($new_instance['meta_date']);
+		$instance['meta_author'] = !empty($new_instance['meta_author']);
 		
 		$this->delete_widget_cache();
 		
@@ -463,16 +452,16 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('category_link'); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $settings['category_link'] ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
-				<?php esc_html_e( 'Link Widget Title to Category Archive page', 'poseidon' ); ?>
+			<label for="<?php echo $this->get_field_id( 'meta_date' ); ?>">
+				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_date'] ) ; ?> id="<?php echo $this->get_field_id( 'meta_date' ); ?>" name="<?php echo $this->get_field_name( 'meta_date' ); ?>" />
+				<?php esc_html_e( 'Display post date', 'poseidon' ); ?>
 			</label>
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('postmeta'); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $settings['postmeta'] ) ; ?> id="<?php echo $this->get_field_id('postmeta'); ?>" name="<?php echo $this->get_field_name('postmeta'); ?>" />
-				<?php esc_html_e( 'Display post date and author', 'poseidon' ); ?>
+			<label for="<?php echo $this->get_field_id( 'meta_author' ); ?>">
+				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_author'] ) ; ?> id="<?php echo $this->get_field_id( 'meta_author' ); ?>" name="<?php echo $this->get_field_name( 'meta_author' ); ?>" />
+				<?php esc_html_e( 'Display post author', 'poseidon' ); ?>
 			</label>
 		</p>
 		
@@ -485,17 +474,17 @@ class Poseidon_Category_Posts_Boxed_Widget extends WP_Widget {
 	 */
 	public function delete_widget_cache() {
 		
-		wp_cache_delete( 'widget_poseidon_category_posts_boxed', 'widget' );
+		wp_cache_delete( 'widget_poseidon_magazine_posts_boxed', 'widget' );
 		
 	}
 	
 }
 
 // Register Widget
-add_action( 'widgets_init', 'poseidon_register_category_posts_boxed_widget' );
+add_action( 'widgets_init', 'poseidon_register_magazine_posts_boxed_widget' );
 
-function poseidon_register_category_posts_boxed_widget() {
+function poseidon_register_magazine_posts_boxed_widget() {
 
-	register_widget( 'Poseidon_Category_Posts_Boxed_Widget' );
+	register_widget( 'Poseidon_Magazine_Posts_Boxed_Widget' );
 	
 }

@@ -52,7 +52,7 @@ function poseidon_default_options() {
 		'meta_date'							=> true,
 		'meta_author'						=> true,
 		'meta_category'						=> true,
-		'meta_tags'							=> true,
+		'meta_tags'							=> false,
 		'post_navigation'					=> true,
 		'slider_magazine' 					=> false,
 		'slider_blog' 						=> false,

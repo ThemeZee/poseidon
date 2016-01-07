@@ -98,7 +98,7 @@ msgstr ""
 
 #: functions.php:115
 msgid ""
-"Appears on Magazine Homepage template only. You can use the Category Posts "
+"Appears on Magazine Homepage template only. You can use the Magazine Posts "
 "widgets here."
 msgstr ""
 
@@ -138,7 +138,7 @@ msgstr ""
 #: template-magazine.php:44
 msgid ""
 "Please go to Appearance &#8594; Widgets and add at least one widget to the "
-"\"Magazine Homepage\" widget area. You can use the Category Posts widgets to "
+"\"Magazine Homepage\" widget area. You can use the Magazine Posts widgets to "
 "set up the theme like the demo website."
 msgstr ""
 
@@ -162,9 +162,9 @@ msgid "Posted on %s"
 msgstr ""
 
 #: inc/template-tags.php:193 inc/template-tags.php:302
-#: inc/widgets/widget-category-posts-boxed.php:368
-#: inc/widgets/widget-category-posts-columns.php:276
-#: inc/widgets/widget-category-posts-grid.php:337
+#: inc/widgets/widget-magazine-posts-boxed.php:368
+#: inc/widgets/widget-magazine-posts-columns.php:276
+#: inc/widgets/widget-magazine-posts-grid.php:337
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
@@ -296,10 +296,10 @@ msgid "Latest Posts"
 msgstr ""
 
 #: inc/customizer/functions/custom-controls.php:61
-#: inc/widgets/widget-category-posts-boxed.php:492
-#: inc/widgets/widget-category-posts-columns.php:403
-#: inc/widgets/widget-category-posts-columns.php:424
-#: inc/widgets/widget-category-posts-grid.php:463
+#: inc/widgets/widget-magazine-posts-boxed.php:492
+#: inc/widgets/widget-magazine-posts-columns.php:403
+#: inc/widgets/widget-magazine-posts-columns.php:424
+#: inc/widgets/widget-magazine-posts-grid.php:463
 msgid "All Categories"
 msgstr ""
 
@@ -480,120 +480,120 @@ msgstr ""
 msgid "More Features"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:21
+#: inc/widgets/widget-magazine-posts-boxed.php:21
 msgid ""
 "Displays your posts from a selected category in a boxed layout. Please use "
 "this widget ONLY in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:23
+#: inc/widgets/widget-magazine-posts-boxed.php:23
 #, php-format
-msgid "Category Posts: Boxed (%s)"
+msgid "Magazine Posts: Boxed (%s)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:427
-#: inc/widgets/widget-category-posts-columns.php:335
-#: inc/widgets/widget-category-posts-grid.php:396
+#: inc/widgets/widget-magazine-posts-boxed.php:427
+#: inc/widgets/widget-magazine-posts-columns.php:335
+#: inc/widgets/widget-magazine-posts-grid.php:396
 #, php-format
 msgid "View all posts from category %s"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:483
-#: inc/widgets/widget-category-posts-grid.php:454
+#: inc/widgets/widget-magazine-posts-boxed.php:483
+#: inc/widgets/widget-magazine-posts-grid.php:454
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:489
-#: inc/widgets/widget-category-posts-grid.php:460
+#: inc/widgets/widget-magazine-posts-boxed.php:489
+#: inc/widgets/widget-magazine-posts-grid.php:460
 msgid "Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:504
+#: inc/widgets/widget-magazine-posts-boxed.php:504
 msgid "Post Layout:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:506
+#: inc/widgets/widget-magazine-posts-boxed.php:506
 msgid "Horizontal Arrangement"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:507
+#: inc/widgets/widget-magazine-posts-boxed.php:507
 msgid "Vertical Arrangement"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:514
-#: inc/widgets/widget-category-posts-grid.php:498
+#: inc/widgets/widget-magazine-posts-boxed.php:514
+#: inc/widgets/widget-magazine-posts-grid.php:498
 msgid "Link Widget Title to Category Archive page"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:521
-#: inc/widgets/widget-category-posts-columns.php:458
-#: inc/widgets/widget-category-posts-grid.php:505
+#: inc/widgets/widget-magazine-posts-boxed.php:521
+#: inc/widgets/widget-magazine-posts-columns.php:458
+#: inc/widgets/widget-magazine-posts-grid.php:505
 msgid "Display post date and author"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:21
+#: inc/widgets/widget-magazine-posts-columns.php:21
 msgid ""
 "Displays your posts from two selected categories. Please use this widget "
 "ONLY in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:23
+#: inc/widgets/widget-magazine-posts-columns.php:23
 #, php-format
-msgid "Category Posts: 2 Columns (%s)"
+msgid "Magazine Posts: 2 Columns (%s)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:394
+#: inc/widgets/widget-magazine-posts-columns.php:394
 msgid "Left Category Title:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:400
+#: inc/widgets/widget-magazine-posts-columns.php:400
 msgid "Left Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:415
+#: inc/widgets/widget-magazine-posts-columns.php:415
 msgid "Right Category Title:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:421
+#: inc/widgets/widget-magazine-posts-columns.php:421
 msgid "Right Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:436
-#: inc/widgets/widget-category-posts-grid.php:483
+#: inc/widgets/widget-magazine-posts-columns.php:436
+#: inc/widgets/widget-magazine-posts-grid.php:483
 msgid "Number of posts:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:444
+#: inc/widgets/widget-magazine-posts-columns.php:444
 msgid "Highlight first post (big image + excerpt)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:451
+#: inc/widgets/widget-magazine-posts-columns.php:451
 msgid "Link Category Titles to Category Archive pages"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:21
+#: inc/widgets/widget-magazine-posts-grid.php:21
 msgid ""
 "Displays your posts from a selected category in a grid layout. Please use "
 "this widget ONLY in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:23
+#: inc/widgets/widget-magazine-posts-grid.php:23
 #, php-format
-msgid "Category Posts: Grid (%s)"
+msgid "Magazine Posts: Grid (%s)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:475
+#: inc/widgets/widget-magazine-posts-grid.php:475
 msgid "Grid Layout:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:477
+#: inc/widgets/widget-magazine-posts-grid.php:477
 msgid "Two Columns Grid"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:478
+#: inc/widgets/widget-magazine-posts-grid.php:478
 msgid "Three Columns Grid"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:491
+#: inc/widgets/widget-magazine-posts-grid.php:491
 msgid "Display post excerpt and read more button"
 msgstr ""

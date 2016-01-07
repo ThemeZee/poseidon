@@ -146,14 +146,14 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting( 'poseidon_theme_options[meta_tags]', array(
-        'default'           => true,
+        'default'           => false,
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'poseidon_sanitize_checkbox'
 		)
 	);
     $wp_customize->add_control( 'poseidon_theme_options[meta_tags]', array(
-        'label'    => esc_html__( 'Display post tags', 'poseidon' ),
+        'label'    => esc_html__( 'Display post tags on single posts', 'poseidon' ),
         'section'  => 'poseidon_section_post',
         'settings' => 'poseidon_theme_options[meta_tags]',
         'type'     => 'checkbox',

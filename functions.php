@@ -92,7 +92,7 @@ function poseidon_widgets_init() {
 	register_sidebar( array(
 		'name' => esc_html__( 'Sidebar', 'poseidon' ),
 		'id' => 'sidebar',
-		'description' => esc_html__( 'Appears on posts and pages except Magazine Homepage and Fullwidth template.', 'poseidon' ),
+		'description' => esc_html__( 'Appears on posts and pages except full width template.', 'poseidon' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
@@ -100,23 +100,13 @@ function poseidon_widgets_init() {
 	));
 	
 	register_sidebar( array(
-		'name' => esc_html__( 'Header', 'poseidon' ),
-		'id' => 'header',
-		'description' => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'poseidon' ),
-		'before_widget' => '<aside id="%1$s" class="header-widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="header-widget-title">',
-		'after_title' => '</h4>',
-	));
-	
-	register_sidebar( array(
 		'name' => esc_html__( 'Magazine Homepage', 'poseidon' ),
 		'id' => 'magazine-homepage',
-		'description' => esc_html__( 'Appears on Magazine Homepage template only. You can use the Category Posts widgets here.', 'poseidon' ),
+		'description' => esc_html__( 'Appears on Magazine Homepage template only. You can use the Magazine Posts widgets here.', 'poseidon' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<div class="widget-header"><h2 class="widget-title">',
-		'after_title' => '</h2></div>',
+		'before_title' => '<div class="widget-header"><h1 class="widget-title">',
+		'after_title' => '</h1></div>',
 	));
 	
 } // poseidon_widgets_init
@@ -188,9 +178,9 @@ function poseidon_add_image_sizes() {
 	add_image_size( 'poseidon-header-image', 2500, 500, true );
 	
 	// Add Category Post Widget image sizes
-	add_image_size( 'poseidon-category-posts-widget-small', 85, 85, true );
-	add_image_size( 'poseidon-category-posts-widget-medium', 360, 240, true );
-	add_image_size( 'poseidon-category-posts-widget-large', 600, 400, true );
+	add_image_size( 'poseidon-magazine-posts-widget-small', 120, 80, true );
+	add_image_size( 'poseidon-magazine-posts-widget-medium', 360, 240, true );
+	add_image_size( 'poseidon-magazine-posts-widget-large', 600, 400, true );
 	
 }
 add_action( 'after_setup_theme', 'poseidon_add_image_sizes' );
@@ -220,6 +210,6 @@ require get_template_directory() . '/inc/addons.php';
 require get_template_directory() . '/inc/slider.php';
 
 // include Widget Files
-require get_template_directory() . '/inc/widgets/widget-category-posts-boxed.php';
-require get_template_directory() . '/inc/widgets/widget-category-posts-columns.php';
-require get_template_directory() . '/inc/widgets/widget-category-posts-grid.php';
+require get_template_directory() . '/inc/widgets/widget-magazine-posts-boxed.php';
+require get_template_directory() . '/inc/widgets/widget-magazine-posts-columns.php';
+require get_template_directory() . '/inc/widgets/widget-magazine-posts-grid.php';
