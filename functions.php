@@ -132,9 +132,6 @@ function poseidon_scripts() {
 	// Register and enqueue navigation.js
 	wp_enqueue_script( 'poseidon-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery') );
 	
-	// Register and enqueue sidebar.js
-	wp_enqueue_script( 'poseidon-jquery-sidebar', get_template_directory_uri() .'/js/sidebar.js', array('jquery') );
-	
 	// Register and Enqueue Google Fonts
 	wp_enqueue_style( 'poseidon-default-fonts', poseidon_google_fonts_url(), array(), null );
 

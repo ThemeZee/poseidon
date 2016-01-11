@@ -706,8 +706,7 @@ textarea {
 	float: right;
 }
 
-.main-navigation-toggle,
-.sidebar-navigation-toggle {
+.main-navigation-toggle {
 	display: none;
 }
 
@@ -741,15 +740,32 @@ textarea {
 	transition: all 0.2s ease;
 }
 
+.main-navigation-menu > .menu-item-has-children > a:after {
+	display: inline-block;
+	margin: 0.2em 0 0 0.2em;
+	font-size: 16px;
+	line-height: 1;
+	font-family: 'Genericons';
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-decoration: inherit;
+	vertical-align: top;
+	content: '\f431';
+	color: #404040;
+}
+
 .main-navigation-menu a:link, 
 .main-navigation-menu a:visited {
 	color: #404040;
 	text-decoration: none;
 }
 
-.main-navigation-menu a:hover {
+.main-navigation-menu a:hover,
+.main-navigation-menu a:hover:after {
 	color: #22aadd;
 }
+
+
 
 .main-navigation-menu ul {
 	position: absolute;
@@ -786,6 +802,24 @@ textarea {
 
 .main-navigation-menu ul li:last-child a {
 	border-bottom: none;
+}
+
+.main-navigation-menu ul .menu-item-has-children > a:after {
+	display: inline-block;
+	margin: 0.2em 0 0 0.2em;
+	font-size: 14px;
+	line-height: 1;
+	font-family: 'Genericons';
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-decoration: inherit;
+	vertical-align: top;
+	content: '\f431';
+	color: #404040;
+	-webkit-transform:rotate(270deg);
+	-moz-transform:rotate(270deg);
+	-o-transform:rotate(270deg);
+	-ms-transform:rotate(270deg);
 }
 
 .main-navigation-menu ul a:link, 
@@ -1695,9 +1729,11 @@ textarea {
 /*--------------------------------------------------------------
 # 12.0 - Footer
 --------------------------------------------------------------*/
+.footer-wrap {
+	padding: 2em 0;
+}
+
 .site-footer {
-	border-top: 2px solid #eee;
-	padding: 0.9em 1.5em;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -1705,6 +1741,7 @@ textarea {
 .site-footer .site-info {
 	float: left;
 }
+
 
 /* Footer Navigation Menu */
 .footer-navigation {
@@ -1836,11 +1873,6 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
 	
-	.top-navigation-menu a {
-		font-size: 12px;
-		font-size: 0.75rem;
-	}
-
 	.social-icons-menu li a:before {
 		font-size: 21px;
 	}
@@ -1940,151 +1972,7 @@ object {
 	.header-bar .social-icons-navigation {
 		padding-right: 0.5em;
 	}
-	
-	/*** Mobile Top Navigation ***/
-	
-	/* Reset */
-	.top-navigation-menu li {
-		float: none;
-		position: static;
-	}
-	
-	.top-navigation-menu ul {
-		position: static;
-		display: block;
-	}
-	
-	.top-navigation-menu ul a {
-		width: auto;
-		float: none;
-	}
-	
-	.top-navigation-menu li ul ul {
-		margin-left: 0;
-	}
-	
-	.top-navigation-menu li:hover ul ul, 
-	.top-navigation-menu li:hover ul ul ul, 
-	.top-navigation-menu li:hover ul ul ul ul,
-	.top-navigation-menu li:hover ul, 
-	.top-navigation-menu li li:hover ul, 
-	.top-navigation-menu li li li:hover ul,
-	.top-navigation-menu li li li li:hover ul {
-		display: inline;
-	}
-	
-	
-	/* Top Navigation Toggle */
-	#top-navigation-toggle-tablet {
-		display: inline-block;
-	}
-	
-	#top-navigation-toggle-phone {
-		display: none;
-	}
-	
-	.top-navigation-toggle {
-		display: inline-block;
-		padding: 0.8em 1.2em;
-		background: none;
-	}
-	
-	.top-navigation-toggle:hover,
-	.top-navigation-toggle:active,
-	.top-navigation-toggle:focus {
-		cursor: pointer;
-		background: none;
-	}
-	
-	.top-navigation-toggle:after {
-		float: left;
-		display: inline-block;
-		font-family: 'Genericons';
-		font-size: 18px;
-		font-weight: normal;
-		line-height: 1;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		text-decoration: inherit;
-		vertical-align: middle;
-		content: '\f419';
-		color: #22aadd;
-	}
-	
-	.top-navigation-toggle:hover:after {
-		color: #333;
-	}
-	
-	/* Top Navigation Menu */
-	.top-navigation-menu {
-		float: left;
-		width: 100%;
-		display: none;
-		border-top: 2px solid #eee;
-	}
-	
-	.top-navigation-menu a {
-		display: block;
-		clear: left;
-		font-size: 13px;
-		font-size: 0.8125rem;
-		padding: 0.9em 1.2em;
-	}
 
-	.top-navigation-menu ul {
-		width: 100%;
-		border-width: 1px;
-		border-left: none;
-		border-right: none;
-		padding-left: 1em;
-	}
-	
-	.top-navigation-menu ul a {
-		display: block;
-		width: 100%;
-	}
-	
-	.top-navigation-menu ul ul {
-		border: none;
-		padding-left: 2em;
-	}
-	
-	/* Mobile Submenu Dropdowns */
-	.top-navigation-menu .submenu-dropdown-toggle {
-		float: right;
-		display: block;
-		margin: 0;
-		padding: 0.5em 1.2em;
-	}
-	
-	.top-navigation-menu .submenu-dropdown-toggle:hover {
-		cursor: pointer;
-	}
-	
-	.top-navigation-menu .submenu-dropdown-toggle:before {
-		font-size: 24px;
-		line-height: 1;
-		font-family: 'Genericons';
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		text-decoration: inherit;
-		vertical-align: middle;
-		content: '\f431';
-		color: #22aadd;
-	}
-	
-	.top-navigation-menu .submenu-dropdown-toggle:hover:before {
-		color: #333;
-	}
-	
-	.top-navigation-menu .submenu-dropdown-toggle.active:before {
-		content: '\f432';
-	}
-	
-	.top-navigation-menu ul .submenu-dropdown-toggle {
-		padding: 0.4em 1em;
-	}
-	
 	/*** Mobile Main Navigation ***/
 	
 	/* Reset */
@@ -2231,45 +2119,6 @@ object {
 	
 	.sidebar {
 		float: none;
-		display: none;
-		position: absolute;
-		top: 0;
-		right: 0;
-		padding: 1.8em;
-		background: #fff;
-		box-shadow: 0 0 5px #aaa;
-		width: 80%;
-		height: 100%;
-		overflow: auto;
-		z-index: 200;
-	}
-	
-	/* Sidebar Toggle */
-	.sidebar-navigation-toggle {
-		float: right;
-		display: inline-block;
-		padding: 0.8em 1.2em;
-		background: #444;
-	}
-	
-	.sidebar-navigation-toggle:hover,
-	.sidebar-navigation-toggle:active {
-		cursor: pointer;
-		background: #22aadd;
-	}
-	
-	.sidebar-navigation-toggle:after {
-		float: left;
-		display: inline-block;
-		font-size: 24px;
-		line-height: 1;
-		font-family: 'Genericons';
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		text-decoration: inherit;
-		vertical-align: middle;
-		content: '\f510';
-		color: #fff;
 	}
 	
 	/* Magazine Homepage: Category Post Widgets Boxed */
@@ -2372,17 +2221,7 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 45em) {
 	
-	.type-post .post-thumbnail-small .wp-post-image {
-		float: none;
-		max-width: 100%;
-		margin: 0 0 0.5em;
-		padding: 0;
-	}
-	
-	.type-post .post-thumbnail-small + .entry-header .entry-title	{
-		font-size: 26px;
-		font-size: 1.625rem;
-	}
+
 	
 }
 
@@ -2392,8 +2231,7 @@ object {
 @media only screen and (max-width: 40em) {
 	
 	.page-title,
-	.entry-title,
-	.type-post .post-thumbnail-small + .entry-header .entry-title	{
+	.entry-title {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
@@ -2521,14 +2359,6 @@ object {
 		float: none;
 	}
 
-	/* Mobile Main Navigation */
-	#top-navigation-toggle-tablet {
-		display: none;
-	}
-	#top-navigation-toggle-phone {
-		display: inline-block;
-	}
-	
 	/* Social Menu Dropdown */
 	.social-icons-navigation-toggle {
 		float: right;
@@ -2707,19 +2537,8 @@ object {
 /* Ensure navigation is visible on desktop view */
 @media only screen and (min-width: 60em) {
 	
-	.main-navigation-menu, .top-navigation-menu {
+	.main-navigation-menu {
 		display: block !important;
-	}
-	
-}
-
-/* Ensure sidebar is visible on desktop view */
-@media only screen and (min-width: 55em) {
-	
-	.sidebar {
-		display: block;
-		width: 32%;
-		position: static;
 	}
 	
 }
