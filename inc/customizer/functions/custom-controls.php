@@ -105,25 +105,6 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				
 			</div>
 			
-			<div class="upgrade-toolkit">
-			
-				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Toolkit', 'poseidon' ); ?></span>
-				
-				<span class="textfield">
-					<?php esc_html_e( 'The ThemeZee Toolkit add-on is a collection of useful small modules and features, neatly bundled into a single plugin.', 'poseidon' ); ?>
-				</span>
-				
-				<p>
-					<a href="<?php echo esc_url( poseidon_theme_links( 'toolkit' ) . '?utm_source=customizer&utm_medium=button&utm_campaign=poseidon&utm_content=toolkit' ); ?>" target="_blank" class="button button-secondary">
-						<?php printf( esc_html__( 'View Details', 'poseidon' ), 'Poseidon'); ?>
-					</a>
-					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
-						<?php esc_html_e( 'Install now', 'poseidon' ); ?>
-					</a>
-				</p>
-			
-			</div>
-			
 			<div class="upgrade-plugins">
 			
 				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Plugins', 'poseidon' ); ?></span>
@@ -131,13 +112,16 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				<span class="textfield">
 					<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'poseidon' ); ?>
 				</span>
-
+				
 				<p>
 					<a href="<?php echo esc_url( poseidon_theme_links( 'plugins' ) . '?utm_source=customizer&utm_medium=button&utm_campaign=poseidon&utm_content=plugins' ); ?>" target="_blank" class="button button-secondary">
 						<?php esc_html_e( 'Browse Plugins', 'poseidon' ); ?>
 					</a>
+					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
+						<?php esc_html_e( 'Install now', 'poseidon' ); ?>
+					</a>
 				</p>
-				
+			
 			</div>
 			
 			<?php
