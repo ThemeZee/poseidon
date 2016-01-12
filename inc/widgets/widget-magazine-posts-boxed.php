@@ -179,7 +179,7 @@ class Poseidon_Magazine_Posts_Boxed_Widget extends WP_Widget {
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post clearfix' ); ?>>
 
-						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-magazine-posts-widget-large' ); ?></a>
+						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-thumbnail-large' ); ?></a>
 						
 						<div class="post-content">
 
@@ -207,7 +207,7 @@ class Poseidon_Magazine_Posts_Boxed_Widget extends WP_Widget {
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'medium-post clearfix' ); ?>>
 
 						<?php if ( has_post_thumbnail() ) : ?>
-							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-magazine-posts-widget-medium' ); ?></a>
+							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-thumbnail-medium' ); ?></a>
 						<?php endif; ?>
 
 						<div class="medium-post-content">
@@ -250,7 +250,7 @@ class Poseidon_Magazine_Posts_Boxed_Widget extends WP_Widget {
 		
 		// Get latest posts from database
 		$query_arguments = array(
-			'posts_per_page' => 6,
+			'posts_per_page' => 5,
 			'ignore_sticky_posts' => true,
 			'cat' => (int)$settings['category']
 		);
@@ -274,7 +274,7 @@ class Poseidon_Magazine_Posts_Boxed_Widget extends WP_Widget {
 
 						<header class="entry-header">
 			
-							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-magazine-posts-widget-large' ); ?></a>
+							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-thumbnail-large' ); ?></a>
 
 							<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 						
@@ -296,7 +296,7 @@ class Poseidon_Magazine_Posts_Boxed_Widget extends WP_Widget {
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'small-post clearfix' ); ?>>
 
 						<?php if ( has_post_thumbnail() ) : ?>
-							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-magazine-posts-widget-small' ); ?></a>
+							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-thumbnail-small' ); ?></a>
 						<?php endif; ?>
 
 						<div class="small-post-content">

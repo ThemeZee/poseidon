@@ -95,7 +95,7 @@ function poseidon_post_image_archives() {
 	if ( 'left' == $theme_options['post_layout_archives'] ) : ?>
 
 		<a class="post-thumbnail-small" href="<?php esc_url( the_permalink() ); ?>" rel="bookmark">
-			<?php the_post_thumbnail( 'poseidon-thumbnail-small' ); ?>
+			<?php the_post_thumbnail( 'poseidon-thumbnail-medium' ); ?>
 		</a>
 
 <?php

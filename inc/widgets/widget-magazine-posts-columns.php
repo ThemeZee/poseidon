@@ -195,7 +195,7 @@ class Poseidon_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 						<header class="entry-header">
 			
-							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-magazine-posts-widget-large' ); ?></a>
+							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-thumbnail-large' ); ?></a>
 
 							<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 							
@@ -215,7 +215,7 @@ class Poseidon_Magazine_Posts_Columns_Widget extends WP_Widget {
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'small-post clearfix' ); ?>>
 
 						<?php if ( has_post_thumbnail() ) : ?>
-							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-magazine-posts-widget-small' ); ?></a>
+							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'poseidon-thumbnail-small' ); ?></a>
 						<?php endif; ?>
 						
 						<div class="small-post-content">

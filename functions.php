@@ -168,16 +168,13 @@ function poseidon_google_fonts_url() {
  */
 function poseidon_add_image_sizes() {
 	
-	// Add image size for small post thumbnais
-	add_image_size( 'poseidon-thumbnail-small', 330, 220, true );
-	
 	// Add Custom Header Image Size
 	add_image_size( 'poseidon-header-image', 2500, 500, true );
 	
-	// Add Category Post Widget image sizes
-	add_image_size( 'poseidon-magazine-posts-widget-small', 120, 80, true );
-	add_image_size( 'poseidon-magazine-posts-widget-medium', 360, 240, true );
-	add_image_size( 'poseidon-magazine-posts-widget-large', 600, 400, true );
+	// Add different thumbnail sizes for widgets and post layouts
+	add_image_size( 'poseidon-thumbnail-small', 120, 80, true );
+	add_image_size( 'poseidon-thumbnail-medium', 360, 240, true );
+	add_image_size( 'poseidon-thumbnail-large', 600, 400, true );
 	
 }
 add_action( 'after_setup_theme', 'poseidon_add_image_sizes' );
