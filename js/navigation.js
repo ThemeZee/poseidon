@@ -1,6 +1,6 @@
 /**
  * jQuery Navigation Plugin
- * Includes responsiveMenu() and flipMenu() functions
+ * Includes responsiveMenu() function
  *
  * Copyright 2015 ThemeZee
  * Free to use under the GPLv2 and later license.
@@ -105,49 +105,6 @@
 
 	};
 	
-	/**--------------------------------------------------------------
-	# Flip between dropdown menus for Social Icons and Top Navigation
-	--------------------------------------------------------------*/
-	$.fn.flipMenu = function( options ) {
-	
-		if (options === undefined) options = {};
-		
-		/* Set Defaults */
-		var defaults = {
-			menuClass: "menu",
-			flipMenuClass: "menu",
-			toggleClass: "menu-toggle",
-			toggleText: ""
-		};
-		
-		/* Set Variables */
-		var vars = $.extend({}, defaults, options),
-			menuClass = vars.menuClass,
-			flipMenuClass = vars.flipMenuClass,
-			toggleID = (vars.toggleID) ? vars.toggleID : vars.toggleClass,
-			toggleClass = vars.toggleClass,
-			toggleText = vars.toggleText,
-			$this = $(this),
-			$menu = $('.' + menuClass),
-			$flipMenu = $('.' + flipMenuClass);
-		
-		
-		/* Add both Menu Toggle Buttons */
-		$this.before('<button id=\"' + toggleID + '\" class=\"' + toggleClass + '\">' + toggleText + '</button>');
-		
-		/* Add dropdown slide animation for mobile devices */
-		$('#' + toggleID).on('click', function(){
-			if( $flipMenu.is(':visible') ) {
-				$flipMenu.slideToggle();
-				$menu.delay(400).slideToggle();
-			} else {
-				$menu.slideToggle();
-			}
-			$(this).toggleClass('active');
-		});
-
-	};
-	
 	
 	/**--------------------------------------------------------------
 	# Setup Navigation Menus
@@ -164,57 +121,24 @@
 		/* Setup Top Navigation */
 		$("#top-navigation").responsiveMenu({
 			menuClass: "top-navigation-menu",
-			toggleID: "top-navigation-toggle-tablet",
 			toggleClass: "top-navigation-toggle",
-			maxWidth: "65em"
+			maxWidth: "60em"
 		});
 		
-		
-		/* Add flipMenu for social icons menu */
-		$("#header-social-icons").flipMenu({
-			menuClass: "social-icons-navigation",
-			flipMenuClass: "top-navigation-menu",
-			toggleClass: "social-icons-navigation-toggle"
+		/* Setup Top Navigation */
+		$("#footer-links").responsiveMenu({
+			menuClass: "footer-navigation-menu",
+			toggleClass: "footer-navigation-toggle",
+			maxWidth: "60em"
 		});
 		
-		/* Add flipMenu for top navigation */
-		$("#top-navigation").flipMenu({
-			menuClass: "top-navigation-menu",
-			flipMenuClass: "social-icons-navigation",
-			toggleID: "top-navigation-toggle-phone",
-			toggleClass: "top-navigation-toggle"
-		});
-		
-		
-		/* Setup Footer Navigation */
+		/* Setup Footer Navigation 
 		$('.footer-navigation-menu').before('<button id=\"footer-links-toggle\" class=\"footer-navigation-toggle\"></button>');
 		
 		$('#footer-links-toggle').on('click', function(){
 			$('.footer-navigation-menu').slideToggle();
 			$(this).toggleClass('active');
-		});
-		
-		
-		/* Setup Sticky Menu for main navigation menu */
-		var menu = $( '#main-navigation' );
-		var stickyNavTop = menu.offset().top;
-			
-		stickyMenu = function() {
-		
-			scrollTop = $(window).scrollTop();
-			
-			/* Add Sticky class */
-			if (scrollTop > stickyNavTop) { 
-				menu.addClass('sticky-nav-menu');
-			} else {
-				menu.removeClass('sticky-nav-menu'); 
-			}
-			
-		}
-		stickyMenu();
-		$(window).scroll(function() {
-			stickyMenu();
-		});
+		});*/
 
 	} );
 

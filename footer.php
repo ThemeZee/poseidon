@@ -16,11 +16,11 @@
 	<div id="footer" class="footer-wrap">
 	
 		<footer id="colophon" class="site-footer container clearfix" role="contentinfo">
-			
+
 			<div id="footer-text" class="site-info">
 				<?php do_action('poseidon_footer_text'); ?>
 			</div><!-- .site-info -->
-				
+			
 			<nav id="footer-links" class="footer-navigation navigation clearfix" role="navigation">
 				<?php 
 					// Display Footer Navigation
