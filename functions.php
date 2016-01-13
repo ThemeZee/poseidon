@@ -52,7 +52,7 @@ function poseidon_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'poseidon_custom_background_args', array('default-color' => 'e5e5e5') ) );
+	add_theme_support( 'custom-background', apply_filters( 'poseidon_custom_background_args', array( 'default-color' => 'ffffff' ) ) );
 	
 	// Set up the WordPress core custom header feature.
 	add_theme_support('custom-header', apply_filters( 'poseidon_custom_header_args', array(
