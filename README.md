@@ -5,7 +5,8 @@ Poseidon is distributed under the terms of the GNU GPL
 Thanks for Downloading Poseidon
 ===================================
 
-Thank you for downloading my theme. 
+Thank you for downloading the Poseidon WordPress theme.
+
 If you have any questions that are beyond the scope of this help file, 
 please visit themezee.com. Thanks so much!
 
@@ -19,9 +20,8 @@ Table of Contents
     * B) Installation
     * C) Theme Options
     * D) Theme Documentation
-    * E) Page Templates
-    * F) Theme License
-	* G) Licenses of bundled resources
+    * E) Theme License
+	* F) Licenses of bundled resources
 -----------------------------------
 
 ===================================
@@ -30,10 +30,9 @@ A) Requirements
 
 The theme has been tested on all major browsers including Firefox, Opera, Chrome,  
 Internet Explorer and Safari. Your browser should have JavaScript enabled to make this theme work!
-For example the DropDown Navigation and the Content Slider need Javascript to work.
 
 The theme works on the latest Wordpress version without any problems. Previous versions have not been tested
-and are not supported. I suggest to update your wordpress installation, especially due to security flaws.
+and are not supported. We suggest to update your wordpress installation, especially due to security flaws.
 
 ===================================
 B) Installation
@@ -46,7 +45,7 @@ B) Installation
       Upload the theme files to your wordpress theme folder wp-content/themes and activate the theme in
       your wordpress admin panel. That's it!
 
-To find out more about installing WordPress themes please also see http://themezee.com/docs/install-wordpress-themes/
+To find out more about installing WordPress themes please also see https://themezee.com/docs/install-wordpress-themes/
 
 ===================================
 C) Theme Options
@@ -60,29 +59,17 @@ D) Theme Documentation
 ===================================
 
 Need any help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.
-http://themezee.com/docs/Poseidon-documentation/
+https://themezee.com/docs/Poseidon-documentation/
 
 ===================================
-E) Page Templates
-===================================
-
-I have included a few, nice page templates for advanced content presentation.
-
-	1. Fullwidth Template 
-	This template shows a static page without the blog sidebar
-	
-	2. Magazine Homepage Template
-	Displays a magazine-styled homepage with various posts.
-
-===================================
-F) Theme License
+E) Theme License
 ===================================
 
 Poseidon is released under the GNU general public license. 
 That means you can use this theme on all of your websites - for personal or commercial purposes!
 
 ===================================
-G) Licenses of bundled resources
+F) Licenses of bundled resources
 ===================================
 
 	1. Genericons Icon Font - http://genericons.com
@@ -102,16 +89,16 @@ G) Licenses of bundled resources
 	Copyright: 2015 WooThemes, http://www.woothemes.com
 	
 	5. Ubuntu Font - https://www.google.com/fonts/specimen/Ubuntu
-	License: Distributed under the terms of the Apache License (http://www.apache.org/licenses/LICENSE-2.0.html)
-	Copyright: 2015 Christian Robertson
+	License: Distributed under the terms of the Ubuntu Font License (http://font.ubuntu.com/ufl/)
+	Copyright: 2015 Dalton Maag
 	
-	6. Raleway Font - https://www.google.com/fonts/specimen/Hammersmith+One
+	6. Raleway Font - https://www.google.com/fonts/specimen/Raleway
 	License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-	Copyright: 2015 Sorkin Type
+	Copyright: 2015 Matt McInerney, Pablo Impallari
 	
 	7. Images from Pixabay - http://pixabay.com
 	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2015 Pixabay users werner22brigitte, sciencefreak, geralt
+	Copyright: 2015 Pixabay users: werner22brigitte, sciencefreak, geralt
 	
 	Images used in screenshot.jpg:
 	Image 1: https://pixabay.com/en/fantasy-magic-mystic-fantastic-466759/

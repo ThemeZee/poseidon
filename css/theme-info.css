@@ -114,18 +114,25 @@
 
 /* Getting Started */
 #getting-started {
-	margin: 1em 0;
+	margin: 2em 0;
 }
 #getting-started .section {
-	margin: 0.5em 0 2.5em;
+	margin: 2em 0 4em;
 }
 #getting-started .section .about {
 	color: #777777;
     font-size: 1.2em;
     line-height: 1.6em;
 }
-#getting-started img {
-	margin-top: 1em;
+
+/* More Features */
+#more-features .section {
+	margin: 1em 0 3em;
+}
+#more-features .section .about {
+	color: #777777;
+    font-size: 1.2em;
+    line-height: 1.6em;
 }
 
 /* Theme Author */

@@ -133,7 +133,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 	text-shadow: 0 0 5px #000;
 }
 
-.entry-meta span:after {
+.post-slider .zeeslide .entry-meta span:after {
 	color: #fff;
 }
 

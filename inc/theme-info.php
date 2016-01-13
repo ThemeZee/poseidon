@@ -87,7 +87,29 @@ function poseidon_theme_info_page() {
 							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary"><?php esc_html_e( 'Customize Theme', 'poseidon' ); ?></a>
 						</p>
 					</div>
+
+				</div>
+				
+				<div class="column column-half clearfix">
 					
+					<img src="<?php echo get_template_directory_uri(); ?>/screenshot.jpg" />
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div id="more-features">
+
+			<h3><?php esc_html_e( 'Get more features', 'poseidon' ); ?></h3>
+			
+			<div class="columns-wrapper clearfix">
+
+				<div class="column column-half clearfix">
+				
 					<div class="section">
 						<h4><?php esc_html_e( 'Pro Version', 'poseidon' ); ?></h4>
 						
@@ -105,7 +127,21 @@ function poseidon_theme_info_page() {
 				
 				<div class="column column-half clearfix">
 					
-					<img src="<?php echo get_template_directory_uri(); ?>/screenshot.jpg" />
+					<div class="section">
+						<h4><?php esc_html_e( 'ThemeZee Plugins', 'poseidon' ); ?></h4>
+						
+						<p class="about">
+							<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'poseidon' ); ?>
+						</p>
+						<p>
+							<a href="<?php echo esc_url( poseidon_theme_links( 'plugins' ) . '?utm_source=theme-info&utm_medium=button&utm_campaign=poseidon&utm_content=plugins' ); ?>" target="_blank" class="button button-secondary">
+								<?php esc_html_e( 'Browse Plugins', 'poseidon' ); ?>
+							</a>
+							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
+								<?php esc_html_e( 'Install now', 'poseidon' ); ?>
+							</a>
+						</p>
+					</div>
 					
 				</div>
 				

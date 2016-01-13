@@ -7,9 +7,6 @@
  * @package Poseidon
  */
  
-// Get Theme Options from Database
-$theme_options = poseidon_theme_options();
-	
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -28,13 +25,15 @@ $theme_options = poseidon_theme_options();
 		
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'poseidon' ); ?></a>
 		
+		<?php do_action( 'poseidon_header_bar' ); ?>
+		
 		<header id="masthead" class="site-header clearfix" role="banner">
 			
 			<div class="header-main container clearfix">
 						
 				<div id="logo" class="site-branding clearfix">
 				
-					<?php do_action('poseidon_site_title'); ?>
+					<?php do_action( 'poseidon_site_title' ); ?>
 				
 				</div><!-- .site-branding -->
 				

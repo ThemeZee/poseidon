@@ -4,7 +4,7 @@ Theme URI: http://themezee.com/themes/poseidon/
 Author: ThemeZee
 Author URI: http://themezee.com
 Description: Poseidon is a beautiful designed Magazine WordPress theme with a responsive layout. The theme comes with a gorgeous Post Slider, Magazine Homepage template and a Header Widget area. Settings can be configured easily in the Customizer. 
-Version: 1.1.2
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: poseidon
@@ -1733,57 +1733,6 @@ textarea {
 	padding: 2em 0;
 }
 
-
-/* Footer Navigation Menu */
-.footer-navigation {
-	float: right;
-}
-
-.footer-navigation-toggle {
-	display: none;
-}
-
-.footer-navigation-menu {
-	display: inline;
-	margin: 0;
-	padding: 2em 0;
-	list-style-type: none;
-	list-style-position: outside;
-	position: relative;
-}
-
-.footer-navigation-menu li {
-	float: left;
-	position: relative;
-}
-
-.footer-navigation-menu a {
-	display: block;
-	font-family: 'Raleway', Tahoma, Arial;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	font-weight: bold;
-	padding: 0.1em 1em;
-	text-transform: uppercase;
-	text-decoration: none;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
-}
-
-.footer-navigation-menu a:link, 
-.footer-navigation-menu a:visited {
-	color: #404040;
-	text-decoration: none;
-}
-
-.footer-navigation-menu a:hover,
-.footer-navigation-menu a:hover:after {
-	color: #22aadd;
-}
-
 /*--------------------------------------------------------------
 # 13.0 - Media
 --------------------------------------------------------------*/
@@ -2138,62 +2087,6 @@ object {
 		font-size: 24px;
 	}
 	
-	/*** Mobile Footer Navigation ***/
-	
-	/* Footer Navigation Toggle */
-	.footer-navigation-toggle {
-		float: right;
-		display: inline-block;
-		background: none;
-		padding: 1em;
-		margin: 1em 0 0;
-	}
-	
-	.footer-navigation-toggle:hover,
-	.footer-navigation-toggle:active,
-	.footer-navigation-toggle:focus {
-		cursor: pointer;
-		background: none;
-	}
-	
-	.footer-navigation-toggle:after {
-		float: left;
-		display: inline-block;
-		font-family: 'Genericons';
-		font-size: 24px;
-		font-weight: normal;
-		line-height: 1;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		text-decoration: inherit;
-		vertical-align: middle;
-		content: '\f419';
-		color: #404040;
-	}
-	
-	.footer-navigation-toggle:hover:after {
-		color: #22aadd;
-	}
-	
-	/* Footer Navigation Menu */
-	.footer-navigation {
-		display: block;
-		width: 100%;
-	}
-	
-	.footer-navigation-menu {
-		float: left;
-		width: 100%;
-		display: none;
-		padding: 1.5em 0;
-		border-top: 2px solid #404040;
-	}
-	
-	.site-footer .site-info {
-		max-width: 75%;
-	}
-
-	
 }
 
 /*--------------------------------------------------------------
@@ -2365,20 +2258,6 @@ object {
 	.widget-magazine-posts .small-post .entry-title {
 		font-size: 15px;
 		font-size: 0.9375rem;
-	}
-	
-	/* Footer Navigation Menu */
-	.footer-navigation-menu {
-		padding-top: 0;
-	}
-	
-	.footer-navigation-menu li {
-		float: none;
-	}
-	
-	.footer-navigation-menu a {
-		padding: 0.8em 1em;
-		border-bottom: 1px dotted #ccc;
 	}
 	
 }
@@ -2581,7 +2460,7 @@ object {
 /* Ensure navigation is visible on desktop view */
 @media only screen and (min-width: 60em) {
 	
-	.main-navigation-menu, .footer-navigation-menu {
+	.main-navigation-menu {
 		display: block !important;
 	}
 	

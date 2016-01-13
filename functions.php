@@ -38,13 +38,8 @@ function poseidon_setup() {
 	// Set detfault Post Thumbnail size
 	set_post_thumbnail_size( 840, 560, true );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Main Navigation', 'poseidon' ),
-		'secondary' => esc_html__( 'Top Navigation', 'poseidon' ),
-		'footer' => esc_html__( 'Footer Navigation', 'poseidon' ),
-		'social' => esc_html__( 'Social Icons', 'poseidon' ),
-	) );
+	// Register Navigation Menu
+	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'poseidon' ) );
 
 	// Switch default core markup for search form, comment form, and comments to output valid HTML5.
 	add_theme_support( 'html5', array(
@@ -57,8 +52,8 @@ function poseidon_setup() {
 	// Set up the WordPress core custom header feature.
 	add_theme_support('custom-header', apply_filters( 'poseidon_custom_header_args', array(
 		'header-text' => false,
-		'width'	=> 1190,
-		'height' => 250,
+		'width'	=> 1920,
+		'height' => 480,
 		'flex-height' => true
 	) ) );
 	
@@ -169,7 +164,7 @@ function poseidon_google_fonts_url() {
 function poseidon_add_image_sizes() {
 	
 	// Add Custom Header Image Size
-	add_image_size( 'poseidon-header-image', 2500, 500, true );
+	add_image_size( 'poseidon-header-image', 1920, 480, true );
 	
 	// Add different thumbnail sizes for widgets and post layouts
 	add_image_size( 'poseidon-thumbnail-small', 120, 80, true );

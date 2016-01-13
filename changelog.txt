@@ -2,70 +2,9 @@
 Poseidon Changelog
 ===================================
 
-Version 1.1.3
------------------------------------
-[added] setting to disable single post navigation
-
-Version 1.1.2
------------------------------------
-[added] support for ThemeZee Related Posts plugin
-[fixed] styling of archive descriptions
-
-Version 1.1.1
------------------------------------
-[added] basic support for wooCommerce
-[added] support for ThemeZee Breadcrumbs plugin
-[added] custom header image settings
-[added] theme links in theme options panel
-
-Version 1.1.0
------------------------------------
-[added] social icon for newsletter and mailto links
-[fixed] Javascript error on pages without sidebar
-
-Version 1.0.9
------------------------------------
-[added] Post Slider page template
-[changed] h2 post titles in post widgets to h1 for better SEO
-[fixed] postmeta styling for widget bundle
-
-Version 1.0.8
------------------------------------
-[fixed] styling of broken full width page template
-
-Version 1.0.7
------------------------------------
-[added] escaping for translation strings for improved security
-
-Version 1.0.6
------------------------------------
-[improved] structure of post meta functions for better re-usability
-[added] postmeta setting to Magazine Posts Boxed widget
-[added] postmeta setting to Magazine Posts Columns widget
-[added] postmeta setting to Magazine Posts Grid widget
-
-Version 1.0.5
------------------------------------
-[added] theme support for Widget Bundle Addon Plugin
-[moved] content wrapper to header.php and footer.php
-
-Version 1.0.4
------------------------------------
-[moved] register_widget functions to widgets_init action hook to fix widget translation
-[added] readme.txt
-
-Version 1.0.3
------------------------------------
-[improved] phrasing of all translatable text strings
-[added] German language files
-
-Version 1.0.2
------------------------------------
-[fixed] deprecating PHP4 style constructors notices in WordPress 4.3
-
 Version 1.0.1
 -----------------------------------
-[fixed] Poseidon Magazine Posts Widgets causing some warnings on post edit screen
+[added] Magazine Homepage page template
 
 Version 1.0
 -----------------------------------
