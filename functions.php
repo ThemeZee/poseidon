@@ -145,7 +145,7 @@ add_action( 'wp_enqueue_scripts', 'poseidon_scripts' );
 function poseidon_google_fonts_url() {
     
 	// Set default Fonts
-	$font_families = array('Ubuntu:200,400,600,800', 'Raleway:100,200,300,400,500,600,700,800');
+	$font_families = array( 'Ubuntu:400,400italic,700,700italic', 'Raleway:400,700' );
 
 	// Build Fonts URL
 	$query_args = array(

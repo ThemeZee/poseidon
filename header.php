@@ -25,7 +25,7 @@
 		
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'poseidon' ); ?></a>
 		
-		<?php do_action( 'poseidon_header_bar' ); ?>
+		<div id="header-top" class="header-bar-wrap"><?php do_action( 'poseidon_header_bar' ); ?></div>
 		
 		<header id="masthead" class="site-header clearfix" role="banner">
 			

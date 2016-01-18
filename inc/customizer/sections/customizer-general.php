@@ -16,8 +16,8 @@
 function poseidon_customize_register_general_settings( $wp_customize ) {
 
 	// Add Section for Theme Options
-	$wp_customize->add_section( 'poseidon_section_layout', array(
-        'title'    => esc_html__( 'Layout Settings', 'poseidon' ),
+	$wp_customize->add_section( 'beetle_section_general', array(
+        'title'    => esc_html__( 'General Settings', 'poseidon' ),
         'priority' => 10,
 		'panel' => 'poseidon_options_panel' 
 		)
@@ -33,7 +33,7 @@ function poseidon_customize_register_general_settings( $wp_customize ) {
 	);
     $wp_customize->add_control( 'poseidon_theme_options[layout]', array(
         'label'    => esc_html__( 'Theme Layout', 'poseidon' ),
-        'section'  => 'poseidon_section_layout',
+        'section'  => 'beetle_section_general',
         'settings' => 'poseidon_theme_options[layout]',
         'type'     => 'radio',
 		'priority' => 1,
@@ -44,8 +44,8 @@ function poseidon_customize_register_general_settings( $wp_customize ) {
 		)
 	);
 	
-	// Add Sticky Navigation Setting
-	$wp_customize->add_setting( 'poseidon_theme_options[sticky_nav_headline]', array(
+	// Add Sticky Header Setting
+	$wp_customize->add_setting( 'poseidon_theme_options[sticky_header_title]', array(
         'default'           => '',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
@@ -53,10 +53,10 @@ function poseidon_customize_register_general_settings( $wp_customize ) {
         )
     );
     $wp_customize->add_control( new Poseidon_Customize_Header_Control(
-        $wp_customize, 'poseidon_theme_options[sticky_nav_headline]', array(
-            'label' => esc_html__( 'Sticky Navigation', 'poseidon' ),
-            'section' => 'poseidon_section_layout',
-            'settings' => 'poseidon_theme_options[sticky_nav_headline]',
+        $wp_customize, 'poseidon_theme_options[sticky_header_title]', array(
+            'label' => esc_html__( 'Sticky Header', 'poseidon' ),
+            'section' => 'beetle_section_general',
+            'settings' => 'poseidon_theme_options[sticky_header_title]',
             'priority' => 2
             )
         )
@@ -70,7 +70,7 @@ function poseidon_customize_register_general_settings( $wp_customize ) {
 	);
     $wp_customize->add_control( 'poseidon_theme_options[sticky_header]', array(
         'label'    => esc_html__( 'Enable sticky header feature', 'poseidon' ),
-        'section'  => 'poseidon_section_layout',
+        'section'  => 'beetle_section_general',
         'settings' => 'poseidon_theme_options[sticky_header]',
         'type'     => 'checkbox',
 		'priority' => 3
@@ -88,7 +88,7 @@ function poseidon_customize_register_general_settings( $wp_customize ) {
 	);
     $wp_customize->add_control( 'poseidon_theme_options[post_layout_archives]', array(
         'label'    => esc_html__( 'Post Layout (archive pages)', 'poseidon' ),
-        'section'  => 'poseidon_section_layout',
+        'section'  => 'beetle_section_general',
         'settings' => 'poseidon_theme_options[post_layout_archives]',
         'type'     => 'select',
 		'priority' => 4,
@@ -110,7 +110,7 @@ function poseidon_customize_register_general_settings( $wp_customize ) {
 	);
     $wp_customize->add_control( 'poseidon_theme_options[post_layout_single]', array(
         'label'    => esc_html__( 'Post Layout (single post)', 'poseidon' ),
-        'section'  => 'poseidon_section_layout',
+        'section'  => 'beetle_section_general',
         'settings' => 'poseidon_theme_options[post_layout_single]',
         'type'     => 'select',
 		'priority' => 5,
