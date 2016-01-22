@@ -31,85 +31,45 @@
 
 
 /*--------------------------------------------------------------
-# Facebook Like Box Widget
+# Posts List
 ---------------------------------------------------------------- */
-.tzwb-facebook-likebox .tzwb-content {
-	overflow: hidden;
-}
-
-
-/*--------------------------------------------------------------
-# Recent Posts Widget
----------------------------------------------------------------- */
-.tzwb-recent-posts .tzwb-posts-list li {
+.tzwb-posts-list li {
 	list-style: none;
 	overflow: auto;
 	padding: 0;
+	margin-bottom: 0.5em;
 }
 
-.tzwb-recent-posts .tzwb-posts-list .tzwb-excerpt p {
+.tzwb-posts-list .tzwb-excerpt p {
 	margin: 0;
 	padding: 0;
 }
 
-.tzwb-recent-posts .tzwb-posts-list .wp-post-image {
+.tzwb-posts-list .wp-post-image {
 	float: left;
-	margin: 0.3em 0.8em 0.6em 0;
-	max-width: 80px;
+	margin: 0.3em 0.8em 1em 0;
+	max-width: 90px;
 	height: auto;
 }
 
-.tzwb-recent-posts .tzwb-posts-list li:before {
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 16px 'Genericons';
-	vertical-align: middle;
-	color: #555;
-	margin: 0 0.2em 0 0;
-	content: '\f303';
-}
-
-.tzwb-recent-posts .tzwb-posts-list li.tzwb-has-thumbnail:before {
-	display: none;
-}
-
 .tzwb-posts-list .tzwb-entry-meta {
-	margin: 0.2em 0 0.6em;
-	color: #777;
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-.tzwb-posts-list .tzwb-entry-meta span {
-	margin-right: 0.4em;
+	margin: 0.4em 0.2em 0;
+	font-size: 12px;
+	font-size: 0.75rem;
 }
 
 /*--------------------------------------------------------------
-# Recent Comments Widget
+# Comments List
 ---------------------------------------------------------------- */
-.tzwb-recent-comments .tzwb-comments-list li {
+.tzwb-comments-list li {
 	list-style: none;
-	margin-bottom: 0.4em;
+	margin-bottom: 0.5em;
 	overflow: auto;
 }
 
-.tzwb-recent-comments .tzwb-comments-list .avatar {
+.tzwb-comments-list .avatar {
 	float: left;
-	margin: 0.3em 0.8em 0.6em 0;
-}
-
-.tzwb-recent-comments .tzwb-comments-list li:before {
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 16px 'Genericons';
-	vertical-align: middle;
-	color: #555;
-	margin: 0 0.2em 0 0;
-	content: '\f300';
-}
-
-.tzwb-recent-comments .tzwb-comments-list li.tzwb-has-avatar:before  {
-	display: none;
+	margin: 0.3em 0.8em 0.8em 0;
 }
 
 .tzwb-comments-list .tzwb-comment-content {
@@ -117,10 +77,11 @@
 }
 
 .tzwb-comments-list .tzwb-comment-date {
-	margin: 0.2em 0;
-	color: #777;
-	font-size: 14px;
-	font-size: 0.875rem;
+	margin: 0.4em 0.2em 0;
+	font-size: 12px;
+	font-size: 0.75rem;
+	color: #aaa;
+	text-transform: uppercase;
 }
 
 
@@ -135,9 +96,13 @@
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi {
+	float: left;
+	width: 100%;
 	list-style: none;
 	list-style-position: outside;
 	position: relative;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li {
@@ -150,35 +115,35 @@
 
 .tzwb-tabbed-content .tzwb-tabnavi li a {
 	display: block;
-	margin: 0 2px 2px 0;
-	padding: 0.5em 0.8em;
+	margin: 0;
+	padding: 0.8em 0.8em 0.5em;
 	font-family: 'Raleway', Tahoma, Arial;
 	font-size: 14px;
 	font-size: 0.875rem;
-	color: #fff;
-	background: #444;
+	font-weight: bold;
+	color: #404040;
 	text-transform: uppercase;
+	text-decoration: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link, 
 .tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
-	color: #fff;
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	-ms-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	transition: all 0.4s ease;
+	color: #404040;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover, 
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
-	background: #22aadd;
+	color: #22aadd;
 	text-decoration: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
-	color: #fff;
-	background: #22aadd;
+	color: #22aadd;
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -186,150 +151,6 @@
 	margin: 1em 0 0 0;
 }
 
-.tzwb-tabbed-content .tzwb-tabcontent li.tzwb-has-thumbnail {
-	list-style: none;
-	padding: 0.5em 0.3em;
-	overflow: auto;
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent  li.tzwb-has-thumbnail .wp-post-image {
-	float: left;
-	margin: 0.3em 0.8em 0.8em 0;
-	max-width: 80px;
-	height: auto;
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list li.tzwb-has-avatar {
-	list-style: none;
-	padding: 0.5em 0.3em;
-	overflow: auto;
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list li.tzwb-has-avatar .avatar {
-	float: left;
-	margin: 0.3em 0.8em 0.3em 0;
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent ul li .tzwb-entry-meta {
-	margin: 0.2em 0;
-	color: #777;
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-/* Archive & Category Tab */
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-archives,
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-categories {
-	list-style: none;
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-archives li a:before,
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-categories li a:before {
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 18px 'Genericons';
-	vertical-align: middle;
-	color: #555;
-	margin: 0 0.3em 0 0;
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-archives li a:before {
-	content: '\f307';
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-categories li a:before {
-	content: '\f301';
-}
-
-/* Recent Posts & Comments Tab */
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-posts-list,
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list {
-	list-style: none;
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-posts-list li:before, 
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list li:before {
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 16px 'Genericons';
-	vertical-align: middle;
-	color: #555;
-	margin: 0 0.2em 0 0;
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-posts-list li:before {
-	content: '\f303';
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list li:before {
-	content: '\f300';
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-posts-list li.tzwb-has-thumbnail:before,
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list li.tzwb-has-avatar:before  {
-	display: none;
-}
-
-/* Pages Tab */
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-pages,
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-pages ul {
-	list-style: none;
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-pages li a:before {
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 18px 'Genericons';
-	vertical-align: middle;
-	color: #555;
-	margin: 0 0.1em 0 0;
-	content: '\f432';
-	-webkit-transform:rotate(90deg);
-	-moz-transform:rotate(90deg);
-	-o-transform:rotate(90deg);
-	-ms-transform:rotate(90deg);
-}
-
-/* Tagcloud Tab */
-.tzwb-tabcontent-tagcloud {
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-.tzwb-tabcontent-tagcloud:before,
-.tzwb-tabcontent-tagcloud:after {
-	content: "";
-	display: table;
-}
-
-.tzwb-tabcontent-tagcloud:after {
-	clear: both;
-}
-
-.tzwb-tabcontent-tagcloud a {
-	float: left;
-	display: inline-block;
-	margin: 0 2px 2px 0;
-	padding: 0.3em 0.6em;
-	text-decoration: none;
-	font-size: 1.0em !important;
-	border: 1px solid #22aadd;
-}
-
-.tzwb-tabcontent-tagcloud a:link, 
-.tzwb-tabcontent-tagcloud a:visited {
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	-ms-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-}
-
-.tzwb-tabcontent-tagcloud a:hover, 
-.tzwb-tabcontent-tagcloud a:active {
-	color: #fff;
-	background-color: #22aadd;
-}
 
 /*--------------------------------------------------------------
 # Social Icons Widget
@@ -355,4 +176,11 @@
 .tzwb-social-icons .social-icons-menu li a:hover {
 	text-decoration: none;
 	background: #404040;
+}
+
+/*--------------------------------------------------------------
+# Facebook Like Box Widget
+---------------------------------------------------------------- */
+.tzwb-facebook-likebox .tzwb-content {
+	overflow: hidden;
 }

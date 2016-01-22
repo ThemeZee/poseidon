@@ -362,7 +362,7 @@ function poseidon_footer_text() { ?>
 	<span class="credit-link">
 		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'poseidon' ), 
 			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
-			'<a href="http://themezee.com/themes/poseidon/" title="Poseidon WordPress Theme">Poseidon</a>'
+			'<a href="https://themezee.com/themes/poseidon/" title="Poseidon WordPress Theme">Poseidon</a>'
 		); ?>
 	</span>
 

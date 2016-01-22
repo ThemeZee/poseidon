@@ -57,9 +57,9 @@ add_action( 'after_setup_theme', 'poseidon_theme_addons_image_sizes' );
 function poseidon_theme_addons_image_sizes() {
 
 	// Add Widget Bundle Thumbnail
-	add_image_size( 'tzwb-thumbnail', 80, 60, true );
+	add_image_size( 'tzwb-thumbnail', 90, 65, true );
 	
 	// Add Related Posts Thumbnail
-	add_image_size( 'themezee-related-posts', 450, 250, true );
+	add_image_size( 'themezee-related-posts', 480, 320, true );
 
 }

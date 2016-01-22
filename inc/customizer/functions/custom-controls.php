@@ -98,7 +98,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</span>
 				
 				<p>
-					<a href="<?php echo esc_url( poseidon_theme_links( 'pro_version' ) . '?utm_source=customizer&utm_medium=button&utm_campaign=poseidon&utm_content=pro-version' ); ?>" target="_blank" class="button button-secondary">
+					<a href="<?php echo esc_url( __( 'https://themezee.com/addons/poseidon-pro/', 'poseidon' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=poseidon&utm_content=pro-version" target="_blank" class="button button-secondary">
 						<?php printf( esc_html__( 'Learn more about %s Pro', 'poseidon' ), 'Poseidon'); ?>
 					</a>
 				</p>
@@ -114,7 +114,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</span>
 				
 				<p>
-					<a href="<?php echo esc_url( poseidon_theme_links( 'plugins' ) . '?utm_source=customizer&utm_medium=button&utm_campaign=poseidon&utm_content=plugins' ); ?>" target="_blank" class="button button-secondary">
+					<a href="<?php echo esc_url( __( 'https://themezee.com/plugins/', 'poseidon' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=poseidon&utm_content=plugins" target="_blank" class="button button-secondary">
 						<?php esc_html_e( 'Browse Plugins', 'poseidon' ); ?>
 					</a>
 					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">

@@ -100,9 +100,9 @@ function poseidon_customize_controls_js() {
 	// Localize the script
 	wp_localize_script( 'poseidon-customizer-controls', 'poseidon_theme_links', array(
 		'title'	=> esc_html__( 'Theme Links', 'poseidon' ),
-		'themeURL'	=> esc_url( poseidon_theme_links( 'theme_page' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=poseidon&utm_content=theme-page' ),
+		'themeURL'	=> esc_url( __( 'https://themezee.com/themes/poseidon/', 'poseidon' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=poseidon&utm_content=theme-page' ),
 		'themeLabel'	=> esc_html__( 'Theme Page', 'poseidon' ),
-		'docuURL'	=> esc_url( poseidon_theme_links( 'documentation' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=poseidon&utm_content=documentation' ),
+		'docuURL'	=> esc_url( __( 'https://themezee.com/docs/poseidon-documentation/', 'poseidon' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=poseidon&utm_content=documentation' ),
 		'docuLabel'	=>  esc_html__( 'Theme Documentation', 'poseidon' ),
 		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/poseidon?filter=5' ),
 		'rateLabel'	=> esc_html__( 'Rate this theme', 'poseidon' ),

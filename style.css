@@ -1,8 +1,8 @@
 /*
 Theme Name: Poseidon
-Theme URI: http://themezee.com/themes/poseidon/
+Theme URI: https://themezee.com/themes/poseidon/
 Author: ThemeZee
-Author URI: http://themezee.com
+Author URI: https://themezee.com
 Description: Poseidon is a beautiful designed Magazine WordPress theme with a responsive layout. The theme comes with a gorgeous Post Slider, Magazine Homepage template and a Header Widget area. Settings can be configured easily in the Customizer. 
 Version: 1.0.1
 License: GNU General Public License v2 or later
@@ -1526,11 +1526,11 @@ textarea {
 /* Breadcrumbs */
 .breadcrumbs {
 	margin: 0;
+	padding: 0.5em 0;
 	border-bottom: 1px solid #ddd;
 }
 
 .breadcrumbs-container {
-	padding: 0.6em 0;
 	color: #222;
 	font-size: 14px;
 	font-size: 0.875rem;
