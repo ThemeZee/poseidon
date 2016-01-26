@@ -4,7 +4,7 @@ Poseidon Changelog
 
 Version 1.0.1
 -----------------------------------
-[added] Magazine Homepage page template
+[added] Magazine Homepage template
 
 Version 1.0
 -----------------------------------

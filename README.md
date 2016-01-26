@@ -98,16 +98,11 @@ F) Licenses of bundled resources
 	
 	7. Images from Pixabay - http://pixabay.com
 	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2015 Pixabay users: werner22brigitte, sciencefreak, geralt
+	Copyright: 2015 Pixabay users: LoggaWiggler, mruizdeassin
 	
 	Images used in screenshot.jpg:
-	Image 1: https://pixabay.com/en/fantasy-magic-mystic-fantastic-466759/
-	Image 2: https://pixabay.com/en/butterfly-stopwatch-eye-face-744115/
-	Image 3: https://pixabay.com/en/mysticism-beyond-bridge-death-666965/
-	Image 4: https://pixabay.com/en/statue-planet-sky-space-universe-717492/
-	Image 5: https://pixabay.com/en/orbit-space-science-fiction-767375/
-	Image 6: https://pixabay.com/en/baby-nest-stork-feather-bird-bill-707906/
-	Image 7: https://pixabay.com/en/butterfly-bokeh-magic-dream-dreams-407746/
+	Image 1: https://pixabay.com/en/mallorca-cala-blue-water-beach-109204/
+	Image 2: https://pixabay.com/en/beach-boot-colorful-sea-water-51956/
 
 ===================================
 Enjoy!
