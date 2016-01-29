@@ -59,7 +59,7 @@ D) Theme Documentation
 ===================================
 
 Need any help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.
-https://themezee.com/docs/Poseidon-documentation/
+https://themezee.com/docs/poseidon-documentation/
 
 ===================================
 E) Theme License
@@ -96,13 +96,35 @@ F) Licenses of bundled resources
 	License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
 	Copyright: 2015 Matt McInerney, Pablo Impallari
 	
-	7. Images from Pixabay - http://pixabay.com
-	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2015 Pixabay users: LoggaWiggler, mruizdeassin
+	7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 	
-	Images used in screenshot.jpg:
-	Image 1: https://pixabay.com/en/mallorca-cala-blue-water-beach-109204/
-	Image 2: https://pixabay.com/en/beach-boot-colorful-sea-water-51956/
+	Image 1: https://pixabay.com/en/sea-ocean-water-light-diver-79606/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2012 David Mark (https://pixabay.com/en/users/tpsdave-12019/)
+	
+	Image 2: https://pixabay.com/en/beach-hut-beach-vacation-holidays-237489/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2011 Sharon Ang (https://pixabay.com/en/users/sharonang-99559/)
+	
+	Image 3: https://pixabay.com/en/dolphin-marine-mammals-water-sea-203875/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2011 Claudia Beer (https://pixabay.com/en/users/Claudia14-80737/)
+	
+	Image 4: https://pixabay.com/en/mallorca-cala-blue-water-beach-109204/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2013 mruizdeassin (https://pixabay.com/en/users/mruizdeassin-33807/)
+	
+	Image 5: https://pixabay.com/en/shells-massage-therapy-sand-beach-792912/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2011 Julia Roman (https://pixabay.com/en/users/julesroman-359800/)
+	
+	Image 6: https://pixabay.com/en/universal-studios-island-of-adventure-241597/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2012 Rafael (https://pixabay.com/en/users/rafaelsamir-127598/)
+	
+	Image 7: https://pixabay.com/en/dubrovnik-croatia-kings-landing-512798/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2014 Ivan Ivankovic (https://pixabay.com/en/users/fjaka-551782/)
 
 ===================================
 Enjoy!

@@ -445,7 +445,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: #444;
+	color: #404040;
 }
 
 a:focus {
@@ -484,10 +484,7 @@ input[type="submit"] {
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
-	background: #444;
-}
-
+input[type="submit"]:hover,
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -496,7 +493,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	background: #444;
+	background: #404040;
 }
 
 input[type="text"],
@@ -643,15 +640,11 @@ textarea {
 	border-bottom: 1px solid #ddd;
 }
 
-.header-main {
-	padding-top: 1em;
-	padding-bottom: 1em;
-}
-
 .site-branding {
 	float: left;
 	max-width: 100%;
-	margin: 0;
+	margin: 1em 0;
+	padding: 0;
 }
 
 .site-branding a:link, 
@@ -659,6 +652,7 @@ textarea {
 .site-branding a:hover {
 	text-decoration: none;
 	padding: 0;
+	border: none;
 }
 
 .site-title {
@@ -704,6 +698,7 @@ textarea {
 --------------------------------------------------------------*/
 .primary-navigation {
 	float: right;
+	margin: 1em 0;
 }
 
 .main-navigation-toggle {
@@ -789,7 +784,6 @@ textarea {
 	float: left;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	color: #404040;
 	border-bottom: 1px dotted #ccc;
 	-webkit-transition: none;
 	-moz-transition: none;
@@ -820,16 +814,6 @@ textarea {
 	-ms-transform:rotate(270deg);
 }
 
-.main-navigation-menu ul a:link, 
-.main-navigation-menu ul a:visited {
-	color: #404040;
-	text-decoration: none;
-}
-
-.main-navigation-menu ul a:hover {
-	color: #22aadd;
-}
-
 .main-navigation-menu li ul ul {
 	margin-left: 250px;
 	margin-left: 16rem;
@@ -839,14 +823,14 @@ textarea {
 .main-navigation-menu li:hover ul ul, 
 .main-navigation-menu li:hover ul ul ul, 
 .main-navigation-menu li:hover ul ul ul ul {
-	display:none;
+	display: none;
 }
 
 .main-navigation-menu li:hover ul, 
 .main-navigation-menu li li:hover ul, 
 .main-navigation-menu li li li:hover ul, 
 .main-navigation-menu li li li li:hover ul {
-	display:block;
+	display: block;
 }
 
 .main-navigation-menu li.current-menu-item > a {
@@ -1063,7 +1047,6 @@ textarea {
 	top: 0;
 	right: 0;
 	border: none;
-	background: #22aadd;
 	padding: 0.6em 0.6em 0 0;
 	cursor: pointer;
 	-webkit-transition: all 0.2s ease;
@@ -1088,11 +1071,6 @@ textarea {
 	color: #fff;
 	content: '\f400';
 }
-
-.search-form .search-submit:hover {
-	background: #444;
-}
-
 
 /*--------------------------------------------------------------
 ## 11.2 - Magazine Posts Widgets
@@ -1330,7 +1308,6 @@ textarea {
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-weight: bold;
-	color: #22aadd;
 	text-transform: uppercase;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
@@ -1472,6 +1449,7 @@ textarea {
 	border-top: 4px solid #eee;
 	margin: 0 0 3em;
 }
+
 .post-pagination a,
 .post-pagination .current {
 	display: inline-block;
@@ -1483,7 +1461,6 @@ textarea {
 	font-size: 16px;
 	font-size: 1rem;
 	font-weight: bold;
-	color: #22aadd;
 	text-transform: uppercase;
 }
 
@@ -1494,11 +1471,6 @@ textarea {
 	-ms-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
-}
-
-.post-pagination a:hover,
-.post-pagination .current {
-	color: #404040;
 }
 
 /* Archives and Search Heading */
@@ -1907,6 +1879,10 @@ object {
 	/*** Mobile Main Navigation ***/
 	
 	/* Reset */
+	.primary-navigation {
+		margin: 0;
+	}
+	
 	.primary-navigation, 
 	.main-navigation-menu li {
 		float: none;
@@ -1946,6 +1922,7 @@ object {
 	.main-navigation-toggle {
 		float: right;
 		display: inline-block;
+		margin: 1em 0;
 		padding: 1em;
 		background: none;
 	}
@@ -1980,7 +1957,7 @@ object {
 		float: left;
 		width: 100%;
 		display: none;
-		margin-top: 1em;
+		margin-bottom: 1em;
 		border-top: 4px solid #404040;
 	}
 	
@@ -2076,16 +2053,11 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 55em) {
 	
-	.site-content {
-		position: relative;
-		padding: 0;
-	}
-	
 	.content-area, 
 	.site-content .fullwidth-content-area {
 		float: none;
 		width: 100%;
-		padding: 2em 2em 0;
+		padding: 0;
 	}
 	
 	.sidebar {
@@ -2286,13 +2258,9 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 30em) {
 	
-	.header-main {
-		padding: 1em 1.5em;
-	}
-	
-	.content-area, 
-	.site-content .fullwidth-content-area {
-		padding: 1.5em;
+	.container {
+		padding-left: 1.5em;
+		padding-right: 1.5em;
 	}
 	
 	.page-title,
@@ -2376,7 +2344,7 @@ object {
 	}
 	
 	.main-navigation-toggle:after {
-		font-size: 22px;
+		font-size: 24px;
 	}
 	
 	.page-title,
@@ -2416,7 +2384,7 @@ object {
 /*--------------------------------------------------------------
 ## 15.2 - Sticky Header
 --------------------------------------------------------------*/
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 50em) {
 	
 	.sticky-header {
 		position: relative;

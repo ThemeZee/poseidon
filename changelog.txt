@@ -2,6 +2,10 @@
 Poseidon Changelog
 ===================================
 
+Version 1.0.2
+-----------------------------------
+[added] German translation files
+
 Version 1.0.1
 -----------------------------------
 [added] Magazine Homepage template

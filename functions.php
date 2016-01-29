@@ -72,7 +72,7 @@ add_action( 'after_setup_theme', 'poseidon_setup' );
  * @global int $content_width
  */
 function poseidon_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'poseidon_content_width', 810 );
+	$GLOBALS['content_width'] = apply_filters( 'poseidon_content_width', 840 );
 }
 add_action( 'after_setup_theme', 'poseidon_content_width', 0 );
 
