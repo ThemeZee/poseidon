@@ -2,6 +2,13 @@
 Poseidon Changelog
 ===================================
 
+Version 1.0.3
+-----------------------------------
+[added] theme styling to Visual Editor
+[added] proper escaping for the $theme_content variable
+[fixed] PHP notices in Magazine Post Widgets
+[removed] unused header-bar.php template file
+
 Version 1.0.2
 -----------------------------------
 [added] German translation files
