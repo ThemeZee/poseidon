@@ -2,6 +2,11 @@
 Poseidon Changelog
 ===================================
 
+Version 1.0.4
+-----------------------------------
+[added] support for Jetpack Infinite Scroll feature
+[fixed] wrong section name in customizer controls
+
 Version 1.0.3
 -----------------------------------
 [added] theme styling to Visual Editor

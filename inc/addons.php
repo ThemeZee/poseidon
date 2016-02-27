@@ -19,6 +19,13 @@ function poseidon_theme_addons_setup() {
 	add_theme_support( 'themezee-breadcrumbs' );
 	add_theme_support( 'themezee-related-posts' );
 	
+	// Add Support for Infinite Scroll
+	add_theme_support( 'infinite-scroll', array(
+		'type' 		=> 'click',
+		'container' => 'main',
+		'render'    => 'poseidon_infinite_scroll_render',
+	) );
+	
 }
 
 
@@ -63,3 +70,18 @@ function poseidon_theme_addons_image_sizes() {
 	add_image_size( 'themezee-related-posts', 480, 320, true );
 
 }
+
+/**
+ * Custom render function for Infinite Scroll.
+ */
+function poseidon_infinite_scroll_render() {
+
+	// Get Theme Options from Database
+	$theme_options = poseidon_theme_options();
+	
+	while ( have_posts() ) {
+		the_post();
+		get_template_part( 'template-parts/content', $theme_options['post_content'] );
+	}
+	
+} // poseidon_infinite_scroll_render()
