@@ -125,20 +125,21 @@
 			maxWidth: "60em"
 		});
 		
-		/* Setup Top Navigation */
+		/* Setup Footer Navigation */
 		$("#footer-links").responsiveMenu({
 			menuClass: "footer-navigation-menu",
 			toggleClass: "footer-navigation-toggle",
 			maxWidth: "60em"
 		});
 		
-		/* Setup Footer Navigation 
-		$('.footer-navigation-menu').before('<button id=\"footer-links-toggle\" class=\"footer-navigation-toggle\"></button>');
+		/* Add Sticky Header Margin to Content*/
+		$('.sticky-header .site-header').after('<div class="site-header-push"></div>')
 		
-		$('#footer-links-toggle').on('click', function(){
-			$('.footer-navigation-menu').slideToggle();
-			$(this).toggleClass('active');
-		});*/
+		function resizeHeader() {
+			$(".site-header-push").height( $( ".sticky-header .site-header" ).height() );
+		}
+		$(document).ready(resizeHeader);
+		$(window).resize(resizeHeader);
 
 	} );
 

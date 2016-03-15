@@ -2411,23 +2411,31 @@ object {
 /*--------------------------------------------------------------
 ## 15.2 - Sticky Header
 --------------------------------------------------------------*/
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 60em) {
 	
 	.sticky-header {
 		position: relative;
 	}
 	
 	.sticky-header .site-header {
-		position: -webkit-sticky;
-		position: sticky;
+		position: fixed;
 		z-index: 100;
 		top: 0;
 		width: 100%;
 	}
 
-	.sticky-header.admin-bar .site-header {
+	.sticky-header.admin-bar .site-header  {
 		top: 32px;
 	}
+
+}
+
+@media only screen and (max-width: 60em) {
+	
+	.sticky-header .site-header-push {
+		display: none;
+	}
+
 }
 
 /*--------------------------------------------------------------
