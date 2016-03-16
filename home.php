@@ -22,7 +22,7 @@ $theme_options = poseidon_theme_options();
 						
 				<header class="page-header">
 					
-					<h1 class="archive-title"><?php echo wp_kses_post( $theme_options['latest_posts_title'] ); ?></h1>
+					<h2 class="archive-title"><?php echo wp_kses_post( $theme_options['latest_posts_title'] ); ?></h2>
 
 				</header><!-- .page-header -->
 		
