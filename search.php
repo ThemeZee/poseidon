@@ -48,7 +48,7 @@ $theme_options = poseidon_theme_options();
 				
 				<header class="entry-header">
 		
-					<h1 class="page-title"><?php esc_html_e( 'No matches', 'poseidon' ); ?></h1>
+					<h2 class="page-title"><?php esc_html_e( 'No matches', 'poseidon' ); ?></h2>
 					
 				</header><!-- .entry-header -->
 				

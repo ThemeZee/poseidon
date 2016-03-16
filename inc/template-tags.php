@@ -11,13 +11,18 @@
 /**
  * Displays the site title in the header area
  */
-function poseidon_site_title() { ?>
+function poseidon_site_title() {
 
-	<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-		<h1 class="site-title"><?php bloginfo('name'); ?></h1>
-	</a>
-
-<?php
+	if ( is_home() or is_page_template( 'template-magazine.php' )  ) : ?>
+		
+		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+	
+	<?php else : ?>
+		
+		<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+	
+	<?php endif; 
+	
 }
 add_action( 'poseidon_site_title', 'poseidon_site_title' );
 

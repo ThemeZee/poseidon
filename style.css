@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/poseidon/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Poseidon is an elegant designed WordPress theme featuring a splendid fullscreen image slideshow. The clean typography and spacious white layout makes it great to share your stories. You can use the theme as simple blog or easily create a news website with the widget-based Magazine Homepage template.
-Version: 1.0.4
+Version: 1.0.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: poseidon
@@ -662,7 +662,13 @@ textarea {
 	font-family: 'Raleway', sans-serif;
 	font-size: 38px;
 	font-size: 2.375rem;
+	font-weight: bold;
 	text-decoration: none;
+}
+
+.site-title a:link, 
+.site-title a:visited {
+	color: #404040;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-ms-transition: all 0.2s ease;
@@ -670,7 +676,8 @@ textarea {
 	transition: all 0.2s ease;
 }
 
-.site-branding a:hover .site-title {
+.site-title a:hover,
+.site-title a:active {
 	color: #22aadd;
 }
 

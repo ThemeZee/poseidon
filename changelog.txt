@@ -2,6 +2,11 @@
 Poseidon Changelog
 ===================================
 
+Version 1.0.5
+-----------------------------------
+[improved] HTML markup of post and page titles
+[fixed] sticky header feature not working in some browsers
+
 Version 1.0.4
 -----------------------------------
 [added] support for Jetpack Infinite Scroll feature
