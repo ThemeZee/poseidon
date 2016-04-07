@@ -6,6 +6,7 @@ Version 1.0.6
 -----------------------------------
 [added] support for new Site Logo feature of WordPress 4.5
 [added] setting to hide site title
+[fixed] gallery styling
 
 Version 1.0.5
 -----------------------------------
