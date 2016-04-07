@@ -33,7 +33,8 @@
 						
 				<div id="logo" class="site-branding clearfix">
 				
-					<?php do_action( 'poseidon_site_title' ); ?>
+					<?php poseidon_site_logo(); ?>
+					<?php poseidon_site_title(); ?>
 				
 				</div><!-- .site-branding -->
 				

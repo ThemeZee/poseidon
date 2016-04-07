@@ -6,12 +6,11 @@
  */
 
 /**
- * Poseidon only works in WordPress 4.2 or later.
+ * Poseidon only works in WordPress 4.5 or later.
  */
-if ( version_compare( $GLOBALS['wp_version'], '4.2', '<' ) ) :
+if ( version_compare( $GLOBALS['wp_version'], '4.5-alpha', '<' ) ) :
 	require get_template_directory() . '/inc/back-compat.php';
 endif;
-
 
 if ( ! function_exists( 'poseidon_setup' ) ) :
 /**
@@ -48,6 +47,9 @@ function poseidon_setup() {
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'poseidon_custom_background_args', array( 'default-color' => 'ffffff' ) ) );
+	
+	// Set up the WordPress core Site Logo feature
+	add_theme_support( 'site-logo', array( 'size' => 'poseidon-site-logo' ) );
 	
 	// Set up the WordPress core custom header feature.
 	add_theme_support('custom-header', apply_filters( 'poseidon_custom_header_args', array(
@@ -165,6 +167,9 @@ function poseidon_google_fonts_url() {
  * Add custom sizes for featured images
  */
 function poseidon_add_image_sizes() {
+	
+	// Add Site Logo Size
+	add_image_size( 'poseidon-site-logo', 300, 50, true );
 	
 	// Add Custom Header Image Size
 	add_image_size( 'poseidon-header-image', 1920, 480, true );

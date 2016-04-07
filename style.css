@@ -681,6 +681,13 @@ textarea {
 	color: #22aadd;
 }
 
+.site-branding .site-logo {
+	margin: 0.3em 1em 0 0;
+	vertical-align: top;
+	max-width: 100%;
+	max-height: 50px;
+}
+
 /* Custom Header Image */
 .header-image {
 	margin-top: -1px;
@@ -2450,7 +2457,7 @@ object {
 --------------------------------------------------------------*/
 
 /* Ensure navigation is visible on desktop view */
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 60.001em) {
 	
 	.main-navigation-menu {
 		display: block !important;

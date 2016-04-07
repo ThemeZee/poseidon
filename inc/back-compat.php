@@ -2,9 +2,9 @@
 /**
  * Poseidon back compat functionality
  *
- * Prevents Poseidon from running on WordPress versions prior to 4.2,
+ * Prevents Poseidon from running on WordPress versions prior to 4.5,
  * since this theme is not meant to be backward compatible beyond that and
- * relies on many newer functions and markup changes introduced in 4.2.
+ * relies on many newer functions and markup changes introduced in 4.5.
  *
  * @package Poseidon
  *
@@ -33,20 +33,20 @@ add_action( 'after_switch_theme', 'poseidon_compat_switch_theme' );
  * Add message for unsuccessful theme switch.
  *
  * Prints an update nag after an unsuccessful attempt to switch to
- * Poseidon on WordPress versions prior to 4.2.
+ * Poseidon on WordPress versions prior to 4.5.
  *
  */
 function poseidon_compat_upgrade_notice() {
-	$message = sprintf( esc_html__( '%$1s requires at least WordPress version 4.2. You are running version %$2s. Please upgrade and try again.', 'poseidon' ), 'Poseidon', $GLOBALS['wp_version'] );
+	$message = sprintf( esc_html__( 'Poseidon requires at least WordPress version 4.5. You are running version %s. Please upgrade and try again.', 'poseidon' ), $GLOBALS['wp_version'] );
 	printf( '<div class="error"><p>%s</p></div>', $message );
 }
 
 
 /**
- * Prevent the Customizer from being loaded on WordPress versions prior to 4.2.
+ * Prevent the Customizer from being loaded on WordPress versions prior to 4.5.
  */
 function poseidon_compat_customize() {
-	wp_die( sprintf( esc_html__( 'Poseidon requires at least WordPress version 4.2. You are running version %s. Please upgrade and try again.', 'poseidon' ), $GLOBALS['wp_version'] ), '', array(
+	wp_die( sprintf( esc_html__( 'Poseidon requires at least WordPress version 4.5. You are running version %s. Please upgrade and try again.', 'poseidon' ), $GLOBALS['wp_version'] ), '', array(
 		'back_link' => true,
 	) );
 }
@@ -54,11 +54,11 @@ add_action( 'load-customize.php', 'poseidon_compat_customize' );
 
 
 /**
- * Prevent the Theme Preview from being loaded on WordPress versions prior to 4.2.
+ * Prevent the Theme Preview from being loaded on WordPress versions prior to 4.5.
  */
 function poseidon_compat_preview() {
 	if ( isset( $_GET['preview'] ) ) {
-		wp_die( sprintf( esc_html__( 'Poseidon requires at least WordPress version 4.2. You are running version %s. Please upgrade and try again.', 'poseidon' ), $GLOBALS['wp_version'] ) );
+		wp_die( sprintf( esc_html__( 'Poseidon requires at least WordPress version 4.5. You are running version %s. Please upgrade and try again.', 'poseidon' ), $GLOBALS['wp_version'] ) );
 	}
 }
 add_action( 'template_redirect', 'poseidon_compat_preview' );

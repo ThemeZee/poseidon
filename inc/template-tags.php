@@ -7,12 +7,37 @@
  *
  * @package Poseidon
  */
+
+ 
+if ( ! function_exists( 'poseidon_site_logo' ) ): 
+/**
+ * Displays the site logo in the header area
+ */
+function poseidon_site_logo() {
+
+	if ( has_site_logo()  ) :
+		
+		the_site_logo();
 	
+	endif; 
+	
+}
+endif;
+
+if ( ! function_exists( 'poseidon_site_title' ) ): 
 /**
  * Displays the site title in the header area
  */
 function poseidon_site_title() {
-
+	
+	// Get theme options from database
+	$theme_options = poseidon_theme_options();	
+	
+	// Return early if site title is deactivated
+	if( false == $theme_options['display_site_title'] ) {
+		return;
+	}
+	
 	if ( is_home() or is_page_template( 'template-magazine.php' )  ) : ?>
 		
 		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -24,7 +49,7 @@ function poseidon_site_title() {
 	<?php endif; 
 	
 }
-add_action( 'poseidon_site_title', 'poseidon_site_title' );
+endif;
 
 
 if ( ! function_exists( 'poseidon_header_image' ) ):

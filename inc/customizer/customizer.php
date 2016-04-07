@@ -41,6 +41,23 @@ function poseidon_customize_register_options( $wp_customize ) {
 	$wp_customize->get_control( 'background_color'  )->section   = 'background_image';
 	$wp_customize->get_section( 'background_image'  )->title     = esc_html__( 'Background', 'poseidon' );
 	
+	// Add Display Site Title Setting
+	$wp_customize->add_setting( 'poseidon_theme_options[display_site_title]', array(
+        'default'           => true,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'poseidon_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'poseidon_theme_options[display_site_title]', array(
+        'label'    => esc_html__( 'Display Site Title', 'poseidon' ),
+        'section'  => 'title_tagline',
+        'settings' => 'poseidon_theme_options[display_site_title]',
+        'type'     => 'checkbox',
+		'priority' => 10
+		)
+	);
+	
 	// Add Header Image Link
 	$wp_customize->add_setting( 'poseidon_theme_options[custom_header_link]', array(
         'default'           => '',
@@ -49,7 +66,7 @@ function poseidon_customize_register_options( $wp_customize ) {
         'sanitize_callback' => 'esc_url'
 		)
 	);
-    $wp_customize->add_control( 'poseidon_control_custom_header_link', array(
+    $wp_customize->add_control( 'poseidon_theme_options[custom_header_link]', array(
         'label'    => esc_html__( 'Header Image Link', 'poseidon' ),
         'section'  => 'header_image',
         'settings' => 'poseidon_theme_options[custom_header_link]',
@@ -66,7 +83,7 @@ function poseidon_customize_register_options( $wp_customize ) {
         'sanitize_callback' => 'poseidon_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'poseidon_control_custom_header_hide', array(
+    $wp_customize->add_control( 'poseidon_theme_options[custom_header_hide]', array(
         'label'    => esc_html__( 'Hide header image on front page', 'poseidon' ),
         'section'  => 'header_image',
         'settings' => 'poseidon_theme_options[custom_header_hide]',
