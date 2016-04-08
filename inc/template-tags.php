@@ -15,7 +15,8 @@ if ( ! function_exists( 'poseidon_site_logo' ) ):
  */
 function poseidon_site_logo() {
 
-	if ( has_site_logo()  ) :
+	
+	if ( function_exists( 'has_site_logo' ) && has_site_logo()  ) :
 		
 		the_site_logo();
 	
