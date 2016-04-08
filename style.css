@@ -2430,45 +2430,66 @@ object {
 /*--------------------------------------------------------------
 ## 15.2 - Sticky Header
 --------------------------------------------------------------*/
-@media only screen and (min-width: 60em) {
+.sticky-header .fixed-header {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+}
+
+.sticky-header.admin-bar .fixed-header  {
+	top: 32px;
+}
+
+.sticky-header .fixed-header .site-branding,
+.sticky-header .fixed-header .primary-navigation,
+.sticky-header .fixed-header .main-navigation-toggle {
+	margin: 0;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+.sticky-header .fixed-header .main-navigation-toggle {
+	padding: 1em;
+}
+
+.sticky-header .fixed-header .site-branding .site-title {
+	margin: 0.25em 0 0;
+	font-size: 28px;
+	font-size: 1.75rem;
+}
+
+.sticky-header .fixed-header .site-branding .site-logo {
+	margin-top: 1em;
+	max-height: 25px;
+	width: auto;
+}
+
+@media only screen and (max-width: 60em) {
 	
-	.sticky-header {
-		position: relative;
-	}
-	
-	.sticky-header .fixed-header {
-		position: fixed;
-		z-index: 100;
-		top: 0;
-		width: 100%;
+	.sticky-header .fixed-header .main-navigation-menu {
+		margin-top: 0.5em;
 	}
 
+}
+
+@media only screen and (max-width: 782px) {
+	
 	.sticky-header.admin-bar .fixed-header  {
-		top: 32px;
+		top: 46px;
 	}
 	
-	.sticky-header .fixed-header .site-branding,
-	.sticky-header .fixed-header .primary-navigation	{
-		margin: 0;
-		-webkit-transition: all 0.2s ease;
-		-moz-transition: all 0.2s ease;
-		-ms-transition: all 0.2s ease;
-		-o-transition: all 0.2s ease;
-		transition: all 0.2s ease;
-	}
+}
 
-	.sticky-header .fixed-header .site-branding .site-title {
-		margin: 0.25em 0 0;
-		font-size: 28px;
-		font-size: 1.75rem;
+@media only screen and (max-width: 600px) {
+	
+	.sticky-header.admin-bar .fixed-header  {
+		top: 0;
 	}
-
-	.sticky-header .fixed-header .site-branding .site-logo {
-		margin-top: 1em;
-		max-height: 25px;
-		width: auto;
-	}
-
+	
 }
 
 /*--------------------------------------------------------------

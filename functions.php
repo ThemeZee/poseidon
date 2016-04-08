@@ -6,9 +6,9 @@
  */
 
 /**
- * Poseidon only works in WordPress 4.5 or later.
+ * Poseidon only works in WordPress 4.4 or later.
  */
-if ( version_compare( $GLOBALS['wp_version'], '4.5-alpha', '<' ) ) :
+if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) :
 	require get_template_directory() . '/inc/back-compat.php';
 endif;
 
