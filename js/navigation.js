@@ -105,6 +105,26 @@
 
 	};
 	
+	/**--------------------------------------------------------------
+	# Sticky Header
+	--------------------------------------------------------------*/
+	function stickyHeader() {
+
+		var window_top = $(window).scrollTop(),
+			top_position = $('body').offset().top ,
+			sticky_header = $('.site-header');
+
+		if ( window_top > top_position ) {
+			
+			sticky_header.addClass('fixed-header');
+				
+		} else {
+			
+			sticky_header.removeClass('fixed-header');
+				
+		}
+    };
+	
 	
 	/**--------------------------------------------------------------
 	# Setup Navigation Menus
@@ -132,14 +152,9 @@
 			maxWidth: "60em"
 		});
 		
-		/* Add Sticky Header Margin to Content*/
-		$('.sticky-header .site-header').after('<div class="site-header-push"></div>')
-		
-		function resizeHeader() {
-			$(".site-header-push").height( $( ".sticky-header .site-header" ).height() );
-		}
-		$(document).ready(resizeHeader);
-		$(window).resize(resizeHeader);
+		/* Add Sticky Header feature */
+		$(window).scroll(stickyHeader);
+		stickyHeader();
 
 	} );
 
