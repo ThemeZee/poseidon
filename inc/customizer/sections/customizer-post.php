@@ -145,6 +145,24 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 
+	// Add Post Footer Settings
+	$wp_customize->add_setting( 'poseidon_theme_options[single_posts_headline]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Poseidon_Customize_Header_Control(
+        $wp_customize, 'poseidon_theme_options[single_posts_headline]', array(
+            'label' => esc_html__( 'Single Posts', 'poseidon' ),
+            'section' => 'poseidon_section_post',
+            'settings' => 'poseidon_theme_options[single_posts_headline]',
+            'priority' => 8
+            )
+        )
+    );
+	
 	$wp_customize->add_setting( 'poseidon_theme_options[meta_tags]', array(
         'default'           => false,
 		'type'           	=> 'option',
@@ -157,27 +175,10 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
         'section'  => 'poseidon_section_post',
         'settings' => 'poseidon_theme_options[meta_tags]',
         'type'     => 'checkbox',
-		'priority' => 8
+		'priority' => 9
 		)
 	);
 	
-	// Add Post Footer Settings
-	$wp_customize->add_setting( 'poseidon_theme_options[post_footer_headline]', array(
-        'default'           => '',
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'esc_attr'
-        )
-    );
-    $wp_customize->add_control( new Poseidon_Customize_Header_Control(
-        $wp_customize, 'poseidon_theme_options[post_footer_headline]', array(
-            'label' => esc_html__( 'Post Footer', 'poseidon' ),
-            'section' => 'poseidon_section_post',
-            'settings' => 'poseidon_theme_options[post_footer_headline]',
-            'priority' => 9
-            )
-        )
-    );
 	$wp_customize->add_setting( 'poseidon_theme_options[post_navigation]', array(
         'default'           => true,
 		'type'           	=> 'option',
