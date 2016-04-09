@@ -130,7 +130,7 @@ function poseidon_scripts() {
 	$wp_scripts->add_data( 'poseidon-html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js
-	wp_enqueue_script( 'poseidon-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery') );
+	wp_enqueue_script( 'poseidon-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'), '1.0.6' );
 	
 	// Register and Enqueue Google Fonts
 	wp_enqueue_style( 'poseidon-default-fonts', poseidon_google_fonts_url(), array(), null );

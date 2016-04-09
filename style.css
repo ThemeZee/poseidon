@@ -384,7 +384,42 @@ q:after {
 
 blockquote,
 q {
-	quotes: "" "";
+	quotes: none;
+}
+
+blockquote {
+	margin: 0 0 1.5em;
+	border-left: 4px solid #eee;
+	padding-left: 1.5em;
+	font-size: 19px;
+	font-size: 1.1875rem;
+	font-style: italic;
+	color: #777;
+}
+
+blockquote cite,
+blockquote small {
+	margin-top: 1em;
+	display: block;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.75;
+	color: #404040;
+}
+
+blockquote cite:before,
+blockquote small:before {
+	content: "\2014\00a0";
+}
+
+blockquote em,
+blockquote i,
+blockquote cite {
+	font-style: normal;
+}
+
+blockquote > :last-child {
+	margin-bottom: 0.5em;
 }
 
 hr {
@@ -428,7 +463,19 @@ img {
 
 table {
 	margin: 0 0 1.5em;
+	border: none;
+	table-layout: fixed;
 	width: 100%;
+}
+
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 0.3em 0.6em;
+}
+
+th {
+	background: #eee;
 }
 
 a {
