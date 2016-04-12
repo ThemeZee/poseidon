@@ -45,13 +45,18 @@ function poseidon_setup() {
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	) );
 
-	// Set up the WordPress core custom background feature.
+	// Set up the WordPress core custom background feature
 	add_theme_support( 'custom-background', apply_filters( 'poseidon_custom_background_args', array( 'default-color' => 'ffffff' ) ) );
 	
-	// Set up the WordPress core Site Logo feature
-	add_theme_support( 'site-logo', array( 'size' => 'poseidon-site-logo' ) );
+	// Set up the WordPress core custom logo feature
+	add_theme_support( 'custom-logo', apply_filters( 'poseidon_custom_logo_args', array(
+		'height' => 50,
+		'width' => 350,
+		'flex-height' => true,
+		'flex-width' => true,
+	) ) );
 	
-	// Set up the WordPress core custom header feature.
+	// Set up the WordPress core custom header feature
 	add_theme_support('custom-header', apply_filters( 'poseidon_custom_header_args', array(
 		'header-text' => false,
 		'width'	=> 1920,
@@ -168,9 +173,6 @@ function poseidon_google_fonts_url() {
  */
 function poseidon_add_image_sizes() {
 	
-	// Add Site Logo Size
-	add_image_size( 'poseidon-site-logo', 300, 50, true );
-	
 	// Add Custom Header Image Size
 	add_image_size( 'poseidon-header-image', 1920, 480, true );
 	
@@ -179,6 +181,7 @@ function poseidon_add_image_sizes() {
 	add_image_size( 'poseidon-thumbnail-medium', 360, 240, true );
 	add_image_size( 'poseidon-thumbnail-large', 600, 400, true );
 	add_image_size( 'poseidon-thumbnail-single', 840, 420, true );
+	
 }
 add_action( 'after_setup_theme', 'poseidon_add_image_sizes' );
 

@@ -40,7 +40,7 @@ function poseidon_theme_options() {
 function poseidon_default_options() {
 
 	$default_options = array(
-		'display_site_title'				=> true,
+		'site_title'						=> true,
 		'custom_header_link'				=> '',
 		'custom_header_hide'				=> false,
 		'layout' 							=> 'right-sidebar',

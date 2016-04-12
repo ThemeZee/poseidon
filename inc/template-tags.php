@@ -15,11 +15,11 @@ if ( ! function_exists( 'poseidon_site_logo' ) ):
  */
 function poseidon_site_logo() {
 
-	if ( function_exists( 'has_site_logo' ) && has_site_logo()  ) :
+	if ( function_exists( 'the_custom_logo' ) ) {
 		
-		the_site_logo();
+		the_custom_logo();
 	
-	endif; 
+	} 
 	
 }
 endif;
@@ -35,7 +35,7 @@ function poseidon_site_title() {
 	$theme_options = poseidon_theme_options();	
 	
 	// Return early if site title is deactivated
-	if( false == $theme_options['display_site_title'] ) {
+	if( false == $theme_options['site_title'] ) {
 		return;
 	}
 	
