@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Poseidon\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-01-29 11:10+0100\n"
-"PO-Revision-Date: 2016-01-29 11:10+0100\n"
+"POT-Creation-Date: 2016-04-13 15:57+0100\n"
+"PO-Revision-Date: 2016-04-13 15:57+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -59,23 +59,23 @@ msgstr ""
 msgid "Leave a Reply"
 msgstr ""
 
-#: functions.php:42
+#: functions.php:41
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:88 sidebar.php:20
+#: functions.php:98 sidebar.php:20
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:90
-msgid "Appears on posts and pages except full width template."
+#: functions.php:100
+msgid "Appears on posts and pages except the full width template."
 msgstr ""
 
-#: functions.php:98
+#: functions.php:108
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:100
+#: functions.php:110
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Magazine Posts "
 "widgets here."
@@ -121,29 +121,23 @@ msgid ""
 "set up the theme like the demo website."
 msgstr ""
 
-#: inc/back-compat.php:40
-msgid ""
-"%$1s requires at least WordPress version 4.2. You are running version %$2s. "
-"Please upgrade and try again."
-msgstr ""
-
-#: inc/back-compat.php:49 inc/back-compat.php:61
+#: inc/back-compat.php:40 inc/back-compat.php:49 inc/back-compat.php:61
 #, php-format
 msgid ""
-"Poseidon requires at least WordPress version 4.2. You are running version "
+"Poseidon requires at least WordPress version 4.4. You are running version "
 "%s. Please upgrade and try again."
 msgstr ""
 
-#: inc/template-tags.php:205
+#: inc/template-tags.php:236
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:260 template-parts/content.php:22
+#: inc/template-tags.php:291 template-parts/content.php:22
 msgid "Read more"
 msgstr ""
 
-#: inc/template-tags.php:363
+#: inc/template-tags.php:394
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
@@ -157,15 +151,15 @@ msgstr ""
 msgid "Theme Info"
 msgstr ""
 
-#: inc/theme-info.php:49 inc/customizer/customizer.php:102
+#: inc/theme-info.php:49 inc/customizer/customizer.php:119
 msgid "Theme Links"
 msgstr ""
 
-#: inc/theme-info.php:50 inc/customizer/customizer.php:103
+#: inc/theme-info.php:50 inc/customizer/customizer.php:120
 msgid "https://themezee.com/themes/poseidon/"
 msgstr ""
 
-#: inc/theme-info.php:50 inc/customizer/customizer.php:104
+#: inc/theme-info.php:50 inc/customizer/customizer.php:121
 msgid "Theme Page"
 msgstr ""
 
@@ -178,16 +172,16 @@ msgid "Theme Demo"
 msgstr ""
 
 #: inc/theme-info.php:53 inc/theme-info.php:74
-#: inc/customizer/customizer.php:105
+#: inc/customizer/customizer.php:122
 msgid "https://themezee.com/docs/poseidon-documentation/"
 msgstr ""
 
 #: inc/theme-info.php:53 inc/theme-info.php:68
-#: inc/customizer/customizer.php:106
+#: inc/customizer/customizer.php:123
 msgid "Theme Documentation"
 msgstr ""
 
-#: inc/theme-info.php:54 inc/customizer/customizer.php:108
+#: inc/theme-info.php:54 inc/customizer/customizer.php:125
 msgid "Rate this theme"
 msgstr ""
 
@@ -286,14 +280,18 @@ msgid "Background"
 msgstr ""
 
 #: inc/customizer/customizer.php:53
-msgid "Header Image Link"
+msgid "Display Site Title"
 msgstr ""
 
 #: inc/customizer/customizer.php:70
+msgid "Header Image Link"
+msgstr ""
+
+#: inc/customizer/customizer.php:87
 msgid "Hide header image on front page"
 msgstr ""
 
-#: inc/customizer/default-options.php:49
+#: inc/customizer/default-options.php:50
 #: inc/customizer/sections/customizer-post.php:28
 msgid "Latest Posts"
 msgstr ""
@@ -402,15 +400,15 @@ msgstr ""
 msgid "Display post categories"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:156
-msgid "Display post tags on single posts"
+#: inc/customizer/sections/customizer-post.php:158
+msgid "Single Posts"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:174
-msgid "Post Footer"
+msgid "Display post tags on single posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:189
+#: inc/customizer/sections/customizer-post.php:190
 msgid "Display post navigation on single posts"
 msgstr ""
 

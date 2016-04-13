@@ -51,7 +51,7 @@ function poseidon_setup() {
 	// Set up the WordPress core custom logo feature
 	add_theme_support( 'custom-logo', apply_filters( 'poseidon_custom_logo_args', array(
 		'height' => 50,
-		'width' => 350,
+		'width' => 250,
 		'flex-height' => true,
 		'flex-width' => true,
 	) ) );
@@ -97,7 +97,7 @@ function poseidon_widgets_init() {
 	register_sidebar( array(
 		'name' => esc_html__( 'Sidebar', 'poseidon' ),
 		'id' => 'sidebar',
-		'description' => esc_html__( 'Appears on posts and pages except full width template.', 'poseidon' ),
+		'description' => esc_html__( 'Appears on posts and pages except the full width template.', 'poseidon' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<div class="widget-header"><h3 class="widget-title">',

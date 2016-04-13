@@ -730,8 +730,11 @@ textarea {
 
 .site-branding .custom-logo {
 	margin: 0.3em 1em 0 0;
+	padding: 0;
+	border: none;
 	vertical-align: top;
 	max-width: 100%;
+	height: auto;
 }
 
 /* Custom Header Image */

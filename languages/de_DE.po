@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Poseidon\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-01-29 11:10+0100\n"
-"PO-Revision-Date: 2016-01-29 11:13+0100\n"
+"POT-Creation-Date: 2016-04-13 15:57+0100\n"
+"PO-Revision-Date: 2016-04-13 15:57+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: de_DE\n"
@@ -57,25 +57,23 @@ msgstr "Kommentare sind geschlossen."
 msgid "Leave a Reply"
 msgstr "Kommentar hinterlassen"
 
-#: functions.php:42
+#: functions.php:41
 msgid "Main Navigation"
 msgstr "Hauptnavigation"
 
-#: functions.php:88 sidebar.php:20
+#: functions.php:98 sidebar.php:20
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:90
-msgid "Appears on posts and pages except full width template."
-msgstr ""
-"Erscheint auf allen Beiträgen und Seiten mit Ausnahme des Fullwidth "
-"Templates."
+#: functions.php:100
+msgid "Appears on posts and pages except the full width template."
+msgstr "Erscheint auf allen Beiträgen und Seiten außer dem Fullwidth Template."
 
-#: functions.php:98
+#: functions.php:108
 msgid "Magazine Homepage"
 msgstr "Magazin Startseite"
 
-#: functions.php:100
+#: functions.php:110
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Magazine Posts "
 "widgets here."
@@ -129,33 +127,25 @@ msgstr ""
 "\"Magazin Startseite\" Widget Bereich hinzu. Du kannst die Magazin Beiträge "
 "Widgets verwenden, um das Theme wie die Demo Webseite einzurichten."
 
-#: inc/back-compat.php:40
-msgid ""
-"%$1s requires at least WordPress version 4.2. You are running version %$2s. "
-"Please upgrade and try again."
-msgstr ""
-"%$1s benötigt mindestens WordPress Version 4.2. Du verwendest Version %$2s. "
-"Bitte aktualisiere und versuche es erneut."
-
-#: inc/back-compat.php:49 inc/back-compat.php:61
+#: inc/back-compat.php:40 inc/back-compat.php:49 inc/back-compat.php:61
 #, php-format
 msgid ""
-"Poseidon requires at least WordPress version 4.2. You are running version "
+"Poseidon requires at least WordPress version 4.4. You are running version "
 "%s. Please upgrade and try again."
 msgstr ""
-"Poseidon benötigt mindestens WordPress Version 4.2. Du verwendest Version "
+"Poseidon benötigt mindestens WordPress Version 4.4. Du verwendest Version "
 "%s. Bitte führe ein Update durch und versuche es erneut."
 
-#: inc/template-tags.php:205
+#: inc/template-tags.php:236
 #, php-format
 msgid "View all posts by %s"
 msgstr "Alle Beiträge von %s ansehen"
 
-#: inc/template-tags.php:260 template-parts/content.php:22
+#: inc/template-tags.php:291 template-parts/content.php:22
 msgid "Read more"
 msgstr "Weiterlesen"
 
-#: inc/template-tags.php:363
+#: inc/template-tags.php:394
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr "Erstellt mit %1$s und %2$s."
@@ -169,15 +159,15 @@ msgstr "Willkommen bei %1$s %2$s"
 msgid "Theme Info"
 msgstr "Theme Info"
 
-#: inc/theme-info.php:49 inc/customizer/customizer.php:102
+#: inc/theme-info.php:49 inc/customizer/customizer.php:119
 msgid "Theme Links"
 msgstr "Theme Links"
 
-#: inc/theme-info.php:50 inc/customizer/customizer.php:103
+#: inc/theme-info.php:50 inc/customizer/customizer.php:120
 msgid "https://themezee.com/themes/poseidon/"
 msgstr "https://themezee.com/de/themes/poseidon/"
 
-#: inc/theme-info.php:50 inc/customizer/customizer.php:104
+#: inc/theme-info.php:50 inc/customizer/customizer.php:121
 msgid "Theme Page"
 msgstr "Theme Seite"
 
@@ -190,16 +180,16 @@ msgid "Theme Demo"
 msgstr "Theme Demo"
 
 #: inc/theme-info.php:53 inc/theme-info.php:74
-#: inc/customizer/customizer.php:105
+#: inc/customizer/customizer.php:122
 msgid "https://themezee.com/docs/poseidon-documentation/"
 msgstr "https://themezee.com/de/docs/poseidon-dokumentation/"
 
 #: inc/theme-info.php:53 inc/theme-info.php:68
-#: inc/customizer/customizer.php:106
+#: inc/customizer/customizer.php:123
 msgid "Theme Documentation"
 msgstr "Theme Dokumentation"
 
-#: inc/theme-info.php:54 inc/customizer/customizer.php:108
+#: inc/theme-info.php:54 inc/customizer/customizer.php:125
 msgid "Rate this theme"
 msgstr "Theme bewerten"
 
@@ -307,14 +297,18 @@ msgid "Background"
 msgstr "Hintergrund"
 
 #: inc/customizer/customizer.php:53
+msgid "Display Site Title"
+msgstr "Zeige Titel der Website"
+
+#: inc/customizer/customizer.php:70
 msgid "Header Image Link"
 msgstr "Header-Bild Link"
 
-#: inc/customizer/customizer.php:70
+#: inc/customizer/customizer.php:87
 msgid "Hide header image on front page"
 msgstr "Verstecke Header-Bild auf der Startseite"
 
-#: inc/customizer/default-options.php:49
+#: inc/customizer/default-options.php:50
 #: inc/customizer/sections/customizer-post.php:28
 msgid "Latest Posts"
 msgstr "Letzte Beiträge"
@@ -423,15 +417,15 @@ msgstr "Zeige den Author des Beitrags"
 msgid "Display post categories"
 msgstr "Zeige die Kategorien des Beitrags"
 
-#: inc/customizer/sections/customizer-post.php:156
+#: inc/customizer/sections/customizer-post.php:158
+msgid "Single Posts"
+msgstr "Einzelne  Beiträge"
+
+#: inc/customizer/sections/customizer-post.php:174
 msgid "Display post tags on single posts"
 msgstr "Zeige die Schlagwörter in einzelnen Beiträgen"
 
-#: inc/customizer/sections/customizer-post.php:174
-msgid "Post Footer"
-msgstr "Beitrags-Footer"
-
-#: inc/customizer/sections/customizer-post.php:189
+#: inc/customizer/sections/customizer-post.php:190
 msgid "Display post navigation on single posts"
 msgstr "Zeige Beitrags-Navigation"
 
@@ -587,6 +581,16 @@ msgstr "Dreispaltiges Raster"
 #: inc/widgets/widget-magazine-posts-grid.php:439
 msgid "Display post excerpt"
 msgstr "Zeige Beitragsauszug"
+
+#~ msgid ""
+#~ "%$1s requires at least WordPress version 4.2. You are running version %"
+#~ "$2s. Please upgrade and try again."
+#~ msgstr ""
+#~ "%$1s benötigt mindestens WordPress Version 4.2. Du verwendest Version %"
+#~ "$2s. Bitte aktualisiere und versuche es erneut."
+
+#~ msgid "Post Footer"
+#~ msgstr "Beitrags-Footer"
 
 #~ msgid "Enter password to view comments."
 #~ msgstr "Passwort eingeben, um Kommentare zu sehen."
@@ -859,9 +863,6 @@ msgstr "Zeige Beitragsauszug"
 
 #~ msgid "Display Social Icons on top navigation"
 #~ msgstr "Social Icons in der oberen Navigation anzeigen"
-
-#~ msgid "Display Category Titles"
-#~ msgstr "Zeige Kategorien als Titel"
 
 #~ msgid ""
 #~ "Displays a single post from a selected category. Please use this widget "
@@ -1553,9 +1554,6 @@ msgstr "Zeige Beitragsauszug"
 
 #~ msgid "Show Faces"
 #~ msgstr "Zeige Fans"
-
-#~ msgid "Show Page Posts"
-#~ msgstr "Zeige Beiträge"
 
 #~ msgid "Recent Comments (ThemeZee)"
 #~ msgstr "Letzte Kommentare (ThemeZee)"

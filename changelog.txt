@@ -4,11 +4,13 @@ Poseidon Changelog
 
 Version 1.0.6
 -----------------------------------
-[added] support for new Site Logo feature of WordPress 4.5
+[added] support for new custom logo feature from WordPress 4.5
 [added] setting to hide site title
 [fixed] column layout styling of image galleries
-[updated] Flexslider to version 2.6.0
 [improved] styling of sticky header
+[fixed] broken slideshow on browser resize
+
+You can upload your logo image on Appearance -> Customize -> Site Identity now.
 
 Version 1.0.5
 -----------------------------------
