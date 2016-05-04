@@ -11,7 +11,7 @@ add_action( 'after_setup_theme', 'poseidon_theme_addons_setup' );
 
 function poseidon_theme_addons_setup() {
 
-	// Add Theme Support for Anderson Pro Plugin
+	// Add Theme Support for Poseidon Pro Plugin
 	add_theme_support( 'poseidon-pro' );
 	
 	// Add Theme Support for ThemeZee Plugins
