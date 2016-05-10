@@ -79,6 +79,23 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	
+	// Add Setting and Control for Excerpt More Text
+	$wp_customize->add_setting( 'poseidon_theme_options[excerpt_more]', array(
+        'default'           => '[...]',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+		)
+	);
+    $wp_customize->add_control( 'poseidon_theme_options[excerpt_more]', array(
+        'label'    => esc_html__( 'Excerpt More Text', 'poseidon' ),
+        'section'  => 'poseidon_section_post',
+        'settings' => 'poseidon_theme_options[excerpt_more]',
+        'type'     => 'text',
+		'priority' => 4
+		)
+	);
+	
 	// Add Post Meta Settings
 	$wp_customize->add_setting( 'poseidon_theme_options[postmeta_headline]', array(
         'default'           => '',
@@ -92,7 +109,7 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
             'label' => esc_html__( 'Post Meta', 'poseidon' ),
             'section' => 'poseidon_section_post',
             'settings' => 'poseidon_theme_options[postmeta_headline]',
-            'priority' => 4
+            'priority' => 5
             )
         )
     );
@@ -109,7 +126,7 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
         'section'  => 'poseidon_section_post',
         'settings' => 'poseidon_theme_options[meta_date]',
         'type'     => 'checkbox',
-		'priority' => 5
+		'priority' => 6
 		)
 	);
 	
@@ -125,7 +142,7 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
         'section'  => 'poseidon_section_post',
         'settings' => 'poseidon_theme_options[meta_author]',
         'type'     => 'checkbox',
-		'priority' => 6
+		'priority' => 7
 		)
 	);
 	
@@ -141,7 +158,7 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
         'section'  => 'poseidon_section_post',
         'settings' => 'poseidon_theme_options[meta_category]',
         'type'     => 'checkbox',
-		'priority' => 7
+		'priority' => 8
 		)
 	);
 
@@ -158,7 +175,7 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
             'label' => esc_html__( 'Single Posts', 'poseidon' ),
             'section' => 'poseidon_section_post',
             'settings' => 'poseidon_theme_options[single_posts_headline]',
-            'priority' => 8
+            'priority' => 9
             )
         )
     );
@@ -175,7 +192,7 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
         'section'  => 'poseidon_section_post',
         'settings' => 'poseidon_theme_options[meta_tags]',
         'type'     => 'checkbox',
-		'priority' => 9
+		'priority' => 10
 		)
 	);
 	
@@ -191,7 +208,7 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
         'section'  => 'poseidon_section_post',
         'settings' => 'poseidon_theme_options[post_navigation]',
         'type'     => 'checkbox',
-		'priority' => 10
+		'priority' => 11
 		)
 	);
 	

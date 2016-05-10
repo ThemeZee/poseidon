@@ -83,6 +83,23 @@ function poseidon_magazine_posts_excerpt_length($length) {
 
 
 /**
+ * Change excerpt more text for posts
+ *
+ * @param string $more_text Excerpt More Text
+ * @return string
+ */
+function poseidon_excerpt_more( $more_text ) {
+	
+	// Get Theme Options from Database
+	$theme_options = poseidon_theme_options();
+
+	return esc_attr( $theme_options['excerpt_more'] );
+
+}
+add_filter( 'excerpt_more', 'poseidon_excerpt_more' );
+
+
+/**
  * Set wrapper start for wooCommerce
  *
  */

@@ -50,6 +50,7 @@ function poseidon_default_options() {
 		'latest_posts_title'				=> esc_html__( 'Latest Posts', 'poseidon' ),
 		'post_content' 						=> 'excerpt',
 		'excerpt_length' 					=> 20,
+		'excerpt_more' 						=> '[...]',
 		'meta_date'							=> true,
 		'meta_author'						=> true,
 		'meta_category'						=> true,

@@ -4,6 +4,7 @@ Poseidon Changelog
 
 Version 1.0.7
 -----------------------------------
+[added] setting to change excerpt more text
 [added] selective refresh support in customizer for sidebars and widgets
 [added] version numbers to wp_enqueue_style and wp_enqueue_script functions
 [updated] flexlider, html5shiv and Genericons
