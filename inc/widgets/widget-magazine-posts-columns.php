@@ -21,7 +21,8 @@ class Poseidon_Magazine_Posts_Columns_Widget extends WP_Widget {
 			sprintf( esc_html__( 'Magazine Posts: 2 Columns (%s)', 'poseidon' ), wp_get_theme()->Name ), // Name
 			array( 
 				'classname' => 'poseidon_magazine_posts_columns', 
-				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'poseidon' ) 
+				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'poseidon' ),
+				'customize_selective_refresh' => true, 
 			) // Args
 		);
 
