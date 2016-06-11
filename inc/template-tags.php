@@ -91,12 +91,12 @@ function poseidon_header_image() {
 			if( $theme_options['custom_header_link'] <> '' ) : ?>
 			
 				<a href="<?php echo esc_url( $theme_options['custom_header_link'] ); ?>">
-					<img src="<?php echo get_header_image(); ?>" />
+					<img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id ) ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 				</a>
 				
 			<?php else : ?>
 			
-				<img src="<?php echo get_header_image(); ?>" />
+				<img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id ) ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 				
 			<?php endif; ?>
 			
