@@ -694,8 +694,8 @@ textarea {
 	padding: 0;
 }
 
-.site-branding a:link, 
-.site-branding a:visited, 
+.site-branding a:link,
+.site-branding a:visited,
 .site-branding a:hover {
 	text-decoration: none;
 	padding: 0;
@@ -714,7 +714,7 @@ textarea {
 	text-decoration: none;
 }
 
-.site-title a:link, 
+.site-title a:link,
 .site-title a:visited {
 	color: #404040;
 	-webkit-transition: all 0.2s ease;
@@ -774,7 +774,7 @@ textarea {
 	padding: 0;
 	list-style-type: none;
 	list-style-position: outside;
-	position: relative;	
+	position: relative;
 }
 
 .main-navigation-menu li {
@@ -812,7 +812,7 @@ textarea {
 	color: #404040;
 }
 
-.main-navigation-menu a:link, 
+.main-navigation-menu a:link,
 .main-navigation-menu a:visited {
 	color: #404040;
 	text-decoration: none;
@@ -883,15 +883,15 @@ textarea {
 	margin-top: -4px;
 }
 
-.main-navigation-menu li:hover ul ul, 
-.main-navigation-menu li:hover ul ul ul, 
+.main-navigation-menu li:hover ul ul,
+.main-navigation-menu li:hover ul ul ul,
 .main-navigation-menu li:hover ul ul ul ul {
 	display: none;
 }
 
-.main-navigation-menu li:hover ul, 
-.main-navigation-menu li li:hover ul, 
-.main-navigation-menu li li li:hover ul, 
+.main-navigation-menu li:hover ul,
+.main-navigation-menu li li:hover ul,
+.main-navigation-menu li li li:hover ul,
 .main-navigation-menu li li li li:hover ul {
 	display: block;
 }
@@ -1013,7 +1013,7 @@ textarea {
 	margin: 0.5em 0 0.5em 1em;
 }
 
-.widget-title a:link, 
+.widget-title a:link,
 .widget-title a:visited  {
 	color: #404040;
 	-webkit-transition: all 0.2s ease;
@@ -1023,7 +1023,7 @@ textarea {
 	transition: all 0.2s ease;
 }
 
-.widget-title a:hover, 
+.widget-title a:hover,
 .widget-title a:active  {
 	color: #22aadd;
 }
@@ -1064,7 +1064,7 @@ textarea {
 	font-size: 1rem !important;
 }
 
-.widget_tag_cloud .tagcloud a:link, 
+.widget_tag_cloud .tagcloud a:link,
 .widget_tag_cloud .tagcloud a:visited {
 	color: #777;
 	-webkit-transition: all 0.2s ease;
@@ -1074,7 +1074,7 @@ textarea {
 	transition: all 0.2s ease;
 }
 
-.widget_tag_cloud .tagcloud a:hover, 
+.widget_tag_cloud .tagcloud a:hover,
 .widget_tag_cloud .tagcloud a:active {
 	color: #fff;
 	background: #22aadd;
@@ -1216,7 +1216,7 @@ textarea {
 
 /* Magazine Posts Boxed Widget Horizontal Style */
 .widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .wp-post-image {
-	float: left;	
+	float: left;
 	width: 50%;
 	margin: 0;
 	padding-right: 1em;
@@ -1316,14 +1316,14 @@ textarea {
 /*--------------------------------------------------------------
 # 12.0 - Posts and pages
 --------------------------------------------------------------*/
-.type-post, 
-.type-page, 
+.type-post,
+.type-page,
 .type-attachment  {
 	margin: 0 0 3em 0;
 	max-width: 100%;
 }
 
-.page-title, 
+.page-title,
 .entry-title {
 	display: inline;
 	font-family: 'Raleway', sans-serif;
@@ -1337,7 +1337,7 @@ textarea {
 	word-wrap: break-word;
 }
 
-.entry-title a:link, 
+.entry-title a:link,
 .entry-title a:visited {
 	color: #404040;
 	text-decoration: none;
@@ -1348,7 +1348,7 @@ textarea {
 	transition: all 0.2s ease;
 }
 
-.entry-title a:hover, 
+.entry-title a:hover,
 .entry-title a:active{
 	color: #22aadd;
 }
@@ -1418,12 +1418,12 @@ textarea {
 	text-transform: uppercase;
 }
 
-.entry-meta a:link, 
+.entry-meta a:link,
 .entry-meta a:visited {
 	color: #aaa;
 }
 
-.entry-meta a:hover, 
+.entry-meta a:hover,
 .entry-meta a:active {
 	color: #777;
 }
@@ -1464,7 +1464,7 @@ textarea {
 	background: #eee;
 }
 
-.entry-tags .meta-tags a:link, 
+.entry-tags .meta-tags a:link,
 .entry-tags .meta-tags a:visited {
 	color: #777;
 	-webkit-transition: all 0.2s ease;
@@ -1474,7 +1474,7 @@ textarea {
 	transition: all 0.2s ease;
 }
 
-.entry-tags .meta-tags a:hover, 
+.entry-tags .meta-tags a:hover,
 .entry-tags .meta-tags a:active {
 	color: #fff;
 	background: #22aadd;
@@ -1518,7 +1518,7 @@ textarea {
 	display: inline-block;
 	margin: 0;
 	padding: 0.5em 0.9em;
-    text-align: center;
+	text-align: center;
 	text-decoration: none;
 	font-family: 'Raleway', Tahoma, Arial;
 	font-size: 16px;
@@ -1527,7 +1527,7 @@ textarea {
 	text-transform: uppercase;
 }
 
-.post-pagination a:link, 
+.post-pagination a:link,
 .post-pagination a:visited {
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
@@ -1886,11 +1886,11 @@ object {
 	.site-content {
 		padding-top: 2em;
 	}
-	
+
 	.content-area {
 		padding-right: 3em;
 	}
-	
+
 }
 
 @media only screen and (max-width: 75em) {
@@ -1900,31 +1900,31 @@ object {
 		font-size: 0.875rem;
 		padding: 1.3em 1.1em;
 	}
-	
-	.page-title, 
+
+	.page-title,
 	.entry-title {
 		font-size: 36px;
 		font-size: 2.25rem;
 	}
-	
+
 	.post-layout-small .content-area .type-post .entry-title {
 		font-size: 26px;
 		font-size: 1.625rem;
 	}
-	
+
 }
 
 /*--------------------------------------------------------------
 ## 14.2 - Desktop Large ( < 1120px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
-	
+
 	.main-navigation-menu a {
 		font-size: 13px;
 		font-size: 0.8125rem;
 		padding: 1.5em 1em;
 	}
-	
+
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
@@ -1934,23 +1934,23 @@ object {
 		font-size: 15px;
 		font-size: 0.9375rem;
 	}
-	
+
 	.widget-magazine-posts .small-post .entry-title {
 		font-size: 14px;
 		font-size: 0.875rem;
 	}
-	
+
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .more-link  {
 		display: none;
 	}
-	
+
 }
 
 /*--------------------------------------------------------------
 ## 14.2 - Desktop Medium ( < 1040px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 65em) {
-	
+
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .entry-content {
 		display: none;
 	}
@@ -1961,60 +1961,60 @@ object {
 ## 14.3 - Desktop Small ( < 960px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 60em) {
-	
-	.page-title, 
+
+	.page-title,
 	.entry-title {
 		font-size: 32px;
 		font-size: 2rem;
 	}
-	
+
 	.post-layout-small .content-area .type-post .entry-title {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
-	
+
 	/*** Mobile Main Navigation ***/
-	
+
 	/* Reset */
 	.primary-navigation {
 		margin: 0;
 	}
-	
-	.primary-navigation, 
+
+	.primary-navigation,
 	.main-navigation-menu li {
 		float: none;
 		position: static;
 	}
-	
+
 	.main-navigation-menu ul {
 		position: static;
 		display: block;
 	}
-	
+
 	.main-navigation-menu ul a {
 		width: auto;
 		float: none;
 	}
-	
+
 	.main-navigation-menu li ul ul {
 		margin-left: 0;
 	}
-	
-	.main-navigation-menu li:hover ul ul, 
-	.main-navigation-menu li:hover ul ul ul, 
+
+	.main-navigation-menu li:hover ul ul,
+	.main-navigation-menu li:hover ul ul ul,
 	.main-navigation-menu li:hover ul ul ul ul,
-	.main-navigation-menu li:hover ul, 
-	.main-navigation-menu li li:hover ul, 
+	.main-navigation-menu li:hover ul,
+	.main-navigation-menu li li:hover ul,
 	.main-navigation-menu li li li:hover ul,
 	.main-navigation-menu li li li li:hover ul {
 		display: inline;
 	}
-	
+
 	.main-navigation-menu > .menu-item-has-children > a:after,
 	.main-navigation-menu ul .menu-item-has-children > a:after {
 		display: none;
 	}
-	
+
 	/* Main Navigation Toggle */
 	.main-navigation-toggle {
 		float: right;
@@ -2023,14 +2023,14 @@ object {
 		padding: 1em;
 		background: none;
 	}
-	
+
 	.main-navigation-toggle:hover,
 	.main-navigation-toggle:focus,
 	.main-navigation-toggle:active {
 		cursor: pointer;
 		background: none;
 	}
-	
+
 	.main-navigation-toggle:after {
 		float: left;
 		display: inline-block;
@@ -2044,11 +2044,11 @@ object {
 		content: '\f419';
 		color: #404040;
 	}
-	
+
 	.main-navigation-toggle:hover:after {
 		color: #22aadd;
 	}
-	
+
 	/* Main Navigation Menu */
 	.main-navigation-menu {
 		float: left;
@@ -2057,7 +2057,7 @@ object {
 		margin-bottom: 1em;
 		border-top: 4px solid #404040;
 	}
-	
+
 	.main-navigation-menu a {
 		display: block;
 		clear: left;
@@ -2066,7 +2066,7 @@ object {
 		padding: 1.2em;
 		border-bottom: 1px dotted #ccc;
 	}
-	
+
 	.main-navigation-menu li:last-child a {
 		border-bottom: none;
 	}
@@ -2076,33 +2076,33 @@ object {
 		width: 100%;
 		border: none;
 	}
-	
+
 	.main-navigation-menu ul a {
 		display: block;
 		width: 100%;
 		padding-left: 2em;
 	}
-	
+
 	.main-navigation-menu ul li ul a {
 		padding-left: 4em;
 	}
-	
+
 	.main-navigation-menu ul li ul li ul a {
 		padding-left: 6em;
 	}
-	
+
 	.main-navigation-menu ul li ul li ul li ul a {
 		padding-left: 8em;
 	}
-	
+
 	.main-navigation-menu ul li:last-child a {
 		border-bottom: 1px dotted #ccc;
 	}
-	
+
 	.main-navigation-menu ul ul {
 		border-top: 1px dotted #ccc;
 	}
-	
+
 	/* Mobile Submenu Dropdowns */
 	.main-navigation-menu .submenu-dropdown-toggle {
 		float: right;
@@ -2110,11 +2110,11 @@ object {
 		margin: 0;
 		padding: 0.8em 1.2em;
 	}
-	
+
 	.main-navigation-menu .submenu-dropdown-toggle:hover {
 		cursor: pointer;
 	}
-	
+
 	.main-navigation-menu .submenu-dropdown-toggle:before {
 		font-size: 32px;
 		line-height: 1;
@@ -2126,50 +2126,50 @@ object {
 		content: '\f431';
 		color: #404040;
 	}
-	
+
 	.main-navigation-menu .submenu-dropdown-toggle:hover:before {
 		color: #22aadd;
 	}
-	
+
 	.main-navigation-menu .submenu-dropdown-toggle.active:before {
 		content: '\f432';
 	}
-	
+
 	.main-navigation-menu ul .submenu-dropdown-toggle {
 		padding: 0.5em 1em;
 	}
-	
+
 	.main-navigation-menu ul .submenu-dropdown-toggle:before {
 		font-size: 24px;
 	}
-	
+
 }
 
 /*--------------------------------------------------------------
 ## 14.4 - Tablet Large ( < 880px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 55em) {
-	
-	.content-area, 
+
+	.content-area,
 	.site-content .fullwidth-content-area {
 		float: none;
 		width: 100%;
 		padding: 0;
 	}
-	
+
 	.sidebar {
 		float: none;
 		padding: 2em 0 0;
 		width: 100%;
 		border-top: 4px solid #eee;
 	}
-	
+
 	/* Magazine Post Widgets */
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .entry-content,
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .more-link {
 		display: inline-block;
 	}
-	
+
 	.widget-magazine-posts .large-post .entry-title 	{
 		font-size: 24px;
 		font-size: 1.5rem;
@@ -2179,28 +2179,28 @@ object {
 		font-size: 16px;
 		font-size: 1rem;
 	}
-	
+
 	.widget-magazine-posts .small-post .entry-title {
 		font-size: 15px;
 		font-size: 0.9375rem;
 	}
-	
+
 }
 
 /*--------------------------------------------------------------
 ## 14.5 - Tablet Medium ( < 800px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
-	
+
 	.site-branding .site-title {
 		font-size: 35px;
 		font-size: 2.1875rem;
 	}
-	
+
 	.main-navigation-toggle:after {
 		font-size: 29px;
 	}
-	
+
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .large-post .entry-title 	{
 		font-size: 22px;
@@ -2211,59 +2211,59 @@ object {
 		font-size: 15px;
 		font-size: 0.9375rem;
 	}
-	
+
 	.widget-magazine-posts .small-post .entry-title {
 		font-size: 14px;
 		font-size: 0.875rem;
 	}
-	
+
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .more-link {
 		display: none;
 	}
-	
+
 }
 
 /*--------------------------------------------------------------
 ## 14.6 - Tablet Small ( < 720px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 45em) {
-	
+
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .entry-content {
 		display: none;
 	}
-	
+
 }
 
 /*--------------------------------------------------------------
 ## 14.7 - Mobile Extra Large ( < 640px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 40em) {
-	
-	.page-title, 
+
+	.page-title,
 	.entry-title {
 		font-size: 28px;
 		font-size: 1.75rem;
 	}
-	
+
 	.post-layout-small .content-area .type-post .entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
-	
+
 	.entry-content {
 		font-size: 16px;
 		font-size: 1rem;
 	}
-	
+
 	/* Magazine Post Widgets */
 	.widget-magazine-posts-grid .magazine-posts-grid-row {
 		margin-right: 0;
 	}
-	
+
 	.widget-magazine-posts-grid .medium-post-row {
 		margin-right: -1.2em;
 	}
-	
+
 	.widget-magazine-posts-grid .magazine-posts-grid-row .large-post,
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .wp-post-image,
 	.widget-magazine-posts-boxed .magazine-posts-boxed-vertical .large-post,
@@ -2280,23 +2280,23 @@ object {
 		margin-left: 0;
 		padding-left: 0;
 	}
-	
+
 	.widget-magazine-posts .large-post .wp-post-image {
 		float: left;
 		margin: 0 1.5em 0 0;
 		max-width: 50%;
 	}
-	
+
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .post-content {
 		float: right;
 		width: 50%;
 		padding-left: 1.5em;
 	}
-	
+
 	.widget-magazine-posts-grid .magazine-posts-grid-row .large-post {
 		clear: left;
 	}
-	
+
 	.widget-magazine-posts-grid .magazine-posts-grid-row .large-post .wp-post-image {
 		margin-bottom: 1em;
 	}
@@ -2304,12 +2304,12 @@ object {
 	.widget-magazine-posts .large-post .entry-content {
 		display: none;
 	}
-	
+
 	.widget-magazine-posts .small-post .entry-title {
 		font-size: 15px;
 		font-size: 0.9375rem;
 	}
-	
+
 }
 
 /*--------------------------------------------------------------
@@ -2321,138 +2321,138 @@ object {
 		font-size: 32px;
 		font-size: 2rem;
 	}
-	
+
 	.main-navigation-toggle:after {
 		font-size: 26px;
 	}
-	
+
 	.widget-magazine-posts-grid .medium-post-row {
 		margin-right: 0;
 	}
-	
+
 	.widget-magazine-posts .medium-post {
 		float: none;
 		width: 100%;
 		padding-right: 0;
 	}
-	
+
 	.widget-magazine-posts .medium-post .wp-post-image {
 		float: left;
 		margin: 0 1em 0 0;
 		max-width: 120px;
 	}
-	
+
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
-	
+
 }
 
 /*--------------------------------------------------------------
 ## 14.9 - Mobile Medium ( < 480px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 30em) {
-	
+
 	.container {
 		padding-left: 1.5em;
 		padding-right: 1.5em;
 	}
-	
+
 	.page-title,
 	.entry-title {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
-	
+
 	.post-layout-small .content-area .type-post .entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
-	
+
 	.alignright, .alignleft {
 		float: none;
 		margin: 1em 0;
 	}
-	
+
 	/* Magazine Homepage: Category Post Widgets */
 	.widget-magazine-posts .medium-post .wp-post-image,
 	.widget-magazine-posts .small-post .wp-post-image {
 		max-width: 30%;
 	}
-	
+
 	.widget-magazine-posts .medium-post .entry-title {
 		font-size: 14px;
 		font-size: 0.875rem;
 	}
-	
+
 	.widget-magazine-posts .large-post .wp-post-image,
 	.widget-magazine-posts-grid .magazine-posts-grid-row .large-post .wp-post-image {
 		float: none;
 		margin: 0 0 0.5em 0;
 		max-width: 100%;
 	}
-	
+
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .post-content {
 		float: none;
 		width: 100%;
 		padding: 0;
 	}
-	
+
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
-	
+
 	.widget-magazine-posts .large-post .entry-content,
 	.widget-magazine-posts .large-post .entry-content .more-link {
 		display: inline-block;
 	}
-	
+
 }
 
 /*--------------------------------------------------------------
 ## 14.9.5 - Mobile Small ( < 320px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 25em) {
-	
+
 	.post-layout-small .content-area .type-post .wp-post-image {
 		float: none;
 		max-width: 100%;
 		margin: 0 0 0.5em;
 		padding: 0;
 	}
-	
+
 }
 
 /*--------------------------------------------------------------
 ## 14.10 - Mobile Small ( < 320px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 20em) {
-	
+
 	.site-branding .site-title {
 		font-size: 28px;
 		font-size: 1.75rem;
 	}
-	
+
 	.main-navigation-toggle {
 		padding: 0.75em;
 	}
-	
+
 	.main-navigation-toggle:after {
 		font-size: 24px;
 	}
-	
+
 	.page-title,
 	.entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
-	
+
 	.entry-meta span {
 		display: block;
 	}
-	
+
 	.entry-meta span:after {
 		display: none;
 	}
@@ -2472,7 +2472,7 @@ object {
 	padding-right: 0;
 	padding-left: 4em;
 }
-	
+
 .sidebar-left .sidebar {
 	float: left;
 }
@@ -2519,7 +2519,7 @@ object {
 }
 
 @media only screen and (max-width: 60em) {
-	
+
 	.sticky-header .fixed-header .main-navigation-menu {
 		margin-top: 0.5em;
 	}
@@ -2527,19 +2527,19 @@ object {
 }
 
 @media only screen and (max-width: 782px) {
-	
+
 	.sticky-header.admin-bar .fixed-header  {
 		top: 46px;
 	}
-	
+
 }
 
 @media only screen and (max-width: 600px) {
-	
+
 	.sticky-header.admin-bar .fixed-header  {
 		top: 0;
 	}
-	
+
 }
 
 /*--------------------------------------------------------------
@@ -2548,9 +2548,9 @@ object {
 
 /* Ensure navigation is visible on desktop view */
 @media only screen and (min-width: 60.001em) {
-	
+
 	.main-navigation-menu {
 		display: block !important;
 	}
-	
+
 }

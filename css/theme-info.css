@@ -7,24 +7,24 @@
  */
 
 .theme-info-wrap {
-    margin: 25px 40px 0 20px;
-    max-width: 1050px;
-    position: relative;
+	margin: 25px 40px 0 20px;
+	max-width: 1050px;
+	position: relative;
 }
 .theme-info-wrap img {
 	max-width: 100%;
 }
 
 /* Clearing Floats */
-.theme-info-wrap .clearfix:before, .theme-info-wrap .clearfix:after {  
+.theme-info-wrap .clearfix:before, .theme-info-wrap .clearfix:after {
 	content: " ";
-	display: table;  
-}  
-.theme-info-wrap .clearfix:after {  
+	display: table;
+}
+.theme-info-wrap .clearfix:after {
 	clear: both;
-}  
+}
 .theme-info-wrap .clearfix {
-    *zoom: 1; /* For IE 6/7 only */  
+	*zoom: 1; /* For IE 6/7 only */
 }
 
 /* Columns */
@@ -50,30 +50,30 @@
 
 /* Font Styles */
 .theme-info-wrap h3 {
-    font-size: 1.8em;
-    line-height: 1.5em;
-    margin: 1em 0 0.6em;
+	font-size: 1.8em;
+	line-height: 1.5em;
+	margin: 1em 0 0.6em;
 }
 .theme-info-wrap h4 {
-    font-size: 1.4em;
-    margin: 0.2em 0;
+	font-size: 1.4em;
+	margin: 0.2em 0;
 }
 
 /* Theme Info Header */
 .theme-info-wrap h1 {
-    color: #333333;
-    font-size: 3.0em;
-    font-weight: 400;
-    line-height: 1.2em;
-    margin: 0.2em 0 0 0;
+	color: #333333;
+	font-size: 3.0em;
+	font-weight: 400;
+	line-height: 1.2em;
+	margin: 0.2em 0 0 0;
 }
 .theme-info-wrap .theme-description {
-    color: #777777;
-    font-size: 1.4em;
-    margin: 1em 0;
-    min-height: 60px;
+	color: #777777;
+	font-size: 1.4em;
+	margin: 1em 0;
+	min-height: 60px;
 	font-weight: 400;
-    line-height: 1.6em;
+	line-height: 1.6em;
 }
 
 /* Important Links */
@@ -121,8 +121,8 @@
 }
 #getting-started .section .about {
 	color: #777777;
-    font-size: 1.2em;
-    line-height: 1.6em;
+	font-size: 1.2em;
+	line-height: 1.6em;
 }
 
 /* More Features */
@@ -131,8 +131,8 @@
 }
 #more-features .section .about {
 	color: #777777;
-    font-size: 1.2em;
-    line-height: 1.6em;
+	font-size: 1.2em;
+	line-height: 1.6em;
 }
 
 /* Theme Author */
@@ -141,6 +141,6 @@
 }
 #theme-author p {
 	color: #777777;
-    font-size: 1.2em;
-    line-height: 1.6em;
+	font-size: 1.2em;
+	line-height: 1.6em;
 }
