@@ -20,8 +20,8 @@ function poseidon_theme_addons_setup() {
 
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
-		'type' 		=> 'click',
 		'container' => 'main',
+		'footer_widgets' => array( 'footer-left', 'footer-center-left', 'footer-center-right', 'footer-right' ),
 		'render'    => 'poseidon_infinite_scroll_render',
 	) );
 
