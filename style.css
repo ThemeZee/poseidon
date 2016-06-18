@@ -629,12 +629,18 @@ textarea {
 # 7.0 - Clearings
 --------------------------------------------------------------*/
 .clearfix:before,
-.clearfix:after {
+.clearfix:after,
+.post-navigation .nav-links:before,
+.post-navigation .nav-links:after,
+.comment-navigation:before,
+.comment-navigation:after {
 	content: "";
 	display: table;
 }
 
-.clearfix:after {
+.clearfix:after,
+.post-navigation .nav-links:after,
+.comment-navigation:after {
 	clear: both;
 }
 
@@ -1488,16 +1494,6 @@ textarea {
 	border-bottom: 1px solid #ddd;
 }
 
-.post-navigation .nav-links:before,
-.post-navigation .nav-links:after {
-	content: "";
-	display: table;
-}
-
-.post-navigation .nav-links:after {
-	clear: both;
-}
-
 .post-navigation .nav-links .nav-previous {
 	float: left;
 }
@@ -1732,6 +1728,16 @@ textarea {
 
 .comment-navigation .nav-next {
 	float: right;
+}
+
+.comment-navigation .nav-previous a:before {
+	margin-right: 3px;
+	content: "\00AB";
+}
+
+.comment-navigation .nav-next a:after {
+	margin-left: 4px;
+	content: "\00BB";
 }
 
 /* Comment Form */
