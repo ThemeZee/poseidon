@@ -64,6 +64,9 @@
 					$( this ).parent().find( '.submenu-dropdown-toggle' ).removeClass( 'active' );
 				} );
 
+				/* Remove ARIA states on mobile devices */
+				$menu.find( 'li.menu-item-has-children a' ).unbind( 'focus.aria mouseenter.aria blur.aria  mouseleave.aria' );
+
 			} else {
 
 				/* Add dropdown animation for desktop navigation menu */
@@ -75,11 +78,30 @@
 				} );
 
 				/* Make sure menu does not fly off the right of the screen */
-				$menu.find( 'li ul li' ).mouseenter( function() {
+				$menu.find( 'li ul .menu-item-has-children' ).mouseenter( function() {
 					if ( $( this ).children( 'ul' ).offset().left + 250 > $( window ).width() ) {
 						$( this ).children( 'ul' ).css( 'right', '16rem' );
 					}
 				});
+
+				// Add menu items with submenus to aria-haspopup="true".
+				$menu.find( '.menu-item-has-children' ).attr( 'aria-haspopup', 'true' ).attr( 'aria-expanded', 'false' );
+
+				/* Properly update the ARIA states on focus (keyboard) and mouse over events */
+				$menu.find( 'li.menu-item-has-children a' ).on( 'focus.aria mouseenter.aria', function() {
+					$( this ).parents( '.menu-item' ).attr( 'aria-expanded', true ).find('ul:first').css({visibility: 'visible',display: 'block'});
+				} );
+
+				/* Properly update the ARIA states on blur (keyboard) and mouse out events */
+				$menu.find( 'li.menu-item-has-children a' ).on( 'blur.aria  mouseleave.aria', function() {
+
+					if( ! $(this).parent().next('li').length > 0 && ! $(this).next('ul').length > 0 ) {
+
+						$( this ).closest( '.menu-item-has-children' ).attr( 'aria-expanded', false ).find('.sub-menu').css({display: 'none'});
+
+					}
+
+				} );
 
 			}
 
