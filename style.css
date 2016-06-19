@@ -1502,6 +1502,16 @@ textarea {
 	float: right;
 }
 
+.post-navigation .nav-links .nav-previous a:before {
+	margin-right: 3px;
+	content: "\00AB";
+}
+
+.post-navigation .nav-links .nav-next a:after {
+	margin-left: 4px;
+	content: "\00BB";
+}
+
 /* Theme Pagination */
 .post-pagination {
 	display: inline-block;
