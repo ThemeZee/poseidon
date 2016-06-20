@@ -34,8 +34,6 @@
 .theme-info-wrap .columns-wrapper .column {
 	float: left;
 	padding-right: 4em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 .theme-info-wrap .columns-wrapper .column-half {
