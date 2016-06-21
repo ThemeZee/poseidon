@@ -16,7 +16,9 @@ $theme_options = poseidon_theme_options();
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php
+		<?php
+		if ( have_posts() ) :
+
 			// Display Latest Posts Title.
 			if ( '' !== $theme_options['latest_posts_title'] ) : ?>
 
@@ -26,18 +28,21 @@ $theme_options = poseidon_theme_options();
 
 				</header><!-- .page-header -->
 
-			<?php endif; ?>
+			<?php endif;
 
+			while ( have_posts() ) : the_post();
 
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/content', esc_attr( $theme_options['post_content'] ) );
 
-					get_template_part( 'template-parts/content', esc_attr( $theme_options['post_content'] ) );
+			endwhile;
 
-				endwhile;
+			poseidon_pagination();
 
-				poseidon_pagination();
+		else :
 
-			endif; ?>
+			get_template_part( 'template-parts/content', 'none' );
+
+		endif; ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
