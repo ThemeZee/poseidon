@@ -45,7 +45,6 @@ function poseidon_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'poseidon' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/poseidon/', 'poseidon' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=poseidon&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'poseidon' ); ?></a>
-				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php esc_html_e( 'Changelog', 'poseidon' ); ?></a>
 				<a href="<?php echo esc_url( 'http://preview.themezee.com/poseidon/?utm_source=theme-info&utm_medium=textlink&utm_campaign=poseidon&utm_content=demo' ); ?>" target="_blank"><?php esc_html_e( 'Theme Demo', 'poseidon' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/poseidon-documentation/', 'poseidon' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=poseidon&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'poseidon' ); ?></a>
 				<a href="<?php echo esc_url( 'http://wordpress.org/support/view/theme-reviews/poseidon?filter=5' ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'poseidon' ); ?></a>
