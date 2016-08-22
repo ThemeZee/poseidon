@@ -1,0 +1,29 @@
+{
+  "name": "poseidon",
+  "version": "1.0.0",
+  "description": "WordPress Theme",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThemeZee/poseidon.git"
+  },
+  "author": "Thomas Weichselbaumer <contact@themezee.com> (https://themezee.com)",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/ThemeZee/poseidon/issues"
+  },
+  "homepage": "https://github.com/ThemeZee/poseidon#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rtlcss": "^1.0.0",
+    "gulp-uglify": "^2.0.0",
+    "postcss-sorting": "^1.6.1",
+    "postcss-wprtl": "^1.2.0"
+  }
+}
