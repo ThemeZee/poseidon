@@ -862,10 +862,11 @@ textarea {
 	vertical-align: top;
 	content: '\f431';
 	color: #404040;
-	-webkit-transform:rotate(270deg);
-	-moz-transform:rotate(270deg);
-	-o-transform:rotate(270deg);
-	-ms-transform:rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
 }
 
 .main-navigation-menu li ul ul {

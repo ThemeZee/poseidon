@@ -3,6 +3,7 @@ var gulp = require('gulp');
 
 // Include Our Plugins
 var rename       = require( 'gulp-rename' );
+var concat       = require( 'gulp-concat' );
 var uglify       = require( 'gulp-uglify' );
 var rtlcss       = require( 'gulp-rtlcss' );
 var autoprefixer = require( 'autoprefixer' );
@@ -30,10 +31,10 @@ gulp.task( 'cleancss', function() {
 
 // WP RTL
 gulp.task( 'wprtl', function () {
-	return gulp.src( 'style.css' )
+	return gulp.src( ['style.css', 'css/themezee-related-posts.css', 'css/themezee-widget-bundle.css', 'css/flexslider.css'] )
+		.pipe( concat( 'rtl.css' ) )
 		.pipe( postcss( [ wprtl() ] ) )
 		.pipe( postcss( [ sorting( { 'preserve-empty-lines-between-children-rules': true } ) ] ) )
-		.pipe( rename( 'rtl.css' ) )
 		.pipe( gulp.dest( './' ) );
 });
 
