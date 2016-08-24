@@ -31,9 +31,9 @@ body {
 --------------------------------------------------------------*/
 body {
 	color: #404040;
-	font-family: 'Ubuntu', Tahoma, Arial;
 	font-size: 17px;
 	font-size: 1.0625rem;
+	font-family: 'Ubuntu', Tahoma, Arial;
 	line-height: 1.5;
 }
 
@@ -66,24 +66,24 @@ address {
 }
 
 pre {
+	overflow: auto;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	max-width: 100%;
 	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
+	font-family: "Courier 10 Pitch", Courier, monospace;
 	line-height: 1.6;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
 }
 
 code,
 kbd,
 tt,
 var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
 abbr,
@@ -132,10 +132,10 @@ q {
 }
 
 hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
 	margin-bottom: 1.5em;
+	height: 1px;
+	border: 0;
+	background-color: #ccc;
 }
 
 ul,
@@ -166,8 +166,8 @@ dd {
 }
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
+	height: auto; /* Make sure images are scaled correctly. */
 }
 
 table {
@@ -216,10 +216,10 @@ a:active {
 }
 
 .aligncenter {
-	clear: both;
 	display: block;
-	margin-left: auto;
+	clear: both;
 	margin-right: auto;
+	margin-left: auto;
 }
 
 
@@ -253,12 +253,12 @@ a:active {
 
 .gallery-item {
 	display: inline-block;
+	box-sizing: border-box;
 	margin: 0;
 	padding: 1em 1.5em 0 0;
-	text-align: center;
-	vertical-align: top;
 	width: 100%;
-	box-sizing: border-box;
+	vertical-align: top;
+	text-align: center;
 }
 
 .gallery-columns-2 .gallery-item {

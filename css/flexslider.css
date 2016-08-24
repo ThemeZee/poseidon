@@ -44,16 +44,16 @@
 	-webkit-backface-visibility: hidden;
 }
 .zeeflexslider .zeeslides img {
-	width: 100%;
 	display: block;
+	width: 100%;
 }
 .zeeflexslider .zeeslides:after {
-	content: "\0020";
 	display: block;
-	clear: both;
 	visibility: hidden;
-	line-height: 0;
+	clear: both;
 	height: 0;
+	content: "\0020";
+	line-height: 0;
 }
 html[xmlns] .zeeflexslider .zeeslides {
 	display: block;
@@ -70,8 +70,8 @@ html[xmlns] .zeeflexslider .zeeslides {
  * ====================================================================================================================*/
 
 .post-slider-container {
-	margin: -1px 0 0;
 	overflow: hidden;
+	margin: -1px 0 0;
 	width: 100%;
 }
 
@@ -95,23 +95,23 @@ html[xmlns] .zeeflexslider .zeeslides {
 
 .post-slider .zeeslide .slide-image {
 	float: left;
-	width: 100%;
-	height: auto;
 	max-width: 2500px;
 	max-height: 500px;
+	width: 100%;
+	height: auto;
 	vertical-align: top;
 }
 
 .post-slider .zeeslide .slide-post {
 	position: absolute;
+	bottom: 0;
 	overflow: hidden;
+	box-sizing: border-box;
 	width: 100%;
 	background: rgba(0,0,0,0.3);
-	bottom: 0;
 	color: #fff;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	box-sizing: border-box;
 }
 
 .post-slider .zeeslide .slide-content {
@@ -119,10 +119,10 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 .post-slider .zeeslide .entry-title {
-	font-size: 48px;
-	font-size: 3rem;
 	color: #fff;
 	text-shadow: 0 0 10px #000;
+	font-size: 48px;
+	font-size: 3rem;
 }
 
 .post-slider .zeeslide .entry-meta {
@@ -157,16 +157,16 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 .post-slider-controls .zeeflex-direction-nav a {
-	display: block;
 	position: absolute;
 	top: 50%;
+	z-index: 10;
+	display: block;
 	margin: -80px 0 0;
 	width: 80px;
 	height: 120px;
 	text-align: left;
 	font-size: 0;
 	cursor: pointer;
-	z-index: 10;
 }
 
 .post-slider-controls .zeeflex-direction-nav .zeeflex-prev {
@@ -178,15 +178,15 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 .post-slider-controls .zeeflex-direction-nav a:before {
-	margin: 0;
-	-webkit-font-smoothing: antialiased;
 	display: inline-block;
-	font: normal 90px Genericons;
-	text-decoration: inherit;
-	vertical-align: text-bottom;
+	margin: 0;
 	color: #fff;
-	opacity: 0;
+	vertical-align: text-bottom;
+	text-decoration: inherit;
 	text-shadow: 0 0 10px #000;
+	font: normal 90px Genericons;
+	opacity: 0;
+	-webkit-font-smoothing: antialiased;
 }
 
 .post-slider-wrap:hover .post-slider-controls .zeeflex-direction-nav a:before {
@@ -222,7 +222,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 --------------------------------------------------------------*/
 
 @media only screen and (max-width: 90em) {
-
 	.post-slider .zeeslide .entry-title {
 		font-size: 44px;
 		font-size: 2.75rem;
@@ -231,7 +230,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 80em) {
-
 	.post-slider .zeeslide .slide-content {
 		padding: 1.5em 2em;
 	}
@@ -244,7 +242,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 70em) {
-
 	.post-slider .zeeslide .entry-title {
 		font-size: 36px;
 		font-size: 2.25rem;
@@ -253,7 +250,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 60em) {
-
 	.post-slider .zeeslide .entry-title {
 		font-size: 32px;
 		font-size: 2rem;
@@ -271,7 +267,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 55em) {
-
 	.post-slider .zeeslide .slide-content {
 		padding: 1.25em 2em;
 	}
@@ -288,7 +283,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 50em) {
-
 	.post-slider .zeeslide .entry-title {
 		font-size: 24px;
 		font-size: 1.5rem;
@@ -305,7 +299,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 40em) {
-
 	.post-slider .zeeslide .slide-content {
 		padding: 0.75em 1.5em;
 	}
@@ -326,7 +319,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 30em) {
-
 	.post-slider .zeeslide .slide-content {
 		padding: 0.5em 1.5em;
 	}
@@ -343,7 +335,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 20em) {
-
 	.post-slider .zeeslide .slide-content {
 		padding: 0.25em 1.5em;
 	}

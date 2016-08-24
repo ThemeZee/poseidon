@@ -26,6 +26,9 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 1.1.1 =
+* added Right-to-Left language support
+
 = 1.1.0 =
 * added readme.txt file
 * improved styling of navigation menus

@@ -17,8 +17,8 @@
 /* Clearing Floats */
 .tzwb-clearfix:before,
 .tzwb-clearfix:after {
-	content: " ";
 	display: table;
+	content: " ";
 }
 
 .tzwb-clearfix:after {
@@ -34,10 +34,10 @@
 # Posts List
 ---------------------------------------------------------------- */
 .tzwb-posts-list li {
-	list-style: none;
 	overflow: auto;
-	padding: 0;
 	margin-bottom: 0.5em;
+	padding: 0;
+	list-style: none;
 }
 
 .tzwb-posts-list .tzwb-excerpt p {
@@ -62,9 +62,9 @@
 # Comments List
 ---------------------------------------------------------------- */
 .tzwb-comments-list li {
-	list-style: none;
-	margin-bottom: 0.5em;
 	overflow: auto;
+	margin-bottom: 0.5em;
+	list-style: none;
 }
 
 .tzwb-comments-list .avatar {
@@ -78,10 +78,10 @@
 
 .tzwb-comments-list .tzwb-comment-date {
 	margin: 0.4em 0.2em 0;
-	font-size: 12px;
-	font-size: 0.75rem;
 	color: #aaa;
 	text-transform: uppercase;
+	font-size: 12px;
+	font-size: 0.75rem;
 }
 
 
@@ -89,41 +89,41 @@
 # Tabbed Content Widget
 ---------------------------------------------------------------- */
 .tzwb-tabbed-content .tzwb-tabnavi-wrap {
+	overflow: auto;
 	margin: 0 -0.3em;
 	padding: 0;
-	overflow: auto;
 	list-style: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi {
+	position: relative;
 	float: left;
 	width: 100%;
-	list-style: none;
-	list-style-position: outside;
-	position: relative;
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
+	list-style: none;
+	list-style-position: outside;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li {
-	float: left;
-	list-style: none;
 	position: relative;
+	float: left;
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a {
 	display: block;
 	margin: 0;
 	padding: 0.8em 0.8em 0.5em;
-	font-family: 'Raleway', Tahoma, Arial;
+	color: #404040;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: bold;
-	color: #404040;
-	text-transform: uppercase;
-	text-decoration: none;
+	font-family: 'Raleway', Tahoma, Arial;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
@@ -144,8 +144,8 @@
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
-	padding: 0;
 	margin: 1em 0 0 0;
+	padding: 0;
 }
 
 
@@ -171,8 +171,8 @@
 }
 
 .tzwb-social-icons .social-icons-menu li a:hover {
-	text-decoration: none;
 	background: #404040;
+	text-decoration: none;
 }
 
 /*--------------------------------------------------------------
