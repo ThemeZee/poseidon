@@ -96,10 +96,10 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			<div class="upgrade-pro-version">
 
-				<span class="customize-control-title"><?php esc_html_e( 'Pro Version', 'poseidon' ); ?></span>
+				<span class="customize-control-title"><?php esc_html_e( 'Pro Version Add-on', 'poseidon' ); ?></span>
 
 				<span class="textfield">
-					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'poseidon' ), 'Poseidon' ); ?>
+					<?php printf( esc_html__( 'Purchase the %s Pro Add-on and get additional features and advanced customization options.', 'poseidon' ), 'Poseidon' ); ?>
 				</span>
 
 				<p>
@@ -112,18 +112,15 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			<div class="upgrade-plugins">
 
-				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Plugins', 'poseidon' ); ?></span>
+				<span class="customize-control-title"><?php esc_html_e( 'Recommended Plugins', 'poseidon' ); ?></span>
 
 				<span class="textfield">
-					<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'poseidon' ); ?>
+					<?php esc_html_e( 'Extend the functionality of your WordPress website with our free and easy to use plugins.', 'poseidon' ); ?>
 				</span>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://themezee.com/plugins/', 'poseidon' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=poseidon&utm_content=plugins" target="_blank" class="button button-secondary">
-						<?php esc_html_e( 'Browse Plugins', 'poseidon' ); ?>
-					</a>
-					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
-						<?php esc_html_e( 'Install now', 'poseidon' ); ?>
+					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-secondary">
+						<?php esc_html_e( 'Install Plugins', 'poseidon' ); ?>
 					</a>
 				</p>
 

@@ -35,6 +35,33 @@
 #customize-control-poseidon_theme_options-upgrade div {
 	margin: 4px 0 32px;
 }
+
 #customize-control-poseidon_theme_options-upgrade div .customize-control-title {
 	margin-bottom: 4px;
+}
+
+#accordion-panel-poseidon_options_panel .customize-info .customize-help-toggle {
+	top: 24px;
+	right: 4px;
+}
+
+#accordion-panel-poseidon_options_panel .customize-info .customize-help-toggle::before {
+	content: "\f333";
+	color: #a0a5aa;
+	font-size: 28px;
+	padding: 0;
+	left: 0;
+	top: 0;
+}
+
+#accordion-panel-poseidon_options_panel .customize-info .customize-help-toggle[aria-expanded="true"]::before {
+	content: "\f335";
+}
+
+#accordion-panel-poseidon_options_panel .customize-info .customize-help-toggle:hover::before {
+	color: #72777c;
+}
+
+#accordion-panel-poseidon_options_panel .customize-info .customize-help-toggle:focus::before {
+	box-shadow: none;
 }

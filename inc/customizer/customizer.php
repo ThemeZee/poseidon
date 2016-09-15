@@ -29,7 +29,7 @@ function poseidon_customize_register_options( $wp_customize ) {
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
 		'title'          => esc_html__( 'Theme Options', 'poseidon' ),
-		'description'    => '',
+		'description'    => poseidon_customize_theme_links(),
 	) );
 
 	// Add postMessage support for site title and description.
@@ -105,32 +105,54 @@ add_action( 'customize_preview_init', 'poseidon_customize_preview_js' );
 
 
 /**
- * Embed JS file for Customizer Controls
- */
-function poseidon_customize_controls_js() {
-
-	wp_enqueue_script( 'poseidon-customizer-controls', get_template_directory_uri() . '/js/customizer-controls.js', array(), '20151202', true );
-
-	// Localize the script.
-	wp_localize_script( 'poseidon-customizer-controls', 'poseidon_theme_links', array(
-		'title'	=> esc_html__( 'Theme Links', 'poseidon' ),
-		'themeURL'	=> esc_url( __( 'https://themezee.com/themes/poseidon/', 'poseidon' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=poseidon&utm_content=theme-page' ),
-		'themeLabel'	=> esc_html__( 'Theme Page', 'poseidon' ),
-		'docuURL'	=> esc_url( __( 'https://themezee.com/docs/poseidon-documentation/', 'poseidon' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=poseidon&utm_content=documentation' ),
-		'docuLabel'	=> esc_html__( 'Theme Documentation', 'poseidon' ),
-		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/poseidon?filter=5' ),
-		'rateLabel'	=> esc_html__( 'Rate this theme', 'poseidon' ),
-		)
-	);
-
-}
-add_action( 'customize_controls_enqueue_scripts', 'poseidon_customize_controls_js' );
-
-
-/**
  * Embed CSS styles for the theme options in the Customizer
  */
 function poseidon_customize_preview_css() {
-	wp_enqueue_style( 'poseidon-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20151202' );
+	wp_enqueue_style( 'poseidon-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20160915' );
 }
 add_action( 'customize_controls_print_styles', 'poseidon_customize_preview_css' );
+
+/**
+ * Returns Theme Links
+ */
+function poseidon_customize_theme_links() {
+
+	ob_start();
+	?>
+
+		<div class="theme-links">
+
+			<span class="customize-control-title"><?php esc_html_e( 'Theme Links', 'poseidon' ); ?></span>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/poseidon/', 'poseidon' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=poseidon&utm_content=theme-page" target="_blank">
+					<?php esc_html_e( 'Theme Page', 'poseidon' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="http://preview.themezee.com/poseidon/?utm_source=theme-info&utm_medium=textlink&utm_campaign=poseidon&utm_content=demo" target="_blank">
+					<?php esc_html_e( 'Theme Demo', 'poseidon' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/poseidon-documentation/', 'poseidon' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=poseidon&utm_content=documentation" target="_blank">
+					<?php esc_html_e( 'Theme Documentation', 'poseidon' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/poseidon/reviews/?filter=5', 'poseidon' ) ); ?>" target="_blank">
+					<?php esc_html_e( 'Rate this theme', 'poseidon' ); ?>
+				</a>
+			</p>
+
+		</div>
+
+	<?php
+	$theme_links = ob_get_contents();
+	ob_end_clean();
+
+	return $theme_links;
+}
