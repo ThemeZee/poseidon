@@ -64,8 +64,8 @@ function poseidon_setup() {
 	// Set up the WordPress core custom header feature.
 	add_theme_support('custom-header', apply_filters( 'poseidon_custom_header_args', array(
 		'header-text' => false,
-		'width'	=> 1920,
-		'height' => 480,
+		'width'	=> 2500,
+		'height' => 625,
 		'flex-height' => true,
 	) ) );
 

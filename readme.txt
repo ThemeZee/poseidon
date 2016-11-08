@@ -26,6 +26,10 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 1.1.3 =
+* Removed height limitations of header & slider images to avoid distorted images. Please make sure to use images with a minimum width of 1920 pixels for the featured image.
+* Changed default size of custom header image
+
 = 1.1.2 =
 * fixed mobile menus on RTL language sites
 * moved Theme Links to Theme Options panel dropdown
