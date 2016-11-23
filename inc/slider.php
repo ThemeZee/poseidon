@@ -21,14 +21,14 @@ function poseidon_slider_scripts() {
 	// Register and enqueue FlexSlider JS and CSS if necessary.
 	if ( true === $theme_options['slider_blog'] or true === $theme_options['slider_magazine'] or is_page_template( 'template-slider.php' ) ) :
 
-		// FlexSlider CSS.
-		wp_enqueue_style( 'poseidon-flexslider', get_template_directory_uri() . '/css/flexslider.css' );
-
 		// FlexSlider JS.
-		wp_enqueue_script( 'flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
+		wp_enqueue_script( 'jquery-flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
 
 		// Register and enqueue slider setup.
-		wp_enqueue_script( 'poseidon-post-slider', get_template_directory_uri() .'/js/slider.js', array( 'flexslider' ) );
+		wp_enqueue_script( 'poseidon-slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery-flexslider' ) );
+
+		// Register and enqueue slider CSS.
+		wp_enqueue_style( 'poseidon-slider', get_template_directory_uri() . '/css/flexslider.css' );
 
 	endif;
 
@@ -61,13 +61,13 @@ function poseidon_slider_options() {
 	$params = array();
 
 	// Set slider animation.
-	$params['animation'] = $theme_options['slider_animation'];
+	$params['animation'] = ( 'fade' === $theme_options['slider_animation'] ) ? 'fade' : 'slide';
 
 	// Set slider speed.
-	$params['speed'] = $theme_options['slider_speed'];
+	$params['speed'] = absint( $theme_options['slider_speed'] );
 
 	// Passing parameters to Flexslider.
-	wp_localize_script( 'poseidon-post-slider', 'poseidon_slider_params', $params );
+	wp_localize_script( 'poseidon-slider', 'poseidon_slider_params', $params );
 
 }
 add_action( 'wp_enqueue_scripts', 'poseidon_slider_options' );
