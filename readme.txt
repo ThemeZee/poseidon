@@ -29,6 +29,7 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 = 1.1.4 =
 * improved escaping and sanitizing of widget settings and slider options
 * added full-width posts by automatically centering layout if sidebar widget area is empty
+* fixed padding of content area with left sidebar layout on mobile devices
 
 = 1.1.3 =
 * Removed height limitations of header & slider images to avoid distorted images. Please make sure to use images with a minimum width of 1920 pixels for the featured image.
