@@ -673,6 +673,15 @@ textarea {
 	width: 30%;
 }
 
+/* No Sidebar Layout */
+.no-sidebar .content-area {
+	float: none;
+	padding: 0;
+	width: 100%;
+	max-width: 840px;
+	margin: 0 auto;
+}
+
 /* Fullwidth Template */
 .site-content .fullwidth-content-area {
 	float: none;
