@@ -28,6 +28,7 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 = 1.1.5 =
 * fixed styling of search template
+* fixed styling of full width page template
 * removed deprecated Tags
 
 = 1.1.4 =
