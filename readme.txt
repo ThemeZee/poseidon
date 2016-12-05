@@ -26,6 +26,10 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 1.1.5 =
+* fixed styling of search template
+* removed deprecated Tags
+
 = 1.1.4 =
 * improved escaping and sanitizing of widget settings and slider options
 * added full-width posts by automatically centering layout if sidebar widget area is empty

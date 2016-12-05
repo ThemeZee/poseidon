@@ -6,14 +6,14 @@
  */
 
 if ( ! function_exists( 'poseidon_default_menu' ) ) :
-/**
- * Display default page as navigation if no custom menu was set
- */
-function poseidon_default_menu() {
+	/**
+	 * Display default page as navigation if no custom menu was set
+	 */
+	function poseidon_default_menu() {
 
-	echo '<ul id="menu-main-navigation" class="main-navigation-menu menu">'. wp_list_pages( 'title_li=&echo=0' ) .'</ul>';
+		echo '<ul id="menu-main-navigation" class="main-navigation-menu menu">' . wp_list_pages( 'title_li=&echo=0' ) . '</ul>';
 
-}
+	}
 endif;
 
 
@@ -41,7 +41,7 @@ function poseidon_body_classes( $classes ) {
 	}
 
 	// Add small post layout class.
-	if ( ( is_archive() or is_home() ) and 'left' == $theme_options['post_layout_archives'] ) {
+	if ( ( is_archive() or is_home() or is_search() ) and 'left' == $theme_options['post_layout_archives'] ) {
 		$classes[] = 'post-layout-small';
 	}
 
