@@ -108,7 +108,7 @@ add_action( 'customize_preview_init', 'poseidon_customize_preview_js' );
  * Embed CSS styles for the theme options in the Customizer
  */
 function poseidon_customize_preview_css() {
-	wp_enqueue_style( 'poseidon-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20160915' );
+	wp_enqueue_style( 'poseidon-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20161205' );
 }
 add_action( 'customize_controls_print_styles', 'poseidon_customize_preview_css' );
 
