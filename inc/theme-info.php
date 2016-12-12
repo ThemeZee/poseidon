@@ -45,7 +45,7 @@ function poseidon_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'poseidon' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/poseidon/', 'poseidon' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=poseidon&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'poseidon' ); ?></a>
-				<a href="http://preview.themezee.com/poseidon/?utm_source=theme-info&utm_medium=textlink&utm_campaign=poseidon&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'poseidon' ); ?></a>
+				<a href="http://preview.themezee.com/?demo=poseidon&utm_source=theme-info&utm_medium=textlink&utm_campaign=poseidon&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'poseidon' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/poseidon-documentation/', 'poseidon' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=poseidon&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'poseidon' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/poseidon/reviews/?filter=5', 'poseidon' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'poseidon' ); ?></a>
 			</p>
@@ -130,7 +130,7 @@ function poseidon_theme_info_page() {
 							<?php esc_html_e( 'Extend the functionality of your WordPress website with our free and easy to use plugins.', 'poseidon' ); ?>
 						</p>
 						<p>
-							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-secondary">
+							<a href="<?php echo esc_url( admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ) ); ?>" class="button button-secondary">
 								<?php esc_html_e( 'Install Plugins', 'poseidon' ); ?>
 							</a>
 						</p>
