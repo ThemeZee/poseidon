@@ -35,6 +35,7 @@
 
 					<?php poseidon_site_logo(); ?>
 					<?php poseidon_site_title(); ?>
+					<?php poseidon_site_description(); ?>
 
 				</div><!-- .site-branding -->
 

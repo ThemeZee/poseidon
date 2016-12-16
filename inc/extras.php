@@ -51,6 +51,46 @@ add_filter( 'body_class', 'poseidon_body_classes' );
 
 
 /**
+ * Hide Elements with CSS.
+ *
+ * @return void
+ */
+function poseidon_hide_elements() {
+
+	// Get theme options from database.
+	$theme_options = poseidon_theme_options();
+
+	$elements = array();
+
+	// Hide Site Title?
+	if ( false === $theme_options['site_title'] ) {
+		$elements[] = '.site-title';
+	}
+
+	// Hide Site Description?
+	if ( false === $theme_options['site_description'] ) {
+		$elements[] = '.site-description';
+	}
+
+	// Return early if no elements are hidden.
+	if ( empty( $elements ) ) {
+		return;
+	}
+
+	// Create CSS.
+	$classes = implode( ', ', $elements );
+	$custom_css = $classes . ' {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+}';
+
+	// Add Custom CSS.
+	wp_add_inline_style( 'poseidon-stylesheet', $custom_css );
+}
+add_filter( 'wp_enqueue_scripts', 'poseidon_hide_elements', 11 );
+
+
+/**
  * Change excerpt length for default posts
  *
  * @param int $length Length of excerpt in number of words.

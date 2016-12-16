@@ -32,19 +32,29 @@ function poseidon_customize_register_options( $wp_customize ) {
 		'description'    => poseidon_customize_theme_links(),
 	) );
 
-	// Add postMessage support for site title and description.
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-
 	// Change default background section.
 	$wp_customize->get_control( 'background_color' )->section   = 'background_image';
 	$wp_customize->get_section( 'background_image' )->title     = esc_html__( 'Background', 'poseidon' );
+
+	// Add postMessage support for site title and description.
+	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+
+	// Add selective refresh for site title and description.
+	$wp_customize->selective_refresh->add_partial( 'blogname', array(
+		'selector'        => '.site-title a',
+		'render_callback' => 'poseidon_customize_partial_blogname',
+	) );
+	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+		'selector'        => '.site-description',
+		'render_callback' => 'poseidon_customize_partial_blogdescription',
+	) );
 
 	// Add Display Site Title Setting.
 	$wp_customize->add_setting( 'poseidon_theme_options[site_title]', array(
 		'default'           => true,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'poseidon_sanitize_checkbox',
 		)
 	);
@@ -54,6 +64,23 @@ function poseidon_customize_register_options( $wp_customize ) {
 		'settings' => 'poseidon_theme_options[site_title]',
 		'type'     => 'checkbox',
 		'priority' => 10,
+		)
+	);
+
+	// Add Display Tagline Setting.
+	$wp_customize->add_setting( 'poseidon_theme_options[site_description]', array(
+		'default'           => false,
+		'type'           	=> 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'poseidon_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control( 'poseidon_theme_options[site_description]', array(
+		'label'    => esc_html__( 'Display Tagline', 'poseidon' ),
+		'section'  => 'title_tagline',
+		'settings' => 'poseidon_theme_options[site_description]',
+		'type'     => 'checkbox',
+		'priority' => 11,
 		)
 	);
 
@@ -96,10 +123,26 @@ add_action( 'customize_register', 'poseidon_customize_register_options' );
 
 
 /**
+ * Render the site title for the selective refresh partial.
+ */
+function poseidon_customize_partial_blogname() {
+	bloginfo( 'name' );
+}
+
+
+/**
+ * Render the site tagline for the selective refresh partial.
+ */
+function poseidon_customize_partial_blogdescription() {
+	bloginfo( 'description' );
+}
+
+
+/**
  * Embed JS file to make Theme Customizer preview reload changes asynchronously.
  */
 function poseidon_customize_preview_js() {
-	wp_enqueue_script( 'poseidon-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151202', true );
+	wp_enqueue_script( 'poseidon-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20161214', true );
 }
 add_action( 'customize_preview_init', 'poseidon_customize_preview_js' );
 

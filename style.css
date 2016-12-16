@@ -747,6 +747,12 @@ textarea {
 	vertical-align: top;
 }
 
+.site-description {
+	margin: -0.2em 0 0.6em;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
 /* Custom Header Image */
 .header-image {
 	margin-top: -1px;
