@@ -174,7 +174,7 @@ function poseidon_customize_theme_links() {
 			</p>
 
 			<p>
-				<a href="http://preview.themezee.com/?demo=poseidon&utm_source=theme-info&utm_medium=textlink&utm_campaign=poseidon&utm_content=demo" target="_blank">
+				<a href="http://preview.themezee.com/?demo=poseidon&utm_source=customizer&utm_campaign=poseidon" target="_blank">
 					<?php esc_html_e( 'Theme Demo', 'poseidon' ); ?>
 				</a>
 			</p>

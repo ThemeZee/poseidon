@@ -2466,6 +2466,10 @@ object {
 	width: 100%;
 }
 
+.sticky-header .fixed-header .site-description {
+	display: none;
+}
+
 .sticky-header.admin-bar .fixed-header  {
 	top: 32px;
 }
