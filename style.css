@@ -1939,6 +1939,12 @@ object {
 		font-size: 1.5rem;
 	}
 
+	/* Footer */
+	.site-footer .site-info {
+		float: none;
+		text-align: center;
+	}
+
 	/*** Mobile Main Navigation ***/
 
 	/* Reset */

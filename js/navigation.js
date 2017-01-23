@@ -174,13 +174,6 @@
 			maxWidth: '60em'
 		} );
 
-		/* Setup Footer Navigation */
-		$( '#footer-links' ).responsiveMenu( {
-			menuClass: 'footer-navigation-menu',
-			toggleClass: 'footer-navigation-toggle',
-			maxWidth: '60em'
-		} );
-
 		/* Add Sticky Header feature */
 		$( window ).scroll( stickyHeader );
 		stickyHeader();
