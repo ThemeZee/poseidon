@@ -26,6 +26,10 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 1.1.7 =
+* added fullwidth page template for blog posts
+* added centered page template for posts and static pages
+
 = 1.1.6 =
 * added new theme setting to display tagline
 * added editor shortcuts and instant live preview for site title and tagline in Customizer
