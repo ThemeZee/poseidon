@@ -27,8 +27,10 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 == Changelog ==
 
 = 1.1.7 =
+* added Magazine Homepage widgets to blog index
 * added fullwidth page template for blog posts
 * added centered page template for posts and static pages
+* improved implementation of sticky header feature
 
 = 1.1.6 =
 * added new theme setting to display tagline

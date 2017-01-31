@@ -1354,24 +1354,24 @@ textarea {
 }
 
 /* Small Post Layout */
-.post-layout-small .content-area .type-post .wp-post-image {
+.post-layout-small .post-wrapper .type-post .wp-post-image {
 	float: left;
 	margin: 0 1.5em 1.5em 0;
 	padding: 0.3em 0 0;
 	max-width: 40%;
 }
 
-.post-layout-small .content-area .type-post .entry-title {
+.post-layout-small .post-wrapper .type-post .entry-title {
 	font-size: 28px;
 	font-size: 1.75rem;
 }
 
-.post-layout-small .content-area .type-post .entry-content {
+.post-layout-small .post-wrapper .type-post .entry-content {
 	font-size: 16px;
 	font-size: 1rem;
 }
 
-.post-layout-small .content-area .type-post .entry-excerpt p {
+.post-layout-small .post-wrapper .type-post .entry-excerpt p {
 	margin-bottom: 1em;
 }
 
@@ -1877,7 +1877,7 @@ object {
 		font-size: 2.25rem;
 	}
 
-	.post-layout-small .content-area .type-post .entry-title {
+	.post-layout-small .post-wrapper .type-post .entry-title {
 		font-size: 26px;
 		font-size: 1.625rem;
 	}
@@ -1935,7 +1935,7 @@ object {
 		font-size: 2rem;
 	}
 
-	.post-layout-small .content-area .type-post .entry-title {
+	.post-layout-small .post-wrapper .type-post .entry-title {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
@@ -2226,7 +2226,7 @@ object {
 		font-size: 1.75rem;
 	}
 
-	.post-layout-small .content-area .type-post .entry-title {
+	.post-layout-small .post-wrapper .type-post .entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
@@ -2350,7 +2350,7 @@ object {
 		font-size: 1.5rem;
 	}
 
-	.post-layout-small .content-area .type-post .entry-title {
+	.post-layout-small .post-wrapper .type-post .entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
@@ -2400,7 +2400,7 @@ object {
 ## 14.9.5 - Mobile Small ( < 320px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 25em) {
-	.post-layout-small .content-area .type-post .wp-post-image {
+	.post-layout-small .post-wrapper .type-post .wp-post-image {
 		float: none;
 		margin: 0 0 0.5em;
 		padding: 0;

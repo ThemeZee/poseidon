@@ -25,14 +25,17 @@ $theme_options = poseidon_theme_options();
 
 			<?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
 
-			<?php
-			while ( have_posts() ) : the_post();
+			<div id="post-wrapper" class="post-wrapper clearfix">
 
-				get_template_part( 'template-parts/content', esc_attr( $theme_options['post_content'] ) );
+				<?php while ( have_posts() ) : the_post();
 
-			endwhile;
+					get_template_part( 'template-parts/content', esc_attr( $theme_options['post_content'] ) );
 
-			poseidon_pagination();
+				endwhile; ?>
+
+			</div>
+
+			<?php poseidon_pagination();
 
 		else :
 

@@ -25,22 +25,25 @@ $theme_options = poseidon_theme_options();
 
 			</header><!-- .page-header -->
 
-			<?php
-			while ( have_posts() ) : the_post();
+			<div id="post-wrapper" class="post-wrapper clearfix">
 
-				if ( 'post' === get_post_type() ) :
+				<?php while ( have_posts() ) : the_post();
 
-					get_template_part( 'template-parts/content', esc_attr( $theme_options['post_content'] ) );
+					if ( 'post' === get_post_type() ) :
 
-				else :
+						get_template_part( 'template-parts/content', esc_attr( $theme_options['post_content'] ) );
 
-					get_template_part( 'template-parts/content', 'search' );
+					else :
 
-				endif;
+						get_template_part( 'template-parts/content', 'search' );
 
-			endwhile;
+					endif;
 
-			poseidon_pagination();
+				endwhile; ?>
+
+			</div>
+
+			<?php poseidon_pagination();
 
 		else :
 

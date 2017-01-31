@@ -17,6 +17,18 @@ $theme_options = poseidon_theme_options();
 		<main id="main" class="site-main" role="main">
 
 		<?php
+		// Display Magazine Homepage Widgets.
+		if ( ! is_paged() && is_active_sidebar( 'magazine-homepage' ) ) : ?>
+
+			<div id="magazine-homepage-widgets" class="widget-area clearfix">
+
+				<?php dynamic_sidebar( 'magazine-homepage' ); ?>
+
+			</div><!-- #magazine-homepage-widgets -->
+
+			<?php
+		endif;
+
 		if ( have_posts() ) :
 
 			// Display Latest Posts Title.
@@ -28,15 +40,20 @@ $theme_options = poseidon_theme_options();
 
 				</header><!-- .page-header -->
 
-			<?php endif;
+			<?php endif; ?>
 
-			while ( have_posts() ) : the_post();
+			<div id="post-wrapper" class="post-wrapper clearfix">
 
-				get_template_part( 'template-parts/content', esc_attr( $theme_options['post_content'] ) );
+				<?php
+				while ( have_posts() ) : the_post();
 
-			endwhile;
+					get_template_part( 'template-parts/content', esc_attr( $theme_options['post_content'] ) );
 
-			poseidon_pagination();
+				endwhile; ?>
+
+			</div>
+
+			<?php poseidon_pagination();
 
 		else :
 
