@@ -35,11 +35,6 @@ function poseidon_body_classes( $classes ) {
 		$classes[] = 'sidebar-left';
 	}
 
-	// Add sticky header class.
-	if ( true == $theme_options['sticky_header'] ) {
-		$classes[] = 'sticky-header';
-	}
-
 	// Add small post layout class.
 	if ( ( is_archive() or is_home() or is_search() ) and 'left' == $theme_options['post_layout_archives'] ) {
 		$classes[] = 'post-layout-small';
