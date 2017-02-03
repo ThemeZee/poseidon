@@ -26,6 +26,9 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 1.1.8 =
+* fixed spacing issue of new sticky header feature
+
 = 1.1.7 =
 * added Magazine Homepage widgets to blog index
 * added fullwidth page template for blog posts

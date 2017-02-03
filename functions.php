@@ -151,7 +151,7 @@ function poseidon_scripts() {
 
 	// Register and enqueue sticky-header.js.
 	if ( true == $theme_options['sticky_header'] ) {
-		wp_enqueue_script( 'poseidon-jquery-sticky-header', get_template_directory_uri() . '/js/sticky-header.js', array( 'jquery' ), '20170127' );
+		wp_enqueue_script( 'poseidon-jquery-sticky-header', get_template_directory_uri() . '/js/sticky-header.js', array( 'jquery' ), '20170203' );
 	}
 
 	// Register and Enqueue Google Fonts.
