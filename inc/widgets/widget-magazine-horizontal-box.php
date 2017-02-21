@@ -63,18 +63,14 @@ class Poseidon_Magazine_Horizontal_Box_Widget extends WP_Widget {
 		echo $args['before_widget'];
 		?>
 
-		<div class="widget-magazine-posts-boxed widget-magazine-posts clearfix">
+		<div class="widget-magazine-posts-horizontal-box widget-magazine-posts clearfix">
 
 			<?php // Display Title.
 			$this->widget_title( $args, $settings ); ?>
 
-			<div class="widget-magazine-posts-content">
+			<div class="widget-magazine-posts-content magazine-horizontal-box clearfix">
 
-				<div class="magazine-posts-boxed-horizontal clearfix">
-
-					<?php $this->render( $settings ); ?>
-
-				</div>
+				<?php $this->render( $settings ); ?>
 
 			</div>
 
