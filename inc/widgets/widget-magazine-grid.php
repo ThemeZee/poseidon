@@ -124,7 +124,7 @@ class Poseidon_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 				<div class="post-column">
 
-					<?php get_template_part( 'template-parts/widgets/magazine-content', $template ); ?>
+					<?php get_template_part( 'template-parts/widgets/magazine-' . $template, 'grid' ); ?>
 
 				</div>
 

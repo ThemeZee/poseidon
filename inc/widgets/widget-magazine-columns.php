@@ -151,7 +151,6 @@ class Poseidon_Magazine_Posts_Columns_Widget extends WP_Widget {
 			'no_found_rows'       => true,
 		);
 		$posts_query = new WP_Query( $query_arguments );
-		$i = 0;
 
 		// Check if there are posts.
 		if ( $posts_query->have_posts() ) :
@@ -164,15 +163,16 @@ class Poseidon_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 				$posts_query->the_post();
 
-				if ( true === $settings['highlight_post'] and 0 === $i ) :
+				// Display first post differently.
+				if ( true === $settings['highlight_post'] and 0 === $posts_query->current_post ) :
 
-					get_template_part( 'template-parts/widgets/magazine-content', 'large-post' );
+					get_template_part( 'template-parts/widgets/magazine-large-post', 'columns' );
 
 				else :
 
-					get_template_part( 'template-parts/widgets/magazine-content', 'small-post' );
+					get_template_part( 'template-parts/widgets/magazine-small-post', 'columns' );
 
-				endif; $i++;
+				endif;
 
 			endwhile;
 
