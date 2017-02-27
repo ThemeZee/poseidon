@@ -150,7 +150,7 @@ if ( ! function_exists( 'poseidon_post_image_archives' ) ) :
 		// Return early if no featured image should be displayed.
 		if ( 'none' == $theme_options['post_layout_archives'] ) :
 			return;
-			endif;
+		endif;
 
 		// Display featured image beside post content.
 		if ( 'left' == $theme_options['post_layout_archives'] ) : ?>
@@ -198,37 +198,11 @@ if ( ! function_exists( 'poseidon_entry_meta' ) ) :
 	 */
 	function poseidon_entry_meta() {
 
-		// Get theme options from database.
-		$theme_options = poseidon_theme_options();
+		$postmeta = poseidon_meta_date();
+		$postmeta .= poseidon_meta_author();
+		$postmeta .= poseidon_meta_category();
 
-		$postmeta = '';
-
-		// Display date unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_date'] ) {
-
-			$postmeta .= poseidon_meta_date();
-
-		}
-
-		// Display author unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_author'] ) {
-
-			$postmeta .= poseidon_meta_author();
-
-		}
-
-		// Display categories unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_category'] ) {
-
-			$postmeta .= poseidon_meta_category();
-
-		}
-
-		if ( $postmeta ) {
-
-			echo '<div class="entry-meta">' . $postmeta . '</div>';
-
-		}
+		echo '<div class="entry-meta">' . $postmeta . '</div>';
 	}
 endif;
 
@@ -310,14 +284,11 @@ if ( ! function_exists( 'poseidon_entry_tags' ) ) :
 	 */
 	function poseidon_entry_tags() {
 
-		// Get theme options from database.
-		$theme_options = poseidon_theme_options();
-
 		// Get tags.
 		$tag_list = get_the_tag_list( '', '' );
 
 		// Display tags.
-		if ( $tag_list && $theme_options['meta_tags'] ) : ?>
+		if ( $tag_list ) : ?>
 
 			<div class="entry-tags clearfix">
 				<span class="meta-tags">
@@ -354,7 +325,7 @@ if ( ! function_exists( 'poseidon_post_navigation' ) ) :
 		// Get theme options from database.
 		$theme_options = poseidon_theme_options();
 
-		if ( true === $theme_options['post_navigation'] ) {
+		if ( true === $theme_options['post_navigation'] || is_customize_preview() ) {
 
 			the_post_navigation( array(
 				'prev_text' => '<span class="screen-reader-text">' . esc_html_x( 'Previous Post:', 'post navigation', 'poseidon' ) . '</span>%title',
