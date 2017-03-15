@@ -155,24 +155,11 @@ class Poseidon_Magazine_Horizontal_Box_Widget extends WP_Widget {
 
 		if ( ! empty( $widget_title ) ) :
 
-			// Link Category Title.
-			if ( $settings['category'] > 0 ) :
+			// Link Widget Title to category archive when possible.
+			$widget_title = poseidon_magazine_widget_title( $widget_title, $settings['category'] );
 
-				// Set Link URL and Title for Category.
-				$link_title = sprintf( esc_html__( 'View all posts from category %s', 'poseidon' ), get_cat_name( $settings['category'] ) );
-				$link_url = esc_url( get_category_link( $settings['category'] ) );
-
-				// Display Widget Title with link to category archive.
-				echo '<div class="widget-header">';
-				echo '<h3 class="widget-title"><a class="category-archive-link" href="' . $link_url . '" title="' . $link_title . '">' . $widget_title . '</a></h3>';
-				echo '</div>';
-
-			else :
-
-				// Display default Widget Title without link.
-				echo $args['before_title'] . $widget_title . $args['after_title'];
-
-			endif;
+			// Display Widget Title.
+			echo $args['before_title'] . $widget_title . $args['after_title'];
 
 		endif;
 	}

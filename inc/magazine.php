@@ -8,6 +8,32 @@
  */
 
 
+if ( ! function_exists( 'poseidon_magazine_widget_title' ) ) :
+	/**
+	 * Displays the widget title with link to the category archive
+	 *
+	 * @param String $widget_title Widget Title.
+	 * @param int    $category_id  Category ID.
+	 * @return String Widget Title
+	 */
+	function poseidon_magazine_widget_title( $widget_title, $category_id ) {
+
+		// Check if widget shows a specific category.
+		if ( $category_id > 0 ) {
+
+			// Set URL and Title for Category.
+			$category_title = sprintf( esc_html__( 'View all posts from category %s', 'poseidon' ), get_cat_name( $category_id ) );
+			$category_url = get_category_link( $category_id );
+
+			// Set Widget Title with link to category archive.
+			$widget_title = '<a class="category-archive-link" href="' . esc_url( $category_url ) . '" title="' . esc_attr( $category_title ) . '">' . $widget_title . '</a>';
+		}
+
+		return $widget_title;
+	}
+endif;
+
+
 if ( ! function_exists( 'poseidon_magazine_entry_meta' ) ) :
 	/**
 	 * Displays the date and author of magazine posts
