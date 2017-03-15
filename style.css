@@ -1429,7 +1429,8 @@ body.categories-hidden .entry-meta .meta-category {
 }
 
 body.author-hidden.categories-hidden .entry-meta .meta-date:after,
-body.categories-hidden .entry-meta .meta-author:after {
+body.categories-hidden .entry-meta .meta-author:after,
+body.author-hidden .widget-magazine-posts .entry-meta .meta-date:after {
 	display: none;
 }
 
