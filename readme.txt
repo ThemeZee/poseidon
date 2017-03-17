@@ -26,9 +26,11 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
-= 1.1.9 =
+= 1.2 =
 * added template files for Magazine widgets to improve child theme compatibility
-* improved transient caching of Magazine widgets for increased performance
+* added transient caching for Magazine widgets to increase performance
+* added pluggable template functions for Magazine widgets
+* improved implementation of post meta settings for instant live preview in Customizer
 * replaced Magazine Boxed widget with Horizontal Box and Vertical Box widget
 
 = 1.1.8 =
