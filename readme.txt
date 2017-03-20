@@ -26,6 +26,9 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 1.2.1 =
+* fixed layout rendering issue in Magazine Grid widget
+
 = 1.2 =
 * added template files for Magazine widgets to improve child theme compatibility
 * added transient caching for Magazine widgets to increase performance
