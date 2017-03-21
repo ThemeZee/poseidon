@@ -105,8 +105,9 @@ class Poseidon_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 		// Fetch posts from database.
 		$query_arguments = array(
-			'post__in'            => $post_ids,
-			'no_found_rows'       => true,
+			'post__in'       => $post_ids,
+			'posts_per_page' => absint( $settings['number'] ),
+			'no_found_rows'  => true,
 		);
 		$posts_query = new WP_Query( $query_arguments );
 
