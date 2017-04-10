@@ -99,7 +99,7 @@ function poseidon_hide_elements() {
 
 	// Create CSS.
 	$classes = implode( ', ', $elements );
-	$custom_css = $classes . ' { position: absolute; clip: rect(1px, 1px, 1px, 1px); }';
+	$custom_css = $classes . ' { position: absolute; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; overflow: hidden; }';
 
 	// Add Custom CSS.
 	wp_add_inline_style( 'poseidon-stylesheet', $custom_css );
