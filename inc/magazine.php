@@ -115,4 +115,5 @@ function poseidon_flush_magazine_post_ids() {
 }
 add_action( 'save_post', 'poseidon_flush_magazine_post_ids' );
 add_action( 'deleted_post', 'poseidon_flush_magazine_post_ids' );
+add_action( 'customize_save_after', 'poseidon_flush_magazine_post_ids' );
 add_action( 'switch_theme', 'poseidon_flush_magazine_post_ids' );

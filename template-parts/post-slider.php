@@ -10,11 +10,14 @@
 // Get Theme Options from Database.
 $theme_options = poseidon_theme_options();
 
-// Get latest posts from database.
+// Get cached post ids.
+$post_ids = poseidon_get_magazine_post_ids( 'post-slider', $theme_options['slider_category'], $theme_options['slider_limit'] );
+
+// Fetch posts from database.
 $query_arguments = array(
+	'post__in'       => $post_ids,
 	'posts_per_page' => absint( $theme_options['slider_limit'] ),
-	'ignore_sticky_posts' => true,
-	'cat' => absint( $theme_options['slider_category'] ),
+	'no_found_rows'  => true,
 );
 $slider_query = new WP_Query( $query_arguments );
 
