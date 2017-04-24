@@ -50,12 +50,12 @@
 }
 
 #customize-theme-controls [id$=accordion-panel-poseidon_options_panel] .customize-info .customize-help-toggle::before {
-	content: "\f333";
-	color: #a0a5aa;
-	font-size: 28px;
-	padding: 0;
-	left: 0;
 	top: 0;
+	left: 0;
+	padding: 0;
+	color: #a0a5aa;
+	content: "\f333";
+	font-size: 28px;
 }
 
 #customize-theme-controls [id$=accordion-panel-poseidon_options_panel] .customize-info .customize-help-toggle[aria-expanded="true"]::before {

@@ -124,45 +124,50 @@ li > ol {
 	margin: 0 0 0 1em;
 }
 
-.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .wp-post-image {
+.widget-magazine-posts .magazine-horizontal-box .large-post .wp-post-image {
 	float: right;
 	padding-right: 0;
 	padding-left: 1em;
 }
 
-.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .post-content {
+.widget-magazine-posts .magazine-horizontal-box .large-post .post-content {
 	float: left;
 	padding-right: 1em;
 	padding-left: 0;
 }
 
-.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .medium-posts {
+.widget-magazine-posts .magazine-horizontal-box .medium-posts {
 	margin-right: 0;
 	margin-left: -2em;
 }
 
-.widget-magazine-posts-boxed .magazine-posts-boxed-vertical .large-post {
+.widget-magazine-posts .magazine-vertical-box .large-post {
 	float: right;
 	padding-right: 0;
 	padding-left: 1em;
 }
 
-.widget-magazine-posts-boxed .magazine-posts-boxed-vertical .small-posts {
+.widget-magazine-posts .magazine-vertical-box .small-posts {
 	margin-right: 50%;
 	margin-left: 0;
 	padding-right: 1em;
 	padding-left: 0;
 }
 
-.widget-magazine-posts-grid .magazine-posts-grid-row {
+.widget-magazine-posts .magazine-grid {
 	margin-right: 0;
 	margin-left: -2em;
 }
 
-.widget-magazine-posts-grid .magazine-posts-grid-row .large-post {
+.widget-magazine-posts .magazine-grid .large-post {
 	float: right;
 	padding-right: 0;
 	padding-left: 2em;
+}
+
+.widget-magazine-posts .magazine-grid .post-column:nth-child(2n+1) .large-post,
+.widget-magazine-posts .magazine-grid .post-column:nth-child(3n+1) .medium-post {
+	clear: right;
 }
 
 .widget-magazine-posts-columns .magazine-posts-columns .magazine-posts-columns-content .magazine-posts-columns-post-list {
@@ -191,9 +196,14 @@ li > ol {
 	padding-left: 0;
 }
 
-.post-layout-small .content-area .type-post .wp-post-image {
+.post-layout-small .post-wrapper .type-post .wp-post-image {
 	float: right;
 	margin: 0 0 1.5em 1.5em;
+}
+
+.entry-meta span:after {
+	margin-right: 0.2em;
+	margin-left: 0;
 }
 
 .entry-tags .meta-tags a {
@@ -303,16 +313,8 @@ li > ol {
 		float: right;
 	}
 
-	.primary-navigation {
-		width: 100%;
-	}
-
 	.main-navigation-menu {
 		float: right;
-	}
-
-	.main-navigation-menu li {
-		width: 100%;
 	}
 
 	.main-navigation-menu a {
@@ -346,17 +348,17 @@ li > ol {
 }
 
 @media only screen and (max-width: 40em) {
-	.widget-magazine-posts-grid .magazine-posts-grid-row {
+	.widget-magazine-posts .magazine-grid-two-columns {
 		margin-right: 0;
 		margin-left: 0;
 	}
 
-	.widget-magazine-posts-grid .medium-post-row {
+	.widget-magazine-posts .magazine-grid-three-columns {
 		margin-right: 0;
 		margin-left: -1.2em;
 	}
 
-	.widget-magazine-posts-boxed .magazine-posts-boxed-vertical .small-posts,
+	.widget-magazine-posts .magazine-vertical-box .small-posts,
 	.widget-magazine-posts-columns .magazine-posts-column-right {
 		margin-right: 0;
 		margin-left: 0;
@@ -369,20 +371,20 @@ li > ol {
 		margin: 0 0 0 1.5em;
 	}
 
-	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .post-content {
+	.widget-magazine-posts .magazine-horizontal-box .large-post .post-content {
 		float: left;
 		padding-right: 1.5em;
 		padding-left: 0;
 	}
 
-	.widget-magazine-posts-grid .magazine-posts-grid-row .large-post {
+	.widget-magazine-posts .magazine-grid .large-post {
 		clear: right;
 	}
 
 }
 
 @media only screen and (max-width: 35em) {
-	.widget-magazine-posts-grid .medium-post-row {
+	.widget-magazine-posts .magazine-grid-three-columns {
 		margin-right: 0;
 		margin-left: 0;
 	}
@@ -500,10 +502,6 @@ li > ol {
 
 .zeeflex-viewport {
 	direction: ltr;
-}
-
-.post-slider .zeeslide .slide-image {
-	float: right;
 }
 
 .post-slider-controls {

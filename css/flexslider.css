@@ -89,7 +89,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 
 .zeeflex-viewport {
 	max-height: 2000px;
-	-webkit-transition: all 1s ease;
 	transition: all 1s ease;
 }
 
