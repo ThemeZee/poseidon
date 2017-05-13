@@ -66,7 +66,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 						<?php
 						foreach ( $categories as $category ) :
 
-							printf(	'<option value="%s" %s>%s</option>',
+							printf( '<option value="%1$s" %2$s>%3$s</option>',
 								$category->term_id,
 								selected( $this->value(), $category->term_id, false ),
 								$category->name . ' (' . $category->count . ')'
