@@ -26,6 +26,11 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 1.2.4 =
+* fixed alignment of site logo and site title when used together
+* fixed small live preview issue in Customizer for site title and tagline options
+* use localized theme name and description on theme info page
+
 = 1.2.3 =
 * added transient caching to post slider
 * added post hyperlinks to slider images in post slider

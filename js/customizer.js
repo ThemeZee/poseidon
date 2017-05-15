@@ -102,14 +102,20 @@
 	function hideElement( element ) {
 		$( element ).css({
 			clip: 'rect(1px, 1px, 1px, 1px)',
-			position: 'absolute'
+			position: 'absolute',
+			width: '1px',
+			height: '1px',
+			overflow: 'hidden'
 		});
 	}
 
 	function showElement( element ) {
 		$( element ).css({
 			clip: 'auto',
-			position: 'relative'
+			position: 'relative',
+			width: 'auto',
+			height: 'auto',
+			overflow: 'visible'
 		});
 	}
 
