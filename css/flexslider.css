@@ -71,8 +71,9 @@ html[xmlns] .zeeflexslider .zeeslides {
 
 .post-slider-container {
 	overflow: hidden;
-	margin: -1px 0 0;
+	margin: -1px auto 0;
 	width: 100%;
+	max-width: 1920px;
 }
 
 .post-slider-wrap {

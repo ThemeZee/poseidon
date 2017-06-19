@@ -26,6 +26,11 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 1.2.5 =
+* fixed alignment of site logo in MS Edge
+* ignore sticky posts in Magazine widgets
+* fixed header images being stretched on single posts
+
 = 1.2.4 =
 * fixed alignment of site logo and site title when used together
 * fixed small live preview issue in Customizer for site title and tagline options
