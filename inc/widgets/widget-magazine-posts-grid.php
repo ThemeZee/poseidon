@@ -24,7 +24,7 @@ class Poseidon_Magazine_Posts_Grid_Widget extends WP_Widget {
 			esc_html__( 'Magazine (Grid)', 'poseidon' ), // Name.
 			array(
 				'classname' => 'poseidon-magazine-grid-widget',
-				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'poseidon' ),
+				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout.', 'poseidon' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);

@@ -24,7 +24,7 @@ class Poseidon_Magazine_Vertical_Box_Widget extends WP_Widget {
 			esc_html__( 'Magazine (Vertical Box)', 'poseidon' ), // Name.
 			array(
 				'classname' => 'poseidon-magazine-vertical-box-widget',
-				'description' => esc_html__( 'Displays your posts from a selected category in a vertical box. Please use this widget ONLY in the Magazine Homepage widget area.', 'poseidon' ),
+				'description' => esc_html__( 'Displays your posts from a selected category in a vertical box.', 'poseidon' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);

@@ -24,7 +24,7 @@ class Poseidon_Magazine_Horizontal_Box_Widget extends WP_Widget {
 			esc_html__( 'Magazine (Horizontal Box)', 'poseidon' ), // Name.
 			array(
 				'classname' => 'poseidon-magazine-horizontal-box-widget',
-				'description' => esc_html__( 'Displays your posts from a selected category in a horizontal box. Please use this widget ONLY in the Magazine Homepage widget area.', 'poseidon' ),
+				'description' => esc_html__( 'Displays your posts from a selected category in a horizontal box.', 'poseidon' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
