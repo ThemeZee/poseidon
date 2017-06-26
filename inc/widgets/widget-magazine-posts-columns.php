@@ -36,12 +36,12 @@ class Poseidon_Magazine_Posts_Columns_Widget extends WP_Widget {
 	private function default_settings() {
 
 		$defaults = array(
-			'category_one'			=> 0,
-			'category_two'			=> 0,
-			'category_one_title'	=> '',
-			'category_two_title'	=> '',
-			'number'				=> 4,
-			'highlight_post'		=> true,
+			'category_one'       => 0,
+			'category_two'       => 0,
+			'category_one_title' => esc_html__( 'Left Category', 'poseidon' ),
+			'category_two_title' => esc_html__( 'Right Category', 'poseidon' ),
+			'number'             => 4,
+			'highlight_post'     => true,
 		);
 
 		return $defaults;

@@ -36,8 +36,8 @@ class Poseidon_Magazine_Vertical_Box_Widget extends WP_Widget {
 	private function default_settings() {
 
 		$defaults = array(
-			'title'				=> '',
-			'category'			=> 0,
+			'title'    => esc_html__( 'Magazine (Vertical Box)', 'poseidon' ),
+			'category' => 0,
 		);
 
 		return $defaults;

@@ -36,10 +36,10 @@ class Poseidon_Magazine_Posts_Grid_Widget extends WP_Widget {
 	private function default_settings() {
 
 		$defaults = array(
-			'title'				=> '',
-			'category'			=> 0,
-			'layout'			=> 'three-columns',
-			'number'			=> 6,
+			'title'    => esc_html__( 'Magazine (Grid)', 'poseidon' ),
+			'category' => 0,
+			'layout'   => 'three-columns',
+			'number'   => 6,
 		);
 
 		return $defaults;
