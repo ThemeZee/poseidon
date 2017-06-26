@@ -21,19 +21,12 @@ get_header(); ?>
 
 			</div><!-- #magazine-homepage-widgets -->
 
-		<?php // Display Description about Magazine Homepage Widgets when widget area is empty.
+		<?php
 		else :
-
-			// Display only to users with permission.
-			if ( current_user_can( 'edit_theme_options' ) ) : ?>
-
-				<p class="empty-widget-area">
-					<?php esc_html_e( 'Please go to Appearance &#8594; Widgets and add at least one widget to the "Magazine Homepage" widget area. You can use the Magazine Posts widgets to set up the theme like the demo website.', 'poseidon' ); ?>
-				</p>
-
-			<?php endif;
-
-		endif; ?>
+			// Display Magazine Widget Placeholder in Customizer.
+			poseidon_customize_magazine_placeholder();
+		endif;
+		?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->

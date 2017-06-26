@@ -27,6 +27,9 @@ $theme_options = poseidon_theme_options();
 			</div><!-- #magazine-homepage-widgets -->
 
 			<?php
+		else :
+			// Display Magazine Widget Placeholder in Customizer.
+			poseidon_customize_magazine_placeholder();
 		endif;
 
 		if ( have_posts() ) :
