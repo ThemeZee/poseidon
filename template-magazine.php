@@ -12,20 +12,9 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php // Display Magazine Homepage Widgets.
-		if ( is_active_sidebar( 'magazine-homepage' ) ) : ?>
-
-			<div id="magazine-homepage-widgets" class="widget-area clearfix">
-
-				<?php dynamic_sidebar( 'magazine-homepage' ); ?>
-
-			</div><!-- #magazine-homepage-widgets -->
-
 		<?php
-		else :
-			// Display Magazine Widget Placeholder in Customizer.
-			poseidon_customize_magazine_placeholder();
-		endif;
+		// Display Magazine Homepage Widgets.
+		poseidon_magazine_widgets();
 		?>
 
 		</main><!-- #main -->

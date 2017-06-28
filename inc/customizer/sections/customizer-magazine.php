@@ -2,7 +2,7 @@
 /**
  * Magazine Widget Area
  *
- * Enhances the Magazine widget area with Magazine Sections.
+ * Enhances the Magazine widget area with custom Magazine Widget Control.
  *
  * @package Poseidon
  */
@@ -46,8 +46,5 @@ add_action( 'customize_register', 'poseidon_customize_register_magazine_widget_a
  * Displays a Placeholder for adding Magazine widgets.
  */
 function poseidon_customize_magazine_placeholder() {
-	// Show Magazine Widget Placeholder only in Customizer preview.
-	if ( is_customize_preview() ) {
-		echo '<div id="magazine-placeholder" class="magazine-widgets-placeholder type-post"><span class="magazine-widgets-placeholder-title">' . esc_html__( 'Add Magazine Widget', 'poseidon' ) . '</span></div>';
-	}
+	echo '<div id="magazine-placeholder" class="magazine-widgets-placeholder type-post"><span class="magazine-widgets-placeholder-title">' . esc_html__( 'Add Magazine Widget', 'poseidon' ) . '</span></div>';
 }

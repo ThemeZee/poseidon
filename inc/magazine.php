@@ -8,6 +8,41 @@
  */
 
 
+/**
+* Displays Magazine widget area
+*/
+function poseidon_magazine_widgets() {
+
+	// Only display on first page of blog.
+	if ( is_home() && is_paged() ) {
+		return;
+	}
+
+	// Check if there are widgets in Magazine sidebar.
+	if ( is_active_sidebar( 'magazine-homepage' ) ) : ?>
+
+		<div id="magazine-homepage-widgets" class="widget-area clearfix">
+
+			<?php dynamic_sidebar( 'magazine-homepage' ); ?>
+
+		</div><!-- #magazine-homepage-widgets -->
+
+	<?php
+	elseif ( is_customize_preview() ) :
+
+		// Display Magazine Widget Placeholder in Customizer.
+		poseidon_customize_magazine_placeholder();
+
+	elseif ( is_page_template( 'template-magazine.php' ) && current_user_can( 'edit_theme_options' ) ) :
+
+		echo '<p class="empty-widget-area">';
+		esc_html_e( 'Please go to Customize &#8594; Widgets and add at least one widget to the "Magazine Homepage" widget area. You can use the Magazine widgets to set up the theme like the demo website.', 'poseidon' );
+		echo '</p>';
+
+	endif;
+}
+
+
 if ( ! function_exists( 'poseidon_magazine_widget_title' ) ) :
 	/**
 	 * Displays the widget title with link to the category archive

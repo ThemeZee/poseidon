@@ -18,20 +18,9 @@ $theme_options = poseidon_theme_options();
 
 		<?php
 		// Display Magazine Homepage Widgets.
-		if ( ! is_paged() && is_active_sidebar( 'magazine-homepage' ) ) : ?>
+		poseidon_magazine_widgets();
 
-			<div id="magazine-homepage-widgets" class="widget-area clearfix">
-
-				<?php dynamic_sidebar( 'magazine-homepage' ); ?>
-
-			</div><!-- #magazine-homepage-widgets -->
-
-			<?php
-		else :
-			// Display Magazine Widget Placeholder in Customizer.
-			poseidon_customize_magazine_placeholder();
-		endif;
-
+		// Display Latest Posts.
 		if ( have_posts() ) :
 
 			// Display Latest Posts Title.
