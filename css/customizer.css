@@ -75,7 +75,8 @@
 	margin-bottom: 10px;
 }
 
-#customize-theme-controls #magazine-widgets-buttons .add-new-magazine-section::before {
+#customize-theme-controls #magazine-widgets-buttons .add-new-magazine-section::before,
+#available-widgets [id*='widget-tpl-poseidon-magazine-'] .widget-title::before {
 	content: "\f116";
 }
 
