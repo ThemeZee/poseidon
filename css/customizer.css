@@ -76,16 +76,16 @@
 }
 
 #customize-theme-controls #magazine-widgets-buttons .add-new-magazine-section::before {
-    content: "\f535";
+	content: "\f116";
 }
 
 body.adding-widget #magazine-widgets-buttons .add-new-magazine-section::before,
-body.adding-widget.adding-magazine-section #magazine-widgets-buttons .add-new-default-widget::before {
+body.adding-widget.adding-magazine-section #magazine-widgets-buttons .button.add-new-widget::before {
     transform: rotate(0deg);
 }
 
 body.adding-widget #magazine-widgets-buttons .add-new-magazine-section,
-body.adding-widget.adding-magazine-section #magazine-widgets-buttons .add-new-default-widget {
+body.adding-widget.adding-magazine-section #magazine-widgets-buttons .button.add-new-widget {
 	background: #f7f7f7;
 	border-color: #ccc;
 	box-shadow: 0 1px 0 #ccc;
