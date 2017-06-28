@@ -29,7 +29,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 		public function render_content() {
 			?>
 			<div id="magazine-widgets-buttons">
-				<button type="button" class="button-secondary add-new-magazine-section add-new-widget" aria-expanded="false" aria-controls="available-widgets">
+				<button type="button" class="button-secondary add-new-magazine-widget add-new-widget" aria-expanded="false" aria-controls="available-widgets">
 					<?php esc_html_e( 'Add Magazine Widget', 'poseidon' ); ?>
 				</button>
 				<?php parent::render_content(); ?>

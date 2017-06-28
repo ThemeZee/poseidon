@@ -75,18 +75,18 @@
 	margin-bottom: 10px;
 }
 
-#customize-theme-controls #magazine-widgets-buttons .add-new-magazine-section::before,
+#customize-theme-controls #magazine-widgets-buttons .add-new-magazine-widget::before,
 #available-widgets [id*='widget-tpl-poseidon-magazine-'] .widget-title::before {
 	content: "\f116";
 }
 
-body.adding-widget #magazine-widgets-buttons .add-new-magazine-section::before,
-body.adding-widget.adding-magazine-section #magazine-widgets-buttons .button.add-new-widget::before {
+body.adding-widget #magazine-widgets-buttons .add-new-magazine-widget::before,
+body.adding-widget.adding-magazine-widget #magazine-widgets-buttons .button.add-new-widget::before {
     transform: rotate(0deg);
 }
 
-body.adding-widget #magazine-widgets-buttons .add-new-magazine-section,
-body.adding-widget.adding-magazine-section #magazine-widgets-buttons .button.add-new-widget {
+body.adding-widget #magazine-widgets-buttons .add-new-magazine-widget,
+body.adding-widget.adding-magazine-widget #magazine-widgets-buttons .button.add-new-widget {
 	background: #f7f7f7;
 	border-color: #ccc;
 	box-shadow: 0 1px 0 #ccc;
@@ -96,7 +96,7 @@ body.adding-widget.adding-magazine-section #magazine-widgets-buttons .button.add
 	pointer-events: none;
 }
 
-body.adding-widget.adding-magazine-section #magazine-widgets-buttons .add-new-magazine-section {
+body.adding-widget.adding-magazine-widget #magazine-widgets-buttons .add-new-magazine-widget {
 	background: #eee;
 	border-color: #929793;
 	box-shadow: 0 2px 5px -3px rgba(0, 0, 0, 0.5) inset;
@@ -107,28 +107,28 @@ body.adding-widget.adding-magazine-section #magazine-widgets-buttons .add-new-ma
 }
 
 /* Magazine Homepage Available Sections */
-.adding-magazine-section #available-widgets #available-widgets-list > div,
-.adding-magazine-section #available-widgets #available-widgets-filter {
+.adding-magazine-widget #available-widgets #available-widgets-list > div,
+.adding-magazine-widget #available-widgets #available-widgets-filter {
 	display: none !important;
 	visibility: hidden;
 }
 
-.adding-magazine-section #available-widgets {
+.adding-magazine-widget #available-widgets {
 	width: 400px;
 	left: -401px;
 }
 
-.adding-magazine-section #available-widgets #available-widgets-list {
+.adding-magazine-widget #available-widgets #available-widgets-list {
 	top: 0;
 	border-top: none;
 }
 
-.adding-magazine-section #available-widgets #available-widgets-list [id*='widget-tpl-poseidon-magazine-'] {
+.adding-magazine-widget #available-widgets #available-widgets-list [id*='widget-tpl-poseidon-magazine-'] {
 	display: block !important;
 	visibility: visible;
 }
 
-.adding-magazine-section #available-widgets .widget-tpl {
+.adding-magazine-widget #available-widgets .widget-tpl {
 	float: left;
 	clear: left;
 	padding-left: 15px;
@@ -136,11 +136,11 @@ body.adding-widget.adding-magazine-section #magazine-widgets-buttons .add-new-ma
 	box-sizing: border-box;
 }
 
-.adding-magazine-section #available-widgets .widget-tpl .widget-title::before {
+.adding-magazine-widget #available-widgets .widget-tpl .widget-title::before {
 	display: none;
 }
 
-.adding-magazine-section #available-widgets .widget-tpl .widget-top::before {
+.adding-magazine-widget #available-widgets .widget-tpl .widget-top::before {
 	display: block;
 	float: left;
 	font-size: 1px;
@@ -151,25 +151,25 @@ body.adding-widget.adding-magazine-section #magazine-widgets-buttons .add-new-ma
 	margin: 0 15px 0 0;
 }
 
-.adding-magazine-section #available-widgets [id*='widget-tpl-poseidon-magazine-'] .widget-top::before {
+.adding-magazine-widget #available-widgets [id*='widget-tpl-poseidon-magazine-'] .widget-top::before {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: #f2f2f2;
 }
 
-.adding-magazine-section #available-widgets [id*='widget-tpl-poseidon-magazine-posts-columns'] .widget-top::before {
+.adding-magazine-widget #available-widgets [id*='widget-tpl-poseidon-magazine-posts-columns'] .widget-top::before {
 	background-image: url( '../images/magazine-columns.png' );
 }
 
-.adding-magazine-section #available-widgets [id*='widget-tpl-poseidon-magazine-posts-grid'] .widget-top::before {
+.adding-magazine-widget #available-widgets [id*='widget-tpl-poseidon-magazine-posts-grid'] .widget-top::before {
 	background-image: url( '../images/magazine-grid.png' );
 }
 
-.adding-magazine-section #available-widgets [id*='widget-tpl-poseidon-magazine-posts-boxed'] .widget-top::before {
+.adding-magazine-widget #available-widgets [id*='widget-tpl-poseidon-magazine-posts-boxed'] .widget-top::before {
 	background-image: url( '../images/magazine-horizontal-box.png' );
 }
 
-.adding-magazine-section #available-widgets [id*='widget-tpl-poseidon-magazine-vertical-box'] .widget-top::before {
+.adding-magazine-widget #available-widgets [id*='widget-tpl-poseidon-magazine-vertical-box'] .widget-top::before {
 	background-image: url( '../images/magazine-vertical-box.png' );
 }
