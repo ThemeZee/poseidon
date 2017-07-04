@@ -36,7 +36,7 @@ function poseidon_magazine_widgets() {
 	elseif ( is_page_template( 'template-magazine.php' ) && current_user_can( 'edit_theme_options' ) ) :
 
 		echo '<p class="empty-widget-area">';
-		esc_html_e( 'Please go to Customize &#8594; Widgets and add at least one widget to the "Magazine Homepage" widget area. You can use the Magazine widgets to set up the theme like the demo website.', 'poseidon' );
+		esc_html_e( 'Please go to Customize &#8594; Widgets and add at least one widget to the Magazine Homepage widget area.', 'poseidon' );
 		echo '</p>';
 
 	endif;

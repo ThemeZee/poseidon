@@ -26,6 +26,10 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 1.3 =
+* added improved Magazine Widget Customizer Control
+* added default widget titles for Magazine widgets
+
 = 1.2.5 =
 * fixed alignment of site logo in MS Edge
 * ignore sticky posts in Magazine widgets
