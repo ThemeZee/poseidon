@@ -411,17 +411,6 @@ li > ol {
 
 }
 
-.sidebar-left .content-area {
-	float: left;
-	padding-right: 0;
-	padding-right: 4em;
-	padding-left: 0;
-}
-
-.sidebar-left .sidebar {
-	float: right;
-}
-
 .related-posts-list li .wp-post-image {
 	float: right;
 	margin: 0 0 0 1em;
