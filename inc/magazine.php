@@ -13,6 +13,14 @@
 */
 function poseidon_magazine_widgets() {
 
+	// Get theme options from database.
+	$theme_options = poseidon_theme_options();
+
+	// Return early if Magazine widgets are deactivated on blog index.
+	if ( is_home() && false === $theme_options['blog_magazine_widgets'] ) {
+		return;
+	}
+
 	// Only display on first page of blog.
 	if ( is_home() && is_paged() ) {
 		return;
