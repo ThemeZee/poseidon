@@ -44,6 +44,17 @@
 		} );
 	} );
 
+	// Sidebar Position.
+	wp.customize( 'poseidon_theme_options[layout]', function( value ) {
+		value.bind( function( newval ) {
+			if ( 'left-sidebar' === newval && false === $( 'body' ).hasClass( 'no-sidebar' ) ) {
+				$( 'body' ).addClass( 'sidebar-left' );
+			} else {
+				$( 'body' ).removeClass( 'sidebar-left' );
+			}
+		} );
+	} );
+
 	// Post Date checkbox.
 	wp.customize( 'poseidon_theme_options[meta_date]', function( value ) {
 		value.bind( function( newval ) {

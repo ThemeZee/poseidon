@@ -18,14 +18,14 @@ function poseidon_customize_register_general_settings( $wp_customize ) {
 	$wp_customize->add_section( 'poseidon_section_general', array(
 		'title'    => esc_html__( 'General Settings', 'poseidon' ),
 		'priority' => 10,
-		'panel' => 'poseidon_options_panel',
+		'panel'    => 'poseidon_options_panel',
 	) );
 
 	// Add Settings and Controls for Layout.
 	$wp_customize->add_setting( 'poseidon_theme_options[layout]', array(
 		'default'           => 'right-sidebar',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'poseidon_sanitize_select',
 	) );
 
@@ -44,7 +44,7 @@ function poseidon_customize_register_general_settings( $wp_customize ) {
 	// Add Sticky Header Setting.
 	$wp_customize->add_setting( 'poseidon_theme_options[sticky_header_title]', array(
 		'default'           => '',
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'esc_attr',
 	) );
@@ -59,7 +59,7 @@ function poseidon_customize_register_general_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'poseidon_theme_options[sticky_header]', array(
 		'default'           => false,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'poseidon_sanitize_checkbox',
 	) );
