@@ -40,6 +40,7 @@ function poseidon_default_options() {
 		'post_layout_archives'  => 'left',
 		'post_layout_single'    => 'header',
 		'latest_posts_title'    => esc_html__( 'Latest Posts', 'poseidon' ),
+		'blog_description'      => '',
 		'post_content'          => 'excerpt',
 		'excerpt_length'        => 20,
 		'blog_magazine_widgets' => true,

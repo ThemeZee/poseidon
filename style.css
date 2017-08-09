@@ -1559,8 +1559,9 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	font-family: 'Raleway', Tahoma, Arial;
 }
 
-.archive-description {
-	color: #666;
+.blog-description,
+.archive-description p {
+	margin-bottom: 0;
 }
 
 /* Breadcrumbs */

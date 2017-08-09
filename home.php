@@ -23,16 +23,9 @@ $theme_options = poseidon_theme_options();
 		// Display Latest Posts.
 		if ( have_posts() ) :
 
-			// Display Latest Posts Title.
-			if ( '' !== $theme_options['latest_posts_title'] ) : ?>
-
-				<header class="page-header">
-
-					<h2 class="archive-title"><?php echo wp_kses_post( $theme_options['latest_posts_title'] ); ?></h2>
-
-				</header><!-- .page-header -->
-
-			<?php endif; ?>
+			// Display Blog Title.
+			poseidon_blog_title();
+			?>
 
 			<div id="post-wrapper" class="post-wrapper clearfix">
 

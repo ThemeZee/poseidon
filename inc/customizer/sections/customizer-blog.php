@@ -37,6 +37,22 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 		'priority' => 10,
 	) );
 
+	// Add Blog Description setting and control.
+	$wp_customize->add_setting( 'poseidon_theme_options[blog_description]', array(
+		'default'           => '',
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'wp_kses_post',
+	) );
+
+	$wp_customize->add_control( 'poseidon_theme_options[blog_description]', array(
+		'label'    => esc_html__( 'Blog Description', 'poseidon' ),
+		'section'  => 'poseidon_section_blog',
+		'settings' => 'poseidon_theme_options[blog_description]',
+		'type'     => 'textarea',
+		'priority' => 20,
+	) );
+
 	// Add Post Layout Settings for archive posts.
 	$wp_customize->add_setting( 'poseidon_theme_options[post_layout_archives]', array(
 		'default'           => 'left',
@@ -50,7 +66,7 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'poseidon_section_blog',
 		'settings' => 'poseidon_theme_options[post_layout_archives]',
 		'type'     => 'select',
-		'priority' => 20,
+		'priority' => 30,
 		'choices'  => array(
 			'left' => esc_html__( 'Show featured image beside content', 'poseidon' ),
 			'top'  => esc_html__( 'Show featured image above content', 'poseidon' ),
@@ -71,7 +87,7 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'poseidon_section_blog',
 		'settings' => 'poseidon_theme_options[post_content]',
 		'type'     => 'radio',
-		'priority' => 30,
+		'priority' => 40,
 		'choices'  => array(
 			'index'   => esc_html__( 'Show full posts', 'poseidon' ),
 			'excerpt' => esc_html__( 'Show post excerpts', 'poseidon' ),
@@ -92,7 +108,7 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 		'settings'        => 'poseidon_theme_options[excerpt_length]',
 		'type'            => 'text',
 		'active_callback' => 'poseidon_control_post_content_callback',
-		'priority' => 40,
+		'priority'        => 50,
 	) );
 
 	// Add Magazine Widgets Headline.
@@ -101,7 +117,7 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 			'label'    => esc_html__( 'Magazine Widgets', 'poseidon' ),
 			'section'  => 'poseidon_section_blog',
 			'settings' => array(),
-			'priority' => 50,
+			'priority' => 60,
 		)
 	) );
 
@@ -118,7 +134,7 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'poseidon_section_blog',
 		'settings' => 'poseidon_theme_options[blog_magazine_widgets]',
 		'type'     => 'checkbox',
-		'priority' => 60,
+		'priority' => 70,
 	) );
 }
 add_action( 'customize_register', 'poseidon_customize_register_blog_settings' );

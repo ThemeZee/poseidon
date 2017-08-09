@@ -116,6 +116,45 @@ if ( ! function_exists( 'poseidon_header_image' ) ) :
 endif;
 
 
+if ( ! function_exists( 'poseidon_blog_title' ) ) :
+	/**
+	 * Displays the blog title and description on the blog index (home.php)
+	 */
+	function poseidon_blog_title() {
+
+		// Get theme options from database.
+		$theme_options = poseidon_theme_options();
+
+		// Set blog title and descripton.
+		$blog_title = $theme_options['latest_posts_title'];
+		$blog_description = $theme_options['blog_description'];
+
+		// Display Blog Title.
+		if ( '' !== $blog_title || '' !== $blog_description || is_customize_preview() ) : ?>
+
+			<header class="page-header blog-header clearfix">
+
+				<?php // Display Blog Title.
+				if ( '' !== $blog_title || is_customize_preview() ) : ?>
+
+					<h2 class="archive-title blog-title"><?php echo wp_kses_post( $blog_title ); ?></h2>
+
+				<?php endif;
+
+				// Display Blog Description.
+				if ( '' !== $blog_description || is_customize_preview() ) : ?>
+
+					<p class="blog-description"><?php echo wp_kses_post( $blog_description ); ?></p>
+
+				<?php endif; ?>
+
+			</header>
+
+		<?php endif;
+	}
+endif;
+
+
 if ( ! function_exists( 'poseidon_post_image' ) ) :
 	/**
 	 * Displays the featured image on archive posts.
