@@ -69,7 +69,7 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'poseidon_theme_options[post_layout_archives]', array(
 		'default'           => 'left',
 		'type'              => 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'poseidon_sanitize_select',
 	) );
 
@@ -90,7 +90,7 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'poseidon_theme_options[post_content]', array(
 		'default'           => 'excerpt',
 		'type'              => 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'poseidon_sanitize_select',
 	) );
 
@@ -110,7 +110,7 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'poseidon_theme_options[excerpt_length]', array(
 		'default'           => 30,
 		'type'              => 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'absint',
 	) );
 
@@ -119,8 +119,19 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 		'section'         => 'poseidon_section_blog',
 		'settings'        => 'poseidon_theme_options[excerpt_length]',
 		'type'            => 'text',
-		'active_callback' => 'poseidon_control_post_content_callback',
 		'priority'        => 50,
+	) );
+
+	// Add Partial for Blog Layout, Blog Display and Excerpt Length.
+	$wp_customize->selective_refresh->add_partial( 'poseidon_blog_layout_partial', array(
+		'selector'         => '.site-main .post-wrapper',
+		'settings'         => array(
+			'poseidon_theme_options[post_layout_archives]',
+			'poseidon_theme_options[post_content]',
+			'poseidon_theme_options[excerpt_length]',
+		),
+		'render_callback'  => 'poseidon_customize_partial_blog_layout',
+		'fallback_refresh' => false,
 	) );
 
 	// Add Magazine Widgets Headline.
@@ -165,4 +176,15 @@ function poseidon_customize_partial_blog_title() {
 function poseidon_customize_partial_blog_description() {
 	$theme_options = poseidon_theme_options();
 	echo wp_kses_post( $theme_options['blog_description'] );
+}
+
+/**
+ * Render the blog layout for the selective refresh partial.
+ */
+function poseidon_customize_partial_blog_layout() {
+	$theme_options = poseidon_theme_options();
+	while ( have_posts() ) {
+		the_post();
+		get_template_part( 'template-parts/content', esc_attr( $theme_options['post_content'] ) );
+	}
 }

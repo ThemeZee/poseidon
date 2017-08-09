@@ -145,9 +145,18 @@ function poseidon_customize_partial_blogdescription() {
  * Embed JS file to make Theme Customizer preview reload changes asynchronously.
  */
 function poseidon_customize_preview_js() {
-	wp_enqueue_script( 'poseidon-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170806', true );
+	wp_enqueue_script( 'poseidon-customize-preview', get_template_directory_uri() . '/js/customize-preview.js', array( 'customize-preview' ), '20170806', true );
 }
 add_action( 'customize_preview_init', 'poseidon_customize_preview_js' );
+
+
+/**
+ * Embed JS for Customizer Controls.
+ */
+function poseidon_customizer_controls_js() {
+	wp_enqueue_script( 'poseidon-customizer-controls', get_template_directory_uri() . '/js/customizer-controls.js', array(), '20170806', true );
+}
+add_action( 'customize_controls_enqueue_scripts', 'poseidon_customizer_controls_js' );
 
 
 /**

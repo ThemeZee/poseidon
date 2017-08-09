@@ -55,6 +55,17 @@
 		} );
 	} );
 
+	// Blog Layout.
+	wp.customize( 'poseidon_theme_options[post_layout_archives]', function( value ) {
+		value.bind( function( newval ) {
+			if ( 'left' === newval && ( $( 'body' ).hasClass( 'blog' ) || $( 'body' ).hasClass( 'archive' ) || $( 'body' ).hasClass( 'search' ) ) ) {
+				$( 'body' ).addClass( 'post-layout-small' );
+			} else {
+				$( 'body' ).removeClass( 'post-layout-small' );
+			}
+		} );
+	} );
+
 	// Blog Title textfield.
 	wp.customize( 'poseidon_theme_options[latest_posts_title]', function( value ) {
 		value.bind( function( to ) {

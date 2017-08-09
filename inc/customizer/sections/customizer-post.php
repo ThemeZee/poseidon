@@ -46,7 +46,7 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'poseidon_theme_options[excerpt_more]', array(
 		'default'           => '[...]',
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'esc_attr',
 	) );
 
@@ -56,6 +56,12 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
 		'settings' => 'poseidon_theme_options[excerpt_more]',
 		'type'     => 'text',
 		'priority' => 40,
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'poseidon_theme_options[excerpt_more]', array(
+		'selector'         => '.site-main .post-wrapper',
+		'render_callback'  => 'poseidon_customize_partial_blog_layout',
+		'fallback_refresh' => false,
 	) );
 
 	// Add Post Meta Settings.
