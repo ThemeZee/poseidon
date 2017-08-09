@@ -18,14 +18,14 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 	$wp_customize->add_section( 'poseidon_section_blog', array(
 		'title'    => esc_html__( 'Blog Settings', 'poseidon' ),
 		'priority' => 25,
-		'panel' => 'poseidon_options_panel',
+		'panel'    => 'poseidon_options_panel',
 	) );
 
 	// Add Blog Title setting and control.
 	$wp_customize->add_setting( 'poseidon_theme_options[latest_posts_title]', array(
 		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'wp_kses_post',
 	) );
 
@@ -37,11 +37,17 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 		'priority' => 10,
 	) );
 
+	$wp_customize->selective_refresh->add_partial( 'poseidon_theme_options[latest_posts_title]', array(
+		'selector'         => '.blog-header .blog-title',
+		'render_callback'  => 'poseidon_customize_partial_blog_title',
+		'fallback_refresh' => false,
+	) );
+
 	// Add Blog Description setting and control.
 	$wp_customize->add_setting( 'poseidon_theme_options[blog_description]', array(
 		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'wp_kses_post',
 	) );
 
@@ -53,10 +59,16 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 		'priority' => 20,
 	) );
 
+	$wp_customize->selective_refresh->add_partial( 'poseidon_theme_options[blog_description]', array(
+		'selector'         => '.blog-header .blog-description',
+		'render_callback'  => 'poseidon_customize_partial_blog_description',
+		'fallback_refresh' => false,
+	) );
+
 	// Add Post Layout Settings for archive posts.
 	$wp_customize->add_setting( 'poseidon_theme_options[post_layout_archives]', array(
 		'default'           => 'left',
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'poseidon_sanitize_select',
 	) );
@@ -77,7 +89,7 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 	// Add Settings and Controls for post content.
 	$wp_customize->add_setting( 'poseidon_theme_options[post_content]', array(
 		'default'           => 'excerpt',
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'poseidon_sanitize_select',
 	) );
@@ -97,7 +109,7 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 	// Add Setting and Control for Excerpt Length.
 	$wp_customize->add_setting( 'poseidon_theme_options[excerpt_length]', array(
 		'default'           => 30,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'absint',
 	) );
@@ -138,3 +150,19 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 	) );
 }
 add_action( 'customize_register', 'poseidon_customize_register_blog_settings' );
+
+/**
+ * Render the blog title for the selective refresh partial.
+ */
+function poseidon_customize_partial_blog_title() {
+	$theme_options = poseidon_theme_options();
+	echo wp_kses_post( $theme_options['latest_posts_title'] );
+}
+
+/**
+ * Render the blog description for the selective refresh partial.
+ */
+function poseidon_customize_partial_blog_description() {
+	$theme_options = poseidon_theme_options();
+	echo wp_kses_post( $theme_options['blog_description'] );
+}

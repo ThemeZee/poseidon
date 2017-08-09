@@ -38,6 +38,10 @@
 	margin-bottom: 0;
 }
 
+#customize-control-poseidon_theme_options-blog_description textarea {
+	height: 5em;
+}
+
 #customize-control-poseidon_theme_options-upgrade div {
 	margin: 4px 0 32px;
 }

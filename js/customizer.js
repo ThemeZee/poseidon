@@ -55,6 +55,20 @@
 		} );
 	} );
 
+	// Blog Title textfield.
+	wp.customize( 'poseidon_theme_options[latest_posts_title]', function( value ) {
+		value.bind( function( to ) {
+			$( '.blog-header .blog-title' ).text( to );
+		} );
+	} );
+
+	// Blog Description textfield.
+	wp.customize( 'poseidon_theme_options[blog_description]', function( value ) {
+		value.bind( function( to ) {
+			$( '.blog-header .blog-description' ).text( to );
+		} );
+	} );
+
 	// Post Date checkbox.
 	wp.customize( 'poseidon_theme_options[meta_date]', function( value ) {
 		value.bind( function( newval ) {
