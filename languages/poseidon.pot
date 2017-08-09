@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Poseidon\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2017-07-04 16:24+0200\n"
+"POT-Creation-Date: 2017-08-09 16:23+0200\n"
 "PO-Revision-Date: 2016-09-15 20:13+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.0.3\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
 "_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
 "esc_html_x:1,2c\n"
@@ -20,26 +20,6 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
-
-#: node_modules/js-yaml/dist/js-yaml.min.js:2
-msgid "code point within a string may not be greater than 0xFFFFFFFF"
-msgstr ""
-
-#: node_modules/js-yaml/dist/js-yaml.min.js:2
-msgid "impossible error: invalid scalar style"
-msgstr ""
-
-#: node_modules/js-yaml/dist/js-yaml.min.js:2
-msgid "sortKeys must be a boolean or a function"
-msgstr ""
-
-#: node_modules/js-yaml/dist/js-yaml.min.js:2
-msgid "!<"
-msgstr ""
-
-#: node_modules/js-yaml/dist/js-yaml.min.js:2
-msgid "unacceptable kind of an object to dump "
-msgstr ""
 
 #: 404.php:17
 msgid "404: Page not found"
@@ -68,23 +48,23 @@ msgstr ""
 msgid "Leave a Reply"
 msgstr ""
 
-#: functions.php:42
+#: functions.php:43
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:106
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:108
 msgid "Appears on posts and pages except the full width template."
 msgstr ""
 
-#: functions.php:115
+#: functions.php:116
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:118
 msgid ""
 "Appears on blog index and Magazine Homepage template. You can use the "
 "Magazine widgets here."
@@ -94,74 +74,73 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/back-compat.php:41 inc/back-compat.php:51 inc/back-compat.php:64
+#: inc/back-compat.php:42 inc/back-compat.php:52 inc/back-compat.php:65
 #, php-format
 msgid ""
 "%1$s requires at least WordPress version %2$s. You are running version %3$s. "
 "Please upgrade and try again."
 msgstr ""
 
-#: inc/customizer/customizer.php:33 inc/theme-info.php:77
+#: inc/customizer/customizer.php:34 inc/theme-info.php:77
 msgid "Theme Options"
 msgstr ""
 
-#: inc/customizer/customizer.php:39
+#: inc/customizer/customizer.php:40
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:64
+#: inc/customizer/customizer.php:65
 msgid "Display Site Title"
 msgstr ""
 
-#: inc/customizer/customizer.php:81
+#: inc/customizer/customizer.php:82
 msgid "Display Tagline"
 msgstr ""
 
-#: inc/customizer/customizer.php:98
+#: inc/customizer/customizer.php:99
 msgid "Header Image Link"
 msgstr ""
 
-#: inc/customizer/customizer.php:115
+#: inc/customizer/customizer.php:116
 msgid "Hide header image on front page"
 msgstr ""
 
-#: inc/customizer/customizer.php:170 inc/theme-info.php:46
+#: inc/customizer/customizer.php:180 inc/theme-info.php:46
 msgid "Theme Links"
 msgstr ""
 
-#: inc/customizer/customizer.php:173 inc/theme-info.php:47
+#: inc/customizer/customizer.php:183 inc/theme-info.php:47
 msgid "https://themezee.com/themes/poseidon/"
 msgstr ""
 
-#: inc/customizer/customizer.php:174 inc/theme-info.php:47
+#: inc/customizer/customizer.php:184 inc/theme-info.php:47
 msgid "Theme Page"
 msgstr ""
 
-#: inc/customizer/customizer.php:180 inc/theme-info.php:48
+#: inc/customizer/customizer.php:190 inc/theme-info.php:48
 msgid "Theme Demo"
 msgstr ""
 
-#: inc/customizer/customizer.php:185 inc/theme-info.php:49
+#: inc/customizer/customizer.php:195 inc/theme-info.php:49
 #: inc/theme-info.php:70
 msgid "https://themezee.com/docs/poseidon-documentation/"
 msgstr ""
 
-#: inc/customizer/customizer.php:186 inc/theme-info.php:49
+#: inc/customizer/customizer.php:196 inc/theme-info.php:49
 #: inc/theme-info.php:64
 msgid "Theme Documentation"
 msgstr ""
 
-#: inc/customizer/customizer.php:191 inc/theme-info.php:50
+#: inc/customizer/customizer.php:201 inc/theme-info.php:50
 #: inc/theme-info.php:153
 msgid "https://wordpress.org/support/theme/poseidon/reviews/?filter=5"
 msgstr ""
 
-#: inc/customizer/customizer.php:192 inc/theme-info.php:50
+#: inc/customizer/customizer.php:202 inc/theme-info.php:50
 msgid "Rate this theme"
 msgstr ""
 
 #: inc/customizer/default-options.php:42
-#: inc/customizer/sections/customizer-post.php:27
 msgid "Latest Posts"
 msgstr ""
 
@@ -213,109 +192,125 @@ msgstr ""
 msgid "Add Magazine Widget"
 msgstr ""
 
+#: inc/customizer/sections/customizer-blog.php:19
+msgid "Blog Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:33
+msgid "Blog Title"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:55
+msgid "Blog Description"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:77
+msgid "Blog Layout"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:83
+msgid "Show featured image beside content"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:84
+#: inc/customizer/sections/customizer-post.php:40
+msgid "Show featured image above content"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:85
+#: inc/customizer/sections/customizer-post.php:41
+msgid "Hide featured image"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:98
+msgid "Post length on archives"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:104
+msgid "Show full posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:105
+msgid "Show post excerpts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:118
+msgid "Excerpt Length"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:140
+msgid "Magazine Widgets"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:156
+msgid "Display Magazine widgets on blog index"
+msgstr ""
+
 #: inc/customizer/sections/customizer-general.php:19
 msgid "General Settings"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:34
+#: inc/customizer/sections/customizer-general.php:33
 msgid "Theme Layout"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:40
+#: inc/customizer/sections/customizer-general.php:39
 msgid "Left Sidebar"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:41
+#: inc/customizer/sections/customizer-general.php:40
 msgid "Right Sidebar"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:56
+#: inc/customizer/sections/customizer-general.php:54
 msgid "Sticky Header"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:70
+#: inc/customizer/sections/customizer-general.php:68
 msgid "Enable sticky header feature"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:87
-msgid "Post Layout (archive pages)"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:93
-msgid "Show featured image beside content"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:94
-#: inc/customizer/sections/customizer-general.php:116
-msgid "Show featured image above content"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:95
-#: inc/customizer/sections/customizer-general.php:117
-msgid "Hide featured image"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:109
-msgid "Post Layout (single post)"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:115
-msgid "Show featured image as header image"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:19
 msgid "Post Settings"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:34
-msgid "Title above Latest Posts"
+#: inc/customizer/sections/customizer-post.php:33
+msgid "Post Layout (single post)"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:51
-msgid "Post length on archives"
+#: inc/customizer/sections/customizer-post.php:39
+msgid "Show featured image as header image"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:57
-msgid "Show full posts"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:58
-msgid "Show post excerpts"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:72
-msgid "Excerpt Length"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:90
+#: inc/customizer/sections/customizer-post.php:54
 msgid "Excerpt More Text"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:108
+#: inc/customizer/sections/customizer-post.php:70
 msgid "Post Meta"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:123
+#: inc/customizer/sections/customizer-post.php:86
 msgid "Display post date"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:139
+#: inc/customizer/sections/customizer-post.php:102
 msgid "Display post author"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:155
+#: inc/customizer/sections/customizer-post.php:118
 msgid "Display post categories"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:173
+#: inc/customizer/sections/customizer-post.php:128
 msgid "Single Posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:188
+#: inc/customizer/sections/customizer-post.php:144
 msgid "Display post tags on single posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:204
+#: inc/customizer/sections/customizer-post.php:160
 msgid "Display post navigation on single posts"
 msgstr ""
 
@@ -363,47 +358,47 @@ msgstr ""
 msgid "More Features"
 msgstr ""
 
-#: inc/magazine.php:39
+#: inc/magazine.php:47
 msgid ""
 "Please go to Customize &#8594; Widgets and add at least one widget to the "
 "Magazine Homepage widget area."
 msgstr ""
 
-#: inc/magazine.php:60
+#: inc/magazine.php:68
 #, php-format
 msgid "View all posts from category %s"
 msgstr ""
 
-#: inc/template-tags.php:236
+#: inc/template-tags.php:275
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:288 template-parts/content.php:23
+#: inc/template-tags.php:327 template-parts/content.php:23
 msgid "Read more"
 msgstr ""
 
-#: inc/template-tags.php:307
+#: inc/template-tags.php:346
 msgctxt "post navigation"
 msgid "Previous Post:"
 msgstr ""
 
-#: inc/template-tags.php:308
+#: inc/template-tags.php:347
 msgctxt "post navigation"
 msgid "Next Post:"
 msgstr ""
 
-#: inc/template-tags.php:361
+#: inc/template-tags.php:400
 msgctxt "pagination"
 msgid "Previous Posts"
 msgstr ""
 
-#: inc/template-tags.php:362
+#: inc/template-tags.php:401
 msgctxt "pagination"
 msgid "Next Posts"
 msgstr ""
 
-#: inc/template-tags.php:376
+#: inc/template-tags.php:415
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""

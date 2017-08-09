@@ -3,7 +3,7 @@ Author URI: https://themezee.com
 Theme URI: https://themezee.com/themes/poseidon/
 Contributors: themezee
 Tags: two-columns, custom-background, custom-header, custom-menu, blog, news,  editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
-Requires at least: 4.4
+Requires at least: 4.7
 Tested up to: 4.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,6 +25,16 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 1.4 =
+* added new section for Blog Settings in Customizer
+* added option to hide featured images on blog and archives
+* added setting to disable Magazine widgets on blog index
+* added Blog Description beside Blog Title
+* added selective refresh for blog and post settings
+* added new template function to display blog title
+* changed required WordPress version to 4.7
+* fixed sidebar position on RTL websites
 
 = 1.3 =
 * added improved Magazine Widget Customizer Control
