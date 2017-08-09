@@ -14,7 +14,7 @@
  */
 function poseidon_customize_register_blog_settings( $wp_customize ) {
 
-	// Add Sections for Post Settings.
+	// Add Section for Blog Settings.
 	$wp_customize->add_section( 'poseidon_section_blog', array(
 		'title'    => esc_html__( 'Blog Settings', 'poseidon' ),
 		'priority' => 25,
@@ -65,7 +65,7 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 		'fallback_refresh' => false,
 	) );
 
-	// Add Post Layout Settings for archive posts.
+	// Add Blog Layout setting and control.
 	$wp_customize->add_setting( 'poseidon_theme_options[post_layout_archives]', array(
 		'default'           => 'left',
 		'type'              => 'option',

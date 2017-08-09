@@ -14,17 +14,17 @@
  */
 function poseidon_customize_register_post_settings( $wp_customize ) {
 
-	// Add Sections for Post Settings.
+	// Add Section for Post Settings.
 	$wp_customize->add_section( 'poseidon_section_post', array(
 		'title'    => esc_html__( 'Post Settings', 'poseidon' ),
 		'priority' => 30,
-		'panel' => 'poseidon_options_panel',
+		'panel'    => 'poseidon_options_panel',
 	) );
 
 	// Add Post Layout Settings for single posts.
 	$wp_customize->add_setting( 'poseidon_theme_options[post_layout_single]', array(
 		'default'           => 'header',
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'poseidon_sanitize_select',
 	) );
@@ -45,7 +45,7 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
 	// Add Setting and Control for Excerpt More Text.
 	$wp_customize->add_setting( 'poseidon_theme_options[excerpt_more]', array(
 		'default'           => '[...]',
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'esc_attr',
 	) );
@@ -64,26 +64,20 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
 		'fallback_refresh' => false,
 	) );
 
-	// Add Post Meta Settings.
-	$wp_customize->add_setting( 'poseidon_theme_options[postmeta_headline]', array(
-		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_attr',
-	) );
-
+	// Add Post Details Headline.
 	$wp_customize->add_control( new Poseidon_Customize_Header_Control(
 		$wp_customize, 'poseidon_theme_options[postmeta_headline]', array(
-			'label' => esc_html__( 'Post Meta', 'poseidon' ),
-			'section' => 'poseidon_section_post',
-			'settings' => 'poseidon_theme_options[postmeta_headline]',
+			'label'    => esc_html__( 'Post Meta', 'poseidon' ),
+			'section'  => 'poseidon_section_post',
+			'settings' => array(),
 			'priority' => 50,
 		)
 	) );
 
+	// Add Meta Date setting and control.
 	$wp_customize->add_setting( 'poseidon_theme_options[meta_date]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'poseidon_sanitize_checkbox',
 	) );
@@ -96,9 +90,10 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
 		'priority' => 60,
 	) );
 
+	// Add Meta Author setting and control.
 	$wp_customize->add_setting( 'poseidon_theme_options[meta_author]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'poseidon_sanitize_checkbox',
 	) );
@@ -111,9 +106,10 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
 		'priority' => 70,
 	) );
 
+	// Add Meta Category setting and control.
 	$wp_customize->add_setting( 'poseidon_theme_options[meta_category]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'poseidon_sanitize_checkbox',
 	) );
@@ -126,26 +122,20 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
 		'priority' => 80,
 	) );
 
-	// Add Post Footer Settings.
-	$wp_customize->add_setting( 'poseidon_theme_options[single_posts_headline]', array(
-		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_attr',
-	) );
-
+	// Add Single Posts Headline.
 	$wp_customize->add_control( new Poseidon_Customize_Header_Control(
 		$wp_customize, 'poseidon_theme_options[single_posts_headline]', array(
-			'label' => esc_html__( 'Single Posts', 'poseidon' ),
-			'section' => 'poseidon_section_post',
-			'settings' => 'poseidon_theme_options[single_posts_headline]',
+			'label'    => esc_html__( 'Single Posts', 'poseidon' ),
+			'section'  => 'poseidon_section_post',
+			'settings' => array(),
 			'priority' => 90,
 		)
 	) );
 
+	// Add Meta Tags setting and control.
 	$wp_customize->add_setting( 'poseidon_theme_options[meta_tags]', array(
 		'default'           => false,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'poseidon_sanitize_checkbox',
 	) );
@@ -158,9 +148,10 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
 		'priority' => 100,
 	) );
 
+	// Add Post Navigation setting and control.
 	$wp_customize->add_setting( 'poseidon_theme_options[post_navigation]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'poseidon_sanitize_checkbox',
 	) );
