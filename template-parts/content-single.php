@@ -33,6 +33,7 @@
 	<footer class="entry-footer">
 
 		<?php poseidon_entry_tags(); ?>
+		<?php do_action( 'poseidon_author_bio' ); ?>
 		<?php poseidon_post_navigation(); ?>
 
 	</footer><!-- .entry-footer -->
