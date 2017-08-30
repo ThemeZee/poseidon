@@ -695,7 +695,7 @@ textarea {
 # 9.0 - Header
 --------------------------------------------------------------*/
 .site-header {
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid rgba(0,0,0,0.12);
 	background: #fff;
 }
 
@@ -806,12 +806,12 @@ textarea {
 	font-size: 0.9375rem;
 	font-family: 'Raleway', Tahoma, Arial;
 	transition: all 0.2s ease;
+	color: #404040;
 }
 
 .main-navigation-menu > .menu-item-has-children > a:after {
 	display: inline-block;
 	margin: 0.2em 0 0 0.2em;
-	color: #404040;
 	content: '\f431';
 	vertical-align: top;
 	text-decoration: inherit;
@@ -829,7 +829,7 @@ textarea {
 }
 
 .main-navigation-menu a:hover,
-.main-navigation-menu a:hover:after {
+.main-navigation-menu a:active {
 	color: #22aadd;
 }
 
@@ -839,7 +839,7 @@ textarea {
 	display: none;
 	margin: 0;
 	padding: 0;
-	border: 1px solid #ddd;
+	border: 1px solid rgba(0,0,0,0.12);
 	border-top: 4px solid #404040;
 	background: #fff;
 	list-style-position: outside;
@@ -855,7 +855,7 @@ textarea {
 	padding: 1em;
 	min-width: 250px;
 	min-width: 16rem;
-	border-bottom: 1px dotted #ccc;
+	border-bottom: 1px dotted rgba(0,0,0,0.24);
 	font-size: 13px;
 	font-size: 0.8125rem;
 	transition: none;
@@ -868,7 +868,6 @@ textarea {
 .main-navigation-menu ul .menu-item-has-children > a:after {
 	display: inline-block;
 	margin: 0.2em 0 0 0.2em;
-	color: #404040;
 	content: '\f431';
 	vertical-align: top;
 	text-decoration: inherit;
@@ -930,6 +929,7 @@ textarea {
 	display: inline-block;
 	padding: 0.5em;
 	text-decoration: none;
+	color: #fff;
 }
 
 .social-icons-menu li a .screen-reader-text {
@@ -939,7 +939,6 @@ textarea {
 /* Add Genericons */
 .social-icons-menu li a:before {
 	display: inline-block;
-	color: #fff;
 	vertical-align: top;
 	text-decoration: inherit;
 	font-size: 16px;
@@ -1375,8 +1374,8 @@ textarea {
 
 /* Page Links | wp_link_pages() */
 .page-links {
-	margin: 0;
-	word-spacing: 1em;
+	margin: 0 0 1.5em;
+	word-spacing: 0.75em;
 	font-weight: bold;
 }
 
@@ -1753,7 +1752,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 # 12.0 - Footer
 --------------------------------------------------------------*/
 .footer-wrap {
-	border-top: 1px solid #ddd;
+	border-top: 1px solid rgba(0,0,0,0.12);
 	background: #fff;
 }
 
@@ -2004,20 +2003,24 @@ object {
 		float: right;
 		margin: 1em 0;
 		padding: 1em;
+		color: #404040;
 		background: none;
 	}
 
 	.main-navigation-toggle:hover,
-	.main-navigation-toggle:focus,
 	.main-navigation-toggle:active {
+		color: #22aadd;
 		background: none;
 		cursor: pointer;
+	}
+
+	.main-navigation-toggle:focus {
+		background: none;
 	}
 
 	.main-navigation-toggle:after {
 		display: inline-block;
 		float: left;
-		color: #404040;
 		content: '\f419';
 		vertical-align: middle;
 		text-decoration: inherit;
@@ -2026,10 +2029,6 @@ object {
 		line-height: 1;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-	}
-
-	.main-navigation-toggle:hover:after {
-		color: #22aadd;
 	}
 
 	/* Main Navigation Menu */
@@ -2082,24 +2081,21 @@ object {
 		border-bottom: 1px dotted #ccc;
 	}
 
-	.main-navigation-menu ul ul {
-		border-top: 1px dotted #ccc;
-	}
-
 	/* Mobile Submenu Dropdowns */
 	.main-navigation-menu .submenu-dropdown-toggle {
 		display: block;
 		float: right;
 		margin: 0;
 		padding: 0.8em 1.2em;
+		color: #404040;
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle:hover {
+		color: #22aadd;
 		cursor: pointer;
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle:before {
-		color: #404040;
 		content: '\f431';
 		vertical-align: middle;
 		text-decoration: inherit;
@@ -2108,10 +2104,6 @@ object {
 		line-height: 1;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-	}
-
-	.main-navigation-menu .submenu-dropdown-toggle:hover:before {
-		color: #22aadd;
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle.active:before {
