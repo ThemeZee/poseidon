@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/poseidon/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Poseidon is an elegant designed WordPress theme featuring a splendid fullscreen image slideshow. The clean typography and spacious white layout makes it great to share your stories. You can use the theme as simple blog or easily create a news website with the widget-based Magazine Homepage template.
-Version: 1.4.1
+Version: 1.4.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: poseidon
@@ -167,7 +167,7 @@ svg:not(:root) {
 }
 
 figure {
-	margin: 1em 40px;
+	margin: 0;
 }
 
 hr {
@@ -606,12 +606,14 @@ textarea {
 	display: inline;
 	float: left;
 	margin-right: 1.5em;
+	margin-bottom: 1em;
 }
 
 .alignright {
 	display: inline;
 	float: right;
 	margin-left: 1.5em;
+	margin-bottom: 1em;
 }
 
 .aligncenter {
@@ -619,6 +621,7 @@ textarea {
 	clear: both;
 	margin-right: auto;
 	margin-left: auto;
+	margin-bottom: 1em;
 }
 
 /*--------------------------------------------------------------
@@ -1789,8 +1792,11 @@ object {
 ## 13.1 - Captions
 --------------------------------------------------------------*/
 .wp-caption {
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 	max-width: 100%;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	color: #777;
 }
 
 .wp-caption img[class*="wp-image-"] {
@@ -1803,7 +1809,7 @@ object {
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	margin: 0.5em 0;
 }
 
 /*--------------------------------------------------------------
@@ -1857,6 +1863,9 @@ object {
 
 .gallery-caption {
 	display: block;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	color: #777;
 }
 
 /*--------------------------------------------------------------

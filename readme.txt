@@ -26,6 +26,10 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 1.4.2 =
+* improved styling of image captions
+* improved styling of aligned images
+
 = 1.4.1 =
 * added action hook for author bio
 * added filter to allow plugins to add own elements to be hidden
