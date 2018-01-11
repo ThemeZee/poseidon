@@ -26,6 +26,9 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 1.4.3 =
+* fixed styling of blog layout for posts loaded with Infinite Scrolling
+
 = 1.4.2 =
 * improved styling of image captions
 * improved styling of aligned images

@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/poseidon/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Poseidon is an elegant designed WordPress theme featuring a splendid fullscreen image slideshow. The clean typography and spacious white layout makes it great to share your stories. You can use the theme as simple blog or easily create a news website with the widget-based Magazine Homepage template.
-Version: 1.4.2
+Version: 1.4.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: poseidon
@@ -1354,24 +1354,28 @@ textarea {
 }
 
 /* Small Post Layout */
-.post-layout-small .post-wrapper .type-post .wp-post-image {
+.post-layout-small .post-wrapper .type-post .wp-post-image,
+.post-layout-small .infinite-wrap .type-post .wp-post-image {
 	float: left;
 	margin: 0 1.5em 1.5em 0;
 	padding: 0.3em 0 0;
 	max-width: 40%;
 }
 
-.post-layout-small .post-wrapper .type-post .entry-title {
+.post-layout-small .post-wrapper .type-post .entry-title,
+.post-layout-small .infinite-wrap .type-post .entry-title {
 	font-size: 28px;
 	font-size: 1.75rem;
 }
 
-.post-layout-small .post-wrapper .type-post .entry-content {
+.post-layout-small .post-wrapper .type-post .entry-content,
+.post-layout-small .infinite-wrap .type-post .entry-content {
 	font-size: 16px;
 	font-size: 1rem;
 }
 
-.post-layout-small .post-wrapper .type-post .entry-excerpt p {
+.post-layout-small .post-wrapper .type-post .entry-excerpt p,
+.post-layout-small .infinite-wrap .type-post .entry-excerpt p {
 	margin-bottom: 1em;
 }
 
@@ -1899,7 +1903,8 @@ object {
 		font-size: 2.25rem;
 	}
 
-	.post-layout-small .post-wrapper .type-post .entry-title {
+	.post-layout-small .post-wrapper .type-post .entry-title,
+	.post-layout-small .infinite-wrap .type-post .entry-title {
 		font-size: 26px;
 		font-size: 1.625rem;
 	}
@@ -1957,7 +1962,8 @@ object {
 		font-size: 2rem;
 	}
 
-	.post-layout-small .post-wrapper .type-post .entry-title {
+	.post-layout-small .post-wrapper .type-post .entry-title,
+	.post-layout-small .infinite-wrap .type-post .entry-title {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
@@ -2241,7 +2247,8 @@ object {
 		font-size: 1.75rem;
 	}
 
-	.post-layout-small .post-wrapper .type-post .entry-title {
+	.post-layout-small .post-wrapper .type-post .entry-title,
+	.post-layout-small .infinite-wrap .type-post .entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
@@ -2365,7 +2372,8 @@ object {
 		font-size: 1.5rem;
 	}
 
-	.post-layout-small .post-wrapper .type-post .entry-title {
+	.post-layout-small .post-wrapper .type-post .entry-title,
+	.post-layout-small .infinite-wrap .type-post .entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
@@ -2415,7 +2423,8 @@ object {
 ## 14.9.5 - Mobile Small ( < 320px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 25em) {
-	.post-layout-small .post-wrapper .type-post .wp-post-image {
+	.post-layout-small .post-wrapper .type-post .wp-post-image,
+	.post-layout-small .infinite-wrap .type-post .wp-post-image {
 		float: none;
 		margin: 0 0 0.5em;
 		padding: 0;
