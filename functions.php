@@ -73,7 +73,7 @@ if ( ! function_exists( 'poseidon_setup' ) ) :
 		add_theme_support( 'woocommerce' );
 
 		// Add extra theme styling to the visual editor.
-		add_editor_style( array( 'css/editor-style.css', poseidon_google_fonts_url() ) );
+		add_editor_style( array( 'css/editor-style.css', get_template_directory_uri() . '/assets/css/custom-fonts.css' ) );
 
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -155,9 +155,6 @@ function poseidon_scripts() {
 		wp_enqueue_script( 'poseidon-jquery-sticky-header', get_template_directory_uri() . '/js/sticky-header.js', array( 'jquery' ), '20170203' );
 	}
 
-	// Register and Enqueue Google Fonts.
-	wp_enqueue_style( 'poseidon-default-fonts', poseidon_google_fonts_url(), array(), null );
-
 	// Register Comment Reply Script for Threaded Comments.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -167,22 +164,15 @@ add_action( 'wp_enqueue_scripts', 'poseidon_scripts' );
 
 
 /**
- * Retrieve Font URL to register default Google Fonts
+ * Enqueue custom fonts.
  */
-function poseidon_google_fonts_url() {
+function poseidon_custom_fonts() {
 
-	// Set default Fonts.
-	$font_families = array( 'Ubuntu:400,400italic,700,700italic', 'Raleway:400,700' );
+	// Register and Enqueue Theme Fonts.
+	wp_enqueue_style( 'poseidon-custom-fonts', get_template_directory_uri() . '/assets/css/custom-fonts.css' );
 
-	// Build Fonts URL.
-	$query_args = array(
-		'family' => urlencode( implode( '|', $font_families ) ),
-		'subset' => urlencode( 'latin,latin-ext' ),
-	);
-	$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
-
-	return apply_filters( 'poseidon_google_fonts_url', $fonts_url );
 }
+add_action( 'wp_enqueue_scripts', 'poseidon_custom_fonts', 1 );
 
 
 /**
