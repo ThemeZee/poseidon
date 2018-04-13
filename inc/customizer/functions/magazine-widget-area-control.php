@@ -20,7 +20,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 		 * Enqueue Magazine Widgets Control Scripts.
 		 */
 		function enqueue() {
-			wp_enqueue_script( 'poseidon-customizer-magazine-widgets', get_template_directory_uri() . '/js/customizer-magazine-widgets.js', array( 'jquery' ), '20170627', true );
+			wp_enqueue_script( 'poseidon-customizer-magazine-widgets', get_template_directory_uri() . '/assets/js/customizer-magazine-widgets.js', array( 'jquery' ), '20170627', true );
 		}
 
 		/**
