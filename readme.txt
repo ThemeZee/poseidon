@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/poseidon/
 Contributors: themezee
 Tags: two-columns, custom-background, custom-header, custom-menu, blog, news,  editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 4.7
-Tested up to: 4.8
+Tested up to: 5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,11 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 1.5 =
+* added default theme fonts as local fonts
+* use local fonts instead of Google fonts for GDPR compliance
+* restructured assets into one folder
 
 = 1.4.3 =
 * fixed styling of blog layout for posts loaded with Infinite Scrolling
