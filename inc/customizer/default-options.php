@@ -8,6 +8,25 @@
  */
 
 /**
+* Get a single theme option
+*
+* @return mixed
+*/
+function poseidon_get_option( $option_name = '' ) {
+
+	// Get all Theme Options from Database.
+	$theme_options = poseidon_theme_options();
+
+	// Return single option.
+	if ( isset( $theme_options[ $option_name ] ) ) {
+		return $theme_options[ $option_name ];
+	}
+
+	return false;
+}
+
+
+/**
  * Get saved user settings from database or theme defaults
  *
  * @return array
@@ -19,7 +38,6 @@ function poseidon_theme_options() {
 
 	// Return theme options.
 	return $theme_options;
-
 }
 
 
@@ -43,6 +61,7 @@ function poseidon_default_options() {
 		'blog_description'      => '',
 		'post_content'          => 'excerpt',
 		'excerpt_length'        => 20,
+		'read_more_text'        => esc_html__( 'Read more', 'poseidon' ),
 		'blog_magazine_widgets' => true,
 		'excerpt_more'          => '[...]',
 		'meta_date'             => true,
