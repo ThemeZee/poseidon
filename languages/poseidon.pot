@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Poseidon\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2017-08-09 16:23+0200\n"
+"POT-Creation-Date: 2018-06-09 13:06+0200\n"
 "PO-Revision-Date: 2016-09-15 20:13+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -140,8 +140,13 @@ msgstr ""
 msgid "Rate this theme"
 msgstr ""
 
-#: inc/customizer/default-options.php:42
+#: inc/customizer/default-options.php:60
 msgid "Latest Posts"
+msgstr ""
+
+#: inc/customizer/default-options.php:64
+#: inc/customizer/sections/customizer-blog.php:156
+msgid "Read more"
 msgstr ""
 
 #: inc/customizer/functions/custom-controls.php:65
@@ -223,7 +228,7 @@ msgid "Hide featured image"
 msgstr ""
 
 #: inc/customizer/sections/customizer-blog.php:98
-msgid "Post length on archives"
+msgid "Blog Content"
 msgstr ""
 
 #: inc/customizer/sections/customizer-blog.php:104
@@ -238,11 +243,19 @@ msgstr ""
 msgid "Excerpt Length"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:140
+#: inc/customizer/sections/customizer-blog.php:134
+msgid "Excerpt More Text"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:163
+msgid "Read More Text"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:173
 msgid "Magazine Widgets"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:156
+#: inc/customizer/sections/customizer-blog.php:189
 msgid "Display Magazine widgets on blog index"
 msgstr ""
 
@@ -275,43 +288,39 @@ msgid "Post Settings"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:33
-msgid "Post Layout (single post)"
+msgid "Single Post Layout"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:39
 msgid "Show featured image as header image"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:54
-msgid "Excerpt More Text"
+#: inc/customizer/sections/customizer-post.php:48
+msgid "Post Details"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:70
-msgid "Post Meta"
+#: inc/customizer/sections/customizer-post.php:64
+msgid "Display date"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:86
-msgid "Display post date"
+#: inc/customizer/sections/customizer-post.php:80
+msgid "Display author"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:102
-msgid "Display post author"
+#: inc/customizer/sections/customizer-post.php:96
+msgid "Display categories"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:118
-msgid "Display post categories"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:128
+#: inc/customizer/sections/customizer-post.php:106
 msgid "Single Posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:144
-msgid "Display post tags on single posts"
+#: inc/customizer/sections/customizer-post.php:122
+msgid "Display tags"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:160
-msgid "Display post navigation on single posts"
+#: inc/customizer/sections/customizer-post.php:138
+msgid "Display previous/next post navigation"
 msgstr ""
 
 #: inc/customizer/sections/customizer-slider.php:19
@@ -374,31 +383,27 @@ msgstr ""
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:327 template-parts/content.php:23
-msgid "Read more"
-msgstr ""
-
-#: inc/template-tags.php:346
+#: inc/template-tags.php:352
 msgctxt "post navigation"
 msgid "Previous Post:"
 msgstr ""
 
-#: inc/template-tags.php:347
+#: inc/template-tags.php:353
 msgctxt "post navigation"
 msgid "Next Post:"
 msgstr ""
 
-#: inc/template-tags.php:400
+#: inc/template-tags.php:406
 msgctxt "pagination"
 msgid "Previous Posts"
 msgstr ""
 
-#: inc/template-tags.php:401
+#: inc/template-tags.php:407
 msgctxt "pagination"
 msgid "Next Posts"
 msgstr ""
 
-#: inc/template-tags.php:415
+#: inc/template-tags.php:421
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
