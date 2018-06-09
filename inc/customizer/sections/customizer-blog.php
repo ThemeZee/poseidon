@@ -95,7 +95,7 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'poseidon_theme_options[post_content]', array(
-		'label'    => esc_html__( 'Post length on archives', 'poseidon' ),
+		'label'    => esc_html__( 'Blog Content', 'poseidon' ),
 		'section'  => 'poseidon_section_blog',
 		'settings' => 'poseidon_theme_options[post_content]',
 		'type'     => 'radio',
@@ -115,11 +115,27 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'poseidon_theme_options[excerpt_length]', array(
-		'label'           => esc_html__( 'Excerpt Length', 'poseidon' ),
-		'section'         => 'poseidon_section_blog',
-		'settings'        => 'poseidon_theme_options[excerpt_length]',
-		'type'            => 'text',
-		'priority'        => 50,
+		'label'    => esc_html__( 'Excerpt Length', 'poseidon' ),
+		'section'  => 'poseidon_section_blog',
+		'settings' => 'poseidon_theme_options[excerpt_length]',
+		'type'     => 'text',
+		'priority' => 50,
+	) );
+
+	// Add Setting and Control for Excerpt More Text.
+	$wp_customize->add_setting( 'poseidon_theme_options[excerpt_more]', array(
+		'default'           => '[...]',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'esc_attr',
+	) );
+
+	$wp_customize->add_control( 'poseidon_theme_options[excerpt_more]', array(
+		'label'    => esc_html__( 'Excerpt More Text', 'poseidon' ),
+		'section'  => 'poseidon_section_blog',
+		'settings' => 'poseidon_theme_options[excerpt_more]',
+		'type'     => 'text',
+		'priority' => 60,
 	) );
 
 	// Add Partial for Blog Layout, Blog Display and Excerpt Length.
@@ -129,9 +145,26 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 			'poseidon_theme_options[post_layout_archives]',
 			'poseidon_theme_options[post_content]',
 			'poseidon_theme_options[excerpt_length]',
+			'poseidon_theme_options[excerpt_more]',
 		),
 		'render_callback'  => 'poseidon_customize_partial_blog_layout',
 		'fallback_refresh' => false,
+	) );
+
+	// Add Setting and Control for Read More Text.
+	$wp_customize->add_setting( 'poseidon_theme_options[read_more_text]', array(
+		'default'           => esc_html__( 'Read more', 'poseidon' ),
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control( 'poseidon_theme_options[read_more_text]', array(
+		'label'    => esc_html__( 'Read More Text', 'poseidon' ),
+		'section'  => 'poseidon_section_blog',
+		'settings' => 'poseidon_theme_options[read_more_text]',
+		'type'     => 'text',
+		'priority' => 70,
 	) );
 
 	// Add Magazine Widgets Headline.
@@ -140,7 +173,7 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 			'label'    => esc_html__( 'Magazine Widgets', 'poseidon' ),
 			'section'  => 'poseidon_section_blog',
 			'settings' => array(),
-			'priority' => 60,
+			'priority' => 80,
 		)
 	) );
 
@@ -157,7 +190,7 @@ function poseidon_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'poseidon_section_blog',
 		'settings' => 'poseidon_theme_options[blog_magazine_widgets]',
 		'type'     => 'checkbox',
-		'priority' => 70,
+		'priority' => 90,
 	) );
 }
 add_action( 'customize_register', 'poseidon_customize_register_blog_settings' );

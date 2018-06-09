@@ -42,28 +42,6 @@ function poseidon_customize_register_post_settings( $wp_customize ) {
 		),
 	) );
 
-	// Add Setting and Control for Excerpt More Text.
-	$wp_customize->add_setting( 'poseidon_theme_options[excerpt_more]', array(
-		'default'           => '[...]',
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'esc_attr',
-	) );
-
-	$wp_customize->add_control( 'poseidon_theme_options[excerpt_more]', array(
-		'label'    => esc_html__( 'Excerpt More Text', 'poseidon' ),
-		'section'  => 'poseidon_section_post',
-		'settings' => 'poseidon_theme_options[excerpt_more]',
-		'type'     => 'text',
-		'priority' => 40,
-	) );
-
-	$wp_customize->selective_refresh->add_partial( 'poseidon_theme_options[excerpt_more]', array(
-		'selector'         => '.site-main .post-wrapper',
-		'render_callback'  => 'poseidon_customize_partial_blog_layout',
-		'fallback_refresh' => false,
-	) );
-
 	// Add Post Details Headline.
 	$wp_customize->add_control( new Poseidon_Customize_Header_Control(
 		$wp_customize, 'poseidon_theme_options[postmeta_headline]', array(
