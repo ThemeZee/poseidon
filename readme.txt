@@ -26,6 +26,9 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 1.6.1 =
+* updated screenshot according to new WordPress.org guidelines
+
 = 1.6 =
 * added new setting to change the text of the Read More button
 * updated and restructured blog and post settings
