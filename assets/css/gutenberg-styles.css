@@ -49,8 +49,13 @@ body.block-editor-page .edit-post-visual-editor .editor-block-list__block {
 	margin-bottom: 1.5em;
 }
 
+.edit-post-visual-editor .editor-block-list__block a {
+    color: #22aadd;
+}
+
 .edit-post-visual-editor .editor-block-list__block pre {
-	padding: 1.6em;
+	overflow: auto;
+	padding: 1.5em;
 	background: #eee;
 	font-size: 15px;
 	font-size: 0.9375rem;
