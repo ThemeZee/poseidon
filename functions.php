@@ -55,17 +55,17 @@ if ( ! function_exists( 'poseidon_setup' ) ) :
 
 		// Set up the WordPress core custom logo feature.
 		add_theme_support( 'custom-logo', apply_filters( 'poseidon_custom_logo_args', array(
-			'height' => 50,
-			'width' => 250,
+			'height'      => 50,
+			'width'       => 250,
 			'flex-height' => true,
-			'flex-width' => true,
+			'flex-width'  => true,
 		) ) );
 
 		// Set up the WordPress core custom header feature.
-		add_theme_support('custom-header', apply_filters( 'poseidon_custom_header_args', array(
+		add_theme_support( 'custom-header', apply_filters( 'poseidon_custom_header_args', array(
 			'header-text' => false,
-			'width'	=> 2500,
-			'height' => 625,
+			'width'       => 2500,
+			'height'      => 625,
 			'flex-height' => true,
 		) ) );
 
@@ -78,6 +78,34 @@ if ( ! function_exists( 'poseidon_setup' ) ) :
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		// Add custom color palette for Gutenberg.
+		add_theme_support( 'editor-color-palette', array(
+			array(
+				'name'  => esc_html_x( 'Primary', 'Gutenberg Color Palette', 'poseidon' ),
+				'slug'  => 'primary',
+				'color' => apply_filters( 'poseidon_primary_color', '#22aadd' ),
+			),
+			array(
+				'name'  => esc_html_x( 'White', 'Gutenberg Color Palette', 'poseidon' ),
+				'slug'  => 'white',
+				'color' => '#ffffff',
+			),
+			array(
+				'name'  => esc_html_x( 'Light Gray', 'Gutenberg Color Palette', 'poseidon' ),
+				'slug'  => 'light-gray',
+				'color' => '#f0f0f0',
+			),
+			array(
+				'name'  => esc_html_x( 'Dark Gray', 'Gutenberg Color Palette', 'poseidon' ),
+				'slug'  => 'dark-gray',
+				'color' => '#777777',
+			),
+			array(
+				'name'  => esc_html_x( 'Black', 'Gutenberg Color Palette', 'poseidon' ),
+				'slug'  => 'black',
+				'color' => '#404040',
+			),
+		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'poseidon_setup' );
@@ -103,25 +131,24 @@ add_action( 'after_setup_theme', 'poseidon_content_width', 0 );
 function poseidon_widgets_init() {
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Sidebar', 'poseidon' ),
-		'id' => 'sidebar',
-		'description' => esc_html__( 'Appears on posts and pages except the full width template.', 'poseidon' ),
+		'name'          => esc_html__( 'Sidebar', 'poseidon' ),
+		'id'            => 'sidebar',
+		'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'poseidon' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
-		'after_widget' => '</aside>',
-		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title' => '</h3></div>',
-	));
+		'after_widget'  => '</aside>',
+		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+		'after_title'   => '</h3></div>',
+	) );
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Magazine Homepage', 'poseidon' ),
-		'id' => 'magazine-homepage',
-		'description' => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'poseidon' ),
+		'name'          => esc_html__( 'Magazine Homepage', 'poseidon' ),
+		'id'            => 'magazine-homepage',
+		'description'   => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'poseidon' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title' => '</h3></div>',
-	));
-
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+		'after_title'   => '</h3></div>',
+	) );
 }
 add_action( 'widgets_init', 'poseidon_widgets_init' );
 
@@ -167,12 +194,19 @@ add_action( 'wp_enqueue_scripts', 'poseidon_scripts' );
  * Enqueue custom fonts.
  */
 function poseidon_custom_fonts() {
-
-	// Register and Enqueue Theme Fonts.
 	wp_enqueue_style( 'poseidon-custom-fonts', get_template_directory_uri() . '/assets/css/custom-fonts.css', array(), '20180413' );
-
 }
 add_action( 'wp_enqueue_scripts', 'poseidon_custom_fonts', 1 );
+add_action( 'enqueue_block_editor_assets', 'poseidon_custom_fonts', 1 );
+
+
+/**
+ * Enqueue editor styles for the new Gutenberg Editor.
+ */
+function poseidon_block_editor_assets() {
+	wp_enqueue_style( 'poseidon-editor-styles', get_theme_file_uri( '/assets/css/gutenberg-styles.css' ), array(), '20181102', 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'poseidon_block_editor_assets' );
 
 
 /**
@@ -188,7 +222,6 @@ function poseidon_add_image_sizes() {
 	add_image_size( 'poseidon-thumbnail-medium', 360, 240, true );
 	add_image_size( 'poseidon-thumbnail-large', 600, 400, true );
 	add_image_size( 'poseidon-thumbnail-single', 840, 420, true );
-
 }
 add_action( 'after_setup_theme', 'poseidon_add_image_sizes' );
 
