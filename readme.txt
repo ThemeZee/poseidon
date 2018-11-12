@@ -26,6 +26,10 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 1.7.1 =
+* fixed link color in Gutenberg Editor
+* fixed styling of Read More button
+
 = 1.7 =
 * added styling for Gutenberg blocks
 * added custom color palette for Gutenberg
