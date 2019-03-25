@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Poseidon\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2018-06-09 13:06+0200\n"
+"POT-Creation-Date: 2019-03-25 14:26+0100\n"
 "PO-Revision-Date: 2016-09-15 20:13+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
 "_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
 "esc_html_x:1,2c\n"
@@ -52,19 +52,44 @@ msgstr ""
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:106
+#: functions.php:84
+msgctxt "Gutenberg Color Palette"
+msgid "Primary"
+msgstr ""
+
+#: functions.php:89
+msgctxt "Gutenberg Color Palette"
+msgid "White"
+msgstr ""
+
+#: functions.php:94
+msgctxt "Gutenberg Color Palette"
+msgid "Light Gray"
+msgstr ""
+
+#: functions.php:99
+msgctxt "Gutenberg Color Palette"
+msgid "Dark Gray"
+msgstr ""
+
+#: functions.php:104
+msgctxt "Gutenberg Color Palette"
+msgid "Black"
+msgstr ""
+
+#: functions.php:134
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:136
 msgid "Appears on posts and pages except the full width template."
 msgstr ""
 
-#: functions.php:116
+#: functions.php:144
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:146
 msgid ""
 "Appears on blog index and Magazine Homepage template. You can use the "
 "Magazine widgets here."
@@ -403,9 +428,9 @@ msgctxt "pagination"
 msgid "Next Posts"
 msgstr ""
 
-#: inc/template-tags.php:421
+#: inc/template-tags.php:423
 #, php-format
-msgid "Powered by %1$s and %2$s."
+msgid "WordPress Theme: %s by ThemeZee."
 msgstr ""
 
 #: inc/theme-info.php:19 inc/theme-info.php:40
