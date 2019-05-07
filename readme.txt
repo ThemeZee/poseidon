@@ -26,6 +26,9 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 1.7.3 =
+* added support for responsive embed blocks
+
 = 1.7.2 =
 * adjusted footer credit link with clearer wording
 
