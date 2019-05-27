@@ -419,9 +419,10 @@ function poseidon_footer_text() {
 
 	<span class="credit-link">
 		<?php
-		// translators: Theme Name
-		printf( esc_html__( 'WordPress Theme: %s by ThemeZee.', 'poseidon' ),
-			'<a href="https://themezee.com/themes/poseidon/" title="Poseidon WordPress Theme">Poseidon</a>'
+		// translators: Theme Name and Link to ThemeZee.
+		printf( esc_html__( 'WordPress Theme: %1$s by %2$s.', 'poseidon' ),
+			esc_html__( 'Poseidon', 'poseidon' ),
+			'<a href="https://themezee.com/" target="_blank" rel="nofollow">ThemeZee</a>'
 		);
 		?>
 	</span>
