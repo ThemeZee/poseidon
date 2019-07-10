@@ -26,6 +26,9 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 1.7.4 =
+* fixed empty link tags in source code if there is no featured image
+
 = 1.7.3 =
 * added support for responsive embed blocks
 

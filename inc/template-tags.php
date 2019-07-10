@@ -187,26 +187,28 @@ if ( ! function_exists( 'poseidon_post_image_archives' ) ) :
 		$theme_options = poseidon_theme_options();
 
 		// Return early if no featured image should be displayed.
-		if ( 'none' == $theme_options['post_layout_archives'] ) :
+		if ( 'none' === $theme_options['post_layout_archives'] || ! has_post_thumbnail() ) :
 			return;
 		endif;
 
 		// Display featured image beside post content.
-		if ( 'left' == $theme_options['post_layout_archives'] ) : ?>
+		if ( 'left' === $theme_options['post_layout_archives'] ) :
+			?>
 
 			<a class="post-thumbnail-small" href="<?php the_permalink(); ?>" rel="bookmark">
 				<?php the_post_thumbnail( 'poseidon-thumbnail-medium' ); ?>
 			</a>
 
-		<?php
-		// Display featured image above post content.
-		else : ?>
+			<?php
+			// Display featured image above post content.
+		else :
+			?>
 
 			<a href="<?php the_permalink(); ?>" rel="bookmark">
 				<?php the_post_thumbnail(); ?>
 			</a>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
