@@ -260,3 +260,99 @@ body.block-editor-page .edit-post-visual-editor .editor-block-list__block {
 .has-black-background-color {
 	background-color: #404040;
 }
+
+/*--------------------------------------------------------------
+# 6.0 - Magazine Blocks
+--------------------------------------------------------------*/
+:root {
+	--tz-column-gap: 2em;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-image {
+    margin-bottom: 0.5em;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-title {
+	font-family: 'Raleway', sans-serif;
+	line-height: 1.4;
+	font-size: 24px;
+    font-size: 1.5rem;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-title a:link,
+.edit-post-visual-editor .tz-magazine-block .tz-entry-title a:visited {
+	color: #404040;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-title a:hover,
+.edit-post-visual-editor .tz-magazine-block .tz-entry-title a:active {
+	color: #22aadd;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-magazine-grid-columns-3 .tz-entry-title {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-magazine-grid-columns-4 .tz-entry-title,
+.edit-post-visual-editor .tz-magazine-block .tz-magazine-thumbnail-list .tz-entry-title {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-meta {
+	margin: 0.5em 0.2em 0;
+	color: #aaa;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	text-decoration: none;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-meta a:link,
+.edit-post-visual-editor .tz-magazine-block .tz-entry-meta a:visited {
+	color: #aaa;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-meta a:hover,
+.edit-post-visual-editor .tz-magazine-block .tz-entry-meta a:active {
+	color: #777;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-meta-field {
+	margin-right: 0.5em;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-meta-field a {
+	text-decoration: none;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-content {
+	margin-top: 1em;
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-read-more {
+	margin: 1em 0 0;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-more-link {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-family: 'Raleway', Tahoma, Arial;
+	transition: all 0.2s ease;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-more-link:hover,
+.edit-post-visual-editor .tz-magazine-block .tz-more-link:active {
+	color: #404040;
+}

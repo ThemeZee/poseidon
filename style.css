@@ -1302,6 +1302,47 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+## 11.3 - Magazine Blocks
+--------------------------------------------------------------*/
+:root {
+	--tz-column-gap: 2em;
+}
+
+.tz-magazine-block .tz-entry-title {
+    font-size: 24px;
+    font-size: 1.5rem;
+}
+
+.tz-magazine-block .tz-magazine-grid-columns-3 .tz-entry-title {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+.tz-magazine-block .tz-magazine-grid-columns-4 .tz-entry-title,
+.tz-magazine-block .tz-magazine-thumbnail-list .tz-entry-title {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.tz-magazine-block .tz-entry-meta {
+    font-size: 13px;
+    font-size: 0.8125rem;
+}
+
+.tz-magazine-block .tz-meta-field {
+	margin-right: 0;
+}
+
+.tz-magazine-block .tz-meta-field a {
+	text-decoration: none;
+}
+
+.tz-magazine-block .tz-entry-content {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+/*--------------------------------------------------------------
 # 12.0 - Posts and pages
 --------------------------------------------------------------*/
 .type-post,
