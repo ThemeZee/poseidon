@@ -230,6 +230,20 @@ add_action( 'after_setup_theme', 'poseidon_add_image_sizes' );
 
 
 /**
+ * Make custom image sizes available in Gutenberg.
+ */
+function poseidon_add_image_size_names( $sizes ) {
+	return array_merge( $sizes, array(
+		'post-thumbnail'            => esc_html__( 'Poseidon Blog Post', 'poseidon' ),
+		'poseidon-thumbnail-single' => esc_html__( 'Poseidon Single Post', 'poseidon' ),
+		'poseidon-thumbnail-large'  => esc_html__( 'Poseidon Magazine Post', 'poseidon' ),
+		'poseidon-thumbnail-small'  => esc_html__( 'Poseidon Thumbnail', 'poseidon' ),
+	) );
+}
+add_filter( 'image_size_names_choose', 'poseidon_add_image_size_names' );
+
+
+/**
  * Include Files
  */
 
