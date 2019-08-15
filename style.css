@@ -1476,20 +1476,20 @@ textarea {
 }
 
 /* Hide post meta if they are deactivated in settings */
-body.date-hidden .entry-meta .meta-date,
-body.author-hidden .entry-meta .meta-author,
-body.categories-hidden .entry-meta .meta-category {
+body.date-hidden .type-post .entry-meta .meta-date,
+body.author-hidden .type-post .entry-meta .meta-author,
+body.categories-hidden .type-post .entry-meta .meta-category {
 	 position: absolute;
 	 clip: rect(1px, 1px, 1px, 1px);
 }
 
-body.author-hidden.categories-hidden .entry-meta .meta-date:after,
-body.categories-hidden .entry-meta .meta-author:after,
-body.author-hidden .widget-magazine-posts .entry-meta .meta-date:after {
+body.author-hidden.categories-hidden .type-post .entry-meta .meta-date:after,
+body.categories-hidden .type-post .entry-meta .meta-author:after,
+body.author-hidden .widget-magazine-posts .type-post .entry-meta .meta-date:after {
 	display: none;
 }
 
-body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
+body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry-meta {
 	display: none;
 }
 
