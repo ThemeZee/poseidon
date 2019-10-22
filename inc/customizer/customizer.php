@@ -6,13 +6,14 @@
  */
 
 // Load Customizer Helper Functions.
-require( get_template_directory() . '/inc/customizer/functions/custom-controls.php' );
-require( get_template_directory() . '/inc/customizer/functions/magazine-widget-area-control.php' );
 require( get_template_directory() . '/inc/customizer/functions/sanitize-functions.php' );
 require( get_template_directory() . '/inc/customizer/functions/callback-functions.php' );
 
 // Load Custom Controls.
+require( get_template_directory() . '/inc/customizer/controls/category-dropdown-control.php' );
+require( get_template_directory() . '/inc/customizer/controls/header-control.php' );
 require( get_template_directory() . '/inc/customizer/controls/links-control.php' );
+require( get_template_directory() . '/inc/customizer/controls/magazine-widget-area-control.php' );
 require( get_template_directory() . '/inc/customizer/controls/plugin-control.php' );
 require( get_template_directory() . '/inc/customizer/controls/upgrade-control.php' );
 
