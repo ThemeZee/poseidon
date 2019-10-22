@@ -10,7 +10,10 @@
 	margin-bottom: 4px;
 }
 
-#customize-control-poseidon_theme_options-site_description {
+#customize-control-poseidon_theme_options-site_description,
+#customize-control-poseidon_theme_options-theme_links,
+#customize-control-poseidon_theme_options-pro_version,
+#customize-control-poseidon_theme_options-magazine_blocks {
 	margin-bottom: 16px;
 }
 
@@ -46,40 +49,6 @@
 
 #customize-control-poseidon_theme_options-blog_description textarea {
 	height: 4em;
-}
-
-#customize-control-poseidon_theme_options-upgrade div {
-	margin: 4px 0 32px;
-}
-
-#customize-control-poseidon_theme_options-upgrade div .customize-control-title {
-	margin-bottom: 4px;
-}
-
-#customize-theme-controls [id$=accordion-panel-poseidon_options_panel] .customize-info .customize-help-toggle {
-	top: 24px;
-	right: 4px;
-}
-
-#customize-theme-controls [id$=accordion-panel-poseidon_options_panel] .customize-info .customize-help-toggle::before {
-	top: 0;
-	left: 0;
-	padding: 0;
-	color: #a0a5aa;
-	content: "\f333";
-	font-size: 28px;
-}
-
-#customize-theme-controls [id$=accordion-panel-poseidon_options_panel] .customize-info .customize-help-toggle[aria-expanded="true"]::before {
-	content: "\f335";
-}
-
-#customize-theme-controls [id$=accordion-panel-poseidon_options_panel] .customize-info .customize-help-toggle:hover::before {
-	color: #72777c;
-}
-
-#customize-theme-controls [id$=accordion-panel-poseidon_options_panel] .customize-info .customize-help-toggle:focus::before {
-	box-shadow: none;
 }
 
 /* Magazine Widgets Button Controls */
