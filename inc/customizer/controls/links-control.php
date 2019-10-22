@@ -43,13 +43,13 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/poseidon/', 'poseidon' ) ); ?>" target="_blank">
-						<?php esc_html_e( 'Support Forum', 'poseidon' ); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=poseidon/', 'poseidon' ) ); ?>" target="_blank">
+						<?php esc_html_e( 'Theme Changelog', 'poseidon' ); ?>
 					</a>
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/poseidon/reviews/?filter=5', 'poseidon' ) ); ?>" target="_blank">
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/poseidon/reviews/', 'poseidon' ) ); ?>" target="_blank">
 						<?php esc_html_e( 'Rate this theme', 'poseidon' ); ?>
 					</a>
 				</p>

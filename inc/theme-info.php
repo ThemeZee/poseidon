@@ -47,7 +47,8 @@ function poseidon_theme_info_page() {
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/poseidon/', 'poseidon' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=poseidon&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'poseidon' ); ?></a>
 				<a href="http://preview.themezee.com/?demo=poseidon&utm_source=theme-info&utm_campaign=poseidon" target="_blank"><?php esc_html_e( 'Theme Demo', 'poseidon' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/poseidon-documentation/', 'poseidon' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=poseidon&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'poseidon' ); ?></a>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/poseidon/reviews/?filter=5', 'poseidon' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'poseidon' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=poseidon', 'poseidon' ) ); ?>" target="_blank"><?php esc_html_e( 'Theme Changelog', 'poseidon' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/poseidon/reviews/', 'poseidon' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'poseidon' ); ?></a>
 			</p>
 		</div>
 		<hr>
@@ -150,7 +151,7 @@ function poseidon_theme_info_page() {
 				<?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'poseidon' ),
 					$theme->display( 'Name' ),
 					'<a target="_blank" href="' . __( 'https://themezee.com/', 'poseidon' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=poseidon" title="ThemeZee">ThemeZee</a>',
-					'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/poseidon/reviews/?filter=5', 'poseidon' ) . '" title="' . esc_attr__( 'Review Poseidon', 'poseidon' ) . '">' . esc_html__( 'rate it', 'poseidon' ) . '</a>'
+					'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/poseidon/reviews/', 'poseidon' ) . '" title="' . esc_attr__( 'Review Poseidon', 'poseidon' ) . '">' . esc_html__( 'rate it', 'poseidon' ) . '</a>'
 				); ?>
 			</p>
 

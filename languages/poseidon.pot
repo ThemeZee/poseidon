@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Poseidon\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2019-10-22 10:22+0200\n"
+"POT-Creation-Date: 2019-10-22 12:56+0200\n"
 "PO-Revision-Date: 2016-09-15 20:13+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -122,6 +122,15 @@ msgid ""
 "Please upgrade and try again."
 msgstr ""
 
+#: inc/customizer/controls/category-dropdown-control.php:31
+#: inc/widgets/widget-magazine-posts-columns.php:257
+#: inc/widgets/widget-magazine-posts-columns.php:278
+#: inc/widgets/widget-magazine-posts-grid.php:208
+#: inc/widgets/widget-magazine-posts-horizontal-box.php:208
+#: inc/widgets/widget-magazine-posts-vertical-box.php:208
+msgid "All Categories"
+msgstr ""
+
 #: inc/customizer/controls/links-control.php:25 inc/theme-info.php:46
 msgid "Theme Links"
 msgstr ""
@@ -139,38 +148,44 @@ msgid "Theme Demo"
 msgstr ""
 
 #: inc/customizer/controls/links-control.php:40 inc/theme-info.php:49
-#: inc/theme-info.php:70
+#: inc/theme-info.php:71
 msgid "https://themezee.com/docs/poseidon-documentation/"
 msgstr ""
 
 #: inc/customizer/controls/links-control.php:41 inc/theme-info.php:49
-#: inc/theme-info.php:64
+#: inc/theme-info.php:65
 msgid "Theme Documentation"
 msgstr ""
 
 #: inc/customizer/controls/links-control.php:46
-msgid "https://wordpress.org/support/theme/poseidon/"
+msgid ""
+"https://themezee.com/changelogs/?action=themezee-"
+"changelog&type=theme&slug=poseidon/"
 msgstr ""
 
-#: inc/customizer/controls/links-control.php:47
-msgid "Support Forum"
+#: inc/customizer/controls/links-control.php:47 inc/theme-info.php:50
+msgid "Theme Changelog"
 msgstr ""
 
-#: inc/customizer/controls/links-control.php:52 inc/theme-info.php:50
-#: inc/theme-info.php:153
-msgid "https://wordpress.org/support/theme/poseidon/reviews/?filter=5"
+#: inc/customizer/controls/links-control.php:52 inc/theme-info.php:51
+#: inc/theme-info.php:154
+msgid "https://wordpress.org/support/theme/poseidon/reviews/"
 msgstr ""
 
-#: inc/customizer/controls/links-control.php:53 inc/theme-info.php:50
+#: inc/customizer/controls/links-control.php:53 inc/theme-info.php:51
 msgid "Rate this theme"
+msgstr ""
+
+#: inc/customizer/controls/magazine-widget-area-control.php:33
+#: inc/customizer/sections/customizer-magazine.php:49
+msgid "Add Magazine Widget"
 msgstr ""
 
 #: inc/customizer/controls/plugin-control.php:33
 msgid "Install Plugin"
 msgstr ""
 
-#: inc/customizer/controls/upgrade-control.php:25
-#: inc/customizer/functions/custom-controls.php:99 inc/theme-info.php:110
+#: inc/customizer/controls/upgrade-control.php:25 inc/theme-info.php:111
 msgid "Pro Version Add-on"
 msgstr ""
 
@@ -181,38 +196,36 @@ msgid ""
 "customization options."
 msgstr ""
 
-#: inc/customizer/controls/upgrade-control.php:32
-#: inc/customizer/functions/custom-controls.php:106 inc/theme-info.php:116
+#: inc/customizer/controls/upgrade-control.php:32 inc/theme-info.php:117
 msgid "https://themezee.com/addons/poseidon-pro/"
 msgstr ""
 
-#: inc/customizer/controls/upgrade-control.php:33
-#: inc/customizer/functions/custom-controls.php:107 inc/theme-info.php:117
+#: inc/customizer/controls/upgrade-control.php:33 inc/theme-info.php:118
 #, php-format
 msgid "Learn more about %s Pro"
 msgstr ""
 
-#: inc/customizer/customizer.php:39 inc/theme-info.php:77
+#: inc/customizer/customizer.php:40 inc/theme-info.php:78
 msgid "Theme Options"
 msgstr ""
 
-#: inc/customizer/customizer.php:44
+#: inc/customizer/customizer.php:45
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:68
+#: inc/customizer/customizer.php:69
 msgid "Display Site Title"
 msgstr ""
 
-#: inc/customizer/customizer.php:83
+#: inc/customizer/customizer.php:84
 msgid "Display Tagline"
 msgstr ""
 
-#: inc/customizer/customizer.php:98
+#: inc/customizer/customizer.php:99
 msgid "Header Image Link"
 msgstr ""
 
-#: inc/customizer/customizer.php:112
+#: inc/customizer/customizer.php:113
 msgid "Hide header image on front page"
 msgstr ""
 
@@ -223,41 +236,6 @@ msgstr ""
 #: inc/customizer/default-options.php:64
 #: inc/customizer/sections/customizer-blog.php:156
 msgid "Read more"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:65
-#: inc/widgets/widget-magazine-posts-columns.php:257
-#: inc/widgets/widget-magazine-posts-columns.php:278
-#: inc/widgets/widget-magazine-posts-grid.php:208
-#: inc/widgets/widget-magazine-posts-horizontal-box.php:208
-#: inc/widgets/widget-magazine-posts-vertical-box.php:208
-msgid "All Categories"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:102 inc/theme-info.php:113
-#, php-format
-msgid ""
-"Purchase the %s Pro Add-on and get additional features and advanced "
-"customization options."
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:115 inc/theme-info.php:127
-msgid "Recommended Plugins"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:118 inc/theme-info.php:130
-msgid ""
-"Extend the functionality of your WordPress website with our free and easy to "
-"use plugins."
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:123 inc/theme-info.php:134
-msgid "Install Plugins"
-msgstr ""
-
-#: inc/customizer/functions/magazine-widget-area-control.php:33
-#: inc/customizer/sections/customizer-magazine.php:49
-msgid "Add Magazine Widget"
 msgstr ""
 
 #: inc/customizer/sections/customizer-blog.php:19
@@ -490,51 +468,78 @@ msgstr ""
 msgid "Welcome to %1$s %2$s"
 msgstr ""
 
-#: inc/theme-info.php:57
+#: inc/theme-info.php:50
+msgid ""
+"https://themezee.com/changelogs/?action=themezee-"
+"changelog&type=theme&slug=poseidon"
+msgstr ""
+
+#: inc/theme-info.php:58
 #, php-format
 msgid "Getting Started with %s"
 msgstr ""
 
-#: inc/theme-info.php:67
+#: inc/theme-info.php:68
 msgid ""
 "You need help to setup and configure this theme? We got you covered with an "
 "extensive theme documentation on our website."
 msgstr ""
 
-#: inc/theme-info.php:71
+#: inc/theme-info.php:72
 #, php-format
 msgid "View %s Documentation"
 msgstr ""
 
-#: inc/theme-info.php:80
+#: inc/theme-info.php:81
 #, php-format
 msgid ""
 "%s makes use of the Customizer for all theme settings. Click on \"Customize "
 "Theme\" to open the Customizer now."
 msgstr ""
 
-#: inc/theme-info.php:83
+#: inc/theme-info.php:84
 msgid "Customize Theme"
 msgstr ""
 
-#: inc/theme-info.php:103
+#: inc/theme-info.php:104
 msgid "Get more features"
 msgstr ""
 
-#: inc/theme-info.php:150
+#: inc/theme-info.php:114
+#, php-format
+msgid ""
+"Purchase the %s Pro Add-on and get additional features and advanced "
+"customization options."
+msgstr ""
+
+#: inc/theme-info.php:128
+msgid "Recommended Plugins"
+msgstr ""
+
+#: inc/theme-info.php:131
+msgid ""
+"Extend the functionality of your WordPress website with our free and easy to "
+"use plugins."
+msgstr ""
+
+#: inc/theme-info.php:135
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/theme-info.php:151
 #, php-format
 msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
 msgstr ""
 
-#: inc/theme-info.php:152
+#: inc/theme-info.php:153
 msgid "https://themezee.com/"
 msgstr ""
 
-#: inc/theme-info.php:153
+#: inc/theme-info.php:154
 msgid "Review Poseidon"
 msgstr ""
 
-#: inc/theme-info.php:153
+#: inc/theme-info.php:154
 msgid "rate it"
 msgstr ""
 
