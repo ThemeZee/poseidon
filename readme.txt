@@ -26,31 +26,31 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
-= 1.8.2 =
+= 1.8.2 - 2019-10-23 =
 * added improved Theme Info section to Customizer
 
-= 1.8.1 =
+= 1.8.1 - 2019-09-10 =
 * fixed post meta settings for post slider
 
-= 1.8 =
+= 1.8 - 2019-08-16 =
 * added custom styling for ThemeZee Magazine Blocks
 * added custom image sizes to select fields in Gutenberg Editor and Media Library
 * disabled post meta theme settings for Magazine blocks
 
-= 1.7.4 =
+= 1.7.4 - 2019-07-10 =
 * fixed empty link tags in source code if there is no featured image
 
-= 1.7.3 =
+= 1.7.3 - 2019-05-07 =
 * added support for responsive embed blocks
 
-= 1.7.2 =
+= 1.7.2 - 2019-03-25 =
 * adjusted footer credit link with clearer wording
 
-= 1.7.1 =
+= 1.7.1 - 2018-11-12 =
 * fixed link color in Gutenberg Editor
 * fixed styling of Read More button
 
-= 1.7 =
+= 1.7 - 2018-11-06 =
 * added styling for Gutenberg blocks
 * added custom color palette for Gutenberg
 * added editor styling for WordPress 5.0
