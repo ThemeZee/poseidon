@@ -207,7 +207,7 @@ add_action( 'enqueue_block_editor_assets', 'poseidon_custom_fonts', 1 );
  * Enqueue editor styles for the new Gutenberg Editor.
  */
 function poseidon_block_editor_assets() {
-	wp_enqueue_style( 'poseidon-editor-styles', get_theme_file_uri( '/assets/css/gutenberg-styles.css' ), array(), '20181102', 'all' );
+	wp_enqueue_style( 'poseidon-editor-styles', get_theme_file_uri( '/assets/css/gutenberg-styles.css' ), array(), '20191118', 'all' );
 }
 add_action( 'enqueue_block_editor_assets', 'poseidon_block_editor_assets' );
 
