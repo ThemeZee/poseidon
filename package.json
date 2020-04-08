@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"export": "git archive HEAD -9 --prefix poseidon/ --format=zip > ../../poseidon.zip"
+    "export": "git archive HEAD -9 --prefix poseidon/ --format=zip > ../../poseidon.zip"
   },
   "repository": {
     "type": "git",
@@ -18,14 +18,49 @@
   },
   "homepage": "https://github.com/ThemeZee/poseidon#readme",
   "devDependencies": {
-    "autoprefixer": "^6.4.0",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-postcss": "^6.1.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-rtlcss": "^1.0.0",
-    "gulp-uglify": "^2.0.0",
-    "postcss-sorting": "^1.6.1",
-    "postcss-wprtl": "^1.2.0"
+    "autoprefixer": "^9.7.6",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "postcss-sorting": "^5.0.1",
+    "postcss-wprtl": "^1.2.1",
+    "stylelint": "^13.3.0",
+    "stylelint-config-wordpress": "^16.0.0"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-wordpress",
+      "stylelint-config-wordpress/scss"
+    ],
+    "rules": {
+      "indentation": "tab",
+      "no-descending-specificity": null,
+      "font-weight-notation": "named-where-possible",
+      "rule-empty-line-before": [
+        "always",
+        {
+          "ignore": [
+            "first-nested",
+            "after-comment"
+          ]
+        }
+      ],
+      "at-rule-empty-line-before": [
+        "always",
+        {
+          "except": [
+            "inside-block"
+          ],
+          "ignore": [
+            "after-comment",
+            "blockless-after-same-name-blockless"
+          ]
+        }
+      ]
+    }
   }
 }
