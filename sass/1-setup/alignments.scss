@@ -1,0 +1,20 @@
+.alignleft {
+	float: left;
+	margin-right: 1.5em;
+	margin-bottom: 1em;
+}
+
+.alignright {
+	float: right;
+	margin-left: 1.5em;
+	margin-bottom: 1em;
+}
+
+.aligncenter {
+	display: block;
+	clear: both;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 1em;
+	text-align: center;
+}

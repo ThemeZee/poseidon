@@ -1,0 +1,73 @@
+// Theme Width.
+$themeWidth: 1440px;
+
+// Content Width.
+$contentWidth: 880px;
+$wideBlockWidth: 1120px;
+
+// Fullwidth Template.
+$contentFullwidth: 1280px;
+$wideBlockFullwidth: 1440px;
+
+// Text Color
+$textColor: rgba(0, 0, 0, 0.9);
+
+// Theme Colors
+$themeColors: (
+	--primary-color                  : #c9493b,
+	--secondary-color                : #e36355,
+	--accent-color                   : #078896,
+	--highlight-color                : #5bb021,
+	--light-gray-color               : #e4e4e4,
+	--gray-color                     : #848484,
+	--dark-gray-color                : #242424,
+	--text-color                     : rgba(0, 0, 0, 0.9),
+	--medium-text-color              : rgba(0, 0, 0, 0.7),
+	--light-text-color               : rgba(0, 0, 0, 0.5),
+	--link-color                     : #c9493b,
+	--link-hover-color               : #e36355,
+	--button-color                   : #c9493b,
+	--button-text-color              : #fff,
+	--button-hover-color             : #e36355,
+	--button-hover-text-color        : #fff,
+	--page-background-color          : #fff,
+	--page-border-color              : rgba(0, 0, 0, 0.1),
+	--page-light-bg-color            : rgba(0, 0, 0, 0.05),
+	--header-background-color        : #fff,
+	--header-text-color              : rgba(0, 0, 0, 0.9),
+	--header-text-hover-color        : #e36355,
+	--header-border-color            : rgba(0, 0, 0, 0.1),
+	--title-color                    : #202020,
+	--title-hover-color              : #e36355,
+	--footer-widgets-background-color: #252525,
+	--footer-widgets-text-color      : rgba(255, 255, 255, 0.5),
+	--footer-widgets-link-color      : rgba(255, 255, 255, 0.95),
+	--footer-widgets-link-hover-color: rgba(255, 255, 255, 0.5),
+	--footer-widgets-border-color    : rgba(255, 255, 255, 0.1),
+	--footer-background-color        : #202020,
+	--footer-text-color              : rgba(255, 255, 255, 0.5),
+	--footer-link-color              : rgba(255, 255, 255, 0.95),
+	--footer-link-hover-color        : rgba(255, 255, 255, 0.5),
+	--footer-border-color            : rgba(255, 255, 255, 0.1),
+);
+
+// Theme Fonts
+$baseFont: "Barlow", arial, helvetica, sans-serif;
+$titleFont: "Barlow", arial, helvetica, sans-serif;
+$themeFonts: (
+	--text-font  : $baseFont,
+	--title-font : $titleFont,
+	--navi-font  : $titleFont,
+);
+
+// Font Weight.
+$fontWeight: (
+	--title-font-weight : bold,
+	--navi-font-weight  : normal,
+);
+
+// Text Transform.
+$textTransform: (
+	--title-text-transform : none,
+	--navi-text-transform  : none,
+);

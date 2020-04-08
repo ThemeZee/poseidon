@@ -1,0 +1,57 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	padding: 0.4em 0.8em;
+	border: none;
+	background: #22aadd;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-family: 'Raleway', Tahoma, Arial;
+	transition: all 0.2s ease;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	background: #404040;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	padding: 0.3em 0.6em;
+	max-width: 100%;
+	border: 1px solid #ddd;
+	color: #666;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	border: 1px solid #ccc;
+	color: #111;
+}
+
+textarea {
+	width: 100%;
+}
