@@ -1,0 +1,105 @@
+/*--------------------------------------------------------------
+## 18.1 - Sidebar Left Layout
+--------------------------------------------------------------*/
+
+@media only screen and (min-width: 55em) {
+	.sidebar-left .content-area {
+		float: right;
+		padding-right: 0;
+		padding-left: 4em;
+	}
+
+	.sidebar-left .sidebar {
+		float: left;
+	}
+}
+
+/*--------------------------------------------------------------
+## 18.2 - Sticky Header
+--------------------------------------------------------------*/
+@media only screen and (min-width: 60.001em) {
+	.sticky-header .site-header {
+		position: fixed;
+		top: 0;
+		z-index: 100;
+		width: 100%;
+	}
+
+	.sticky-header.admin-bar .site-header  {
+		top: 32px;
+	}
+
+	.sticky-header .header-bar-wrap {
+		display: none;
+	}
+
+	/* Small Header */
+	.sticky-header.small-header .site-header .site-branding,
+	.sticky-header.small-header .primary-navigation {
+		margin: 0;
+		transition: all 0.4s ease;
+	}
+
+	.sticky-header.small-header .site-header .site-branding .site-title {
+		margin: 0.25em 0 0;
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	.sticky-header.small-header .site-header .site-branding .custom-logo {
+		margin-top: 1em;
+		max-height: 25px;
+		width: auto;
+	}
+
+	.sticky-header.small-header .site-header .site-description {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 60em) {
+	.sticky-header {
+		padding-top: 0 !important;
+	}
+}
+
+/*--------------------------------------------------------------
+# 19.0 - Media Query Fixes
+--------------------------------------------------------------*/
+
+/* Ensure navigation is visible on desktop view */
+@media only screen and (min-width: 60.001em) {
+	.main-navigation-menu {
+		display: block !important;
+	}
+
+}
+
+/*--------------------------------------------------------------
+# 20.0 Customizer Preview
+--------------------------------------------------------------*/
+.magazine-widgets-placeholder {
+	position: relative;
+}
+
+.magazine-widgets-placeholder .magazine-widgets-placeholder-title {
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 1em 1em 1em 55px;
+	color: #0085ba;
+	border: 2px dashed #0085ba;
+}
+
+/* Add some space around the visual edit shortcut buttons. */
+.magazine-widgets-placeholder .customize-partial-edit-shortcut button {
+	left: 15px;
+	top: 12px;
+}
+
+.customize-partial-edit-shortcut-poseidon_theme_options-excerpt_more {
+	left: -9999px;
+}

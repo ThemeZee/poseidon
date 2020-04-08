@@ -49,7 +49,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "_mixins";
 @import "_variables";
-@import "_root";
+//@import "_root";
 
 /*--------------------------------------------------------------
 # - Normalize
@@ -89,22 +89,37 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # - Site Layout
 --------------------------------------------------------------*/
-//@import "2-layout/site";
+@import "2-layout/site";
 
 /*--------------------------------------------------------------
 # - Header
 --------------------------------------------------------------*/
-//@import "2-layout/header";
+@import "2-layout/header";
 
 /*--------------------------------------------------------------
 # - Navigation
 --------------------------------------------------------------*/
-//@import "2-layout/navigation";
+@import "2-layout/navigation";
 
 /*--------------------------------------------------------------
-# - Single Posts and pages
+# - Social Icons Menu
 --------------------------------------------------------------*/
-//@import "3-content/content";
+@import "6-elements/social-icons";
+
+/*--------------------------------------------------------------
+# - Widgets
+--------------------------------------------------------------*/
+@import "6-elements/widgets";
+
+/*--------------------------------------------------------------
+# - Plugins // move below later
+--------------------------------------------------------------*/
+@import "9-plugins/magazine-blocks";
+
+/*--------------------------------------------------------------
+# - Posts and pages
+--------------------------------------------------------------*/
+@import "3-content/content";
 //@import "3-content/post-image";
 //@import "3-content/entry-meta";
 //@import "3-content/more-link";
@@ -122,29 +137,23 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # - Blocks
 --------------------------------------------------------------*/
-//@import "5-blocks/core-blocks";
-//@import "5-blocks/colors";
-//@import "5-blocks/font-sizes";
-
-/*--------------------------------------------------------------
-# - Widgets
---------------------------------------------------------------*/
-//@import "6-elements/widgets";
+@import "5-blocks/core-blocks";
+@import "5-blocks/colors";
 
 /*--------------------------------------------------------------
 # - Comments
 --------------------------------------------------------------*/
-//@import "6-elements/comments";
-
-/*--------------------------------------------------------------
-# - Media
---------------------------------------------------------------*/
-//@import "6-elements/media";
+@import "6-elements/comments";
 
 /*--------------------------------------------------------------
 # - Footer
 --------------------------------------------------------------*/
-//@import "2-layout/footer";
+@import "2-layout/footer";
+
+/*--------------------------------------------------------------
+# - Media - switch with footer
+--------------------------------------------------------------*/
+@import "6-elements/media";
 
 /*--------------------------------------------------------------
 # - Plugins
@@ -157,6 +166,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # - Media Queries
 --------------------------------------------------------------*/
+@import "7-media-queries/mq-all";
 
 /*--------------------------------------------------------------
 ## - Media Queries for Typography
@@ -181,4 +191,4 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # - Theme Options
 --------------------------------------------------------------*/
-//@import "6-elements/theme-options";
+@import "6-elements/theme-options";

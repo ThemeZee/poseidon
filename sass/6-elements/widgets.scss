@@ -1,0 +1,306 @@
+.widget {
+	margin: 0 0 3em 0;
+	color: #333;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.widget-header {
+	margin: 0 0 1.5em 0;
+}
+
+.widget-title {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border-bottom: 4px solid #eee;
+	color: #404040;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	font-size: 1.125rem;
+	font-family: 'Raleway', Tahoma, Arial;
+}
+
+.widget ul {
+	margin: 0;
+	padding: 0 0.3em;
+	list-style: circle inside;
+}
+
+.widget ul .children,
+.widget ul .sub-menu {
+	margin: 0.5em 0 0.5em 1em;
+	padding: 0;
+}
+
+.widget-title a:link,
+.widget-title a:visited  {
+	color: #404040;
+	transition: all 0.2s ease;
+}
+
+.widget-title a:hover,
+.widget-title a:active  {
+	color: #22aadd;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## 11.1 - Default Widgets
+--------------------------------------------------------------*/
+
+/* Tagcloud Widget */
+.widget_tag_cloud .tagcloud {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.widget_tag_cloud .tagcloud:before,
+.widget_tag_cloud .tagcloud:after {
+	display: table;
+	content: "";
+}
+
+.widget_tag_cloud .tagcloud:after {
+	clear: both;
+}
+
+.widget_tag_cloud .tagcloud a {
+	display: inline-block;
+	float: left;
+	margin: 0 2px 2px 0;
+	padding: 0.2em 0.5em 0.3em;
+	background: #eee;
+	text-decoration: none;
+	font-size: 16px !important;
+	font-size: 1rem !important;
+}
+
+.widget_tag_cloud .tagcloud a:link,
+.widget_tag_cloud .tagcloud a:visited {
+	color: #777;
+	transition: all 0.2s ease;
+}
+
+.widget_tag_cloud .tagcloud a:hover,
+.widget_tag_cloud .tagcloud a:active {
+	background: #22aadd;
+	color: #fff;
+}
+
+/* Theme Search Widget */
+.search-form {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.search-form .screen-reader-text {
+	display: none;
+}
+
+.search-form .search-field {
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0.5em 1.5em 0.5em 0.7em;
+	width: 100%;
+	-webkit-appearance: none;
+}
+
+.search-form .search-submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0.6em 0.6em 0 0;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.search-form .search-submit .genericon-search {
+	display: inline-block;
+	padding: 0.05em 0 0.55em 0.45em;
+	color: #fff;
+	content: '\f400';
+	vertical-align: middle;
+	text-decoration: inherit;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	font-family: 'Genericons';
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*--------------------------------------------------------------
+## 11.2 - Magazine Posts Widgets
+--------------------------------------------------------------*/
+
+.widget-magazine-posts {
+	margin-bottom: -1em;
+}
+
+.widget-magazine-posts .type-post {
+	margin: 0 0 2em 0;
+	padding: 0;
+	border: none;
+	background: none;
+}
+
+.widget-magazine-posts .type-post .wp-post-image {
+	margin: 0 0 0.5em;
+	max-width: 100%;
+}
+
+.widget-magazine-posts .type-post .entry-content {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.widget-magazine-posts .type-post .entry-content p {
+	margin: 1em 0 0;
+}
+
+.widget-magazine-posts .type-post .more-link {
+	margin: 1em 0 0;
+}
+
+.widget-magazine-posts .large-post .entry-title {
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+
+.widget-magazine-posts .medium-post {
+	display: block;
+	float: left;
+	box-sizing: border-box;
+	padding-right: 2em;
+	width: 33.33333333%;
+}
+
+.widget-magazine-posts .medium-post .entry-title {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.widget-magazine-posts .small-post {
+	display: block;
+	float: left;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.widget-magazine-posts .small-post .wp-post-image {
+	float: left;
+	margin: 0 1em 0 0;
+	max-width: 40%;
+}
+
+.widget-magazine-posts .small-post .entry-title {
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+.widget-magazine-posts .medium-post .entry-meta,
+.widget-magazine-posts .small-post .entry-meta {
+	font-size: 12px;
+	font-size: 0.75rem;
+}
+
+/* Magazine Posts Horizontal Box Widget */
+.widget-magazine-posts .magazine-horizontal-box .large-post .wp-post-image {
+	float: left;
+	box-sizing: border-box;
+	margin: 0;
+	padding-right: 1em;
+	width: 50%;
+}
+
+.widget-magazine-posts .magazine-horizontal-box .large-post .post-content {
+	float: right;
+	box-sizing: border-box;
+	padding-left: 1em;
+	width: 50%;
+}
+
+.widget-magazine-posts .magazine-horizontal-box .medium-posts {
+	margin-right: -2em;
+}
+
+/* Magazine Posts Vertical Box Widget */
+.widget-magazine-posts .magazine-vertical-box .large-post {
+	float: left;
+	box-sizing: border-box;
+	margin-bottom: 1em;
+	padding-right: 1em;
+	width: 50%;
+}
+
+.widget-magazine-posts .magazine-vertical-box .small-posts {
+	box-sizing: border-box;
+	margin-left: 50%;
+	padding-left: 1em;
+	width: 50%;
+}
+
+/* Magazine Posts Grid Widget */
+.widget-magazine-posts .magazine-grid {
+	margin-right: -2em;
+}
+
+.widget-magazine-posts .magazine-grid .large-post {
+	float: left;
+	box-sizing: border-box;
+	padding-right: 2em;
+	width: 50%;
+}
+
+.widget-magazine-posts .magazine-grid .post-column:nth-child(2n+1) .large-post,
+.widget-magazine-posts .magazine-grid .post-column:nth-child(3n+1) .medium-post {
+	clear: left;
+}
+
+/* Magazine Posts Columns Widget */
+.poseidon-magazine-posts-columns {
+	padding: 0;
+}
+
+.widget-magazine-posts-columns .magazine-posts-columns .magazine-posts-columns-content .magazine-posts-columns-post-list {
+	float: left;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.widget-magazine-posts-columns .magazine-posts-columns .magazine-posts-columns-content {
+	float: left;
+	width: 100%;
+}
+
+.widget-magazine-posts-columns .magazine-posts-column-left {
+	float: left;
+	box-sizing: border-box;
+	padding-right: 1em;
+	width: 50%;
+}
+
+.widget-magazine-posts-columns .magazine-posts-column-right {
+	box-sizing: border-box;
+	margin-left: 50%;
+	padding-left: 1em;
+	width: 50%;
+}
+
+.widget-magazine-posts-columns .medium-post {
+	padding-right: 0;
+	width: 100%;
+}

@@ -8,7 +8,7 @@ Version: 1.8.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: poseidon
-Tags: two-columns, custom-background, custom-header, custom-logo, custom-menu, blog, news,  editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
+Tags: two-columns, custom-background, custom-header, custom-logo, custom-menu, blog, news, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -45,12 +45,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# 1.0 - Normalize
+# - CSS Variables
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# - Normalize
 --------------------------------------------------------------*/
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;
+	-ms-text-size-adjust: 100%;
 }
 
 body {
@@ -255,7 +259,7 @@ th {
 }
 
 /*--------------------------------------------------------------
-# 2.0 - Typography
+# - Typography
 --------------------------------------------------------------*/
 body,
 button,
@@ -366,15 +370,16 @@ big {
 }
 
 /*--------------------------------------------------------------
-# 3.0 - Elements
+# - Elements
 --------------------------------------------------------------*/
 html {
 	box-sizing: border-box;
 }
 
+/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *,
-*:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*::before,
+*::after {
 	box-sizing: inherit;
 }
 
@@ -512,7 +517,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-# 4.0 - Forms
+# - Forms
 --------------------------------------------------------------*/
 button,
 input[type="button"],
@@ -573,8 +578,9 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 5.0 - Accessibility
+# - Accessibility
 --------------------------------------------------------------*/
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	position: absolute !important;
@@ -607,7 +613,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 6.0 - Alignments
+# - Alignments
 --------------------------------------------------------------*/
 .alignleft {
 	float: left;
@@ -631,7 +637,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 7.0 - Clearings
+# - Clearings
 --------------------------------------------------------------*/
 .clearfix:before,
 .clearfix:after,
@@ -650,7 +656,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 8.0 - Layout Structure
+# - Site Layout
 --------------------------------------------------------------*/
 .site {
 	margin: 0;
@@ -701,10 +707,10 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 9.0 - Header
+# - Header
 --------------------------------------------------------------*/
 .site-header {
-	border-bottom: 1px solid rgba(0,0,0,0.12);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 	background: #fff;
 }
 
@@ -778,11 +784,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 10.0 - Navigation
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-## 10.1 - Main Navigation
+# - Navigation
 --------------------------------------------------------------*/
 .primary-navigation {
 	float: right;
@@ -849,7 +851,7 @@ textarea {
 	display: none;
 	margin: 0;
 	padding: 0;
-	border: 1px solid rgba(0,0,0,0.12);
+	border: 1px solid rgba(0, 0, 0, 0.12);
 	border-top: 4px solid #404040;
 	background: #fff;
 	list-style-position: outside;
@@ -865,7 +867,7 @@ textarea {
 	padding: 1em;
 	min-width: 250px;
 	min-width: 16rem;
-	border-bottom: 1px dotted rgba(0,0,0,0.24);
+	border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
 	font-size: 13px;
 	font-size: 0.8125rem;
 	transition: none;
@@ -918,7 +920,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-## 10.2 - Social Icons Menu
+# - Social Icons Menu
 --------------------------------------------------------------*/
 .social-icons-menu {
 	margin: 0;
@@ -947,7 +949,7 @@ textarea {
 }
 
 /* Add Genericons */
-.social-icons-menu li a:before {
+.social-icons-menu li a::before {
 	display: inline-block;
 	vertical-align: top;
 	text-decoration: inherit;
@@ -958,41 +960,119 @@ textarea {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.social-icons-menu li a:before { content: '\f408'; } /* Default Icon */
-.social-icons-menu li a[href*="codepen.io"]:before  { content: '\f216'; }
-.social-icons-menu li a[href*="digg.com"]:before { content: '\f221'; }
-.social-icons-menu li a[href*="dribbble.com"]:before { content: '\f201'; }
-.social-icons-menu li a[href*="facebook.com"]:before { content: '\f204'; }
-.social-icons-menu li a[href*="flickr.com"]:before { content: '\f211'; }
-.social-icons-menu li a[href*="plus.google.com"]:before { content: '\f218'; }
-.social-icons-menu li a[href*="github.com"]:before { content: '\f200'; }
-.social-icons-menu li a[href*="instagram.com"]:before { content: '\f215'; }
-.social-icons-menu li a[href*="linkedin.com"]:before { content: '\f207'; }
-.social-icons-menu li a[href*="pinterest.com"]:before { content: '\f209'; }
-.social-icons-menu li a[href*="polldaddy.com"]:before { content: '\f217'; }
-.social-icons-menu li a[href*="getpocket.com"]:before { content: '\f224'; }
-.social-icons-menu li a[href*="reddit.com"]:before { content: '\f222'; }
-.social-icons-menu li a[href*="spotify.com"]:before { content: '\f515'; }
-.social-icons-menu li a[href*="skype.com"]:before,
-.social-icons-menu li a[href*="skype:"]:before { content: '\f220'; }
-.social-icons-menu li a[href*="stumbleupon.com"]:before { content: '\f223'; }
-.social-icons-menu li a[href*="tumblr.com"]:before { content: '\f214'; }
-.social-icons-menu li a[href*="twitch.tv"]:before { content: '\f516'; }
-.social-icons-menu li a[href*="twitter.com"]:before { content: '\f202'; }
-.social-icons-menu li a[href*="vimeo.com"]:before  { content: '\f212'; }
-.social-icons-menu li a[href*="wordpress.org"]:before { content: '\f205'; }
-.social-icons-menu li a[href*="wordpress.com"]:before { content: '\f205'; }
-.social-icons-menu li a[href*="youtube.com"]:before { content: '\f213'; }
-.social-icons-menu li a[href*="newsletter"]:before,
-.social-icons-menu li a[href*="mailto"]:before { content: '\f410'; }
-.social-icons-menu li a[href*="/feed"]:before,
-.social-icons-menu li a[href*="/feed/"]:before,
-.social-icons-menu li a[href*="?feed=rss2"]:before,
-.social-icons-menu li a[href*="feedburner.google.com"]:before,
-.social-icons-menu li a[href*="feedburner.com"]:before { content: '\f413'; }
+.social-icons-menu li a::before {
+	content: '\f408';
+}
+
+/* Default Icon */
+.social-icons-menu li a[href*="codepen.io"]::before {
+	content: '\f216';
+}
+
+.social-icons-menu li a[href*="digg.com"]::before {
+	content: '\f221';
+}
+
+.social-icons-menu li a[href*="dribbble.com"]::before {
+	content: '\f201';
+}
+
+.social-icons-menu li a[href*="facebook.com"]::before {
+	content: '\f204';
+}
+
+.social-icons-menu li a[href*="flickr.com"]::before {
+	content: '\f211';
+}
+
+.social-icons-menu li a[href*="plus.google.com"]::before {
+	content: '\f218';
+}
+
+.social-icons-menu li a[href*="github.com"]::before {
+	content: '\f200';
+}
+
+.social-icons-menu li a[href*="instagram.com"]::before {
+	content: '\f215';
+}
+
+.social-icons-menu li a[href*="linkedin.com"]::before {
+	content: '\f207';
+}
+
+.social-icons-menu li a[href*="pinterest.com"]::before {
+	content: '\f209';
+}
+
+.social-icons-menu li a[href*="polldaddy.com"]::before {
+	content: '\f217';
+}
+
+.social-icons-menu li a[href*="getpocket.com"]::before {
+	content: '\f224';
+}
+
+.social-icons-menu li a[href*="reddit.com"]::before {
+	content: '\f222';
+}
+
+.social-icons-menu li a[href*="spotify.com"]::before {
+	content: '\f515';
+}
+
+.social-icons-menu li a[href*="skype.com"]::before,
+.social-icons-menu li a[href*="skype:"]::before {
+	content: '\f220';
+}
+
+.social-icons-menu li a[href*="stumbleupon.com"]::before {
+	content: '\f223';
+}
+
+.social-icons-menu li a[href*="tumblr.com"]::before {
+	content: '\f214';
+}
+
+.social-icons-menu li a[href*="twitch.tv"]::before {
+	content: '\f516';
+}
+
+.social-icons-menu li a[href*="twitter.com"]::before {
+	content: '\f202';
+}
+
+.social-icons-menu li a[href*="vimeo.com"]::before {
+	content: '\f212';
+}
+
+.social-icons-menu li a[href*="wordpress.org"]::before {
+	content: '\f205';
+}
+
+.social-icons-menu li a[href*="wordpress.com"]::before {
+	content: '\f205';
+}
+
+.social-icons-menu li a[href*="youtube.com"]::before {
+	content: '\f213';
+}
+
+.social-icons-menu li a[href*="newsletter"]::before,
+.social-icons-menu li a[href*="mailto"]::before {
+	content: '\f410';
+}
+
+.social-icons-menu li a[href*="/feed"]::before,
+.social-icons-menu li a[href*="/feed/"]::before,
+.social-icons-menu li a[href*="?feed=rss2"]::before,
+.social-icons-menu li a[href*="feedburner.google.com"]::before,
+.social-icons-menu li a[href*="feedburner.com"]::before {
+	content: '\f413';
+}
 
 /*--------------------------------------------------------------
-# 11.0 - Widgets
+# - Widgets
 --------------------------------------------------------------*/
 .widget {
 	margin: 0 0 3em 0;
@@ -1031,13 +1111,13 @@ textarea {
 }
 
 .widget-title a:link,
-.widget-title a:visited  {
+.widget-title a:visited {
 	color: #404040;
 	transition: all 0.2s ease;
 }
 
 .widget-title a:hover,
-.widget-title a:active  {
+.widget-title a:active {
 	color: #22aadd;
 }
 
@@ -1141,7 +1221,6 @@ textarea {
 /*--------------------------------------------------------------
 ## 11.2 - Magazine Posts Widgets
 --------------------------------------------------------------*/
-
 .widget-magazine-posts {
 	margin-bottom: -1em;
 }
@@ -1302,15 +1381,15 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-## 11.3 - Magazine Blocks
+# - Plugins // move below later
 --------------------------------------------------------------*/
 :root {
 	--tz-column-gap: 2em;
 }
 
 .tz-magazine-block .tz-entry-title {
-    font-size: 24px;
-    font-size: 1.5rem;
+	font-size: 24px;
+	font-size: 1.5rem;
 }
 
 .tz-magazine-block .tz-magazine-grid-columns-3 .tz-entry-title {
@@ -1325,8 +1404,8 @@ textarea {
 }
 
 .tz-magazine-block .tz-entry-meta {
-    font-size: 13px;
-    font-size: 0.8125rem;
+	font-size: 13px;
+	font-size: 0.8125rem;
 }
 
 .tz-magazine-block .tz-meta-field {
@@ -1343,11 +1422,11 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 12.0 - Posts and pages
+# - Posts and pages
 --------------------------------------------------------------*/
 .type-post,
 .type-page,
-.type-attachment  {
+.type-attachment {
 	margin: 0 0 3em 0;
 	max-width: 100%;
 }
@@ -1374,7 +1453,7 @@ textarea {
 }
 
 .entry-title a:hover,
-.entry-title a:active{
+.entry-title a:active {
 	color: #22aadd;
 }
 
@@ -1481,9 +1560,9 @@ body.author-hidden .type-post .entry-meta .meta-author,
 body.categories-hidden .type-post .entry-meta .meta-category,
 body.date-hidden .post-slider .entry-meta .meta-date,
 body.author-hidden .post-slider .entry-meta .meta-author,
-body.categories-hidden .post-slider .entry-meta .meta-category  {
-	 position: absolute;
-	 clip: rect(1px, 1px, 1px, 1px);
+body.categories-hidden .post-slider .entry-meta .meta-category {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
 }
 
 body.author-hidden.categories-hidden .type-post .entry-meta .meta-date:after,
@@ -1491,7 +1570,7 @@ body.categories-hidden .type-post .entry-meta .meta-author:after,
 body.author-hidden .widget-magazine-posts .type-post .entry-meta .meta-date:after,
 body.author-hidden.categories-hidden .post-slider .entry-meta .meta-date:after,
 body.categories-hidden .post-slider .entry-meta .meta-author:after,
-body.author-hidden .widget-magazine-posts .post-slider .entry-meta .meta-date:after  {
+body.author-hidden .widget-magazine-posts .post-slider .entry-meta .meta-date:after {
 	display: none;
 }
 
@@ -1670,20 +1749,44 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 	content: "\00bb"; /* Raquo */
 }
 
-.trail-separator-slash .trail-items li::after { content: "\002F"; }
-.trail-separator-dash .trail-items li::after { content: "\2013"; }
-.trail-separator-bull .trail-items li::after { content: "\2022"; }
-.trail-separator-arrow-bracket .trail-items li::after { content: "\003e"; }
-.trail-separator-raquo .trail-items li::after { content: "\00bb"; }
-.trail-separator-single-arrow .trail-items li::after { content: "\2192"; }
-.trail-separator-double-arrow .trail-items li::after { content: "\21D2"; }
+.trail-separator-slash .trail-items li::after {
+	content: "\002F";
+}
+
+.trail-separator-dash .trail-items li::after {
+	content: "\2013";
+}
+
+.trail-separator-bull .trail-items li::after {
+	content: "\2022";
+}
+
+.trail-separator-arrow-bracket .trail-items li::after {
+	content: "\003e";
+}
+
+.trail-separator-raquo .trail-items li::after {
+	content: "\00bb";
+}
+
+.trail-separator-single-arrow .trail-items li::after {
+	content: "\2192";
+}
+
+.trail-separator-double-arrow .trail-items li::after {
+	content: "\21D2";
+}
 
 .breadcrumbs .trail-items li:last-of-type::after {
 	display: none;
 }
 
 /*--------------------------------------------------------------
-# 13.0 - Gutenberg Blocks
+# - Archives and Blog Layouts
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# - Blocks
 --------------------------------------------------------------*/
 
 /* Audio */
@@ -1724,8 +1827,8 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 .wp-block-pullquote {
 	margin-bottom: 1.5em;
 	padding: 1.5em 0;
-    border-bottom: 4px solid #eee;
-    border-top: 4px solid #eee;
+	border-bottom: 4px solid #eee;
+	border-top: 4px solid #eee;
 }
 
 .wp-block-pullquote blockquote {
@@ -1752,11 +1855,11 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 
 /* Image */
 .wp-block-image .alignleft {
-    margin-right: 1.5em;
+	margin-right: 1.5em;
 }
 
 .wp-block-image .alignright {
-    margin-left: 1.5em;
+	margin-left: 1.5em;
 }
 
 /* Captions */
@@ -1768,7 +1871,7 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 	font-size: 15px;
 	font-size: 0.9375rem;
 	color: #777;
-    text-align: center;
+	text-align: center;
 }
 
 /* Latest Posts */
@@ -1825,7 +1928,7 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 }
 
 /*--------------------------------------------------------------
-# 14.0 - Comments
+# - Comments
 --------------------------------------------------------------*/
 
 /* Comment Header */
@@ -1967,10 +2070,10 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 }
 
 /*--------------------------------------------------------------
-# 15.0 - Footer
+# - Footer
 --------------------------------------------------------------*/
 .footer-wrap {
-	border-top: 1px solid rgba(0,0,0,0.12);
+	border-top: 1px solid rgba(0, 0, 0, 0.12);
 	background: #fff;
 }
 
@@ -1985,7 +2088,7 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 }
 
 /*--------------------------------------------------------------
-# 16.0 - Media
+# - Media - switch with footer
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
@@ -2084,7 +2187,11 @@ object {
 }
 
 /*--------------------------------------------------------------
-# 17.0 - Media Queries
+# - Plugins
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# - Media Queries
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -2098,7 +2205,6 @@ object {
 	.content-area {
 		padding-right: 3em;
 	}
-
 }
 
 @media only screen and (max-width: 75em) {
@@ -2119,7 +2225,6 @@ object {
 		font-size: 26px;
 		font-size: 1.625rem;
 	}
-
 }
 
 /*--------------------------------------------------------------
@@ -2147,10 +2252,9 @@ object {
 		font-size: 0.875rem;
 	}
 
-	.widget-magazine-posts .magazine-horizontal-box .large-post .more-link  {
+	.widget-magazine-posts .magazine-horizontal-box .large-post .more-link {
 		display: none;
 	}
-
 }
 
 /*--------------------------------------------------------------
@@ -2160,7 +2264,6 @@ object {
 	.widget-magazine-posts .magazine-horizontal-box .large-post .entry-content {
 		display: none;
 	}
-
 }
 
 /*--------------------------------------------------------------
@@ -2186,7 +2289,6 @@ object {
 	}
 
 	/*** Mobile Main Navigation ***/
-
 	/* Reset */
 	.primary-navigation {
 		float: none;
@@ -2346,7 +2448,7 @@ object {
 
 	/* Mega Menu Styling */
 	.mega-menu-item .mega-menu-content {
-		border-bottom: 1px solid rgba(255,255,255,0.1);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
 	.mega-menu-item .mega-menu-two-columns > li,
@@ -2359,7 +2461,6 @@ object {
 	.mega-menu-item .mega-menu-six-columns > li {
 		width: 50%;
 	}
-
 }
 
 /*--------------------------------------------------------------
@@ -2386,7 +2487,7 @@ object {
 		display: inline-block;
 	}
 
-	.widget-magazine-posts .large-post .entry-title 	{
+	.widget-magazine-posts .large-post .entry-title {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
@@ -2400,7 +2501,6 @@ object {
 		font-size: 15px;
 		font-size: 0.9375rem;
 	}
-
 }
 
 /*--------------------------------------------------------------
@@ -2417,7 +2517,7 @@ object {
 	}
 
 	/* Magazine Post Widgets */
-	.widget-magazine-posts .large-post .entry-title 	{
+	.widget-magazine-posts .large-post .entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
@@ -2435,7 +2535,6 @@ object {
 	.widget-magazine-posts .magazine-horizontal-box .large-post .more-link {
 		display: none;
 	}
-
 }
 
 /*--------------------------------------------------------------
@@ -2445,7 +2544,6 @@ object {
 	.widget-magazine-posts .magazine-horizontal-box .large-post .entry-content {
 		display: none;
 	}
-
 }
 
 /*--------------------------------------------------------------
@@ -2529,7 +2627,6 @@ object {
 	.mega-menu-item .mega-menu-six-columns > li {
 		width: 100%;
 	}
-
 }
 
 /*--------------------------------------------------------------
@@ -2565,7 +2662,6 @@ object {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
-
 }
 
 /*--------------------------------------------------------------
@@ -2627,7 +2723,6 @@ object {
 	.widget-magazine-posts .large-post .entry-content .more-link {
 		display: inline-block;
 	}
-
 }
 
 /*--------------------------------------------------------------
@@ -2641,7 +2736,6 @@ object {
 		padding: 0;
 		max-width: 100%;
 	}
-
 }
 
 /*--------------------------------------------------------------
@@ -2674,18 +2768,31 @@ object {
 	.entry-meta span:after {
 		display: none;
 	}
-
 }
 
+/*--------------------------------------------------------------
+## - Media Queries for Typography
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# 18.0 - Theme Option Styles
+## - Media Queries for Layout
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## - Media Queries for Navigation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## - Media Queries for Media
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# - Theme Options
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 ## 18.1 - Sidebar Left Layout
 --------------------------------------------------------------*/
-
 @media only screen and (min-width: 55em) {
 	.sidebar-left .content-area {
 		float: right;
@@ -2709,7 +2816,7 @@ object {
 		width: 100%;
 	}
 
-	.sticky-header.admin-bar .site-header  {
+	.sticky-header.admin-bar .site-header {
 		top: 32px;
 	}
 
@@ -2756,7 +2863,6 @@ object {
 	.main-navigation-menu {
 		display: block !important;
 	}
-
 }
 
 /*--------------------------------------------------------------
