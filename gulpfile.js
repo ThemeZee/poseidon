@@ -1,29 +1,30 @@
 // Include gulp
 var gulp = require('gulp');
 
-// Include Our Plugins
+// Include plugins
+var autoprefixer = require( 'autoprefixer' );
 var rename       = require( 'gulp-rename' );
+var replace      = require( 'gulp-replace' );
 var concat       = require( 'gulp-concat' );
 var uglify       = require( 'gulp-uglify' );
-var rtlcss       = require( 'gulp-rtlcss' );
-var autoprefixer = require( 'autoprefixer' );
+var sass         = require( 'gulp-sass' );
 var postcss      = require( 'gulp-postcss' );
 var sorting      = require( 'postcss-sorting' );
 var wprtl        = require( 'postcss-wprtl' );
 
 // Minify JS
 gulp.task( 'minifyjs', function() {
-	return gulp.src( ['js/navigation.js'] )
+	return gulp.src( ['assets/js/navigation.js', 'assets/js/customize-preview.js', 'assets/js/customizer-controls.js'] )
 		.pipe( uglify() )
 		.pipe( rename( {
 			suffix: '.min'
 		} ) )
-		.pipe( gulp.dest('js') );
+		.pipe( gulp.dest('assets/js') );
 });
 
 // Clean up CSS
 gulp.task( 'cleancss', function() {
-	return gulp.src( ['style.css', 'css/*.css'], { base: './' } )
+	return gulp.src( ['style.css', 'assets/css/*.css'], { base: './' } )
 		.pipe( postcss( [ autoprefixer() ] ) )
 		.pipe( postcss( [ sorting( { 'preserve-empty-lines-between-children-rules': true } ) ] ) )
 		.pipe( gulp.dest( './' ) );
@@ -31,22 +32,42 @@ gulp.task( 'cleancss', function() {
 
 // WP RTL
 gulp.task( 'wprtl', function () {
-	return gulp.src( ['style.css', 'css/themezee-related-posts.css', 'css/themezee-widget-bundle.css', 'css/flexslider.css'] )
+	return gulp.src( ['style.css'] )
 		.pipe( concat( 'rtl.css' ) )
 		.pipe( postcss( [ wprtl() ] ) )
 		.pipe( postcss( [ sorting( { 'preserve-empty-lines-between-children-rules': true } ) ] ) )
 		.pipe( gulp.dest( './' ) );
 });
 
-// Flex RTL
-gulp.task( 'flexrtl', function () {
-	return gulp.src( 'css/flexslider.css' )
-		.pipe( rtlcss() )
-		.pipe( rename( {
-			suffix: '-rtl'
-		} ) )
-		.pipe( gulp.dest( 'css' ) );
+// Editor Styles Sass Bundler
+gulp.task( 'editor', function() {
+    return gulp.src( 'sass/editor-styles.scss' )
+        .pipe( sass( { outputStyle: 'expanded' } ).on( 'error', sass.logError ) )
+		.pipe( rename( 'editor-styles.css' ) )
+		.pipe( postcss( [ sorting() ] ) )
+		.pipe( replace( '  ', '	' ) )
+		.pipe( replace( '}\n	', '}\n\n	' ) )
+		.pipe( replace( '}\n\n	}', '}\n	}' ) )
+		.pipe( replace( '*/\n/*', '*/\n\n/*' ) )
+		.pipe( replace( ';\n	/*', '; /*' ) )
+        .pipe( gulp.dest( 'assets/css' ) )
 });
 
-// Default Task
-gulp.task( 'default', ['minifyjs', 'cleancss'] );
+// Sass Bundler
+gulp.task( 'sass', function() {
+    return gulp.src( 'sass/style.scss' )
+        .pipe( sass( { outputStyle: 'expanded' } ).on( 'error', sass.logError ) )
+		.pipe( rename( 'style.css' ) )
+		.pipe( postcss( [ sorting() ] ) )
+		.pipe( replace( '  ', '	' ) )
+		.pipe( replace( '}\n	', '}\n\n	' ) )
+		.pipe( replace( '}\n\n	}', '}\n	}' ) )
+		.pipe( replace( '*/\n/*', '*/\n\n/*' ) )
+		.pipe( replace( ';\n	/*', '; /*' ) )
+        .pipe( gulp.dest( './' ) )
+});
+
+// Sass Watch
+gulp.task('sass:watch', function () {
+	gulp.watch( 'sass/**/*.scss', gulp.series('sass', 'editor'));
+});
