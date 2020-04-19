@@ -110,19 +110,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # - Posts and pages
 --------------------------------------------------------------*/
 @import "3-content/content";
-//@import "3-content/post-image";
-//@import "3-content/entry-meta";
-//@import "3-content/more-link";
-//@import "3-content/post-navigation";
-//@import "3-content/page-templates";
+@import "3-content/entry-meta";
+@import "3-content/more-link";
+@import "3-content/post-navigation";
 
 /*--------------------------------------------------------------
 # - Archives and Blog Layouts
 --------------------------------------------------------------*/
-//@import "4-archives/archives";
-//@import "4-archives/blog-layouts";
-//@import "4-archives/pagination";
-//@import "4-archives/infinite-scroll";
+@import "4-archives/archives";
+@import "4-archives/pagination";
+@import "4-archives/infinite-scroll";
 
 /*--------------------------------------------------------------
 # - Blocks
@@ -153,7 +150,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # - Plugins
 --------------------------------------------------------------*/
-//@import "9-plugins/breadcrumbs";
+@import "9-plugins/breadcrumbs";
 @import "9-plugins/magazine-blocks";
 //@import "9-plugins/related-posts";
 //@import "9-plugins/widget-bundle";

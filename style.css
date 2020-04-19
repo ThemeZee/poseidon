@@ -1120,24 +1120,6 @@ textarea {
 	text-decoration: underline;
 }
 
-/* Read more Link */
-.more-link {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-family: 'Raleway', Tahoma, Arial;
-	transition: all 0.2s ease;
-}
-
-.entry-content .more-link {
-	text-decoration: none;
-}
-
 /* Small Post Layout */
 .post-layout-small .post-wrapper .type-post .wp-post-image,
 .post-layout-small .infinite-wrap .type-post .wp-post-image {
@@ -1190,7 +1172,7 @@ textarea {
 	color: #777;
 }
 
-.entry-meta span:after {
+.entry-meta span::after {
 	display: inline-block;
 	margin-left: 0.2em;
 	color: #aaa;
@@ -1200,7 +1182,7 @@ textarea {
 	-webkit-font-smoothing: antialiased;
 }
 
-.entry-meta span:last-child:after {
+.entry-meta span:last-child::after {
 	display: none;
 }
 
@@ -1215,12 +1197,12 @@ body.categories-hidden .post-slider .entry-meta .meta-category {
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
-body.author-hidden.categories-hidden .type-post .entry-meta .meta-date:after,
-body.categories-hidden .type-post .entry-meta .meta-author:after,
-body.author-hidden .widget-magazine-posts .type-post .entry-meta .meta-date:after,
-body.author-hidden.categories-hidden .post-slider .entry-meta .meta-date:after,
-body.categories-hidden .post-slider .entry-meta .meta-author:after,
-body.author-hidden .widget-magazine-posts .post-slider .entry-meta .meta-date:after {
+body.author-hidden.categories-hidden .type-post .entry-meta .meta-date::after,
+body.categories-hidden .type-post .entry-meta .meta-author::after,
+body.author-hidden .widget-magazine-posts .type-post .entry-meta .meta-date::after,
+body.author-hidden.categories-hidden .post-slider .entry-meta .meta-date::after,
+body.categories-hidden .post-slider .entry-meta .meta-author::after,
+body.author-hidden .widget-magazine-posts .post-slider .entry-meta .meta-date::after {
 	display: none;
 }
 
@@ -1263,6 +1245,24 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 	color: #fff;
 }
 
+/* Read more Link */
+.more-link {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-family: 'Raleway', Tahoma, Arial;
+	transition: all 0.2s ease;
+}
+
+.entry-content .more-link {
+	text-decoration: none;
+}
+
 /* Post Navigation */
 .post-navigation {
 	margin: 1em 0 0;
@@ -1279,14 +1279,41 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 	float: right;
 }
 
-.post-navigation .nav-links .nav-previous a:before {
+.post-navigation .nav-links .nav-previous a::before {
 	margin-right: 3px;
 	content: "\00AB";
 }
 
-.post-navigation .nav-links .nav-next a:after {
+.post-navigation .nav-links .nav-next a::after {
 	margin-left: 4px;
 	content: "\00BB";
+}
+
+/*--------------------------------------------------------------
+# - Archives and Blog Layouts
+--------------------------------------------------------------*/
+
+/* Archives and Search Heading */
+.page-header {
+	margin: 0 0 1.5em 0;
+}
+
+.page-header .archive-title {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border-bottom: 4px solid #eee;
+	color: #404040;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	font-size: 1.125rem;
+	font-family: 'Raleway', Tahoma, Arial;
+}
+
+.blog-description,
+.archive-description p {
+	margin-bottom: 0;
 }
 
 /* Theme Pagination */
@@ -1338,102 +1365,6 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 .infinite-scroll #infinite-handle span:hover {
 	color: #404040;
 }
-
-/* Archives and Search Heading */
-.page-header {
-	margin: 0 0 1.5em 0;
-}
-
-.page-header .archive-title {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	border-bottom: 4px solid #eee;
-	color: #404040;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 18px;
-	font-size: 1.125rem;
-	font-family: 'Raleway', Tahoma, Arial;
-}
-
-.blog-description,
-.archive-description p {
-	margin-bottom: 0;
-}
-
-/* Breadcrumbs */
-.breadcrumbs {
-	margin: 0;
-	padding: 0.5em 0;
-	border-bottom: 1px solid #ddd;
-}
-
-.breadcrumbs-container {
-	color: #222;
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-.breadcrumbs .trail-browse,
-.breadcrumbs .trail-items,
-.breadcrumbs .trail-items li {
-	display: inline;
-	margin: 0;
-	padding: 0;
-}
-
-.breadcrumbs .trail-browse {
-	margin-right: 0.5em;
-	font-weight: normal;
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-.breadcrumbs .trail-items {
-	list-style: none;
-}
-
-.breadcrumbs .trail-items li::after {
-	padding: 0 0.5em;
-	content: "\00bb"; /* Raquo */
-}
-
-.trail-separator-slash .trail-items li::after {
-	content: "\002F";
-}
-
-.trail-separator-dash .trail-items li::after {
-	content: "\2013";
-}
-
-.trail-separator-bull .trail-items li::after {
-	content: "\2022";
-}
-
-.trail-separator-arrow-bracket .trail-items li::after {
-	content: "\003e";
-}
-
-.trail-separator-raquo .trail-items li::after {
-	content: "\00bb";
-}
-
-.trail-separator-single-arrow .trail-items li::after {
-	content: "\2192";
-}
-
-.trail-separator-double-arrow .trail-items li::after {
-	content: "\21D2";
-}
-
-.breadcrumbs .trail-items li:last-of-type::after {
-	display: none;
-}
-
-/*--------------------------------------------------------------
-# - Archives and Blog Layouts
---------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # - Blocks
@@ -2148,6 +2079,76 @@ object {
 /*--------------------------------------------------------------
 # - Plugins
 --------------------------------------------------------------*/
+
+/* Breadcrumbs */
+.breadcrumbs {
+	margin: 0;
+	padding: 0.5em 0;
+	border-bottom: 1px solid #ddd;
+}
+
+.breadcrumbs-container {
+	color: #222;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.breadcrumbs .trail-browse,
+.breadcrumbs .trail-items,
+.breadcrumbs .trail-items li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+.breadcrumbs .trail-browse {
+	margin-right: 0.5em;
+	font-weight: normal;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.breadcrumbs .trail-items {
+	list-style: none;
+}
+
+.breadcrumbs .trail-items li::after {
+	padding: 0 0.5em;
+	content: "\00bb"; /* Raquo */
+}
+
+.trail-separator-slash .trail-items li::after {
+	content: "\002F";
+}
+
+.trail-separator-dash .trail-items li::after {
+	content: "\2013";
+}
+
+.trail-separator-bull .trail-items li::after {
+	content: "\2022";
+}
+
+.trail-separator-arrow-bracket .trail-items li::after {
+	content: "\003e";
+}
+
+.trail-separator-raquo .trail-items li::after {
+	content: "\00bb";
+}
+
+.trail-separator-single-arrow .trail-items li::after {
+	content: "\2192";
+}
+
+.trail-separator-double-arrow .trail-items li::after {
+	content: "\21D2";
+}
+
+.breadcrumbs .trail-items li:last-of-type::after {
+	display: none;
+}
+
 :root {
 	--tz-column-gap: 2em;
 }

@@ -1,0 +1,25 @@
+/* Theme Pagination */
+.pagination {
+	display: inline-block;
+	margin: 0 0 3em;
+	border-top: 4px solid #eee;
+}
+
+.pagination a,
+.pagination .current {
+	display: inline-block;
+	margin: 0;
+	padding: 0.5em 0.9em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	font-size: 1rem;
+	font-family: 'Raleway', Tahoma, Arial;
+}
+
+.pagination a:link,
+.pagination a:visited {
+	transition: all 0.2s ease;
+}

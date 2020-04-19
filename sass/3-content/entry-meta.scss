@@ -1,0 +1,91 @@
+/* Entry Meta */
+.entry-meta {
+	margin: 0.5em 0.2em 0;
+	color: #aaa;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-size: 0.8125rem;
+}
+
+.entry-meta a:link,
+.entry-meta a:visited {
+	color: #aaa;
+}
+
+.entry-meta a:hover,
+.entry-meta a:active {
+	color: #777;
+}
+
+.entry-meta span::after {
+	display: inline-block;
+	margin-left: 0.2em;
+	color: #aaa;
+	content: '\f428';
+	vertical-align: middle;
+	font: normal 16px 'Genericons';
+	-webkit-font-smoothing: antialiased;
+}
+
+.entry-meta span:last-child::after {
+	display: none;
+}
+
+/* Hide post meta if they are deactivated in settings */
+body.date-hidden .type-post .entry-meta .meta-date,
+body.author-hidden .type-post .entry-meta .meta-author,
+body.categories-hidden .type-post .entry-meta .meta-category,
+body.date-hidden .post-slider .entry-meta .meta-date,
+body.author-hidden .post-slider .entry-meta .meta-author,
+body.categories-hidden .post-slider .entry-meta .meta-category {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+body.author-hidden.categories-hidden .type-post .entry-meta .meta-date::after,
+body.categories-hidden .type-post .entry-meta .meta-author::after,
+body.author-hidden .widget-magazine-posts .type-post .entry-meta .meta-date::after,
+body.author-hidden.categories-hidden .post-slider .entry-meta .meta-date::after,
+body.categories-hidden .post-slider .entry-meta .meta-author::after,
+body.author-hidden .widget-magazine-posts .post-slider .entry-meta .meta-date::after {
+	display: none;
+}
+
+body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry-meta,
+body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
+	display: none;
+}
+
+/* Entry Tags */
+.entry-tags {
+	clear: both;
+	margin: 0 0 2em;
+}
+
+.entry-tags .meta-tags {
+	display: block;
+	margin: 0;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.entry-tags .meta-tags a {
+	display: inline-block;
+	float: left;
+	margin: 0 2px 2px 0;
+	padding: 0.2em 0.5em 0.3em;
+	background: #eee;
+	text-decoration: none;
+}
+
+.entry-tags .meta-tags a:link,
+.entry-tags .meta-tags a:visited {
+	color: #777;
+	transition: all 0.2s ease;
+}
+
+.entry-tags .meta-tags a:hover,
+.entry-tags .meta-tags a:active {
+	background: #22aadd;
+	color: #fff;
+}

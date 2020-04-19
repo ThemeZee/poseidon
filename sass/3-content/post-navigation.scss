@@ -1,0 +1,25 @@
+/* Post Navigation */
+.post-navigation {
+	margin: 1em 0 0;
+	padding: 0.6em 0;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.post-navigation .nav-links .nav-previous {
+	float: left;
+}
+
+.post-navigation .nav-links .nav-next {
+	float: right;
+}
+
+.post-navigation .nav-links .nav-previous a::before {
+	margin-right: 3px;
+	content: "\00AB";
+}
+
+.post-navigation .nav-links .nav-next a::after {
+	margin-left: 4px;
+	content: "\00BB";
+}

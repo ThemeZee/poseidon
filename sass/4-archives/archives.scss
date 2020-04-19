@@ -1,0 +1,22 @@
+/* Archives and Search Heading */
+.page-header {
+	margin: 0 0 1.5em 0;
+}
+
+.page-header .archive-title {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border-bottom: 4px solid #eee;
+	color: #404040;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	font-size: 1.125rem;
+	font-family: 'Raleway', Tahoma, Arial;
+}
+
+.blog-description,
+.archive-description p {
+	margin-bottom: 0;
+}
