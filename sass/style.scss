@@ -22,26 +22,34 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-1.0 - Normalize
-2.0 - Typography
-3.0 - Elements
-4.0 - Forms
-5.0 - Accessibility
-6.0 - Alignments
-7.0 - Clearings
-8.0 - Layout Structure
-9.0 - Header
-10.0 - Navigation
-11.0 - Widgets
-12.0 - Posts and pages
-13.0 - Comments
-14.0 - Gutenberg Blocks
-15.0 - Footer
-16.0 - Media
-17.0 - Media Queries
-18.0 - Theme Option Styles
-19.0 - Media Query Fixes
-20.0 - Customizer Preview
+# - CSS Variables
+# - Normalize
+# - Typography
+# - Elements
+# - Forms
+# - Accessibility
+# - Alignments
+# - Clearings
+# - Site Layout
+# - Header
+# - Navigation
+# - Social Icons Menu
+# - Posts and pages
+# - Archives and Blog Layouts
+# - Blocks
+# - Featured Posts
+# - Widgets
+# - Magazine Widgets
+# - Comments
+# - Media
+# - Footer
+# - Plugins
+# - Media Queries for Typography
+# - Media Queries for Layout
+# - Media Queries for Navigation
+# - Media Queries for Featured Posts
+# - Media Queries for Media
+# - Theme Options
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -157,8 +165,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "9-plugins/breadcrumbs";
 @import "9-plugins/magazine-blocks";
-//@import "9-plugins/related-posts";
-//@import "9-plugins/widget-bundle";
 
 /*--------------------------------------------------------------
 # - Media Queries for Typography

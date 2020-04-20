@@ -1,7 +1,4 @@
-/*--------------------------------------------------------------
-## 18.1 - Sidebar Left Layout
---------------------------------------------------------------*/
-
+/* Sidebar Left Layout */
 @media only screen and (min-width: 55em) {
 	.sidebar-left .content-area {
 		float: right;
@@ -14,9 +11,7 @@
 	}
 }
 
-/*--------------------------------------------------------------
-## 18.2 - Sticky Header
---------------------------------------------------------------*/
+/* Sticky Header */
 @media only screen and (min-width: 60.001em) {
 	.sticky-header .site-header {
 		position: fixed;
@@ -63,21 +58,7 @@
 	}
 }
 
-/*--------------------------------------------------------------
-# 19.0 - Media Query Fixes
---------------------------------------------------------------*/
-
-/* Ensure navigation is visible on desktop view */
-@media only screen and (min-width: 60.001em) {
-	.main-navigation-menu {
-		display: block !important;
-	}
-
-}
-
-/*--------------------------------------------------------------
-# 20.0 Customizer Preview
---------------------------------------------------------------*/
+/* Customizer Preview */
 .magazine-widgets-placeholder {
 	position: relative;
 }
