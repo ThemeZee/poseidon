@@ -1,0 +1,59 @@
+@media only screen and (max-width: 80em) {
+	.site-content {
+		padding-top: 2em;
+	}
+
+	.content-area {
+		padding-right: 3em;
+	}
+}
+
+@media only screen and (max-width: 60em) {
+	.site-footer .site-info {
+		float: none;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 55em) {
+	.content-area,
+	.site-content .fullwidth-content-area {
+		float: none;
+		padding: 0;
+		width: 100%;
+	}
+
+	.sidebar {
+		float: none;
+		padding: 2em 0 0;
+		width: 100%;
+		border-top: 4px solid #eee;
+	}
+}
+
+@media only screen and (max-width: 30em) {
+	.container {
+		padding-right: 1.5em;
+		padding-left: 1.5em;
+	}
+}
+
+@media only screen and (max-width: 25em) {
+	.post-layout-small .post-wrapper .type-post .wp-post-image,
+	.post-layout-small .infinite-wrap .type-post .wp-post-image {
+		float: none;
+		margin: 0 0 0.5em;
+		padding: 0;
+		max-width: 100%;
+	}
+}
+
+@media only screen and (max-width: 20em) {
+	.entry-meta span {
+		display: block;
+	}
+
+	.entry-meta span::after {
+		display: none;
+	}
+}

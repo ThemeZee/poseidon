@@ -161,29 +161,29 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 //@import "9-plugins/widget-bundle";
 
 /*--------------------------------------------------------------
-# - Media Queries
+# - Media Queries for Typography
 --------------------------------------------------------------*/
-@import "7-media-queries/mq-all";
+@import "7-media-queries/mq-typography";
 
 /*--------------------------------------------------------------
-## - Media Queries for Typography
+# - Media Queries for Layout
 --------------------------------------------------------------*/
-//@import "7-media-queries/mq-typography";
+@import "7-media-queries/mq-layout";
 
 /*--------------------------------------------------------------
-## - Media Queries for Layout
+# - Media Queries for Navigation
 --------------------------------------------------------------*/
-//@import "7-media-queries/mq-layout";
+@import "7-media-queries/mq-navigation";
 
 /*--------------------------------------------------------------
-## - Media Queries for Navigation
+# - Media Queries for Magazine widgets
 --------------------------------------------------------------*/
-//@import "7-media-queries/mq-navigation";
+@import "7-media-queries/mq-magazine";
 
 /*--------------------------------------------------------------
-## - Media Queries for Media
+# - Media Queries for Media
 --------------------------------------------------------------*/
-//@import "7-media-queries/mq-media";
+@import "7-media-queries/mq-media";
 
 /*--------------------------------------------------------------
 # - Theme Options
