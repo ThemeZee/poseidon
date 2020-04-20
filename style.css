@@ -1563,23 +1563,19 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 	max-width: 100%;
 }
 
-/*--------------------------------------------------------------
-## 11.1 - Default Widgets
---------------------------------------------------------------*/
-
 /* Tagcloud Widget */
 .widget_tag_cloud .tagcloud {
 	font-size: 14px;
 	font-size: 0.875rem;
 }
 
-.widget_tag_cloud .tagcloud:before,
-.widget_tag_cloud .tagcloud:after {
+.widget_tag_cloud .tagcloud::before,
+.widget_tag_cloud .tagcloud::after {
 	display: table;
 	content: "";
 }
 
-.widget_tag_cloud .tagcloud:after {
+.widget_tag_cloud .tagcloud::after {
 	clear: both;
 }
 
@@ -1656,7 +1652,7 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 }
 
 /*--------------------------------------------------------------
-## 11.2 - Magazine Posts Widgets
+# - Magazine Widgets
 --------------------------------------------------------------*/
 .widget-magazine-posts {
 	margin-bottom: -1em;
