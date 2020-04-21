@@ -111,6 +111,29 @@ add_filter( 'wp_enqueue_scripts', 'poseidon_hide_elements', 11 );
 
 
 /**
+ * Add custom CSS to scale down logo image for retina displays.
+ *
+ * @return void
+ */
+function poseidon_retina_logo() {
+	// Return early if there is no logo image or option for retina logo is disabled.
+	if ( ! has_custom_logo() or false === poseidon_get_option( 'retina_logo' ) ) {
+		return;
+	}
+
+	// Get Logo Image.
+	$logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
+
+	// Create CSS.
+	$css = '.site-branding .custom-logo { width: ' . absint( floor( $logo[1] / 2 ) ) . 'px; }';
+
+	// Add Custom CSS.
+	wp_add_inline_style( 'poseidon-stylesheet', $css );
+}
+add_filter( 'wp_enqueue_scripts', 'poseidon_retina_logo', 11 );
+
+
+/**
  * Change excerpt length for default posts
  *
  * @param int $length Length of excerpt in number of words.

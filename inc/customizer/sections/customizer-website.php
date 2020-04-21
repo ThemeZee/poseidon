@@ -28,6 +28,32 @@ function poseidon_customize_register_website_settings( $wp_customize ) {
 		'render_callback' => 'poseidon_customize_partial_blogdescription',
 	) );
 
+	// Add Retina Logo Headline.
+	$wp_customize->add_control( new Poseidon_Customize_Header_Control(
+		$wp_customize, 'poseidon_theme_options[retina_logo_title]', array(
+			'label'    => esc_html__( 'Retina Logo', 'poseidon' ),
+			'section'  => 'title_tagline',
+			'settings' => array(),
+			'priority' => 8,
+		)
+	) );
+
+	// Add Retina Logo Setting.
+	$wp_customize->add_setting( 'poseidon_theme_options[retina_logo]', array(
+		'default'           => false,
+		'type'              => 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'poseidon_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'poseidon_theme_options[retina_logo]', array(
+		'label'    => esc_html__( 'Scale down logo image for retina displays', 'poseidon' ),
+		'section'  => 'title_tagline',
+		'settings' => 'poseidon_theme_options[retina_logo]',
+		'type'     => 'checkbox',
+		'priority' => 9,
+	) );
+
 	// Add Display Site Title Setting.
 	$wp_customize->add_setting( 'poseidon_theme_options[site_title]', array(
 		'default'           => true,
