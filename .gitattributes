@@ -1,4 +1,6 @@
-package.json export-ignore
-gulpfile.js export-ignore
+/sass export-ignore
 .gitignore export-ignore
 .gitattributes export-ignore
+gulpfile.js export-ignore
+package.json export-ignore
+package-lock.json export-ignore
