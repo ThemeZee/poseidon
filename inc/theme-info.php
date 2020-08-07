@@ -89,7 +89,7 @@ function poseidon_theme_info_page() {
 
 				<div class="column column-half clearfix">
 
-					<img src="<?php echo get_template_directory_uri(); ?>/screenshot.jpg" />
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.jpg" />
 
 				</div>
 
