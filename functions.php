@@ -254,6 +254,9 @@ require get_template_directory() . '/inc/theme-info.php';
 require get_template_directory() . '/inc/customizer/customizer.php';
 require get_template_directory() . '/inc/customizer/default-options.php';
 
+// Include SVG Icon Functions.
+require get_template_directory() . '/inc/icons.php';
+
 // Include Extra Functions.
 require get_template_directory() . '/inc/extras.php';
 
