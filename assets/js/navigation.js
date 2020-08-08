@@ -1,158 +1,122 @@
+/* global poseidonScreenReaderText */
 /**
- * Navigation Plugin
- * Includes responsiveMenu() function
- *
- * Copyright 2016 ThemeZee
- * Free to use under the GPLv2 and later license.
- * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * Author: Thomas Weichselbaumer (themezee.com)
+ * Theme Navigation
  *
  * @package Poseidon
  */
 
-(function($) {
+(function( $ ) {
 
-	/**--------------------------------------------------------------
-	# Responsive Navigation for WordPress menus
-	--------------------------------------------------------------*/
-	$.fn.responsiveMenu = function( options ) {
+	function initNavigation( containerClass ) {
+		var container  = $( containerClass );
+		var navigation = container.find( 'nav[role=navigation]' );
 
-		if ( options === undefined ) {
-			options = {};
+		// Return early if navigation is missing.
+		if ( ! navigation.length ) {
+			return;
 		}
 
-		/* Set Defaults */
-		var defaults = {
-			menuClass: 'menu',
-			toggleClass: 'menu-toggle',
-			toggleText: '',
-			maxWidth: '60em'
-		};
+		// Enable menuToggle.
+		(function() {
+			var menuToggle = container.find( '.menu-toggle' );
 
-		/* Set Variables */
-		var vars = $.extend( {}, defaults, options ),
-			menuClass = vars.menuClass,
-			toggleID = ( vars.toggleID ) ? vars.toggleID : vars.toggleClass,
-			toggleClass = vars.toggleClass,
-			toggleText = vars.toggleText,
-			maxWidth = vars.maxWidth,
-			$this = $( this ),
-			$menu = $( '.' + menuClass );
-
-		/*********************
-		* Desktop Navigation *
-		**********************/
-
-		/* Set and reset dropdown animations based on screen size */
-		if ( typeof matchMedia == 'function' ) {
-			var mq = window.matchMedia( '(max-width: ' + maxWidth + ')' );
-			mq.addListener( widthChange );
-			widthChange( mq );
-		}
-		function widthChange( mq ) {
-
-			if ( mq.matches ) {
-
-				/* Reset desktop navigation menu dropdown animation on smaller screens */
-				$menu.find( 'ul.sub-menu' ).css( { display: 'block' } );
-				$menu.find( 'li ul.sub-menu' ).css( { visibility: 'visible', display: 'block' } );
-				$menu.find( 'li.menu-item-has-children' ).unbind( 'mouseenter mouseleave' );
-
-				$menu.find( 'li.menu-item-has-children ul.sub-menu' ).each( function() {
-					$( this ).hide();
-					$( this ).parent().find( '.submenu-dropdown-toggle' ).removeClass( 'active' );
-				} );
-
-				/* Remove ARIA states on mobile devices */
-				$menu.find( 'li.menu-item-has-children > a' ).unbind( 'focus.aria mouseenter.aria blur.aria  mouseleave.aria' );
-
-			} else {
-
-				/* Add dropdown animation for desktop navigation menu */
-				$menu.find( 'ul.sub-menu' ).css( { display: 'none' } );
-				$menu.find( 'li.menu-item-has-children' ).hover( function() {
-					$( this ).find( 'ul:first' ).css( { visibility: 'visible', display: 'none' } ).slideDown( 300 );
-				}, function() {
-					$( this ).find( 'ul:first' ).css( { visibility: 'hidden' } );
-				} );
-
-				/* Make sure menu does not fly off the right of the screen */
-				$menu.find( 'li ul.sub-menu li.menu-item-has-children' ).mouseenter( function() {
-					if ( $( this ).children( 'ul.sub-menu' ).offset().left + 250 > $( window ).width() ) {
-						$( this ).children( 'ul.sub-menu' ).css( { right: '100%', left: 'auto' } );
-					}
-				});
-
-				// Add menu items with submenus to aria-haspopup="true".
-				$menu.find( 'li.menu-item-has-children' ).attr( 'aria-haspopup', 'true' ).attr( 'aria-expanded', 'false' );
-
-				/* Properly update the ARIA states on focus (keyboard) and mouse over events */
-				$menu.find( 'li.menu-item-has-children > a' ).on( 'focus.aria mouseenter.aria', function() {
-					$( this ).parents( '.menu-item' ).attr( 'aria-expanded', true ).find( 'ul:first' ).css( { visibility: 'visible', display: 'block' } );
-				} );
-
-				/* Properly update the ARIA states on blur (keyboard) and mouse out events */
-				$menu.find( 'li.menu-item-has-children > a' ).on( 'blur.aria  mouseleave.aria', function() {
-
-					if( ! $(this).parent().next( 'li' ).length > 0 && ! $(this).next('ul').length > 0 ) {
-
-						$( this ).closest( 'li.menu-item-has-children' ).attr( 'aria-expanded', false ).find( '.sub-menu' ).css( { display: 'none' } );
-
-					}
-
-				} );
-
+			// Return early if menuToggle is missing.
+			if ( ! menuToggle.length ) {
+				return;
 			}
 
-		}
+			// Add an initial value for the attribute.
+			menuToggle.attr( 'aria-expanded', 'false' );
 
-		/********************
-		* Mobile Navigation *
-		*********************/
+			menuToggle.on( 'click.poseidon_', function() {
+				navigation.toggleClass( 'toggled-on' );
 
-		/* Add Menu Toggle Button for mobile navigation */
-		$this.before( '<button id=\"' + toggleID + '\" class=\"' + toggleClass + '\">' + toggleText + '</button>' );
+				$( this ).attr( 'aria-expanded', navigation.hasClass( 'toggled-on' ) );
+			});
+		})();
 
-		/* Add dropdown toggle for submenus on mobile navigation */
-		$menu.find( 'li.menu-item-has-children' ).prepend( '<span class=\"submenu-dropdown-toggle\"></span>' );
+		// Enable dropdownToggles that displays child menu items.
+		(function() {
 
-		/* Add dropdown slide animation for mobile devices */
-		$( '#' + toggleID ).on( 'click', function() {
-			$menu.slideToggle();
-			$( this ).toggleClass( 'active' );
-		});
+			var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false } )
+				.append( poseidonScreenReaderText.icon )
+				.append( $( '<span />', { 'class': 'screen-reader-text', text: poseidonScreenReaderText.expand } ) );
 
-		/* Add dropdown animation for submenus on mobile navigation */
-		$menu.find( 'li.menu-item-has-children .sub-menu' ).each( function () {
-			$( this ).hide();
-		} );
-		$menu.find( '.submenu-dropdown-toggle' ).on( 'click', function() {
-			$( this ).parent().find( 'ul:first' ).slideToggle();
-			$( this ).toggleClass( 'active' );
-		});
+			navigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
 
-	};
+			// Set the active submenu dropdown toggle button initial state.
+			navigation.find( '.current-menu-ancestor > button' )
+				.addClass( 'toggled-on' )
+				.attr( 'aria-expanded', 'true' )
+				.find( '.screen-reader-text' )
+				.text( poseidonScreenReaderText.collapse );
 
-	/**--------------------------------------------------------------
-	# Setup Navigation Menus
-	--------------------------------------------------------------*/
-	$( document ).ready( function() {
+			// Set the active submenu initial state.
+			navigation.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
 
-		/* Setup Main Navigation */
-		$( '#main-navigation' ).responsiveMenu( {
-			menuClass: 'main-navigation-menu',
-			toggleClass: 'main-navigation-toggle',
-			maxWidth: '60em'
-		} );
+			navigation.find( '.dropdown-toggle' ).click( function( e ) {
+				var _this = $( this ),
+					screenReaderSpan = _this.find( '.screen-reader-text' );
 
-		/* Setup Top Navigation */
-		$( '#top-navigation' ).responsiveMenu( {
-			menuClass: 'top-navigation-menu',
-			toggleClass: 'top-navigation-toggle',
-			maxWidth: '60em'
-		} );
+				e.preventDefault();
+				_this.toggleClass( 'toggled-on' );
+				_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
 
-	} );
+				_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 
-}(jQuery));
+				screenReaderSpan.text( screenReaderSpan.text() === poseidonScreenReaderText.expand ? poseidonScreenReaderText.collapse : poseidonScreenReaderText.expand );
+			} );
+		})();
+
+		// Fix sub-menus for touch devices and better focus for hidden submenu items for accessibility.
+		(function() {
+			var menuList   = navigation.children( 'ul.menu' );
+
+			if ( ! menuList.length || ! menuList.children().length ) {
+				return;
+			}
+
+			// Toggle `focus` class to allow submenu access on tablets.
+			function toggleFocusClassTouchScreen() {
+				if ( 'none' === $( '.menu-toggle' ).css( 'display' ) ) {
+
+					$( document.body ).on( 'touchstart.poseidon_', function( e ) {
+						if ( ! $( e.target ).closest( naviClass + ' li' ).length ) {
+							$( naviClass + ' li' ).removeClass( 'focus' );
+						}
+					});
+
+					menuList.find( '.menu-item-has-children > a, .page_item_has_children > a' )
+						.on( 'touchstart.poseidon_', function( e ) {
+							var el = $( this ).parent( 'li' );
+
+							if ( ! el.hasClass( 'focus' ) ) {
+								e.preventDefault();
+								el.toggleClass( 'focus' );
+								el.siblings( '.focus' ).removeClass( 'focus' );
+							}
+						});
+
+				} else {
+					menuList.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.poseidon_' );
+				}
+			}
+
+			if ( 'ontouchstart' in window ) {
+				$( window ).on( 'resize.poseidon_', toggleFocusClassTouchScreen );
+				toggleFocusClassTouchScreen();
+			}
+
+			menuList.find( 'a' ).on( 'focus.poseidon_ blur.poseidon_', function() {
+				$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
+			});
+		})();
+	}
+
+	// Init Main Navigation.
+	initNavigation( '.header-main' );
+
+	// Init Top Navigation.
+	//initNavigation( '.header-bar' );
+
+})( jQuery );

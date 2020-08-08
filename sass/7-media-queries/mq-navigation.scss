@@ -1,219 +1,105 @@
-@media only screen and (max-width: 75em) {
-	.main-navigation-menu a {
-		padding: 1.3em 1.1em;
-		font-size: 14px;
-		font-size: 0.875rem;
+@media only screen and (min-width: 60em) {
+	.primary-menu-toggle,
+	.main-navigation .dropdown-toggle {
+		display: none;
 	}
-}
 
-@media only screen and (max-width: 70em) {
-	.main-navigation-menu a {
-		padding: 1.5em 1em;
-		font-size: 13px;
-		font-size: 0.8125rem;
+	.main-navigation ul,
+	.main-navigation ul ul {
+		display: block;
 	}
-}
 
-@media only screen and (max-width: 60em) {
-
-	/* Reset */
 	.primary-navigation {
-		float: none;
-		margin: 0;
-	}
-
-	.main-navigation-menu li {
-		position: static;
-		float: none;
-	}
-
-	.main-navigation-menu ul,
-	.mega-menu-item .mega-menu-content,
-	.mega-menu-item .mega-menu-content .mega-menu-widget {
-		position: static;
-		top: auto;
-		left: auto;
-		display: block;
-	}
-
-	.main-navigation-menu ul a {
-		float: none;
+		display: flex;
+		margin-left: auto;
 		width: auto;
+		align-items: center;
 	}
 
-	.main-navigation-menu li ul ul {
-		top: auto;
-		left: auto;
+	#masthead .main-navigation > ul.menu {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
 		margin: 0;
-	}
-
-	.main-navigation-menu > .menu-item-has-children > a:after,
-	.main-navigation-menu ul .menu-item-has-children > a:after {
-		display: none;
-	}
-
-	/* Main Navigation Toggle */
-	.main-navigation-toggle {
-		display: inline-block;
-		float: right;
-		margin: 1em 0;
-		padding: 1em;
-		color: #404040;
-		background: none;
-	}
-
-	.main-navigation-toggle:hover,
-	.main-navigation-toggle:active {
-		color: #22aadd;
-		background: none;
-		cursor: pointer;
-	}
-
-	.main-navigation-toggle:focus {
-		background: none;
-	}
-
-	.main-navigation-toggle:after {
-		display: inline-block;
-		float: left;
-		content: '\f419';
-		vertical-align: middle;
-		text-decoration: inherit;
-		font-size: 32px;
-		font-family: 'Genericons';
-		line-height: 1;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	}
-
-	/* Main Navigation Menu */
-	.main-navigation-menu {
-		display: none;
-		float: left;
-		margin-bottom: 1em;
-		width: 100%;
-		border-top: 4px solid #404040;
-	}
-
-	.main-navigation-menu a {
-		display: block;
-		clear: left;
-		padding: 1.2em;
-		border-bottom: 1px dotted #ccc;
-		font-size: 15px;
-		font-size: 0.9375rem;
-	}
-
-	.main-navigation-menu li:last-child a {
 		border-bottom: none;
 	}
 
-	.main-navigation-menu ul {
-		float: none;
-		width: 100%;
+	.main-navigation > ul,
+	.main-navigation > ul > li > a {
 		border: none;
 	}
 
-	.main-navigation-menu ul a {
-		display: block;
-		padding-left: 2em;
-		width: 100%;
+	/* Dropdown Menus */
+	.main-navigation ul ul {
+		position: absolute;
+		left: -999em;
+		top: 100%;
+		z-index: 99999;
+		background: #fff;
+		border: 1px solid rgba(0, 0, 0, 0.12);
+		border-top: 4px solid #404040;
 	}
 
-	.main-navigation-menu ul li ul a {
-		padding-left: 4em;
+	.main-navigation ul li:hover > ul,
+	.main-navigation ul li.focus > ul {
+		right: 0;
+		left: auto;
 	}
 
-	.main-navigation-menu ul li ul li ul a {
-		padding-left: 6em;
+	.main-navigation ul ul li a {
+		width: 16rem;
 	}
 
-	.main-navigation-menu ul li ul li ul li ul a {
-		padding-left: 8em;
+	.main-navigation ul ul > li:last-child > a {
+		border-bottom: none;
 	}
 
-	.main-navigation-menu ul li:last-child a {
-		border-bottom: 1px dotted #ccc;
+	.main-navigation ul ul ul {
+		left: -999em;
+		margin-top: -4px;
+		top: 0;
 	}
 
-	/* Mobile Submenu Dropdowns */
-	.main-navigation-menu .submenu-dropdown-toggle {
-		display: block;
-		float: right;
-		margin: 0;
-		padding: 0.8em 1.2em;
-		color: #404040;
+	.main-navigation ul ul li:hover > ul,
+	.main-navigation ul ul li.focus > ul {
+		right: 100%;
+		left: auto;
 	}
 
-	.main-navigation-menu .submenu-dropdown-toggle:hover {
-		color: #22aadd;
-		cursor: pointer;
+	.main-navigation ul ul li a,
+	.main-navigation ul ul ul li a,
+	.main-navigation ul ul ul ul li a {
+		padding: 1em;
 	}
 
-	.main-navigation-menu .submenu-dropdown-toggle:before {
-		content: '\f431';
-		vertical-align: middle;
-		text-decoration: inherit;
-		font-size: 32px;
-		font-family: 'Genericons';
-		line-height: 1;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
+	/* Dropdown Icons */
+	.main-navigation .menu-item-has-children > a > .icon {
+		position: relative;
+		display: inline-block;
+		left: 0.5rem;
+		top: 0.1rem;
+		width: 13px;
+		height: 13px;
+		fill: #404040;
+		transition: fill 0.15s ease;
 	}
 
-	.main-navigation-menu .submenu-dropdown-toggle.active:before {
-		content: '\f432';
+	.main-navigation ul ul .menu-item-has-children > a > .icon {
+		position: absolute;
+		left: auto;
+		right: 1em;
+		top: 50%;
+		margin-top: -0.3rem;
+		width: 12px;
+		height: 12px;
+		-webkit-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
 	}
 
-	.main-navigation-menu ul .submenu-dropdown-toggle {
-		padding: 0.5em 1em;
-	}
-
-	.main-navigation-menu ul .submenu-dropdown-toggle:before {
-		font-size: 24px;
-	}
-
-	/* Mega Menu Styling */
-	.mega-menu-item .mega-menu-content {
-		border-bottom: 1px solid rgba(255,255,255,0.1);
-	}
-
-	.mega-menu-item .mega-menu-two-columns > li,
-	.mega-menu-item .mega-menu-three-columns > li,
-	.mega-menu-item .mega-menu-five-columns > li {
-		width: 100%;
-	}
-
-	.mega-menu-item .mega-menu-four-columns > li,
-	.mega-menu-item .mega-menu-six-columns > li {
-		width: 50%;
-	}
-}
-
-@media only screen and (max-width: 50em) {
-	.main-navigation-toggle:after {
-		font-size: 29px;
-	}
-}
-
-@media only screen and (max-width: 35em) {
-	.main-navigation-toggle:after {
-		font-size: 26px;
-	}
-}
-
-@media only screen and (max-width: 20em) {
-	.main-navigation-toggle {
-		padding: 0.75em;
-	}
-
-	.main-navigation-toggle:after {
-		font-size: 24px;
-	}
-}
-
-@media only screen and (min-width: 60.001em) {
-	.main-navigation-menu {
-		display: block !important;
+	.main-navigation ul .menu-item-has-children > a:hover > .icon {
+		fill: #22aadd;
 	}
 }

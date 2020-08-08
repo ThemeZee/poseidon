@@ -1,132 +1,189 @@
 .primary-navigation {
-	float: right;
-	margin: 1em 0;
-}
-
-.main-navigation-toggle {
-	display: none;
-}
-
-.main-navigation-menu {
 	position: relative;
-	float: left;
+	width: 100%;
+}
+
+.main-navigation ul {
 	margin: 0;
 	padding: 0;
-	list-style-position: outside;
-	list-style-type: none;
-}
-
-.main-navigation-menu li {
-	float: left;
-}
-
-.main-navigation-menu a {
-	display: block;
-	padding: 1.2em;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	color: #fff;
+	list-style: none;
 	font-family: 'Raleway', Tahoma, Arial;
-	transition: all 0.2s ease;
-	color: #404040;
+	@include font-size(15);
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
-.main-navigation-menu > .menu-item-has-children > a:after {
-	display: inline-block;
-	margin: 0.2em 0 0 0.2em;
-	content: '\f431';
-	vertical-align: top;
-	text-decoration: inherit;
-	font-size: 16px;
-	font-family: 'Genericons';
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+.main-navigation > ul {
+	border-top: 4px solid #404040;
+	margin-bottom: 1em;
 }
 
-.main-navigation-menu a:link,
-.main-navigation-menu a:visited {
-	color: #404040;
+/* Hide the menu on small screens when JavaScript is available. */
+.main-navigation ul,
+.main-navigation .menu-item-has-children > a > .icon,
+.main-navigation ul a > .icon {
+	display: none;
+}
+
+.main-navigation.toggled-on > ul.menu {
+	display: block;
+}
+
+/* Menu Items Styling */
+.main-navigation ul li {
+	position: relative;
+	margin: 0;
+}
+
+.main-navigation ul a {
+	display: block;
+	margin: 0;
+	padding: 1.2em;
+	border-bottom: 1px dotted #ccc;
 	text-decoration: none;
 }
 
-.main-navigation-menu a:hover,
-.main-navigation-menu a:active {
+.main-navigation ul a:link,
+.main-navigation ul a:visited {
+	color: #404040;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.main-navigation ul a:hover,
+.main-navigation ul a:active,
+.main-navigation ul a:focus {
 	color: #22aadd;
 }
 
-.main-navigation-menu ul {
-	position: absolute;
-	z-index: 99;
-	display: none;
-	margin: 0;
-	padding: 0;
-	border: 1px solid rgba(0,0,0,0.12);
-	border-top: 4px solid #404040;
-	background: #fff;
-	list-style-position: outside;
-	list-style-type: none;
+.main-navigation ul li.current-menu-item > a {
+	background: rgba(255, 255, 255, 0.075);
 }
 
-.main-navigation-menu ul li {
-	position: relative;
-	float: none;
+/* Submenus */
+.main-navigation ul ul {
+	@include font-size(13);
 }
 
-.main-navigation-menu ul a {
+.is-amp-page .main-navigation ul ul,
+.main-navigation ul ul.toggled-on {
+	display: block;
+}
+
+.main-navigation ul ul a {
+	padding-left: 3em;
+}
+
+.main-navigation ul ul ul a {
+	padding-left: 4.5em;
+}
+
+.main-navigation ul ul ul ul a {
+	padding-left: 6em;
+}
+
+/* Main Navigation Toggle */
+.primary-menu-toggle {
+	display: flex;
+	margin: 1em 0;
+	margin-left: auto;
 	padding: 1em;
-	min-width: 250px;
-	min-width: 16rem;
-	border-bottom: 1px dotted rgba(0,0,0,0.24);
-	font-size: 13px;
-	font-size: 0.8125rem;
-	transition: none;
+	border: none;
+	background: none;
+	color: #404040;
+	text-decoration: none;
+	font-family: 'Raleway', Tahoma, Arial;
+	@include font-size(15);
+	text-align: left;
+	transition: all 0.2s ease;
+	align-items: center;
 }
 
-.main-navigation-menu ul li:last-child a {
-	border-bottom: none;
+.primary-menu-toggle:focus {
+	outline: thin dotted;
+	color: #404040;
+	background: none;
 }
 
-.main-navigation-menu ul .menu-item-has-children > a:after {
-	display: inline-block;
-	margin: 0.2em 0 0 0.2em;
-	content: '\f431';
-	vertical-align: top;
-	text-decoration: inherit;
-	font-size: 14px;
-	font-family: 'Genericons';
-	line-height: 1;
-	-webkit-transform: rotate(270deg);
-	transform: rotate(270deg);
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.main-navigation-menu li ul ul {
-	top: 0;
-	left: 100%;
-	margin-top: -4px;
-}
-
-.main-navigation-menu li.menu-item-has-children:hover > ul,
-.main-navigation-menu li.page_item_has_children:hover > ul,
-.main-navigation-menu li.menu-item-has-children[aria-expanded="true"] > ul {
-	display: block;
-}
-
-.main-navigation-menu li.current-menu-item > a {
+.primary-menu-toggle:hover,
+.primary-menu-toggle:active {
 	color: #22aadd;
+	background: none;
+	cursor: pointer;
 }
 
-/* Mega Menu Styling */
-.mega-menu-content .mega-menu-widget ul li {
-	display: block;
-	border-top: 1px dotted #ccc;
+.primary-menu-toggle .icon {
+	margin: 0;
+	width: 28px;
+	height: 28px;
+	vertical-align: top;
+	fill: #404040;
+	transition: fill 0.2s ease;
 }
 
-.mega-menu-content .mega-menu-widget ul li a {
+.primary-menu-toggle:hover .icon,
+.primary-menu-toggle:active .icon {
+	fill: #22aadd;
+}
+
+.primary-menu-toggle[aria-expanded="true"] .icon-menu,
+.primary-menu-toggle[aria-expanded="false"] .icon-close {
+	display: none;
+}
+
+.primary-menu-toggle[aria-expanded="true"] .icon-close {
+	display: inline-block;
+}
+
+/* Submenu Dropdown Toggles */
+.main-navigation .dropdown-toggle {
+	position: absolute;
 	display: block;
-	padding: 0.5em 0.75em;
+	top: 0;
+	right: 0;
+	padding: 1.2em 1.5em;
+	background: none;
+	border: none;
+}
+
+.main-navigation .dropdown-toggle:focus {
+	outline: thin dotted;
+	color: #404040;
+	background: none;
+}
+
+.main-navigation .dropdown-toggle:hover,
+.main-navigation .dropdown-toggle:active {
+	background: none;
+}
+
+.main-navigation .dropdown-toggle .icon {
+	margin: 0.2em 0 0;
+	width: 24px;
+	height: 24px;
+	vertical-align: top;
+	fill: #404040;
+	transition: fill 0.2s ease;
+}
+
+.main-navigation .dropdown-toggle:hover .icon,
+.main-navigation .dropdown-toggle:active .icon,
+.main-navigation .dropdown-toggle:focus .icon {
+	fill: #22aadd;
+}
+
+.main-navigation .dropdown-toggle.toggled-on .icon {
+	-ms-transform: rotate(-180deg); /* IE 9 */
+	-webkit-transform: rotate(-180deg); /* Chrome, Safari, Opera */
+	transform: rotate(-180deg);
+}
+
+.main-navigation ul ul .dropdown-toggle {
+	padding: 1.1em 1.3em;
+}
+
+.main-navigation ul ul .dropdown-toggle .icon {
+	width: 20px;
+	height: 20px;
 }

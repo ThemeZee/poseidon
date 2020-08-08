@@ -3,6 +3,12 @@
 	background: #fff;
 }
 
+.header-main {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
 .site-branding {
 	float: left;
 	margin: 1em 0;

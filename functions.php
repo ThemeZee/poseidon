@@ -178,7 +178,15 @@ function poseidon_scripts() {
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js.
-	wp_enqueue_script( 'poseidon-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20170127' );
+	if ( has_nav_menu( 'primary' ) ) {
+		wp_enqueue_script( 'poseidon-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20191114', true );
+		$poseidon_l10n = array(
+			'expand'   => esc_html__( 'Expand child menu', 'poseidon' ),
+			'collapse' => esc_html__( 'Collapse child menu', 'poseidon' ),
+			'icon'     => poseidon_get_svg( 'expand' ),
+		);
+		wp_localize_script( 'poseidon-navigation', 'poseidonScreenReaderText', $poseidon_l10n );
+	}
 
 	// Register and enqueue sticky-header.js.
 	if ( true == $theme_options['sticky_header'] ) {
