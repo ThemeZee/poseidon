@@ -63,6 +63,18 @@
 	}
 }
 
+@media only screen and (max-width: 782px) {
+	.sticky-header.admin-bar .site-header {
+		top: 46px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.sticky-header.admin-bar.small-header .site-header {
+		top: 0;
+	}
+}
+
 /* Customizer Preview */
 .magazine-widgets-placeholder {
 	position: relative;
