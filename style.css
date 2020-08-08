@@ -822,7 +822,7 @@ textarea {
 
 .main-navigation > ul {
 	border-top: 4px solid #404040;
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
 }
 
 /* Hide the menu on small screens when JavaScript is available. */
@@ -2749,49 +2749,54 @@ object {
 }
 
 /* Sticky Header */
-@media only screen and (min-width: 60.001em) {
-	.sticky-header .site-header {
-		position: fixed;
-		top: 0;
-		z-index: 100;
-		width: 100%;
-	}
+.sticky-header .site-header {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+}
 
-	.sticky-header.admin-bar .site-header {
-		top: 32px;
-	}
+.sticky-header.admin-bar .site-header {
+	top: 32px;
+}
 
-	.sticky-header .header-bar-wrap {
-		display: none;
-	}
+.sticky-header .header-bar-wrap {
+	display: none;
+}
 
-	/* Small Header */
-	.sticky-header.small-header .site-header .site-branding,
-	.sticky-header.small-header .primary-navigation {
-		margin: 0;
-		transition: all 0.4s ease;
-	}
+/* Small Header */
+.sticky-header.small-header .site-header .site-branding,
+.sticky-header.small-header .primary-navigation,
+.sticky-header.small-header .primary-menu-toggle {
+	margin-top: 0;
+	margin-bottom: 0;
+	transition: all 0.4s ease;
+}
 
-	.sticky-header.small-header .site-header .site-branding .site-title {
-		margin: 0.25em 0 0;
-		font-size: 28px;
-		font-size: 1.75rem;
-	}
+.sticky-header.small-header .site-header .site-branding .site-title {
+	margin: 0;
+	font-size: 28px;
+	font-size: 1.75rem;
+}
 
-	.sticky-header.small-header .site-header .site-branding .custom-logo {
-		margin-top: 1em;
-		max-height: 25px;
-		width: auto;
-	}
+.sticky-header.small-header .site-header .site-branding .custom-logo {
+	margin-top: 1em;
+	max-height: 25px;
+	width: auto;
+}
 
-	.sticky-header.small-header .site-header .site-description {
-		display: none;
-	}
+.sticky-header.small-header .site-header .site-description {
+	display: none;
 }
 
 @media only screen and (max-width: 60em) {
-	.sticky-header {
-		padding-top: 0 !important;
+	.sticky-header.small-header .primary-navigation {
+		max-height: 60vh;
+		overflow-y: auto;
+	}
+
+	.sticky-header.small-header .main-navigation > ul {
+		margin-top: 1em;
 	}
 }
 
