@@ -859,12 +859,9 @@ textarea {
 
 .main-navigation ul a:hover,
 .main-navigation ul a:active,
-.main-navigation ul a:focus {
-	color: #22aadd;
-}
-
+.main-navigation ul a:focus,
 .main-navigation ul li.current-menu-item > a {
-	background: rgba(255, 255, 255, 0.075);
+	color: #22aadd;
 }
 
 /* Submenus */

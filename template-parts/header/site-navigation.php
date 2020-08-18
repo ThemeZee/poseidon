@@ -9,8 +9,6 @@
 
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
 
-	<?php do_action( 'poseidon_header_search' ); ?>
-
 	<button class="primary-menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 		<?php
 		echo poseidon_get_svg( 'menu' );
