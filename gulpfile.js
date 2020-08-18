@@ -14,7 +14,7 @@ var wprtl        = require( 'postcss-wprtl' );
 
 // Minify JS
 gulp.task( 'minifyjs', function() {
-	return gulp.src( ['assets/js/navigation.js', 'assets/js/customize-preview.js', 'assets/js/customizer-controls.js'] )
+	return gulp.src( ['assets/js/navigation.js'] )
 		.pipe( uglify() )
 		.pipe( rename( {
 			suffix: '.min'
