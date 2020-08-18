@@ -118,7 +118,7 @@ if ( ! function_exists( 'poseidon_slider_image' ) ) :
 
 			<a class="slide-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
 				<figure class="slide-image-wrap">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-slider-image.png" class="slide-image default-slide-image wp-post-image" />
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/default-slider-image.png" class="slide-image default-slide-image wp-post-image" />
 				</figure>
 			</a>
 
