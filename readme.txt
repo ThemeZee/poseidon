@@ -26,6 +26,9 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 2.0.1 - 2020-08-21 =
+* added svgxuse polyfill to display SVG icons in Internet Explorer
+
 = 2.0 - 2020-08-18 =
 Changed implementation, styles and scripts of main navigation menu
 Important Update: Please read https://themezee.com/2020/08/updates-for-improved-navigation-menus/
