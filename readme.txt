@@ -26,6 +26,10 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 2.0.2 - 2020-04-24 =
+* fixed styling of menu items with empty links
+* fixed undefined naviClass variable warning
+
 = 2.0.1 - 2020-08-21 =
 * added svgxuse polyfill to display SVG icons in Internet Explorer
 
