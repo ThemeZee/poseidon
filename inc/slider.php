@@ -19,7 +19,7 @@ function poseidon_slider_scripts() {
 	$theme_options = poseidon_theme_options();
 
 	// Register and enqueue FlexSlider JS and CSS if necessary.
-	if ( true === $theme_options['slider_blog'] or true === $theme_options['slider_magazine'] or is_page_template( 'template-slider.php' ) ) :
+	if ( ( true === $theme_options['slider_blog'] or true === $theme_options['slider_magazine'] or is_page_template( 'template-slider.php' ) ) && ! poseidon_is_amp() ) :
 
 		// FlexSlider JS.
 		wp_enqueue_script( 'jquery-flexslider', get_template_directory_uri() . '/assets/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
@@ -71,9 +71,10 @@ function poseidon_slider() {
 	$theme_options = poseidon_theme_options();
 
 	// Display post slider only if activated.
-	if ( is_page_template( 'template-slider.php' )
+	if ( ( is_page_template( 'template-slider.php' )
 		or ( true === $theme_options['slider_blog'] and is_home() )
 		or ( true === $theme_options['slider_magazine'] and is_page_template( 'template-magazine.php' ) )
+		) && ! poseidon_is_amp()
 	) {
 
 		get_template_part( 'template-parts/post-slider' );

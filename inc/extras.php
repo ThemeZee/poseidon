@@ -55,6 +55,11 @@ function poseidon_body_classes( $classes ) {
 		$classes[] = 'categories-hidden';
 	}
 
+	// Check for AMP pages.
+	if ( poseidon_is_amp() ) {
+		$classes[] = 'is-amp-page';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'poseidon_body_classes' );

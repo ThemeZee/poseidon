@@ -34,6 +34,9 @@ function poseidon_theme_addons_setup() {
 		'render'    => 'poseidon_infinite_scroll_render',
 	) );
 
+	// Add theme support for AMP.
+	add_theme_support( 'amp' );
+
 }
 add_action( 'after_setup_theme', 'poseidon_theme_addons_setup' );
 
@@ -80,5 +83,33 @@ function poseidon_infinite_scroll_render() {
 		the_post();
 		get_template_part( 'template-parts/content', $theme_options['post_content'] );
 	}
+}
 
+
+/**
+ * Checks if AMP page is rendered.
+ */
+function poseidon_is_amp() {
+	return function_exists( 'is_amp_endpoint' ) && is_amp_endpoint();
+}
+
+
+/**
+ * Adds amp support for menu toggle.
+ */
+function poseidon_amp_menu_toggle() {
+	if ( poseidon_is_amp() ) {
+		echo "[aria-expanded]=\"primaryMenuExpanded? 'true' : 'false'\" ";
+		echo 'on="tap:AMP.setState({primaryMenuExpanded: !primaryMenuExpanded})"';
+	}
+}
+
+
+/**
+ * Adds amp support for mobile dropdown navigation menu.
+ */
+function poseidon_amp_menu_is_toggled() {
+	if ( poseidon_is_amp() ) {
+		echo "[class]=\"'main-navigation' + ( primaryMenuExpanded ? ' toggled-on' : '' )\"";
+	}
 }

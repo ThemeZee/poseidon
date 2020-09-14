@@ -178,7 +178,7 @@ function poseidon_scripts() {
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.min.js.
-	if ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) {
+	if ( ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) && ! poseidon_is_amp() ) {
 		wp_enqueue_script( 'poseidon-navigation', get_theme_file_uri( '/assets/js/navigation.min.js' ), array( 'jquery' ), '20200822', true );
 		$poseidon_l10n = array(
 			'expand'   => esc_html__( 'Expand child menu', 'poseidon' ),
@@ -189,12 +189,14 @@ function poseidon_scripts() {
 	}
 
 	// Register and enqueue sticky-header.js.
-	if ( true == $theme_options['sticky_header'] ) {
+	if ( true == $theme_options['sticky_header'] && ! poseidon_is_amp() ) {
 		wp_enqueue_script( 'poseidon-jquery-sticky-header', get_template_directory_uri() . '/assets/js/sticky-header.js', array( 'jquery' ), '20170203' );
 	}
 
 	// Enqueue svgxuse to support external SVG Sprites in Internet Explorer.
-	wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.6' );
+	if ( ! poseidon_is_amp() ) {
+		wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.6' );
+	}
 
 	// Register Comment Reply Script for Threaded Comments.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
