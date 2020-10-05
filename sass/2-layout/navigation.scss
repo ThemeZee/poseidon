@@ -8,10 +8,10 @@
 	padding: 0;
 	color: #fff;
 	list-style: none;
-	font-family: 'Raleway', Tahoma, Arial;
 	@include font-size(15);
-	font-weight: bold;
-	text-transform: uppercase;
+	@include font-family(--navi-font);
+	@include font-weight(--navi-font-weight);
+	@include text-transform(--navi-text-transform);
 }
 
 .main-navigation > ul {
@@ -91,8 +91,10 @@
 	background: none;
 	color: #404040;
 	text-decoration: none;
-	font-family: 'Raleway', Tahoma, Arial;
 	@include font-size(15);
+	@include font-family(--navi-font);
+	@include font-weight(--navi-font-weight);
+	@include text-transform(--navi-text-transform);
 	text-align: left;
 	transition: all 0.2s ease;
 	align-items: center;

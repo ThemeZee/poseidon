@@ -15,11 +15,11 @@
 	padding: 0;
 	border-bottom: 4px solid #eee;
 	color: #404040;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 18px;
-	font-size: 1.125rem;
-	font-family: 'Raleway', Tahoma, Arial;
+	@include font-size(18);
+	@include font-family(--widget-title-font);
+	@include font-weight(--widget-title-font-weight);
+	@include text-transform(--widget-title-text-transform);
+	@include line-height(--title-line-height);
 }
 
 .widget ul {

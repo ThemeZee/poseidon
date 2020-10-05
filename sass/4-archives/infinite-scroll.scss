@@ -10,11 +10,10 @@
 	background: none;
 	color: #22aadd;
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-family: 'Raleway', Tahoma, Arial;
+	@include font-size(14);
+	@include font-family(--widget-title-font);
+	@include font-weight(--widget-title-font-weight);
+	@include text-transform(--widget-title-text-transform);
 	transition: all 0.2s ease;
 }
 

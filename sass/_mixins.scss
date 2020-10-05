@@ -22,6 +22,12 @@
 	text-transform: var($textVar);
 }
 
+// Line Height Variable
+@mixin line-height($lineVar) {
+	line-height: map-get($lineHeight, $lineVar);
+	line-height: var($lineVar);
+}
+
 // Color CSS Variable
 @mixin color($colorVar) {
 	color: map-get($themeColors, $colorVar);

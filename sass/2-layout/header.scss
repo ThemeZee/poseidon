@@ -30,11 +30,11 @@
 	padding: 0;
 	color: #404040;
 	text-decoration: none;
-	font-weight: bold;
-	font-size: 38px;
-	font-size: 2.375rem;
-	font-family: 'Raleway', sans-serif;
-	line-height: 1.5;
+	@include font-size(38);
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
 }
 
 .site-title a:link,

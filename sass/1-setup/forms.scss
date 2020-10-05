@@ -7,11 +7,10 @@ input[type="submit"] {
 	background: #22aadd;
 	color: #fff;
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	font-family: 'Raleway', Tahoma, Arial;
+	@include font-size(13);
+	@include font-family(--widget-title-font);
+	@include font-weight(--widget-title-font-weight);
+	@include text-transform(--widget-title-text-transform);
 	transition: all 0.2s ease;
 }
 

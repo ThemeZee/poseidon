@@ -59,6 +59,20 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # - CSS Variables
 --------------------------------------------------------------*/
+:root {
+	--text-font: "Ubuntu", arial, helvetica, sans-serif;
+	--title-font: "Raleway", arial, helvetica, sans-serif;
+	--navi-font: "Raleway", arial, helvetica, sans-serif;
+	--widget-title-font: "Raleway", arial, helvetica, sans-serif;
+	--title-font-weight: bold;
+	--navi-font-weight: bold;
+	--widget-title-font-weight: bold;
+	--title-text-transform: none;
+	--navi-text-transform: uppercase;
+	--widget-title-text-transform: uppercase;
+	--text-line-height: 1.5;
+	--title-line-height: 1.5;
+}
 
 /*--------------------------------------------------------------
 # - Normalize
@@ -281,8 +295,10 @@ textarea {
 	color: #404040;
 	font-size: 16px;
 	font-size: 1rem;
-	font-family: 'Ubuntu', Tahoma, Arial;
+	font-family: "Ubuntu", arial, helvetica, sans-serif;
+	font-family: var(--text-font);
 	line-height: 1.5;
+	line-height: var(--text-line-height);
 }
 
 h1,
@@ -293,7 +309,8 @@ h5,
 h6 {
 	clear: both;
 	margin: 0.75em 0;
-	line-height: 1.4;
+	line-height: 1.5;
+	line-height: var(--title-line-height);
 }
 
 h1 {
@@ -540,11 +557,14 @@ input[type="submit"] {
 	background: #22aadd;
 	color: #fff;
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	font-family: 'Raleway', Tahoma, Arial;
+	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
 	transition: all 0.2s ease;
 }
 
@@ -753,11 +773,16 @@ textarea {
 	padding: 0;
 	color: #404040;
 	text-decoration: none;
-	font-weight: bold;
 	font-size: 38px;
 	font-size: 2.375rem;
-	font-family: 'Raleway', sans-serif;
+	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: var(--title-font);
+	font-weight: bold;
+	font-weight: var(--title-font-weight);
+	text-transform: none;
+	text-transform: var(--title-text-transform);
 	line-height: 1.5;
+	line-height: var(--title-line-height);
 }
 
 .site-title a:link,
@@ -814,11 +839,14 @@ textarea {
 	padding: 0;
 	color: #fff;
 	list-style: none;
-	font-family: 'Raleway', Tahoma, Arial;
 	font-size: 15px;
 	font-size: 0.9375rem;
+	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: var(--navi-font);
 	font-weight: bold;
+	font-weight: var(--navi-font-weight);
 	text-transform: uppercase;
+	text-transform: var(--navi-text-transform);
 }
 
 .main-navigation > ul {
@@ -899,9 +927,14 @@ textarea {
 	background: none;
 	color: #404040;
 	text-decoration: none;
-	font-family: 'Raleway', Tahoma, Arial;
 	font-size: 15px;
 	font-size: 0.9375rem;
+	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: var(--navi-font);
+	font-weight: bold;
+	font-weight: var(--navi-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--navi-text-transform);
 	text-align: left;
 	transition: all 0.2s ease;
 	align-items: center;
@@ -1165,10 +1198,16 @@ textarea {
 	color: #404040;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-weight: bold;
 	font-size: 40px;
 	font-size: 2.5rem;
-	font-family: 'Raleway', sans-serif;
+	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: var(--title-font);
+	font-weight: bold;
+	font-weight: var(--title-font-weight);
+	text-transform: none;
+	text-transform: var(--title-text-transform);
+	line-height: 1.5;
+	line-height: var(--title-line-height);
 }
 
 .entry-title a:link,
@@ -1327,11 +1366,14 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-family: 'Raleway', Tahoma, Arial;
+	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
 	transition: all 0.2s ease;
 }
 
@@ -1380,11 +1422,16 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 	padding: 0;
 	border-bottom: 4px solid #eee;
 	color: #404040;
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 18px;
 	font-size: 1.125rem;
-	font-family: 'Raleway', Tahoma, Arial;
+	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
+	line-height: 1.5;
+	line-height: var(--title-line-height);
 }
 
 .blog-description,
@@ -1406,11 +1453,14 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 	padding: 0.5em 0.9em;
 	text-align: center;
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 16px;
 	font-size: 1rem;
-	font-family: 'Raleway', Tahoma, Arial;
+	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
 }
 
 .pagination a:link,
@@ -1430,11 +1480,14 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 	background: none;
 	color: #22aadd;
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-family: 'Raleway', Tahoma, Arial;
+	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
 	transition: all 0.2s ease;
 }
 
@@ -1604,11 +1657,16 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 	padding: 0;
 	border-bottom: 4px solid #eee;
 	color: #404040;
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 18px;
 	font-size: 1.125rem;
-	font-family: 'Raleway', Tahoma, Arial;
+	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
+	line-height: 1.5;
+	line-height: var(--title-line-height);
 }
 
 .widget ul {
@@ -1906,11 +1964,16 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 	padding: 0;
 	border-bottom: 4px solid #eee;
 	color: #404040;
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 18px;
 	font-size: 1.125rem;
-	font-family: 'Raleway', Tahoma, Arial;
+	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
+	line-height: 1.5;
+	line-height: var(--title-line-height);
 }
 
 /* Comment List */

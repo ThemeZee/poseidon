@@ -13,10 +13,11 @@
 	color: #404040;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-weight: bold;
-	font-size: 40px;
-	font-size: 2.5rem;
-	font-family: 'Raleway', sans-serif;
+	@include font-size(40);
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
 }
 
 .entry-title a:link,

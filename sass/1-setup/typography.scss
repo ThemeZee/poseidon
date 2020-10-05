@@ -4,10 +4,9 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-size: 16px;
-	font-size: 1rem;
-	font-family: 'Ubuntu', Tahoma, Arial;
-	line-height: 1.5;
+	@include font-size(16);
+	@include font-family(--text-font);
+	@include line-height(--text-line-height);
 }
 
 h1,
@@ -18,7 +17,7 @@ h5,
 h6 {
 	clear: both;
 	margin: 0.75em 0;
-	line-height: 1.4;
+	@include line-height(--title-line-height);
 }
 
 h1 {

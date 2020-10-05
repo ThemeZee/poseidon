@@ -52,22 +52,31 @@ $themeColors: (
 );
 
 // Theme Fonts
-$baseFont: "Barlow", arial, helvetica, sans-serif;
-$titleFont: "Barlow", arial, helvetica, sans-serif;
+$baseFont: "Ubuntu", arial, helvetica, sans-serif;
+$titleFont: "Raleway", arial, helvetica, sans-serif;
 $themeFonts: (
-	--text-font  : $baseFont,
-	--title-font : $titleFont,
-	--navi-font  : $titleFont,
+	--text-font        : $baseFont,
+	--title-font       : $titleFont,
+	--navi-font        : $titleFont,
+	--widget-title-font: $titleFont,
 );
 
 // Font Weight.
 $fontWeight: (
-	--title-font-weight : bold,
-	--navi-font-weight  : normal,
+	--title-font-weight: bold,
+	--navi-font-weight : bold,
+	--widget-title-font-weight: bold,
 );
 
 // Text Transform.
 $textTransform: (
-	--title-text-transform : none,
-	--navi-text-transform  : none,
+	--title-text-transform: none,
+	--navi-text-transform: uppercase,
+	--widget-title-text-transform: uppercase,
+);
+
+// Line Height.
+$lineHeight: (
+	--text-line-height : 1.5,
+	--title-line-height : 1.5,
 );
