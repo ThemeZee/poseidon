@@ -6,7 +6,7 @@
 .main-navigation ul {
 	margin: 0;
 	padding: 0;
-	color: #fff;
+	@include color(--navi-color);
 	list-style: none;
 	@include font-size(15);
 	@include font-family(--navi-font);
@@ -15,7 +15,8 @@
 }
 
 .main-navigation > ul {
-	border-top: 4px solid #404040;
+	border-top: 4px solid;
+	@include border-color(--navi-color);
 	margin-bottom: 1.5em;
 }
 
@@ -40,14 +41,15 @@
 	display: block;
 	margin: 0;
 	padding: 1.2em;
-	border-bottom: 1px dotted #ccc;
+	border-bottom: 1px dotted;
+	@include border-color(--navi-border-color);
 	text-decoration: none;
 }
 
 .main-navigation ul a,
 .main-navigation ul a:link,
 .main-navigation ul a:visited {
-	color: #404040;
+	@include color(--navi-color);
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
@@ -56,7 +58,7 @@
 .main-navigation ul a:active,
 .main-navigation ul a:focus,
 .main-navigation ul li.current-menu-item > a {
-	color: #22aadd;
+	@include color(--navi-hover-color);
 }
 
 /* Submenus */
@@ -89,7 +91,7 @@
 	padding: 1em;
 	border: none;
 	background: none;
-	color: #404040;
+	@include color(--navi-color);
 	text-decoration: none;
 	@include font-size(15);
 	@include font-family(--navi-font);
@@ -102,13 +104,13 @@
 
 .primary-menu-toggle:focus {
 	outline: thin dotted;
-	color: #404040;
+	@include color(--navi-color);
 	background: none;
 }
 
 .primary-menu-toggle:hover,
 .primary-menu-toggle:active {
-	color: #22aadd;
+	@include color(--navi-hover-color);
 	background: none;
 	cursor: pointer;
 }
@@ -118,13 +120,13 @@
 	width: 28px;
 	height: 28px;
 	vertical-align: top;
-	fill: #404040;
+	@include fill(--navi-color);
 	transition: fill 0.2s ease;
 }
 
 .primary-menu-toggle:hover .icon,
 .primary-menu-toggle:active .icon {
-	fill: #22aadd;
+	@include fill(--navi-hover-color);
 }
 
 .primary-menu-toggle[aria-expanded="true"] .icon-menu,
@@ -149,7 +151,7 @@
 
 .main-navigation .dropdown-toggle:focus {
 	outline: thin dotted;
-	color: #404040;
+	@include color(--navi-color);
 	background: none;
 }
 
@@ -163,14 +165,14 @@
 	width: 24px;
 	height: 24px;
 	vertical-align: top;
-	fill: #404040;
+	@include fill(--navi-color);
 	transition: fill 0.2s ease;
 }
 
 .main-navigation .dropdown-toggle:hover .icon,
 .main-navigation .dropdown-toggle:active .icon,
 .main-navigation .dropdown-toggle:focus .icon {
-	fill: #22aadd;
+	@include fill(--navi-hover-color);
 }
 
 .main-navigation .dropdown-toggle.toggled-on .icon {

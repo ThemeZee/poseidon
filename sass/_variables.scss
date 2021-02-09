@@ -39,18 +39,19 @@ $themeColors: (
 
 	// Page
 	--page-background-color          : #fff,
-	--header-background-color        : #111133,
-	--site-title-color               : #fff,
-	--site-title-hover-color         : rgba(255, 255, 255, 0.6),
+	--page-border-color              : rgba(0, 0, 0, 0.12),
+	--header-background-color        : #fff,
+	--site-title-color               : #404040,
+	--site-title-hover-color         : #22aadd,
 
 	// Navigation
-	--navi-color                     : #fff,
-	--navi-hover-color               : rgba(255, 255, 255, 0.6),
-	--navi-border-color              : rgba(255, 255, 255, 0.1),
+	--navi-color                     : #404040,
+	--navi-hover-color               : #22aadd,
+	--navi-border-color              : #ccc,
 
 	// Posts
-	--title-color                    : #111133,
-	--title-hover-color              : #4477aa,
+	--title-color                    : #404040,
+	--title-hover-color              : #22aadd,
 
 	// Widgets
 	--widget-title-color             : #111133,
@@ -58,10 +59,7 @@ $themeColors: (
 	--widget-title-border-color      : #111133,
 
 	// Footer
-	--footer-background-color        : #111133,
-	--footer-text-color              : rgba(255, 255, 255, 0.6),
-	--footer-link-color              : #fff,
-	--footer-link-hover-color        : rgba(255, 255, 255, 0.6),
+	--footer-background-color        : #fff,
 );
 
 // Theme Fonts

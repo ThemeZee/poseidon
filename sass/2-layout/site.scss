@@ -12,7 +12,7 @@
 
 .site-content {
 	padding-top: 3em;
-	background: #fff;
+	@include background(--page-background-color);
 }
 
 .content-area {
