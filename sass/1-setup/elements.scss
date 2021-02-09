@@ -13,10 +13,10 @@ body {
 	background: #fff; /* Fallback for when there is no custom background color defined. */
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
 	content: "";
 }
 
@@ -28,25 +28,24 @@ q {
 blockquote {
 	margin: 0 0 1.5em;
 	padding-left: 1.5em;
-	border-left: 4px solid #eee;
-	color: #777;
+	border-left: 4px solid;
+	@include border-color(--light-border-color);
+	@include color(--medium-text-color);
 	font-style: italic;
-	font-size: 19px;
-	font-size: 1.1875rem;
+	@include font-size(19);
 }
 
 blockquote cite,
 blockquote small {
 	display: block;
 	margin-top: 1em;
-	color: #404040;
-	font-size: 16px;
-	font-size: 1rem;
+	@include color(--text-color);
+	@include font-size(16);
 	line-height: 1.75;
 }
 
-blockquote cite:before,
-blockquote small:before {
+blockquote cite::before,
+blockquote small::before {
 	content: "\2014\00a0";
 }
 
@@ -64,7 +63,7 @@ hr {
 	margin-bottom: 1.5em;
 	height: 1px;
 	border: 0;
-	background-color: #eee;
+	@include background(--light-border-color);
 }
 
 ul,
@@ -110,7 +109,8 @@ table {
 th,
 td {
 	padding: 0.3em 0.6em;
-	border: 1px solid #ddd;
+	border: 1px solid;
+	@include border-color(--light-border-color);
 }
 
 th {
@@ -118,19 +118,19 @@ th {
 }
 
 a {
-	color: #22aadd;
+	@include color(--link-color);
 	text-decoration: none;
 }
 
 a:link,
 a:visited {
-	color: #22aadd;
+	@include color(--link-color);
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #404040;
+	@include color(--link-hover-color);
 }
 
 a:focus {

@@ -288,15 +288,19 @@ Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 Copyright: 2015 WooThemes, http://www.woothemes.com
 
-5. Ubuntu Font - https://www.google.com/fonts/specimen/Ubuntu
+5. svgxuse - https://github.com/Keyamoon/svgxuse
+License: Licensed under MIT license (https://github.com/Keyamoon/svgxuse/blob/master/license)
+Copyright: 2017 IcoMoon.io
+
+6. Ubuntu Font - https://www.google.com/fonts/specimen/Ubuntu
 License: Distributed under the terms of the Ubuntu Font License (http://font.ubuntu.com/ufl/)
 Copyright: 2015 Dalton Maag
 
-6. Raleway Font - https://www.google.com/fonts/specimen/Raleway
+7. Raleway Font - https://www.google.com/fonts/specimen/Raleway
 License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
 Copyright: 2015 Matt McInerney, Pablo Impallari
 
-7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
+8. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 
 Image 1: https://pixabay.com/en/sea-ocean-water-light-diver-79606/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)

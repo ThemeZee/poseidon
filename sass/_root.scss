@@ -1,4 +1,46 @@
 :root {
+
+	// Text Colors
+	@include variable(--text-color, $themeColors);
+	@include variable(--medium-text-color, $themeColors);
+	@include variable(--light-text-color, $themeColors);
+	@include variable(--dark-border-color, $themeColors);
+	@include variable(--medium-border-color, $themeColors);
+	@include variable(--light-border-color, $themeColors);
+
+	// Links and Buttons
+	@include variable(--link-color, $themeColors);
+	@include variable(--link-hover-color, $themeColors);
+	@include variable(--button-color, $themeColors);
+	@include variable(--button-text-color, $themeColors);
+	@include variable(--button-hover-color, $themeColors);
+	@include variable(--button-hover-text-color, $themeColors);
+
+	// Page
+	@include variable(--page-background-color, $themeColors);
+	@include variable(--header-background-color, $themeColors);
+	@include variable(--site-title-color, $themeColors);
+	@include variable(--site-title-hover-color, $themeColors);
+
+	// Navigation
+	@include variable(--navi-color, $themeColors);
+	@include variable(--navi-hover-color, $themeColors);
+	@include variable(--navi-border-color, $themeColors);
+
+	// Titles
+	@include variable(--title-color, $themeColors);
+	@include variable(--title-hover-color, $themeColors);
+	@include variable(--widget-title-color, $themeColors);
+	@include variable(--widget-title-hover-color, $themeColors);
+	@include variable(--widget-title-border-color, $themeColors);
+
+	// Footer
+	@include variable(--footer-background-color, $themeColors);
+	@include variable(--footer-text-color, $themeColors);
+	@include variable(--footer-link-color, $themeColors);
+	@include variable(--footer-link-hover-color, $themeColors);
+
+	// Typography Styling
 	@include variable(--text-font, $themeFonts);
 	@include variable(--title-font, $themeFonts);
 	@include variable(--navi-font, $themeFonts);

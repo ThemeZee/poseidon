@@ -60,6 +60,34 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
+	--text-color: #404040;
+	--medium-text-color: #666;
+	--light-text-color: #999;
+	--dark-border-color: #404040;
+	--medium-border-color: #ccc;
+	--light-border-color: #ddd;
+	--link-color: #22aadd;
+	--link-hover-color: #404040;
+	--button-color: #22aadd;
+	--button-text-color: #fff;
+	--button-hover-color: #404040;
+	--button-hover-text-color: #fff;
+	--page-background-color: #fff;
+	--header-background-color: #111133;
+	--site-title-color: #fff;
+	--site-title-hover-color: rgba(255, 255, 255, 0.6);
+	--navi-color: #fff;
+	--navi-hover-color: rgba(255, 255, 255, 0.6);
+	--navi-border-color: rgba(255, 255, 255, 0.1);
+	--title-color: #111133;
+	--title-hover-color: #4477aa;
+	--widget-title-color: #111133;
+	--widget-title-hover-color: #4477aa;
+	--widget-title-border-color: #111133;
+	--footer-background-color: #111133;
+	--footer-text-color: rgba(255, 255, 255, 0.6);
+	--footer-link-color: #fff;
+	--footer-link-hover-color: rgba(255, 255, 255, 0.6);
 	--text-font: "Ubuntu", arial, helvetica, sans-serif;
 	--title-font: "Raleway", arial, helvetica, sans-serif;
 	--navi-font: "Raleway", arial, helvetica, sans-serif;
@@ -293,6 +321,7 @@ input,
 select,
 textarea {
 	color: #404040;
+	color: var(--text-color);
 	font-size: 16px;
 	font-size: 1rem;
 	font-family: "Ubuntu", arial, helvetica, sans-serif;
@@ -308,7 +337,8 @@ h4,
 h5,
 h6 {
 	clear: both;
-	margin: 0.75em 0;
+	margin-top: 0.75em;
+	margin-bottom: 0.75em;
 	line-height: 1.5;
 	line-height: var(--title-line-height);
 }
@@ -416,10 +446,10 @@ body {
 	background: #fff; /* Fallback for when there is no custom background color defined. */
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
 	content: "";
 }
 
@@ -431,8 +461,11 @@ q {
 blockquote {
 	margin: 0 0 1.5em;
 	padding-left: 1.5em;
-	border-left: 4px solid #eee;
-	color: #777;
+	border-left: 4px solid;
+	border-color: #ddd;
+	border-color: var(--light-border-color);
+	color: #666;
+	color: var(--medium-text-color);
 	font-style: italic;
 	font-size: 19px;
 	font-size: 1.1875rem;
@@ -443,13 +476,14 @@ blockquote small {
 	display: block;
 	margin-top: 1em;
 	color: #404040;
+	color: var(--text-color);
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.75;
 }
 
-blockquote cite:before,
-blockquote small:before {
+blockquote cite::before,
+blockquote small::before {
 	content: "\2014\00a0";
 }
 
@@ -467,7 +501,8 @@ hr {
 	margin-bottom: 1.5em;
 	height: 1px;
 	border: 0;
-	background-color: #eee;
+	background-color: #ddd;
+	background-color: var(--light-border-color);
 }
 
 ul,
@@ -513,7 +548,9 @@ table {
 th,
 td {
 	padding: 0.3em 0.6em;
-	border: 1px solid #ddd;
+	border: 1px solid;
+	border-color: #ddd;
+	border-color: var(--light-border-color);
 }
 
 th {
@@ -522,18 +559,21 @@ th {
 
 a {
 	color: #22aadd;
+	color: var(--link-color);
 	text-decoration: none;
 }
 
 a:link,
 a:visited {
 	color: #22aadd;
+	color: var(--link-color);
 }
 
 a:hover,
 a:focus,
 a:active {
 	color: #404040;
+	color: var(--link-hover-color);
 }
 
 a:focus {
@@ -554,8 +594,10 @@ input[type="reset"],
 input[type="submit"] {
 	padding: 0.4em 0.8em;
 	border: none;
-	background: #22aadd;
+	background-color: #22aadd;
+	background-color: var(--button-color);
 	color: #fff;
+	color: var(--button-text-color);
 	text-decoration: none;
 	font-size: 13px;
 	font-size: 0.8125rem;
@@ -580,7 +622,10 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	background: #404040;
+	background-color: #404040;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 }
 
 input[type="text"],
@@ -591,8 +636,11 @@ input[type="search"],
 textarea {
 	padding: 0.3em 0.6em;
 	max-width: 100%;
-	border: 1px solid #ddd;
+	border: 1px solid;
+	border-color: #ddd;
+	border-color: var(--light-border-color);
 	color: #666;
+	color: var(--medium-text-color);
 }
 
 input[type="text"]:focus,
@@ -601,8 +649,11 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	border: 1px solid #ccc;
-	color: #111;
+	border: 1px solid;
+	border-color: #ccc;
+	border-color: var(--medium-border-color);
+	color: #404040;
+	color: var(--text-color);
 }
 
 textarea {

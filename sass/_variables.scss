@@ -9,11 +9,10 @@ $wideBlockWidth: 1120px;
 $contentFullwidth: 1280px;
 $wideBlockFullwidth: 1440px;
 
-// Text Color
-$textColor: rgba(0, 0, 0, 0.9);
-
 // Theme Colors
 $themeColors: (
+
+	// Block Editor Colors
 	--primary-color                  : #c9493b,
 	--secondary-color                : #e36355,
 	--accent-color                   : #078896,
@@ -21,34 +20,48 @@ $themeColors: (
 	--light-gray-color               : #e4e4e4,
 	--gray-color                     : #848484,
 	--dark-gray-color                : #242424,
-	--text-color                     : rgba(0, 0, 0, 0.9),
-	--medium-text-color              : rgba(0, 0, 0, 0.7),
-	--light-text-color               : rgba(0, 0, 0, 0.5),
-	--link-color                     : #c9493b,
-	--link-hover-color               : #e36355,
-	--button-color                   : #c9493b,
+
+	// Text Colors
+	--text-color                     : #404040,
+	--medium-text-color              : #666,
+	--light-text-color               : #999,
+	--dark-border-color              : #404040,
+	--medium-border-color            : #ccc,
+	--light-border-color             : #ddd,
+
+	// Links and Buttons
+	--link-color                     : #22aadd,
+	--link-hover-color               : #404040,
+	--button-color                   : #22aadd,
 	--button-text-color              : #fff,
-	--button-hover-color             : #e36355,
+	--button-hover-color             : #404040,
 	--button-hover-text-color        : #fff,
+
+	// Page
 	--page-background-color          : #fff,
-	--page-border-color              : rgba(0, 0, 0, 0.1),
-	--page-light-bg-color            : rgba(0, 0, 0, 0.05),
-	--header-background-color        : #fff,
-	--header-text-color              : rgba(0, 0, 0, 0.9),
-	--header-text-hover-color        : #e36355,
-	--header-border-color            : rgba(0, 0, 0, 0.1),
-	--title-color                    : #202020,
-	--title-hover-color              : #e36355,
-	--footer-widgets-background-color: #252525,
-	--footer-widgets-text-color      : rgba(255, 255, 255, 0.5),
-	--footer-widgets-link-color      : rgba(255, 255, 255, 0.95),
-	--footer-widgets-link-hover-color: rgba(255, 255, 255, 0.5),
-	--footer-widgets-border-color    : rgba(255, 255, 255, 0.1),
-	--footer-background-color        : #202020,
-	--footer-text-color              : rgba(255, 255, 255, 0.5),
-	--footer-link-color              : rgba(255, 255, 255, 0.95),
-	--footer-link-hover-color        : rgba(255, 255, 255, 0.5),
-	--footer-border-color            : rgba(255, 255, 255, 0.1),
+	--header-background-color        : #111133,
+	--site-title-color               : #fff,
+	--site-title-hover-color         : rgba(255, 255, 255, 0.6),
+
+	// Navigation
+	--navi-color                     : #fff,
+	--navi-hover-color               : rgba(255, 255, 255, 0.6),
+	--navi-border-color              : rgba(255, 255, 255, 0.1),
+
+	// Posts
+	--title-color                    : #111133,
+	--title-hover-color              : #4477aa,
+
+	// Widgets
+	--widget-title-color             : #111133,
+	--widget-title-hover-color       : #4477aa,
+	--widget-title-border-color      : #111133,
+
+	// Footer
+	--footer-background-color        : #111133,
+	--footer-text-color              : rgba(255, 255, 255, 0.6),
+	--footer-link-color              : #fff,
+	--footer-link-hover-color        : rgba(255, 255, 255, 0.6),
 );
 
 // Theme Fonts

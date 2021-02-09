@@ -3,7 +3,7 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
+	@include color(--text-color);
 	@include font-size(16);
 	@include font-family(--text-font);
 	@include line-height(--text-line-height);
@@ -16,7 +16,8 @@ h4,
 h5,
 h6 {
 	clear: both;
-	margin: 0.75em 0;
+	margin-top: 0.75em;
+	margin-bottom: 0.75em;
 	@include line-height(--title-line-height);
 }
 
