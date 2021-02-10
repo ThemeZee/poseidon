@@ -1,6 +1,5 @@
 .widget {
 	margin: 0 0 3em 0;
-	color: #333;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -13,8 +12,9 @@
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	border-bottom: 4px solid #eee;
-	color: #404040;
+	border-bottom: 4px solid;
+	@include border-color(--widget-title-border-color);
+	@include color(--widget-title-color);
 	@include font-size(18);
 	@include font-family(--widget-title-font);
 	@include font-weight(--widget-title-font-weight);
@@ -36,13 +36,13 @@
 
 .widget-title a:link,
 .widget-title a:visited {
-	color: #404040;
+	@include color(--widget-title-color);
 	transition: all 0.2s ease;
 }
 
 .widget-title a:hover,
 .widget-title a:active {
-	color: #22aadd;
+	@include color(--widget-title-hover-color);
 }
 
 /* Make sure select elements fit in widgets. */
@@ -71,7 +71,7 @@
 	float: left;
 	margin: 0 2px 2px 0;
 	padding: 0.2em 0.5em 0.3em;
-	background: #eee;
+	@include background(--light-background-color);
 	text-decoration: none;
 	font-size: 16px !important;
 	font-size: 1rem !important;
@@ -79,14 +79,14 @@
 
 .widget_tag_cloud .tagcloud a:link,
 .widget_tag_cloud .tagcloud a:visited {
-	color: #777;
+	@include color(--medium-text-color);
 	transition: all 0.2s ease;
 }
 
 .widget_tag_cloud .tagcloud a:hover,
 .widget_tag_cloud .tagcloud a:active {
-	background: #22aadd;
-	color: #fff;
+	@include background(--button-color);
+	@include color(--button-text-color);
 }
 
 /* Theme Search Widget */

@@ -4,6 +4,7 @@
 	@include variable(--text-color, $themeColors);
 	@include variable(--medium-text-color, $themeColors);
 	@include variable(--light-text-color, $themeColors);
+	@include variable(--light-background-color, $themeColors);
 	@include variable(--dark-border-color, $themeColors);
 	@include variable(--medium-border-color, $themeColors);
 	@include variable(--light-border-color, $themeColors);

@@ -7,8 +7,9 @@
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	border-bottom: 4px solid #eee;
-	color: #404040;
+	border-bottom: 4px solid;
+	@include border-color(--widget-title-border-color);
+	@include color(--widget-title-color);
 	@include font-size(18);
 	@include font-family(--widget-title-font);
 	@include font-weight(--widget-title-font-weight);

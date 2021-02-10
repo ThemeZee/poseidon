@@ -1,7 +1,7 @@
 /* Entry Meta */
 .entry-meta {
 	margin: 0.5em 0.2em 0;
-	color: #aaa;
+	@include color(--light-text-color);
 	text-transform: uppercase;
 	font-size: 13px;
 	font-size: 0.8125rem;
@@ -9,18 +9,18 @@
 
 .entry-meta a:link,
 .entry-meta a:visited {
-	color: #aaa;
+	@include color(--light-text-color);
 }
 
 .entry-meta a:hover,
 .entry-meta a:active {
-	color: #777;
+	@include color(--medium-text-color);
 }
 
 .entry-meta span::after {
 	display: inline-block;
 	margin-left: 0.2em;
-	color: #aaa;
+	@include color(--light-text-color);
 	content: '\f428';
 	vertical-align: middle;
 	font: normal 16px 'Genericons';
@@ -74,18 +74,18 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 	float: left;
 	margin: 0 2px 2px 0;
 	padding: 0.2em 0.5em 0.3em;
-	background: #eee;
+	@include background(--light-background-color);
 	text-decoration: none;
 }
 
 .entry-tags .meta-tags a:link,
 .entry-tags .meta-tags a:visited {
-	color: #777;
+	@include color(--medium-text-color);
 	transition: all 0.2s ease;
 }
 
 .entry-tags .meta-tags a:hover,
 .entry-tags .meta-tags a:active {
-	background: #22aadd;
-	color: #fff;
+	@include background(--button-color);
+	@include color(--button-text-color);
 }

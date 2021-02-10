@@ -10,7 +10,7 @@
 	display: inline;
 	margin: 0;
 	padding: 0;
-	color: #404040;
+	@include color(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	@include font-size(40);
@@ -22,14 +22,14 @@
 
 .entry-title a:link,
 .entry-title a:visited {
-	color: #404040;
+	@include color(--title-color);
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
 
 .entry-title a:hover,
 .entry-title a:active {
-	color: #22aadd;
+	@include color(--title-hover-color);
 }
 
 .type-post .wp-post-image {

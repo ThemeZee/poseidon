@@ -2,7 +2,8 @@
 .pagination {
 	display: inline-block;
 	margin: 0 0 3em;
-	border-top: 4px solid #eee;
+	border-top: 4px solid;
+	@include border-color(--widget-title-border-color);
 }
 
 .pagination a,

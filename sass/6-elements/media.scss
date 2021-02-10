@@ -22,7 +22,7 @@ object {
 	max-width: 100%;
 	font-size: 15px;
 	font-size: 0.9375rem;
-	color: #777;
+	@include color(--medium-text-color);
 }
 
 .wp-caption img[class*="wp-image-"] {
@@ -91,5 +91,5 @@ object {
 	display: block;
 	font-size: 15px;
 	font-size: 0.9375rem;
-	color: #777;
+	@include color(--medium-text-color);
 }
