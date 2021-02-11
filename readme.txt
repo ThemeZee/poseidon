@@ -292,15 +292,19 @@ Copyright: 2015 WooThemes, http://www.woothemes.com
 License: Licensed under MIT license (https://github.com/Keyamoon/svgxuse/blob/master/license)
 Copyright: 2017 IcoMoon.io
 
-6. Ubuntu Font - https://www.google.com/fonts/specimen/Ubuntu
+6. WPTT Webfont Loader - https://github.com/WPTT/webfont-loader
+License: Distributed under the terms of the MIT License (https://github.com/WPTT/webfont-loader/blob/master/LICENSE)
+Copyright: 2020 Ari Stathopoulos, WordPress Themes Team
+
+7. Ubuntu Font - https://www.google.com/fonts/specimen/Ubuntu
 License: Distributed under the terms of the Ubuntu Font License (http://font.ubuntu.com/ufl/)
 Copyright: 2015 Dalton Maag
 
-7. Raleway Font - https://www.google.com/fonts/specimen/Raleway
+8. Raleway Font - https://www.google.com/fonts/specimen/Raleway
 License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
 Copyright: 2015 Matt McInerney, Pablo Impallari
 
-8. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
+9. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 
 Image 1: https://pixabay.com/en/sea-ocean-water-light-diver-79606/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
