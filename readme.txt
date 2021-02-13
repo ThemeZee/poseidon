@@ -26,6 +26,10 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 2.2 - 2021-02-13 =
+* added WPTT Webfont loader to host theme fonts locally
+* added CSS variables for theme colors
+
 = 2.1.1 - 2020-10-05 =
 * added AMP dropdown toggles for sub menus
 * added CSS variables for typography styling
