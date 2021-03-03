@@ -38,6 +38,8 @@
 
 	// Footer
 	@include variable(--footer-background-color, $themeColors);
+	@include variable(--footer-text-color, $themeColors);
+	@include variable(--footer-text-hover-color, $themeColors);
 
 	// Typography Styling
 	@include variable(--text-font, $themeFonts);
