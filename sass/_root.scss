@@ -1,5 +1,16 @@
 :root {
 
+	// Block Editor Colors
+	@include variable(--primary-color, $themeColors);
+	@include variable(--secondary-color, $themeColors);
+	@include variable(--tertiary-color, $themeColors);
+	@include variable(--accent-color, $themeColors);
+	@include variable(--contrast-color, $themeColors);
+	@include variable(--highlight-color, $themeColors);
+	@include variable(--light-gray-color, $themeColors);
+	@include variable(--gray-color, $themeColors);
+	@include variable(--dark-gray-color, $themeColors);
+
 	// Text Colors
 	@include variable(--text-color, $themeColors);
 	@include variable(--medium-text-color, $themeColors);

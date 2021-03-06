@@ -1,41 +1,101 @@
 /* Block Text Colors */
-.has-primary-color {
-	color: #22aadd;
+.has-primary-color,
+.wp-block-button__link.has-primary-color {
+	@include color(--primary-color);
 }
 
-.has-white-color {
-	color: #ffffff;
+.has-secondary-color,
+.wp-block-button__link.has-secondary-color {
+	@include color(--secondary-color);
 }
 
-.has-light-gray-color {
-	color: #f0f0f0;
+.has-tertiary-color,
+.wp-block-button__link.has-tertiary-color {
+	@include color(--tertiary-color);
 }
 
-.has-dark-gray-color {
-	color: #777777;
+.has-accent-color,
+.wp-block-button__link.has-accent-color {
+	@include color(--accent-color);
 }
 
-.has-black-color {
-	color: #404040;
+.has-highlight-color,
+.wp-block-button__link.has-highlight-color {
+	@include color(--highlight-color);
+}
+
+.has-white-color,
+.wp-block-button__link.has-white-color {
+	color: #fff;
+}
+
+.has-light-gray-color,
+.wp-block-button__link.has-light-gray-color {
+	@include color(--light-gray-color);
+}
+
+.has-gray-color,
+.wp-block-button__link.has-gray-color {
+	@include color(--gray-color);
+}
+
+.has-dark-gray-color,
+.wp-block-button__link.has-dark-gray-color {
+	@include color(--dark-gray-color);
+}
+
+.has-black-color,
+.wp-block-button__link.has-black-color {
+	color: #000;
 }
 
 /* Block Background Colors */
-.has-primary-background-color {
-	background-color: #22aadd;
+.has-primary-background-color,
+.has-primary-background-color[class] {
+	@include background(--primary-color);
 }
 
-.has-white-background-color {
-	background-color: #ffffff;
+.has-secondary-background-color,
+.has-secondary-background-color[class] {
+	@include background(--secondary-color);
 }
 
-.has-light-gray-background-color {
-	background-color: #f0f0f0;
+.has-tertiary-background-color,
+.has-tertiary-background-color[class] {
+	@include background(--tertiary-color);
 }
 
-.has-dark-gray-background-color {
-	background-color: #777777;
+.has-accent-background-color,
+.has-accent-background-color[class] {
+	@include background(--accent-color);
 }
 
-.has-black-background-color {
-	background-color: #404040;
+.has-highlight-background-color,
+.has-highlight-background-color[class] {
+	@include background(--highlight-color);
+}
+
+.has-white-background-color,
+.has-white-background-color[class] {
+	background-color: #fff;
+}
+
+.has-light-gray-background-color,
+.has-light-gray-background-color[class] {
+	@include background(--light-gray-color);
+}
+
+.has-gray-background-color,
+.has-gray-background-color[class] {
+	@include background(--gray-color);
+}
+
+.has-dark-gray-background-color,
+.has-dark-gray-background-color[class] {
+	@include background(--dark-gray-color);
+}
+
+.has-black-background-color,
+.has-black-background-color[class] {
+	background-color: #000;
 }

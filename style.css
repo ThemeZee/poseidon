@@ -60,6 +60,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
+	--primary-color: #cc5555;
+	--secondary-color: #5d7b94;
+	--tertiary-color: #90aec7;
+	--accent-color: #60945d;
+	--highlight-color: #915d94;
+	--light-gray-color: #f0f0f0;
+	--gray-color: #999;
+	--dark-gray-color: #303030;
 	--text-color: #404040;
 	--medium-text-color: #777;
 	--light-text-color: #aaa;
@@ -1690,45 +1698,121 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 }
 
 /* Block Text Colors */
-.has-primary-color {
-	color: #22aadd;
+.has-primary-color,
+.wp-block-button__link.has-primary-color {
+	color: #cc5555;
+	color: var(--primary-color);
 }
 
-.has-white-color {
-	color: #ffffff;
+.has-secondary-color,
+.wp-block-button__link.has-secondary-color {
+	color: #5d7b94;
+	color: var(--secondary-color);
 }
 
-.has-light-gray-color {
+.has-tertiary-color,
+.wp-block-button__link.has-tertiary-color {
+	color: #90aec7;
+	color: var(--tertiary-color);
+}
+
+.has-accent-color,
+.wp-block-button__link.has-accent-color {
+	color: #60945d;
+	color: var(--accent-color);
+}
+
+.has-highlight-color,
+.wp-block-button__link.has-highlight-color {
+	color: #915d94;
+	color: var(--highlight-color);
+}
+
+.has-white-color,
+.wp-block-button__link.has-white-color {
+	color: #fff;
+}
+
+.has-light-gray-color,
+.wp-block-button__link.has-light-gray-color {
 	color: #f0f0f0;
+	color: var(--light-gray-color);
 }
 
-.has-dark-gray-color {
-	color: #777777;
+.has-gray-color,
+.wp-block-button__link.has-gray-color {
+	color: #999;
+	color: var(--gray-color);
 }
 
-.has-black-color {
-	color: #404040;
+.has-dark-gray-color,
+.wp-block-button__link.has-dark-gray-color {
+	color: #303030;
+	color: var(--dark-gray-color);
+}
+
+.has-black-color,
+.wp-block-button__link.has-black-color {
+	color: #000;
 }
 
 /* Block Background Colors */
-.has-primary-background-color {
-	background-color: #22aadd;
+.has-primary-background-color,
+.has-primary-background-color[class] {
+	background-color: #cc5555;
+	background-color: var(--primary-color);
 }
 
-.has-white-background-color {
-	background-color: #ffffff;
+.has-secondary-background-color,
+.has-secondary-background-color[class] {
+	background-color: #5d7b94;
+	background-color: var(--secondary-color);
 }
 
-.has-light-gray-background-color {
+.has-tertiary-background-color,
+.has-tertiary-background-color[class] {
+	background-color: #90aec7;
+	background-color: var(--tertiary-color);
+}
+
+.has-accent-background-color,
+.has-accent-background-color[class] {
+	background-color: #60945d;
+	background-color: var(--accent-color);
+}
+
+.has-highlight-background-color,
+.has-highlight-background-color[class] {
+	background-color: #915d94;
+	background-color: var(--highlight-color);
+}
+
+.has-white-background-color,
+.has-white-background-color[class] {
+	background-color: #fff;
+}
+
+.has-light-gray-background-color,
+.has-light-gray-background-color[class] {
 	background-color: #f0f0f0;
+	background-color: var(--light-gray-color);
 }
 
-.has-dark-gray-background-color {
-	background-color: #777777;
+.has-gray-background-color,
+.has-gray-background-color[class] {
+	background-color: #999;
+	background-color: var(--gray-color);
 }
 
-.has-black-background-color {
-	background-color: #404040;
+.has-dark-gray-background-color,
+.has-dark-gray-background-color[class] {
+	background-color: #303030;
+	background-color: var(--dark-gray-color);
+}
+
+.has-black-background-color,
+.has-black-background-color[class] {
+	background-color: #000;
 }
 
 /*--------------------------------------------------------------
