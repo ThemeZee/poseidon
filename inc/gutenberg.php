@@ -18,14 +18,14 @@ function poseidon_gutenberg_support() {
 
 	// Define block color palette.
 	$color_palette = apply_filters( 'poseidon_color_palette', array(
-		'primary_color'    => '#cc5555',
-		'secondary_color'  => '#5d7b94',
-		'tertiary_color'   => '#90aec7',
-		'accent_color'     => '#60945d',
-		'highlight_color'  => '#915d94',
-		'light_gray_color' => '#f0f0f0',
-		'gray_color'       => '#999999',
-		'dark_gray_color'  => '#303030',
+		'primary_color'    => '#22aadd',
+		'secondary_color'  => '#0084b7',
+		'tertiary_color'   => '#005e91',
+		'accent_color'     => '#dd2e22',
+		'highlight_color'  => '#00b734',
+		'light_gray_color' => '#eeeeee',
+		'gray_color'       => '#777777',
+		'dark_gray_color'  => '#404040',
 	) );
 
 	// Add theme support for block color palette.

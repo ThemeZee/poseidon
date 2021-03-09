@@ -4,9 +4,9 @@ Theme URI: https://themezee.com/themes/poseidon/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Poseidon is an elegant designed WordPress theme featuring a splendid fullscreen image slideshow. The clean typography and spacious white layout makes it great to share your stories. You can use the theme as simple blog or easily create a news website with the widget-based Magazine Homepage template.
-Version: 2.2
+Version: 2.2.1
 Requires at least: 5.2
-Tested up to: 5.5
+Tested up to: 5.7
 Requires PHP: 5.6
 AMP: true
 License: GNU General Public License v2 or later
@@ -60,14 +60,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
-	--primary-color: #cc5555;
-	--secondary-color: #5d7b94;
-	--tertiary-color: #90aec7;
-	--accent-color: #60945d;
-	--highlight-color: #915d94;
-	--light-gray-color: #f0f0f0;
-	--gray-color: #999;
-	--dark-gray-color: #303030;
+	--primary-color: #22aadd;
+	--secondary-color: #0084b7;
+	--tertiary-color: #005e91;
+	--accent-color: #dd2e22;
+	--highlight-color: #00b734;
+	--light-gray-color: #eeeeee;
+	--gray-color: #777777;
+	--dark-gray-color: #404040;
 	--text-color: #404040;
 	--medium-text-color: #777;
 	--light-text-color: #aaa;
@@ -1700,31 +1700,31 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 /* Block Text Colors */
 .has-primary-color,
 .wp-block-button__link.has-primary-color {
-	color: #cc5555;
+	color: #22aadd;
 	color: var(--primary-color);
 }
 
 .has-secondary-color,
 .wp-block-button__link.has-secondary-color {
-	color: #5d7b94;
+	color: #0084b7;
 	color: var(--secondary-color);
 }
 
 .has-tertiary-color,
 .wp-block-button__link.has-tertiary-color {
-	color: #90aec7;
+	color: #005e91;
 	color: var(--tertiary-color);
 }
 
 .has-accent-color,
 .wp-block-button__link.has-accent-color {
-	color: #60945d;
+	color: #dd2e22;
 	color: var(--accent-color);
 }
 
 .has-highlight-color,
 .wp-block-button__link.has-highlight-color {
-	color: #915d94;
+	color: #00b734;
 	color: var(--highlight-color);
 }
 
@@ -1735,19 +1735,19 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 
 .has-light-gray-color,
 .wp-block-button__link.has-light-gray-color {
-	color: #f0f0f0;
+	color: #eeeeee;
 	color: var(--light-gray-color);
 }
 
 .has-gray-color,
 .wp-block-button__link.has-gray-color {
-	color: #999;
+	color: #777777;
 	color: var(--gray-color);
 }
 
 .has-dark-gray-color,
 .wp-block-button__link.has-dark-gray-color {
-	color: #303030;
+	color: #404040;
 	color: var(--dark-gray-color);
 }
 
@@ -1759,31 +1759,31 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 /* Block Background Colors */
 .has-primary-background-color,
 .has-primary-background-color[class] {
-	background-color: #cc5555;
+	background-color: #22aadd;
 	background-color: var(--primary-color);
 }
 
 .has-secondary-background-color,
 .has-secondary-background-color[class] {
-	background-color: #5d7b94;
+	background-color: #0084b7;
 	background-color: var(--secondary-color);
 }
 
 .has-tertiary-background-color,
 .has-tertiary-background-color[class] {
-	background-color: #90aec7;
+	background-color: #005e91;
 	background-color: var(--tertiary-color);
 }
 
 .has-accent-background-color,
 .has-accent-background-color[class] {
-	background-color: #60945d;
+	background-color: #dd2e22;
 	background-color: var(--accent-color);
 }
 
 .has-highlight-background-color,
 .has-highlight-background-color[class] {
-	background-color: #915d94;
+	background-color: #00b734;
 	background-color: var(--highlight-color);
 }
 
@@ -1794,19 +1794,19 @@ body.date-hidden.author-hidden.categories-hidden .post-slider .entry-meta {
 
 .has-light-gray-background-color,
 .has-light-gray-background-color[class] {
-	background-color: #f0f0f0;
+	background-color: #eeeeee;
 	background-color: var(--light-gray-color);
 }
 
 .has-gray-background-color,
 .has-gray-background-color[class] {
-	background-color: #999;
+	background-color: #777777;
 	background-color: var(--gray-color);
 }
 
 .has-dark-gray-background-color,
 .has-dark-gray-background-color[class] {
-	background-color: #303030;
+	background-color: #404040;
 	background-color: var(--dark-gray-color);
 }
 
