@@ -1,38 +1,14 @@
-/*
- * ThemeZee Widget Bundle CSS
- * https://themezee.com/plugins/widget-bundle/
- *
- * Copyright(C) 2015, ThemeZee.com - support@themezee.com
- * License: GPL v3
- * License URI: http://www.gnu.org/licenses/gpl-3.0.html
- *
- * @package Poseidon
- */
-
-
-/*--------------------------------------------------------------
-# General Styles
----------------------------------------------------------------- */
-
-/* Clearing Floats */
-.tzwb-clearfix:before,
-.tzwb-clearfix:after {
+/* Widget Bundle */
+.tzwb-clearfix::before,
+.tzwb-clearfix::after {
 	display: table;
 	content: " ";
 }
 
-.tzwb-clearfix:after {
+.tzwb-clearfix::after {
 	clear: both;
 }
 
-.tzwb-clearfix {
-	*zoom: 1; /* For IE 6/7 only */
-}
-
-
-/*--------------------------------------------------------------
-# Posts List
----------------------------------------------------------------- */
 .tzwb-posts-list li {
 	overflow: auto;
 	margin-bottom: 0.5em;
@@ -58,9 +34,6 @@
 	font-size: 0.75rem;
 }
 
-/*--------------------------------------------------------------
-# Comments List
----------------------------------------------------------------- */
 .tzwb-comments-list li {
 	overflow: auto;
 	margin-bottom: 0.5em;
@@ -84,10 +57,6 @@
 	font-size: 0.75rem;
 }
 
-
-/*--------------------------------------------------------------
-# Tabbed Content Widget
----------------------------------------------------------------- */
 .tzwb-tabbed-content .tzwb-tabnavi-wrap {
 	overflow: auto;
 	margin: 0 -0.3em;
@@ -127,7 +96,7 @@
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
-.tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
+.tzwb-tabbed-content .tzwb-tabnavi li a:visited {
 	color: #404040;
 	transition: all 0.2s ease;
 }
@@ -147,10 +116,6 @@
 	padding: 0;
 }
 
-
-/*--------------------------------------------------------------
-# Social Icons Widget
----------------------------------------------------------------- */
 .tzwb-social-icons .social-icons-menu {
 	list-style: none;
 	line-height: 1;
@@ -165,18 +130,11 @@
 	background: #22aadd;
 }
 
-.tzwb-social-icons .social-icons-menu li a:before {
+.tzwb-social-icons .social-icons-menu li a::before {
 	font-size: 24px;
 }
 
 .tzwb-social-icons .social-icons-menu li a:hover {
 	background: #404040;
 	text-decoration: none;
-}
-
-/*--------------------------------------------------------------
-# Facebook Like Box Widget
----------------------------------------------------------------- */
-.tzwb-facebook-likebox .tzwb-content {
-	overflow: hidden;
 }
