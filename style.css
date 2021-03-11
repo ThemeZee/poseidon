@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/poseidon/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Poseidon is an elegant designed WordPress theme featuring a splendid fullscreen image slideshow. The clean typography and spacious white layout makes it great to share your stories. You can use the theme as simple blog or easily create a news website with the widget-based Magazine Homepage template.
-Version: 2.2.1
+Version: 2.2.2
 Requires at least: 5.2
 Tested up to: 5.7
 Requires PHP: 5.6
@@ -2796,6 +2796,7 @@ ul.related-posts-list {
 .tzwb-comments-list .tzwb-comment-date {
 	margin: 0.4em 0.2em 0;
 	color: #aaa;
+	color: var(--light-text-color);
 	text-transform: uppercase;
 	font-size: 12px;
 	font-size: 0.75rem;
@@ -2812,8 +2813,10 @@ ul.related-posts-list {
 	position: relative;
 	float: left;
 	width: 100%;
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	border-color: #ddd;
+	border-color: var(--light-border-color);
 	list-style: none;
 	list-style-position: outside;
 }
@@ -2831,28 +2834,37 @@ ul.related-posts-list {
 	margin: 0;
 	padding: 0.8em 0.8em 0.5em;
 	color: #404040;
+	color: var(--link-hover-color);
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-family: 'Raleway', Tahoma, Arial;
+	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
+	line-height: 1.5;
+	line-height: var(--title-line-height);
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
 .tzwb-tabbed-content .tzwb-tabnavi li a:visited {
 	color: #404040;
+	color: var(--link-hover-color);
 	transition: all 0.2s ease;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover,
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
 	color: #22aadd;
+	color: var(--link-color);
 	text-decoration: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
 	color: #22aadd;
+	color: var(--link-color);
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -2871,15 +2883,22 @@ ul.related-posts-list {
 
 .tzwb-social-icons .social-icons-menu li a {
 	padding: 0.75em;
-	background: #22aadd;
+	background-color: #22aadd;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 }
 
 .tzwb-social-icons .social-icons-menu li a::before {
 	font-size: 24px;
+	color: currentColor;
 }
 
 .tzwb-social-icons .social-icons-menu li a:hover {
-	background: #404040;
+	background-color: #404040;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 	text-decoration: none;
 }
 
