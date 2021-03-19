@@ -876,6 +876,8 @@ textarea {
 	margin: -0.2em 0 0.6em;
 	font-size: 14px;
 	font-size: 0.875rem;
+	color: #404040;
+	color: var(--site-title-color);
 }
 
 /* Custom Header Image */
