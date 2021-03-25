@@ -26,6 +26,9 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 2.2.3 - 2021-03-25 =
+* updated footer color CSS variables
+
 = 2.2.2 - 2021-03-11 =
 * added CSS variables for Widget Bundle and Related Posts plugin styling
 
