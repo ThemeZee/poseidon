@@ -96,7 +96,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--widget-title-border-color: #eee;
 	--footer-background-color: #fff;
 	--footer-text-color: #404040;
-	--footer-text-hover-color: #22aadd;
 	--text-font: "Ubuntu", arial, helvetica, sans-serif;
 	--title-font: "Raleway", arial, helvetica, sans-serif;
 	--navi-font: "Raleway", arial, helvetica, sans-serif;
@@ -2397,6 +2396,8 @@ object {
 	border-top: 1px solid;
 	border-color: rgba(0, 0, 0, 0.12);
 	border-color: var(--page-border-color);
+	color: #404040;
+	color: var(--footer-text-color);
 	background-color: #fff;
 	background-color: var(--footer-background-color);
 }
@@ -2409,6 +2410,19 @@ object {
 .site-footer .site-info {
 	float: left;
 	padding: 2em 0;
+}
+
+.site-footer .site-info a:link,
+.site-footer .site-info a:visited {
+	color: #22aadd;
+	color: var(--footer-link-color);
+	text-decoration: none;
+}
+
+.site-footer .site-info a:hover,
+.site-footer .site-info a:active {
+	color: #404040;
+	color: var(--footer-link-hover-color);
 }
 
 /*--------------------------------------------------------------
