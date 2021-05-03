@@ -405,7 +405,7 @@ if ( ! function_exists( 'poseidon_pagination' ) ) :
 
 		the_posts_pagination( array(
 			'mid_size'  => 2,
-			'prev_text' => '&laquo<span class="screen-reader-text">' . esc_html_x( 'Previous Posts', 'pagination', 'poseidon' ) . '</span>',
+			'prev_text' => '&laquo;<span class="screen-reader-text">' . esc_html_x( 'Previous Posts', 'pagination', 'poseidon' ) . '</span>',
 			'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Posts', 'pagination', 'poseidon' ) . '</span>&raquo;',
 		) );
 
