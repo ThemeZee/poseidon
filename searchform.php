@@ -2,6 +2,7 @@
 /**
  * Custom Markup for Search form
  *
+ * @version 1.1
  * @package Poseidon
  */
 
@@ -16,7 +17,7 @@
 			title="<?php echo esc_attr_x( 'Search for:', 'label', 'poseidon' ); ?>" />
 	</label>
 	<button type="submit" class="search-submit">
-		<span class="genericon-search"></span>
+		<?php echo poseidon_get_svg( 'search' ); ?>
 		<span class="screen-reader-text"><?php echo esc_html_x( 'Search', 'submit button', 'poseidon' ); ?></span>
 	</button>
 </form>

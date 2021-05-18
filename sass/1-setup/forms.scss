@@ -57,3 +57,42 @@ textarea:focus {
 textarea {
 	width: 100%;
 }
+
+/* Search Form */
+.search-form {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.search-form label {
+	flex-grow: 1;
+}
+
+.search-form .screen-reader-text {
+	display: none;
+}
+
+.search-form .search-field {
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0.65rem 0.7rem;
+	min-width: 100px;
+	width: 100%;
+	-webkit-appearance: none;
+	line-height: 1;
+}
+
+.search-form .search-submit {
+	display: flex;
+	margin-left: -1px;
+	padding: 0.65rem 0.7rem;
+	align-items: center;
+}
+
+.search-form .search-submit .icon-search {
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
+}
