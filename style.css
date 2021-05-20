@@ -1417,17 +1417,18 @@ textarea {
 
 .entry-meta span::after {
 	display: inline-block;
-	margin-left: 0.2em;
 	color: #aaa;
 	color: var(--light-text-color);
-	content: '\f428';
+	margin: 0 0.5rem;
+	content: "\2022";
+	font-size: 15px;
+	line-height: 1;
 	vertical-align: middle;
-	font: normal 16px 'Genericons';
-	-webkit-font-smoothing: antialiased;
 }
 
 .entry-meta span:last-child::after {
-	display: none;
+	margin: 0;
+	content: "";
 }
 
 /* Hide post meta if they are deactivated in settings */
