@@ -2757,6 +2757,342 @@ ul.related-posts-list {
 	text-decoration: none;
 }
 
+/*
+ * jQuery FlexSlider v2.5.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 and later license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ *
+ * @package Poseidon
+ */
+
+/* RESETS */
+.zeeflex-container a:hover,
+.zeeflex-slider a:hover,
+.zeeflex-container a:focus,
+.zeeflex-slider a:focus {
+	outline: none;
+}
+
+.zeeslides,
+.zeeslides > li,
+.zeeflex-control-nav,
+.zeeflex-direction-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.zeeflex-pauseplay span {
+	text-transform: capitalize;
+}
+
+/* BASE STYLES */
+.zeeflexslider {
+	margin: 0;
+	padding: 0;
+}
+
+.zeeflexslider .zeeslides > li {
+	display: none;
+}
+
+.zeeflexslider .zeeslides img {
+	display: block;
+	width: 100%;
+}
+
+.zeeflexslider .zeeslides::after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	content: "\0020";
+	line-height: 0;
+}
+
+html[xmlns] .zeeflexslider .zeeslides {
+	display: block;
+}
+
+* html .zeeflexslider .zeeslides {
+	height: 1%;
+}
+
+.no-js .zeeflexslider .zeeslides > li:first-child {
+	display: block;
+}
+
+/* Poseidon Slider Theme */
+.post-slider-container {
+	overflow: hidden;
+	margin: -1px auto 0;
+	width: 100%;
+	max-width: 1920px;
+}
+
+.post-slider-wrap {
+	position: relative;
+}
+
+.post-slider,
+.zeeflexslider .zeeslides {
+	zoom: 1;
+}
+
+.post-slider .zeeslide {
+	position: relative;
+}
+
+.zeeflex-viewport {
+	max-height: 2000px;
+	transition: all 1s ease;
+}
+
+.post-slider .zeeslide .slide-image-wrap {
+	margin: 0;
+	padding: 0;
+	background: #e5e5e5;
+}
+
+.post-slider .zeeslide .slide-image {
+	margin: auto;
+	padding: 0;
+	max-width: 100%;
+	max-height: 480px;
+	width: auto;
+	height: auto;
+	vertical-align: top;
+}
+
+.post-slider .zeeslide .slide-post {
+	position: absolute;
+	bottom: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	color: #fff;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.post-slider .zeeslide .slide-content {
+	padding: 2em;
+}
+
+.post-slider .zeeslide .entry-title {
+	color: #fff;
+	text-shadow: 0 0 10px #000;
+	font-size: 48px;
+	font-size: 3rem;
+}
+
+.post-slider .zeeslide .entry-meta {
+	text-shadow: 0 0 5px #000;
+}
+
+.post-slider .zeeslide .entry-meta span::after {
+	color: #fff;
+}
+
+.post-slider .zeeslide .entry-title a:link,
+.post-slider .zeeslide .entry-title a:visited,
+.post-slider .zeeslide .entry-meta a:link,
+.post-slider .zeeslide .entry-meta a:visited {
+	color: #fff;
+}
+
+.post-slider .zeeslide .entry-meta a:hover,
+.post-slider .zeeslide .entry-meta a:active,
+.post-slider .zeeslide .entry-title a:hover,
+.post-slider .zeeslide .entry-title a:active {
+	color: #ccc;
+}
+
+.post-slider-controls {
+	clear: left;
+}
+
+/* Direction Nav */
+.post-slider-controls .zeeflex-direction-nav {
+	*height: 0;
+}
+
+.post-slider-controls .zeeflex-direction-nav a {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: -80px 0 0;
+	width: 80px;
+	height: 120px;
+	text-align: left;
+	font-size: 0;
+	cursor: pointer;
+}
+
+.post-slider-controls .zeeflex-direction-nav .zeeflex-prev {
+	left: 1em;
+}
+
+.post-slider-controls .zeeflex-direction-nav .zeeflex-next {
+	right: 1em;
+}
+
+.post-slider-controls .zeeflex-direction-nav a::before {
+	display: inline-block;
+	margin: 0;
+	color: #fff;
+	vertical-align: text-bottom;
+	text-decoration: inherit;
+	text-shadow: 0 0 10px #000;
+	font-size: 90px;
+	opacity: 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+.post-slider-wrap:hover .post-slider-controls .zeeflex-direction-nav a::before {
+	opacity: 0.5;
+}
+
+.post-slider-controls .zeeflex-direction-nav a.zeeflex-next::before {
+	content: '\003e';
+}
+
+.post-slider-controls .zeeflex-direction-nav a.zeeflex-prev::before {
+	content: '\003c';
+}
+
+.post-slider-wrap:hover .post-slider-controls .zeeflex-direction-nav a:hover::before,
+.post-slider-controls .zeeflex-direction-nav a:hover::before {
+	text-decoration: none;
+	opacity: 1;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 90em) {
+	.post-slider .zeeslide .entry-title {
+		font-size: 44px;
+		font-size: 2.75rem;
+	}
+}
+
+@media only screen and (max-width: 80em) {
+	.post-slider .zeeslide .slide-content {
+		padding: 1.5em 2em;
+	}
+
+	.post-slider .zeeslide .entry-title {
+		font-size: 40px;
+		font-size: 2.5rem;
+	}
+}
+
+@media only screen and (max-width: 70em) {
+	.post-slider .zeeslide .entry-title {
+		font-size: 36px;
+		font-size: 2.25rem;
+	}
+}
+
+@media only screen and (max-width: 60em) {
+	.post-slider .zeeslide .entry-title {
+		font-size: 32px;
+		font-size: 2rem;
+	}
+
+	.post-slider-controls .zeeflex-direction-nav a {
+		margin: -60px 0 0;
+	}
+
+	.post-slider-controls .zeeflex-direction-nav a::before {
+		font-size: 80px;
+		opacity: 0.5;
+	}
+}
+
+@media only screen and (max-width: 55em) {
+	.post-slider .zeeslide .slide-content {
+		padding: 1.25em 2em;
+	}
+
+	.post-slider .zeeslide .entry-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	.post-slider .zeeslide .entry-meta {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 50em) {
+	.post-slider .zeeslide .entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	.post-slider-controls .zeeflex-direction-nav a::before {
+		font-size: 70px;
+	}
+
+	.post-slider-controls .zeeflex-direction-nav a.zeeflex-prev::before {
+		margin: 15px 0 0 5px;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+	.post-slider .zeeslide .slide-content {
+		padding: 0.75em 1.5em;
+	}
+
+	.post-slider .zeeslide .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+
+	.post-slider-controls .zeeflex-direction-nav a {
+		margin: -50px 0 0;
+	}
+
+	.post-slider-controls .zeeflex-direction-nav a::before {
+		font-size: 60px;
+	}
+}
+
+@media only screen and (max-width: 30em) {
+	.post-slider .zeeslide .slide-content {
+		padding: 0.5em 1.5em;
+	}
+
+	.post-slider .zeeslide .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.post-slider-controls .zeeflex-direction-nav {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 20em) {
+	.post-slider .zeeslide .slide-content {
+		padding: 0.25em 1.5em;
+	}
+
+	.post-slider .zeeslide .entry-title {
+		font-size: 14px;
+		font-size: 0.875rem;
+	}
+}
+
 /*--------------------------------------------------------------
 # - Media Queries for Typography
 --------------------------------------------------------------*/

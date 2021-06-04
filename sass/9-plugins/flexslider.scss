@@ -11,15 +11,14 @@
  * @package Poseidon
  */
 
-/* ====================================================================================================================
- * RESETS
- * ====================================================================================================================*/
+/* RESETS */
 .zeeflex-container a:hover,
 .zeeflex-slider a:hover,
 .zeeflex-container a:focus,
 .zeeflex-slider a:focus {
 	outline: none;
 }
+
 .zeeslides,
 .zeeslides > li,
 .zeeflex-control-nav,
@@ -28,26 +27,27 @@
 	padding: 0;
 	list-style: none;
 }
+
 .zeeflex-pauseplay span {
 	text-transform: capitalize;
 }
 
-/* ====================================================================================================================
- * BASE STYLES
- * ====================================================================================================================*/
+/* BASE STYLES */
 .zeeflexslider {
 	margin: 0;
 	padding: 0;
 }
+
 .zeeflexslider .zeeslides > li {
 	display: none;
-	-webkit-backface-visibility: hidden;
 }
+
 .zeeflexslider .zeeslides img {
 	display: block;
 	width: 100%;
 }
-.zeeflexslider .zeeslides:after {
+
+.zeeflexslider .zeeslides::after {
 	display: block;
 	visibility: hidden;
 	clear: both;
@@ -55,20 +55,20 @@
 	content: "\0020";
 	line-height: 0;
 }
+
 html[xmlns] .zeeflexslider .zeeslides {
 	display: block;
 }
+
 * html .zeeflexslider .zeeslides {
 	height: 1%;
 }
+
 .no-js .zeeflexslider .zeeslides > li:first-child {
 	display: block;
 }
 
-/* ====================================================================================================================
- * Poseidon Slider Theme
- * ====================================================================================================================*/
-
+/* Poseidon Slider Theme */
 .post-slider-container {
 	overflow: hidden;
 	margin: -1px auto 0;
@@ -80,7 +80,8 @@ html[xmlns] .zeeflexslider .zeeslides {
 	position: relative;
 }
 
-.post-slider, .zeeflexslider .zeeslides {
+.post-slider,
+.zeeflexslider .zeeslides {
 	zoom: 1;
 }
 
@@ -115,7 +116,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 	overflow: hidden;
 	box-sizing: border-box;
 	width: 100%;
-	background: rgba(0,0,0,0.3);
+	background: rgba(0, 0, 0, 0.3);
 	color: #fff;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
@@ -136,7 +137,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 	text-shadow: 0 0 5px #000;
 }
 
-.post-slider .zeeslide .entry-meta span:after {
+.post-slider .zeeslide .entry-meta span::after {
 	color: #fff;
 }
 
@@ -167,7 +168,9 @@ html[xmlns] .zeeflexslider .zeeslides {
 	position: absolute;
 	top: 50%;
 	z-index: 10;
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: -80px 0 0;
 	width: 80px;
 	height: 120px;
@@ -184,56 +187,42 @@ html[xmlns] .zeeflexslider .zeeslides {
 	right: 1em;
 }
 
-.post-slider-controls .zeeflex-direction-nav a:before {
+.post-slider-controls .zeeflex-direction-nav a::before {
 	display: inline-block;
 	margin: 0;
 	color: #fff;
 	vertical-align: text-bottom;
 	text-decoration: inherit;
 	text-shadow: 0 0 10px #000;
-	font: normal 90px Genericons;
+	font-size: 90px;
 	opacity: 0;
 	-webkit-font-smoothing: antialiased;
 }
 
-.post-slider-wrap:hover .post-slider-controls .zeeflex-direction-nav a:before {
+.post-slider-wrap:hover .post-slider-controls .zeeflex-direction-nav a::before {
 	opacity: 0.5;
 }
 
-.post-slider-controls .zeeflex-direction-nav a.zeeflex-next:before {
-	margin: 10px 0 0;
-	content: '\f431';
-	-webkit-transform: rotate(270deg);
-	-moz-transform: rotate(270deg);
-	-o-transform: rotate(270deg);
-	-ms-transform: rotate(270deg);
+.post-slider-controls .zeeflex-direction-nav a.zeeflex-next::before {
+	content: '\003e';
 }
 
-.post-slider-controls .zeeflex-direction-nav a.zeeflex-prev:before {
-	margin: 15px 0 0 -5px;
-	content: '\f431';
-	-webkit-transform:rotate(90deg);
-	-moz-transform:rotate(90deg);
-	-o-transform:rotate(90deg);
-	-ms-transform:rotate(90deg);
+.post-slider-controls .zeeflex-direction-nav a.zeeflex-prev::before {
+	content: '\003c';
 }
 
-.post-slider-wrap:hover .post-slider-controls .zeeflex-direction-nav a:hover:before,
-.post-slider-controls .zeeflex-direction-nav a:hover:before {
+.post-slider-wrap:hover .post-slider-controls .zeeflex-direction-nav a:hover::before,
+.post-slider-controls .zeeflex-direction-nav a:hover::before {
 	text-decoration: none;
 	opacity: 1;
 }
 
-/*--------------------------------------------------------------
-# Media Queries
---------------------------------------------------------------*/
-
+/* Media Queries */
 @media only screen and (max-width: 90em) {
 	.post-slider .zeeslide .entry-title {
 		font-size: 44px;
 		font-size: 2.75rem;
 	}
-
 }
 
 @media only screen and (max-width: 80em) {
@@ -245,7 +234,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 		font-size: 40px;
 		font-size: 2.5rem;
 	}
-
 }
 
 @media only screen and (max-width: 70em) {
@@ -253,7 +241,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 		font-size: 36px;
 		font-size: 2.25rem;
 	}
-
 }
 
 @media only screen and (max-width: 60em) {
@@ -266,11 +253,10 @@ html[xmlns] .zeeflexslider .zeeslides {
 		margin: -60px 0 0;
 	}
 
-	.post-slider-controls .zeeflex-direction-nav a:before {
+	.post-slider-controls .zeeflex-direction-nav a::before {
 		font-size: 80px;
 		opacity: 0.5;
 	}
-
 }
 
 @media only screen and (max-width: 55em) {
@@ -286,7 +272,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 	.post-slider .zeeslide .entry-meta {
 		display: none;
 	}
-
 }
 
 @media only screen and (max-width: 50em) {
@@ -295,14 +280,13 @@ html[xmlns] .zeeflexslider .zeeslides {
 		font-size: 1.5rem;
 	}
 
-	.post-slider-controls .zeeflex-direction-nav a:before {
+	.post-slider-controls .zeeflex-direction-nav a::before {
 		font-size: 70px;
 	}
 
-	.post-slider-controls .zeeflex-direction-nav a.zeeflex-prev:before {
+	.post-slider-controls .zeeflex-direction-nav a.zeeflex-prev::before {
 		margin: 15px 0 0 5px;
 	}
-
 }
 
 @media only screen and (max-width: 40em) {
@@ -319,10 +303,9 @@ html[xmlns] .zeeflexslider .zeeslides {
 		margin: -50px 0 0;
 	}
 
-	.post-slider-controls .zeeflex-direction-nav a:before {
+	.post-slider-controls .zeeflex-direction-nav a::before {
 		font-size: 60px;
 	}
-
 }
 
 @media only screen and (max-width: 30em) {
@@ -338,7 +321,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 	.post-slider-controls .zeeflex-direction-nav {
 		display: none;
 	}
-
 }
 
 @media only screen and (max-width: 20em) {
@@ -350,5 +332,4 @@ html[xmlns] .zeeflexslider .zeeslides {
 		font-size: 14px;
 		font-size: 0.875rem;
 	}
-
 }
