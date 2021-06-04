@@ -141,9 +141,6 @@ function poseidon_scripts() {
 	// Register and Enqueue Stylesheet.
 	wp_enqueue_style( 'poseidon-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 
-	// Register Genericons.
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/assets/genericons/genericons.css', array(), '3.4.1' );
-
 	// Register and Enqueue HTML5shiv to support HTML5 elements in older IE versions.
 	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), '3.7.3' );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
