@@ -26,6 +26,9 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 2.3.1 - 2021-06-06 =
+* fixed styling of Social Icons widget from Widget Bundle plugin
+
 = 2.3 - 2021-06-05 =
 * added SVG icons for all theme icons
 * removed Genericons icon font

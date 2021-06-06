@@ -118,6 +118,11 @@
 }
 
 .tzwb-social-icons .social-icons-menu {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0;
+	padding: 0;
+	border: none;
 	list-style: none;
 	line-height: 1;
 }
@@ -127,18 +132,22 @@
 }
 
 .tzwb-social-icons .social-icons-menu li a {
+	display: flex;
 	padding: 0.75em;
 	@include background(--button-color);
 	@include color(--button-text-color);
-}
-
-.tzwb-social-icons .social-icons-menu li a::before {
-	font-size: 24px;
-	color: currentColor;
 }
 
 .tzwb-social-icons .social-icons-menu li a:hover {
 	@include background(--button-hover-color);
 	@include color(--button-hover-text-color);
 	text-decoration: none;
+}
+
+.tzwb-social-icons .social-icons-menu .icon {
+	margin: 0;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	fill: currentColor;
 }
