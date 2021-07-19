@@ -13,7 +13,6 @@ require( get_template_directory() . '/inc/customizer/functions/callback-function
 require( get_template_directory() . '/inc/customizer/controls/category-dropdown-control.php' );
 require( get_template_directory() . '/inc/customizer/controls/header-control.php' );
 require( get_template_directory() . '/inc/customizer/controls/links-control.php' );
-require( get_template_directory() . '/inc/customizer/controls/magazine-widget-area-control.php' );
 require( get_template_directory() . '/inc/customizer/controls/plugin-control.php' );
 require( get_template_directory() . '/inc/customizer/controls/upgrade-control.php' );
 
@@ -21,7 +20,6 @@ require( get_template_directory() . '/inc/customizer/controls/upgrade-control.ph
 require( get_template_directory() . '/inc/customizer/sections/customizer-general.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-blog.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-post.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-magazine.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-slider.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-info.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-website.php' );

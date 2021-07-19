@@ -3660,28 +3660,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 /* Customizer Preview */
-.magazine-widgets-placeholder {
-	position: relative;
-}
-
-.magazine-widgets-placeholder .magazine-widgets-placeholder-title {
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	text-transform: uppercase;
-	margin: 0;
-	padding: 1em 1em 1em 55px;
-	color: #0085ba;
-	border: 2px dashed #0085ba;
-}
-
-/* Add some space around the visual edit shortcut buttons. */
-.magazine-widgets-placeholder .customize-partial-edit-shortcut button {
-	left: 15px;
-	top: 12px;
-}
-
 .customize-partial-edit-shortcut-poseidon_theme_options-excerpt_more {
 	left: -9999px;
 }
