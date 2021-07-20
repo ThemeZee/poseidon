@@ -20,6 +20,8 @@ $theme_options = poseidon_theme_options();
 		// Display Magazine Homepage Widgets.
 		poseidon_magazine_widgets();
 
+		do_action( 'poseidon_before_blog' );
+
 		// Display Latest Posts.
 		if ( have_posts() ) :
 

@@ -22,9 +22,13 @@
 <body <?php body_class(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 
+	<?php do_action( 'poseidon_before_site' ); ?>
+
 	<div id="page" class="hfeed site">
 
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'poseidon' ); ?></a>
+
+		<?php do_action( 'poseidon_before_header' ); ?>
 
 		<?php do_action( 'poseidon_header_bar' ); ?>
 
@@ -45,6 +49,8 @@
 			</div><!-- .header-main -->
 
 		</header><!-- #masthead -->
+
+		<?php do_action( 'poseidon_after_header' ); ?>
 
 		<?php poseidon_header_image(); ?>
 
