@@ -1,0 +1,220 @@
+/* Typography */
+.editor-styles-wrapper {
+	@include color(--text-color);
+	@include font-size(16);
+	@include font-family(--text-font);
+	@include line-height(--text-line-height);
+}
+
+.editor-styles-wrapper p {
+	font-size: inherit;
+	@include line-height(--text-line-height);
+	margin-top: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.editor-styles-wrapper .mce-content-body {
+	@include line-height(--text-line-height);
+}
+
+@media only screen and (min-width: 960px) {
+	.editor-styles-wrapper {
+		@include font-size(17);
+	}
+}
+
+.editor-styles-wrapper a {
+	@include color(--link-color);
+}
+
+.editor-styles-wrapper hr {
+	margin-top: 1.75rem;
+	margin-bottom: 1.75rem;
+	height: 1px;
+	border: 0;
+	@include background(--light-border-color);
+}
+
+.editor-styles-wrapper pre {
+	margin-top: 1.75rem;
+	margin-bottom: 1.75rem;
+	padding: 1rem 1.25rem;
+	border: 1px solid;
+	@include color(--text-color);
+	@include border-color(--light-border-color);
+	background: rgba(0, 0, 0, 0.05);
+	@include font-size(15);
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	@include line-height(--text-line-height);
+}
+
+.editor-styles-wrapper code,
+.editor-styles-wrapper .wp-block code,
+.editor-styles-wrapper kbd,
+.editor-styles-wrapper tt,
+.editor-styles-wrapper var {
+	@include font-size(15);
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	background: rgba(0, 0, 0, 0.1);
+	color: inherit;
+	border-radius: 3px;
+	padding: 2px 5px;
+}
+
+.editor-styles-wrapper .wp-block-code code {
+	background: none;
+	padding: 0;
+}
+
+/* Headings */
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+	clear: both;
+	margin-top: 1em;
+	margin-bottom: 0.75em;
+	@include color(--title-color);
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
+
+	&.mce-content-body {
+		@include line-height(--title-line-height);
+	}
+}
+
+.editor-styles-wrapper h1 {
+	@include font-size(28);
+}
+
+.editor-styles-wrapper h2 {
+	@include font-size(24);
+}
+
+.editor-styles-wrapper h3 {
+	@include font-size(22);
+}
+
+.editor-styles-wrapper h4 {
+	@include font-size(20);
+}
+
+.editor-styles-wrapper h5 {
+	@include font-size(19);
+}
+
+.editor-styles-wrapper h6 {
+	@include font-size(18);
+}
+
+/* Blockquotes */
+.editor-styles-wrapper blockquote,
+.wp-block-quote {
+	margin-top: 1.75rem;
+	margin-bottom: 1.75rem;
+	padding-left: 1.5rem;
+	border-left: 5px solid;
+	@include border-color(--light-border-color);
+	@include color(--light-text-color);
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.editor-styles-wrapper blockquote p {
+	margin-bottom: 1rem;
+}
+
+.editor-styles-wrapper blockquote cite,
+.wp-block-quote cite,
+.wp-block-quote__citation,
+.wp-block-pullquote__citation,
+.wp-block-pullquote cite {
+	display: block;
+	@include color(--text-color);
+	@include font-family(--text-font);
+	@include font-size(16);
+}
+
+.wp-block-quote cite::before,
+.wp-block-quote__citation::before,
+.wp-block-pullquote__citation::before,
+.wp-block-pullquote cite::before {
+	content: "\2014\00a0";
+}
+
+.wp-block-pullquote:not(.is-style-solid-color) .wp-block-pullquote__citation {
+	@include color(--text-color);
+	text-transform: none;
+}
+
+/* Lists */
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ol {
+	margin-top: 1.75rem;
+	margin-bottom: 1.75rem;
+	padding: 0 0 0 1.5rem;
+}
+
+.editor-styles-wrapper ul {
+	list-style: square;
+}
+
+.editor-styles-wrapper ol {
+	list-style: decimal;
+}
+
+.editor-styles-wrapper li > ul,
+.editor-styles-wrapper li > ol {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: 1.5em;
+}
+
+/* Tables */
+.editor-styles-wrapper table {
+	margin-top: 1.75rem;
+	margin-bottom: 1.75rem;
+	width: 100%;
+	border: none;
+	table-layout: fixed;
+}
+
+.editor-styles-wrapper th,
+.editor-styles-wrapper td {
+	padding: 0.4em 0.6em;
+	border: 1px solid;
+	@include border-color(--light-border-color);
+}
+
+.editor-styles-wrapper th {
+	font-weight: normal;
+	text-align: initial;
+	background: rgba(0, 0, 0, 0.05);
+}
+
+.editor-styles-wrapper tfoot td {
+	background: rgba(0, 0, 0, 0.05);
+}
+
+.wp-block-table thead,
+.wp-block-table tfoot {
+	border: 1px solid;
+}
+
+/* Captions */
+.wp-block-embed figcaption,
+.wp-block-image figcaption,
+.wp-block-audio figcaption,
+.wp-block-table figcaption {
+	margin-top: 0.5rem;
+	margin-bottom: 1.5rem;
+	@include font-size(16);
+	@include color(--medium-text-color);
+}
+
+.wp-block-image figcaption {
+	margin-top: 0;
+}

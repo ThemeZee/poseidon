@@ -1,0 +1,129 @@
+/* ThemeZee Magazine Blocks - Editor Styles */
+.edit-post-visual-editor .tz-magazine-block {
+
+	.tz-entry-image {
+		margin-bottom: 0.5rem;
+	}
+
+	.tz-entry-title {
+		margin-top: 0;
+		margin-bottom: 0.25rem;
+		padding: 0;
+		@include color(--title-color);
+		@include font-size(24);
+		@include font-family(--title-font);
+		@include font-weight(--title-font-weight);
+		@include text-transform(--title-text-transform);
+		line-height: 1.4;
+	}
+
+	.tz-entry-title a:link,
+	.tz-entry-title a:visited {
+		@include color(--title-color);
+		text-decoration: none;
+		transition: all 0.15s ease;
+	}
+
+	.tz-entry-title a:hover,
+	.tz-entry-title a:active {
+		@include color(--title-hover-color);
+	}
+
+	.tz-magazine-grid-columns-3 .tz-entry-title {
+		@include font-size(20);
+	}
+
+	.tz-magazine-grid-columns-4 .tz-entry-title,
+	.tz-magazine-thumbnail-list .tz-entry-title {
+		@include font-size(18);
+	}
+
+	.tz-entry-meta {
+		margin: 0.5rem 0 0;
+		@include color(--light-text-color);
+		@include font-size(15);
+	}
+
+	.tz-entry-meta > .tz-meta-field::after {
+		display: inline-block;
+		margin: 0 1rem;
+		@include color(--light-text-color);
+		content: "\2013";
+	}
+
+	.tz-entry-meta > .tz-meta-field:last-child::after {
+		display: none;
+	}
+
+	.tz-entry-meta a:link,
+	.tz-entry-meta a:visited {
+		@include color(--light-text-color);
+		text-decoration: none;
+	}
+
+	.tz-entry-meta a:hover,
+	.tz-entry-meta a:active {
+		@include color(--text-color);
+	}
+
+	.tz-entry-content {
+		margin-top: 1rem;
+		@include font-size(16);
+
+		p {
+			@include font-size(16);
+		}
+	}
+
+	.tz-more-link {
+		display: inline-block;
+		margin: 0;
+		padding: 0.6em 1.2em;
+		@include color(--button-text-color);
+		@include background(--button-color);
+		@include font-size(15);
+	}
+
+	.tz-more-link:link,
+	.tz-more-link:visited {
+		@include color(--button-text-color);
+		text-decoration: none;
+		transition: all 0.15s ease;
+	}
+
+	.tz-more-link:hover,
+	.tz-more-link:active {
+		@include color(--button-hover-text-color);
+		@include background(--button-hover-color);
+	}
+
+	.tz-more-link::after {
+		content: " \00BB";
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	.edit-post-visual-editor .tz-magazine-block {
+
+		.tz-entry-title {
+			@include font-size(28);
+		}
+
+		.tz-magazine-grid-columns-3 .tz-entry-title {
+			@include font-size(22);
+		}
+
+		.tz-magazine-grid-columns-4 .tz-entry-title,
+		.tz-magazine-thumbnail-list .tz-entry-title {
+			@include font-size(20);
+		}
+
+		.tz-entry-content {
+			@include font-size(17);
+
+			p {
+				@include font-size(17);
+			}
+		}
+	}
+}

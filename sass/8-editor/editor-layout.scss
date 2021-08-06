@@ -1,0 +1,79 @@
+.edit-post-visual-editor {
+	@include background(--page-background-color);
+}
+
+.wp-block {
+	max-width: $contentWidth;
+}
+
+.wp-block[data-align="wide"] {
+	max-width: $wideBlockWidth;
+}
+
+.wp-block[data-align="full"] {
+	max-width: $themeWidth;
+}
+
+/* Fullwidth Template */
+.chronus-fullwidth-page-layout .wp-block {
+	max-width: $contentFullwidth;
+}
+
+.chronus-fullwidth-page-layout .wp-block[data-align="wide"],
+.chronus-fullwidth-page-layout .wp-block[data-align="full"] {
+	max-width: $themeWidth;
+}
+
+/* Wide Theme Layout */
+.chronus-wide-theme-layout .wp-block[data-align="full"],
+.chronus-wide-theme-layout.chronus-fullwidth-page-layout .wp-block[data-align="full"] {
+	max-width: none;
+}
+
+.chronus-wide-theme-layout.chronus-fullwidth-page-layout .wp-block[data-align="wide"] {
+	max-width: $wideBlockFullwidth;
+}
+
+/* Post and Page Title */
+body.block-editor-page .editor-post-title__block .editor-post-title__input {
+	@include color(--title-color);
+	@include font-size(20);
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
+	@include border-color(--title-color);
+}
+
+@media only screen and (min-width: 640px) {
+	body.block-editor-page .editor-post-title__block .editor-post-title__input {
+		@include font-size(22);
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	body.block-editor-page .editor-post-title__block .editor-post-title__input {
+		@include font-size(24);
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	body.block-editor-page .editor-post-title__block .editor-post-title__input {
+		@include font-size(28);
+	}
+}
+
+/* Hidden Page Title */
+body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-post-visual-editor__post-title-wrapper {
+	background-color: #fff;
+	background-image:
+		linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd),
+		linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd);
+	background-size: 20px 20px;
+	background-position: 0 0, 10px 10px;
+
+	.editor-post-title__block .editor-post-title__input {
+		border-bottom: none;
+		padding-bottom: 1rem;
+	}
+}
