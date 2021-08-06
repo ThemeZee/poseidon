@@ -1,0 +1,33 @@
+/* Group Block */
+.wp-block-group.has-background {
+	padding: 1.5rem;
+
+	> .wp-block-group__inner-container > *:first-child {
+		margin-top: 0;
+	}
+
+	> .wp-block-group__inner-container > *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/* Latest Posts */
+.wp-block-latest-posts.wp-block-latest-posts__list {
+	margin: 0;
+	padding: 0;
+}
+
+.wp-block-latest-posts.wp-block-latest-posts__list li {
+	margin-top: 0.5rem;
+}
+
+.wp-block-latest-posts__post-date,
+.wp-block-latest-posts__post-author {
+	@include color(--light-text-color);
+	@include font-size(14);
+}
+
+/* Search Block */
+.wp-block-search .wp-block-search__label {
+	width: auto;
+}
