@@ -1,5 +1,5 @@
 /* Typography */
-.editor-styles-wrapper {
+.edit-post-visual-editor__content-area .editor-styles-wrapper {
 	@include color(--text-color);
 	@include font-size(16);
 	@include font-family(--text-font);
@@ -9,16 +9,16 @@
 .editor-styles-wrapper p {
 	font-size: inherit;
 	@include line-height(--text-line-height);
-	margin-top: 1rem;
-	margin-bottom: 1.5rem;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 }
 
 .editor-styles-wrapper .mce-content-body {
 	@include line-height(--text-line-height);
 }
 
-@media only screen and (min-width: 960px) {
-	.editor-styles-wrapper {
+@media only screen and (min-width: 640px) {
+	.edit-post-visual-editor__content-area .editor-styles-wrapper {
 		@include font-size(17);
 	}
 }
@@ -28,17 +28,17 @@
 }
 
 .editor-styles-wrapper hr {
-	margin-top: 1.75rem;
-	margin-bottom: 1.75rem;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	height: 1px;
 	border: 0;
 	@include background(--light-border-color);
 }
 
 .editor-styles-wrapper pre {
-	margin-top: 1.75rem;
-	margin-bottom: 1.75rem;
-	padding: 1rem 1.25rem;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	padding: 1.5em;
 	border: 1px solid;
 	@include color(--text-color);
 	@include border-color(--light-border-color);
@@ -76,10 +76,6 @@
 	clear: both;
 	margin-top: 1em;
 	margin-bottom: 0.75em;
-	@include color(--title-color);
-	@include font-family(--title-font);
-	@include font-weight(--title-font-weight);
-	@include text-transform(--title-text-transform);
 	@include line-height(--title-line-height);
 
 	&.mce-content-body {
@@ -88,39 +84,39 @@
 }
 
 .editor-styles-wrapper h1 {
-	@include font-size(28);
+	@include font-size(36);
 }
 
 .editor-styles-wrapper h2 {
-	@include font-size(24);
+	@include font-size(28);
 }
 
 .editor-styles-wrapper h3 {
-	@include font-size(22);
+	@include font-size(24);
 }
 
 .editor-styles-wrapper h4 {
-	@include font-size(20);
+	@include font-size(22);
 }
 
 .editor-styles-wrapper h5 {
-	@include font-size(19);
+	@include font-size(20);
 }
 
 .editor-styles-wrapper h6 {
-	@include font-size(18);
+	@include font-size(19);
 }
 
 /* Blockquotes */
 .editor-styles-wrapper blockquote,
 .wp-block-quote {
-	margin-top: 1.75rem;
-	margin-bottom: 1.75rem;
-	padding-left: 1.5rem;
-	border-left: 5px solid;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	padding-left: 1.5em;
+	border-left: 4px solid;
 	@include border-color(--light-border-color);
-	@include color(--light-text-color);
-	font-family: Georgia, "Times New Roman", Times, serif;
+	@include color(--medium-text-color );
+	@include font-size(19);
 }
 
 .editor-styles-wrapper blockquote p {
@@ -136,6 +132,7 @@
 	@include color(--text-color);
 	@include font-family(--text-font);
 	@include font-size(16);
+	font-style: normal;
 }
 
 .wp-block-quote cite::before,
@@ -153,9 +150,9 @@
 /* Lists */
 .editor-styles-wrapper ul,
 .editor-styles-wrapper ol {
-	margin-top: 1.75rem;
-	margin-bottom: 1.75rem;
-	padding: 0 0 0 1.5rem;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	padding: 0 0 0 1.25em;
 }
 
 .editor-styles-wrapper ul {
@@ -175,8 +172,8 @@
 
 /* Tables */
 .editor-styles-wrapper table {
-	margin-top: 1.75rem;
-	margin-bottom: 1.75rem;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	width: 100%;
 	border: none;
 	table-layout: fixed;
@@ -209,10 +206,11 @@
 .wp-block-image figcaption,
 .wp-block-audio figcaption,
 .wp-block-table figcaption {
-	margin-top: 0.5rem;
-	margin-bottom: 1.5rem;
-	@include font-size(16);
+	margin-top: 0.5em;
+	margin-bottom: 1.5em;
+	@include font-size(15);
 	@include color(--medium-text-color);
+	text-align: center;
 }
 
 .wp-block-image figcaption {

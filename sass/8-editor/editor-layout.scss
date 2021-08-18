@@ -4,6 +4,8 @@
 
 .wp-block {
 	max-width: $contentWidth;
+	margin-top: 0;
+	margin-bottom: 1.5em;
 }
 
 .wp-block[data-align="wide"] {
@@ -15,56 +17,61 @@
 }
 
 /* Fullwidth Template */
-.chronus-fullwidth-page-layout .wp-block {
+.poseidon-fullwidth-page-layout .wp-block {
 	max-width: $contentFullwidth;
 }
 
-.chronus-fullwidth-page-layout .wp-block[data-align="wide"],
-.chronus-fullwidth-page-layout .wp-block[data-align="full"] {
+.poseidon-fullwidth-page-layout .wp-block[data-align="wide"],
+.poseidon-fullwidth-page-layout .wp-block[data-align="full"] {
 	max-width: $themeWidth;
 }
 
 /* Wide Theme Layout */
-.chronus-wide-theme-layout .wp-block[data-align="full"],
-.chronus-wide-theme-layout.chronus-fullwidth-page-layout .wp-block[data-align="full"] {
+.poseidon-wide-theme-layout .wp-block[data-align="full"],
+.poseidon-wide-theme-layout.poseidon-fullwidth-page-layout .wp-block[data-align="full"] {
 	max-width: none;
 }
 
-.chronus-wide-theme-layout.chronus-fullwidth-page-layout .wp-block[data-align="wide"] {
+.poseidon-wide-theme-layout.poseidon-fullwidth-page-layout .wp-block[data-align="wide"] {
 	max-width: $wideBlockFullwidth;
 }
 
 /* Post and Page Title */
 body.block-editor-page .editor-post-title__block .editor-post-title__input {
 	@include color(--title-color);
-	@include font-size(20);
+	@include font-size(40);
 	@include font-family(--title-font);
 	@include font-weight(--title-font-weight);
 	@include text-transform(--title-text-transform);
 	@include line-height(--title-line-height);
-	@include border-color(--title-color);
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (max-width: 1200px) {
 	body.block-editor-page .editor-post-title__block .editor-post-title__input {
-		@include font-size(22);
+		@include font-size(36);
 	}
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (max-width: 960px) {
 	body.block-editor-page .editor-post-title__block .editor-post-title__input {
-		@include font-size(24);
+		@include font-size(32);
 	}
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (max-width: 640px) {
 	body.block-editor-page .editor-post-title__block .editor-post-title__input {
 		@include font-size(28);
 	}
 }
 
+@media only screen and (max-width: 480px) {
+	body.block-editor-page .editor-post-title__block .editor-post-title__input {
+		@include font-size(24);
+	}
+}
+
 /* Hidden Page Title */
-body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-post-visual-editor__post-title-wrapper {
+body.poseidon-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-post-visual-editor__post-title-wrapper {
 	background-color: #fff;
 	background-image:
 		linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd),

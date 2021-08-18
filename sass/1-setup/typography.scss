@@ -46,6 +46,7 @@ h6 {
 }
 
 p {
+	margin-top: 1.5em;
 	margin-bottom: 1.5em;
 }
 
@@ -56,16 +57,13 @@ i {
 	font-style: italic;
 }
 
-blockquote {
-	margin: 0 1.5em;
-}
-
 address {
 	margin: 0 0 1.5em;
 }
 
 pre {
 	overflow: auto;
+	margin-top: 1.5em;
 	margin-bottom: 1.5em;
 	padding: 1.5em;
 	max-width: 100%;
