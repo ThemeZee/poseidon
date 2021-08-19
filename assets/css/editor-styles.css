@@ -758,11 +758,15 @@ p.has-background {
 
 /* Editor Block Styles */
 .editor-styles-wrapper .wp-block-heading.is-style-widget-title {
-	padding: 0.5rem 0.75rem;
-	color: var(--widget-title-text-color);
-	background-color: var(--widget-title-background-color);
-	font-size: 15px;
-	font-size: 0.9375rem;
+	display: inline-block;
+	margin-top: 0;
+	border-bottom: 4px solid;
+	border-color: #eee;
+	border-color: var(--widget-title-border-color);
+	color: #404040;
+	color: var(--widget-title-color);
+	font-size: 18px;
+	font-size: 1.125rem;
 	font-family: "Raleway", arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
 	font-weight: bold;
