@@ -3891,7 +3891,8 @@ html[xmlns] .zeeflexslider .zeeslides {
 	top: 32px;
 }
 
-.sticky-header .header-bar-wrap {
+.sticky-header .header-bar-wrap,
+.sticky-header .before-header-widget-area {
 	display: none;
 }
 
