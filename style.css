@@ -550,7 +550,7 @@ table {
 	margin-bottom: 1.5em;
 	width: 100%;
 	border: none;
-	table-layout: fixed;
+	table-layout: auto;
 }
 
 th,
@@ -2399,7 +2399,10 @@ p.has-background {
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
-object {
+object,
+figure,
+img,
+picture {
 	max-width: 100%;
 }
 
