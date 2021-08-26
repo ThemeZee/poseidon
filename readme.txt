@@ -26,6 +26,10 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 2.3.4 - 2021-08-26 =
+* fixed table layout styling
+* fixed responsive images with Classic Editor
+
 = 2.3.3 - 2021-08-19 =
 * added Widget Title block style
 * improved Block styling on frontend and Block Editor
