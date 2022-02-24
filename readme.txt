@@ -26,6 +26,9 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 2.3.6 - 2022-02-24 =
+* fixed keyboard navigation of dropdown menus
+
 = 2.3.5 - 2021-11-05 =
 * updated navigation.js to use vanilla js instead of jQuery
 
