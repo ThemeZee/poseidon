@@ -86,6 +86,35 @@
 				});
 			});
 		})();
+
+		// Toggle focus class to allow keyboard navigation.
+		(function() {
+
+			function toggleFocusClass( menuItem ) {
+
+				// Loop through all parent elements up to the menus root.
+				var parent = menuItem.parentNode;
+				while ( ! parent.classList.contains( 'menu' ) ) {
+
+					// Check if we pass any li elements which have submenus.
+					if ( parent.classList.contains( 'menu-item-has-children' ) ) {
+						parent.classList.toggle( 'focus' );
+					}
+
+					parent = parent.parentNode;
+				}
+			}			
+
+			navigation.querySelectorAll( '.menu-item-has-children a, .page_item_has_children a' ).forEach( function( menuItem ) {
+				menuItem.addEventListener( 'focus', function() {
+					toggleFocusClass( menuItem );
+				});
+				menuItem.addEventListener( 'blur', function() {
+					toggleFocusClass( menuItem );
+				});
+			});
+
+		})();
 	}
 
 	document.addEventListener( 'DOMContentLoaded', function() {
