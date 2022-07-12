@@ -1,9 +1,10 @@
 @media only screen and (min-width: 960px) {
-	.wp-block-group.has-background {
-		padding: 2em;
+	div.wp-block-columns {
+		gap: 2em;
 	}
 
-	.wp-block-column:not(:first-child) {
-		margin-left: 2em;
+	.wp-block-group.has-background,
+	.wp-block-column.has-background {
+		padding: 2em;
 	}
 }

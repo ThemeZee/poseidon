@@ -11,6 +11,25 @@
 	}
 }
 
+/* Columns Block */
+div.wp-block-columns {
+	gap: 1.5em;
+}
+
+/* Column Block */
+.wp-block-column.has-background {
+	padding: 1.5em;
+	box-sizing: border-box;
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
+
 /* Latest Posts */
 .wp-block-latest-posts.wp-block-latest-posts__list {
 	margin-top: 1.5em;

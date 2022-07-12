@@ -1,0 +1,10 @@
+/* Columns Block */
+.editor-styles-wrapper div.wp-block-columns {
+	gap: 1.5em;
+}
+
+@media only screen and (min-width: 960px) {
+	.editor-styles-wrapper div.wp-block-columns {
+		gap: 2em;
+	}
+}
