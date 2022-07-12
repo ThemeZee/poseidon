@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/poseidon/
 Contributors: themezee
 Tags: two-columns, custom-background, custom-header, custom-menu, blog, news,  editor-style, block-styles, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 5.2
-Tested up to: 5.9
+Tested up to: 6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,10 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 2.3.7 - 2022-07-12 =
+* added block support for custom spacing and line heights
+* improved styling of columns block
 
 = 2.3.6 - 2022-02-24 =
 * fixed keyboard navigation of dropdown menus

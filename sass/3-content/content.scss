@@ -45,6 +45,10 @@
 	text-decoration: underline;
 }
 
+.entry-content > *:first-child {
+	margin-top: 1.5em;
+}
+
 /* Small Post Layout */
 .post-layout-small .post-wrapper .type-post .wp-post-image,
 .post-layout-small .infinite-wrap .type-post .wp-post-image {
