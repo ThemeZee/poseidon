@@ -26,6 +26,9 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 
 == Changelog ==
 
+= 2.3.8 - 2022-08-23 =
+* updated footer credit link
+
 = 2.3.7 - 2022-07-12 =
 * added block support for custom spacing and line heights
 * improved styling of columns block
