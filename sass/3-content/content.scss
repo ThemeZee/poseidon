@@ -50,29 +50,34 @@
 }
 
 /* Small Post Layout */
-.post-layout-small .post-wrapper .type-post .wp-post-image,
-.post-layout-small .infinite-wrap .type-post .wp-post-image {
-	float: left;
-	margin: 0 1.5em 1.5em 0;
-	padding: 0.3em 0 0;
-	max-width: 40%;
-}
+.post-layout-small .post-wrapper .type-post,
+.post-layout-small .infinite-wrap .type-post {
+	display: flex;
 
-.post-layout-small .post-wrapper .type-post .entry-title,
-.post-layout-small .infinite-wrap .type-post .entry-title {
-	font-size: 28px;
-	font-size: 1.75rem;
-}
+	.post-thumbnail-small {
+		width: 42%;
+	}
 
-.post-layout-small .post-wrapper .type-post .entry-content,
-.post-layout-small .infinite-wrap .type-post .entry-content {
-	font-size: 16px;
-	font-size: 1rem;
-}
+	.wp-post-image {
+		margin: 0.3em 0 0;
+	}
 
-.post-layout-small .post-wrapper .type-post .entry-excerpt p,
-.post-layout-small .infinite-wrap .type-post .entry-excerpt p {
-	margin-bottom: 1em;
+	.post-content {
+		width: 58%;
+		margin-left: 1.5em;
+	}
+
+	.entry-title {
+		@include font-size(28);
+	}
+
+	.entry-content {
+		@include font-size(16);
+	}
+
+	.entry-excerpt p {
+		margin-bottom: 1em;
+	}
 }
 
 /* Page Links | wp_link_pages() */

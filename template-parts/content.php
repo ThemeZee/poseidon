@@ -11,16 +11,20 @@
 
 	<?php poseidon_post_image_archives(); ?>
 
-	<header class="entry-header">
+	<div class="post-content">
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<header class="entry-header">
 
-		<?php poseidon_entry_meta(); ?>
+			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-	</header><!-- .entry-header -->
+			<?php poseidon_entry_meta(); ?>
 
-	<div class="entry-content clearfix">
-		<?php the_content( esc_html( poseidon_get_option( 'read_more_text' ) ) ); ?>
-	</div><!-- .entry-content -->
+		</header><!-- .entry-header -->
+
+		<div class="entry-content clearfix">
+			<?php the_content( esc_html( poseidon_get_option( 'read_more_text' ) ) ); ?>
+		</div><!-- .entry-content -->
+
+	</div>
 
 </article>

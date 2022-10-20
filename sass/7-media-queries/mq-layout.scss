@@ -39,12 +39,15 @@
 }
 
 @media only screen and (max-width: 25em) {
-	.post-layout-small .post-wrapper .type-post .wp-post-image,
-	.post-layout-small .infinite-wrap .type-post .wp-post-image {
-		float: none;
-		margin: 0 0 0.5em;
-		padding: 0;
-		max-width: 100%;
+	.post-layout-small .post-wrapper .type-post,
+	.post-layout-small .infinite-wrap .type-post {
+		display: block;
+
+		.post-content {
+			margin-top: 0.5em;
+			margin-left: 0;
+			width: 100%;
+		}
 	}
 }
 

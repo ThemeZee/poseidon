@@ -27,6 +27,7 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 == Changelog ==
 
 = 2.3.9 - 2022-10-19 =
+* use flexbox layout for post list
 * improved accessibility of search form
 
 = 2.3.8 - 2022-08-23 =

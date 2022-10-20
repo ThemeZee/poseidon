@@ -1215,12 +1215,25 @@ textarea {
 }
 
 /* Small Post Layout */
+.post-layout-small .post-wrapper .type-post,
+.post-layout-small .infinite-wrap .type-post {
+	display: flex;
+}
+
+.post-layout-small .post-wrapper .type-post .post-thumbnail-small,
+.post-layout-small .infinite-wrap .type-post .post-thumbnail-small {
+	width: 42%;
+}
+
 .post-layout-small .post-wrapper .type-post .wp-post-image,
 .post-layout-small .infinite-wrap .type-post .wp-post-image {
-	float: left;
-	margin: 0 1.5em 1.5em 0;
-	padding: 0.3em 0 0;
-	max-width: 40%;
+	margin: 0.3em 0 0;
+}
+
+.post-layout-small .post-wrapper .type-post .post-content,
+.post-layout-small .infinite-wrap .type-post .post-content {
+	width: 58%;
+	margin-left: 1.5em;
 }
 
 .post-layout-small .post-wrapper .type-post .entry-title,
@@ -3530,12 +3543,16 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 25em) {
-	.post-layout-small .post-wrapper .type-post .wp-post-image,
-	.post-layout-small .infinite-wrap .type-post .wp-post-image {
-		float: none;
-		margin: 0 0 0.5em;
-		padding: 0;
-		max-width: 100%;
+	.post-layout-small .post-wrapper .type-post,
+	.post-layout-small .infinite-wrap .type-post {
+		display: block;
+	}
+
+	.post-layout-small .post-wrapper .type-post .post-content,
+	.post-layout-small .infinite-wrap .type-post .post-content {
+		margin-top: 0.5em;
+		margin-left: 0;
+		width: 100%;
 	}
 }
 
