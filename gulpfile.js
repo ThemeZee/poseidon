@@ -5,16 +5,14 @@ var gulp = require('gulp');
 var autoprefixer = require( 'autoprefixer' );
 var rename       = require( 'gulp-rename' );
 var replace      = require( 'gulp-replace' );
-var concat       = require( 'gulp-concat' );
 var uglify       = require( 'gulp-uglify' );
-var sass         = require( 'gulp-sass' );
+var sass         = require('gulp-sass')(require('sass'));
 var postcss      = require( 'gulp-postcss' );
 var sorting      = require( 'postcss-sorting' );
-var wprtl        = require( 'postcss-wprtl' );
 
 // Minify JS
-gulp.task( 'minifyjs', function() {
-	return gulp.src( ['assets/js/navigation.js'] )
+gulp.task( 'minifyjs', async function() {
+	return gulp.src( ['assets/js/navigation.js', 'assets/js/customize-preview.js', 'assets/js/customizer-controls.js'] )
 		.pipe( uglify() )
 		.pipe( rename( {
 			suffix: '.min'
@@ -23,24 +21,15 @@ gulp.task( 'minifyjs', function() {
 });
 
 // Clean up CSS
-gulp.task( 'cleancss', function() {
+gulp.task( 'cleancss', async function() {
 	return gulp.src( ['style.css', 'assets/css/*.css'], { base: './' } )
 		.pipe( postcss( [ autoprefixer() ] ) )
 		.pipe( postcss( [ sorting( { 'preserve-empty-lines-between-children-rules': true } ) ] ) )
 		.pipe( gulp.dest( './' ) );
 });
 
-// WP RTL
-gulp.task( 'wprtl', function () {
-	return gulp.src( ['style.css'] )
-		.pipe( concat( 'rtl.css' ) )
-		.pipe( postcss( [ wprtl() ] ) )
-		.pipe( postcss( [ sorting( { 'preserve-empty-lines-between-children-rules': true } ) ] ) )
-		.pipe( gulp.dest( './' ) );
-});
-
 // Editor Styles Sass Bundler
-gulp.task( 'editor', function() {
+gulp.task( 'editor', async function() {
     return gulp.src( 'sass/editor-styles.scss' )
         .pipe( sass( { outputStyle: 'expanded' } ).on( 'error', sass.logError ) )
 		.pipe( rename( 'editor-styles.css' ) )
@@ -54,7 +43,7 @@ gulp.task( 'editor', function() {
 });
 
 // Sass Bundler
-gulp.task( 'sass', function() {
+gulp.task( 'sass', async function() {
     return gulp.src( 'sass/style.scss' )
         .pipe( sass( { outputStyle: 'expanded' } ).on( 'error', sass.logError ) )
 		.pipe( rename( 'style.css' ) )
@@ -64,10 +53,11 @@ gulp.task( 'sass', function() {
 		.pipe( replace( '}\n\n	}', '}\n	}' ) )
 		.pipe( replace( '*/\n/*', '*/\n\n/*' ) )
 		.pipe( replace( ';\n	/*', '; /*' ) )
+		.pipe( replace( '	}\n}', '	}\n}\n' ) )
         .pipe( gulp.dest( './' ) )
 });
 
 // Sass Watch
-gulp.task('sass:watch', function () {
+gulp.task('sass:watch', async function () {
 	gulp.watch( 'sass/**/*.scss', gulp.series('sass', 'editor'));
 });
