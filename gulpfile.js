@@ -9,6 +9,7 @@ var uglify       = require( 'gulp-uglify' );
 var sass         = require('gulp-sass')(require('sass'));
 var postcss      = require( 'gulp-postcss' );
 var sorting      = require( 'postcss-sorting' );
+var stylelint       = require( 'stylelint' );
 
 // Minify JS
 gulp.task( 'minifyjs', async function() {
@@ -39,6 +40,7 @@ gulp.task( 'editor', async function() {
 		.pipe( replace( '}\n\n	}', '}\n	}' ) )
 		.pipe( replace( '*/\n/*', '*/\n\n/*' ) )
 		.pipe( replace( ';\n	/*', '; /*' ) )
+		.pipe( postcss( [ stylelint( { 'fix': true } ) ] ) )
         .pipe( gulp.dest( 'assets/css' ) )
 });
 
@@ -54,6 +56,7 @@ gulp.task( 'sass', async function() {
 		.pipe( replace( '*/\n/*', '*/\n\n/*' ) )
 		.pipe( replace( ';\n	/*', '; /*' ) )
 		.pipe( replace( '	}\n}', '	}\n}\n' ) )
+		.pipe( postcss( [ stylelint( { 'fix': true } ) ] ) )
         .pipe( gulp.dest( './' ) )
 });
 

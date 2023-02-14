@@ -1,0 +1,34 @@
+{
+  "extends": [
+    "@wordpress/stylelint-config",
+    "@wordpress/stylelint-config/scss"
+  ],
+  "rules": {
+    "rule-empty-line-before": [
+      "always",
+      {
+        "ignore": [
+          "first-nested",
+          "after-comment"
+        ]
+      }
+    ],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "inside-block"
+        ],
+        "ignore": [
+          "after-comment",
+          "blockless-after-same-name-blockless"
+        ]
+      }
+    ],
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null,
+    "color-hex-length": null,
+    "selector-class-pattern": null,
+    "max-line-length": null
+  }
+}

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ThemeZee/poseidon#readme",
   "devDependencies": {
+    "@wordpress/stylelint-config": "^21.9.0",
     "autoprefixer": "^10.4.13",
     "gulp": "^4.0.2",
     "gulp-postcss": "^9.0.1",
@@ -26,40 +27,6 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "postcss-sorting": "^7.0.1",
-    "sass": "^1.58.1",
-    "stylelint": "^13.13.1",
-    "stylelint-config-wordpress": "^17.0.0"
-  },
-  "stylelint": {
-    "extends": [
-      "stylelint-config-wordpress",
-      "stylelint-config-wordpress/scss"
-    ],
-    "rules": {
-      "indentation": "tab",
-      "no-descending-specificity": null,
-      "font-weight-notation": "named-where-possible",
-      "rule-empty-line-before": [
-        "always",
-        {
-          "ignore": [
-            "first-nested",
-            "after-comment"
-          ]
-        }
-      ],
-      "at-rule-empty-line-before": [
-        "always",
-        {
-          "except": [
-            "inside-block"
-          ],
-          "ignore": [
-            "after-comment",
-            "blockless-after-same-name-blockless"
-          ]
-        }
-      ]
-    }
+    "sass": "^1.58.1"
   }
 }

@@ -139,7 +139,7 @@
 .wp-block-quote__citation::before,
 .wp-block-pullquote__citation::before,
 .wp-block-pullquote cite::before {
-	content: "\2014\00a0";
+	content: "\2014";
 }
 
 .wp-block-pullquote:not(.is-style-solid-color) .wp-block-pullquote__citation {
