@@ -6,23 +6,23 @@
  */
 
 // Load Customizer Helper Functions.
-require( get_template_directory() . '/inc/customizer/functions/sanitize-functions.php' );
-require( get_template_directory() . '/inc/customizer/functions/callback-functions.php' );
+require get_template_directory() . '/inc/customizer/functions/sanitize-functions.php';
+require get_template_directory() . '/inc/customizer/functions/callback-functions.php';
 
 // Load Custom Controls.
-require( get_template_directory() . '/inc/customizer/controls/category-dropdown-control.php' );
-require( get_template_directory() . '/inc/customizer/controls/header-control.php' );
-require( get_template_directory() . '/inc/customizer/controls/links-control.php' );
-require( get_template_directory() . '/inc/customizer/controls/plugin-control.php' );
-require( get_template_directory() . '/inc/customizer/controls/upgrade-control.php' );
+require get_template_directory() . '/inc/customizer/controls/category-dropdown-control.php';
+require get_template_directory() . '/inc/customizer/controls/header-control.php';
+require get_template_directory() . '/inc/customizer/controls/links-control.php';
+require get_template_directory() . '/inc/customizer/controls/plugin-control.php';
+require get_template_directory() . '/inc/customizer/controls/upgrade-control.php';
 
 // Load Customizer Section Files.
-require( get_template_directory() . '/inc/customizer/sections/customizer-general.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-blog.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-post.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-slider.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-info.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-website.php' );
+require get_template_directory() . '/inc/customizer/sections/customizer-general.php';
+require get_template_directory() . '/inc/customizer/sections/customizer-blog.php';
+require get_template_directory() . '/inc/customizer/sections/customizer-post.php';
+require get_template_directory() . '/inc/customizer/sections/customizer-slider.php';
+require get_template_directory() . '/inc/customizer/sections/customizer-info.php';
+require get_template_directory() . '/inc/customizer/sections/customizer-website.php';
 
 /**
  * Registers Theme Options panel and sets up some WordPress core settings
@@ -32,12 +32,15 @@ require( get_template_directory() . '/inc/customizer/sections/customizer-website
 function poseidon_customize_register_options( $wp_customize ) {
 
 	// Add Theme Options Panel.
-	$wp_customize->add_panel( 'poseidon_options_panel', array(
-		'priority'       => 180,
-		'capability'     => 'edit_theme_options',
-		'theme_supports' => '',
-		'title'          => esc_html__( 'Theme Options', 'poseidon' ),
-	) );
+	$wp_customize->add_panel(
+		'poseidon_options_panel',
+		array(
+			'priority'       => 180,
+			'capability'     => 'edit_theme_options',
+			'theme_supports' => '',
+			'title'          => esc_html__( 'Theme Options', 'poseidon' ),
+		)
+	);
 
 	// Change default background section.
 	$wp_customize->get_control( 'background_color' )->section = 'background_image';

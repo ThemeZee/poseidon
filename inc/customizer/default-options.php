@@ -8,10 +8,10 @@
  */
 
 /**
-* Get a single theme option
-*
-* @return mixed
-*/
+ * Get a single theme option
+ *
+ * @return mixed
+ */
 function poseidon_get_option( $option_name = '' ) {
 
 	// Get all Theme Options from Database.

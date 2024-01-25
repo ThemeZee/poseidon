@@ -148,11 +148,14 @@ function poseidon_theme_info_page() {
 		<div id="theme-author">
 
 			<p>
-				<?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'poseidon' ),
+				<?php
+				printf(
+					esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'poseidon' ),
 					$theme->display( 'Name' ),
 					'<a target="_blank" href="' . __( 'https://themezee.com/', 'poseidon' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=poseidon" title="ThemeZee">ThemeZee</a>',
 					'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/poseidon/reviews/', 'poseidon' ) . '" title="' . esc_attr__( 'Review Poseidon', 'poseidon' ) . '">' . esc_html__( 'rate it', 'poseidon' ) . '</a>'
-				); ?>
+				);
+				?>
 			</p>
 
 		</div>

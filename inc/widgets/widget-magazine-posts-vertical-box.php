@@ -23,8 +23,8 @@ class Poseidon_Magazine_Vertical_Box_Widget extends WP_Widget {
 			'poseidon-magazine-vertical-box', // ID.
 			esc_html__( 'Magazine (Vertical Box)', 'poseidon' ), // Name.
 			array(
-				'classname' => 'poseidon-magazine-vertical-box-widget',
-				'description' => esc_html__( 'Displays your posts from a selected category in a vertical box.', 'poseidon' ),
+				'classname'                   => 'poseidon-magazine-vertical-box-widget',
+				'description'                 => esc_html__( 'Displays your posts from a selected category in a vertical box.', 'poseidon' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -65,8 +65,10 @@ class Poseidon_Magazine_Vertical_Box_Widget extends WP_Widget {
 
 		<div class="widget-magazine-posts-vertical-box widget-magazine-posts clearfix">
 
-			<?php // Display Title.
-			$this->widget_title( $args, $settings ); ?>
+			<?php
+			// Display Title.
+			$this->widget_title( $args, $settings );
+			?>
 
 			<div class="widget-magazine-posts-content magazine-vertical-box clearfix">
 
@@ -105,7 +107,7 @@ class Poseidon_Magazine_Vertical_Box_Widget extends WP_Widget {
 			'ignore_sticky_posts' => true,
 			'no_found_rows'       => true,
 		);
-		$posts_query = new WP_Query( $query_arguments );
+		$posts_query     = new WP_Query( $query_arguments );
 
 		// Check if there are posts.
 		if ( $posts_query->have_posts() ) :
@@ -175,8 +177,8 @@ class Poseidon_Magazine_Vertical_Box_Widget extends WP_Widget {
 	 */
 	function update( $new_instance, $old_instance ) {
 
-		$instance = $old_instance;
-		$instance['title'] = sanitize_text_field( $new_instance['title'] );
+		$instance             = $old_instance;
+		$instance['title']    = sanitize_text_field( $new_instance['title'] );
 		$instance['category'] = (int) $new_instance['category'];
 
 		poseidon_flush_magazine_post_ids();
@@ -203,17 +205,18 @@ class Poseidon_Magazine_Vertical_Box_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php esc_html_e( 'Category:', 'poseidon' ); ?></label><br/>
-			<?php // Display Category Select.
+			<?php
+			// Display Category Select.
 				$args = array(
-					'show_option_all'    => esc_html__( 'All Categories', 'poseidon' ),
-					'show_count' 		 => true,
-					'hide_empty'		 => false,
-					'selected'           => $settings['category'],
-					'name'               => $this->get_field_name( 'category' ),
-					'id'                 => $this->get_field_id( 'category' ),
+					'show_option_all' => esc_html__( 'All Categories', 'poseidon' ),
+					'show_count'      => true,
+					'hide_empty'      => false,
+					'selected'        => $settings['category'],
+					'name'            => $this->get_field_name( 'category' ),
+					'id'              => $this->get_field_id( 'category' ),
 				);
 				wp_dropdown_categories( $args );
-			?>
+				?>
 		</p>
 
 		<?php

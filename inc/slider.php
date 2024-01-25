@@ -119,6 +119,7 @@ if ( ! function_exists( 'poseidon_slider_image' ) ) :
 				</figure>
 			</a>
 
-		<?php endif;
+			<?php
+		endif;
 	}
 endif;

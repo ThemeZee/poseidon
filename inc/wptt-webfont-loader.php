@@ -232,7 +232,7 @@ if ( ! class_exists( 'WPTT_WebFont_Loader' ) ) {
 					return false;
 				}
 			}
-			
+
 			ob_start();
 			include $local_path;
 			return ob_get_clean();

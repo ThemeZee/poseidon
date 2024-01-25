@@ -43,31 +43,46 @@ if ( ! function_exists( 'poseidon_setup' ) ) :
 		register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'poseidon' ) );
 
 		// Switch default core markup for search form, comment form, and comments to output valid HTML5.
-		add_theme_support( 'html5', array(
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'poseidon_custom_background_args', array( 'default-color' => 'ffffff' ) ) );
 
 		// Set up the WordPress core custom logo feature.
-		add_theme_support( 'custom-logo', apply_filters( 'poseidon_custom_logo_args', array(
-			'height'      => 50,
-			'width'       => 250,
-			'flex-height' => true,
-			'flex-width'  => true,
-		) ) );
+		add_theme_support(
+			'custom-logo',
+			apply_filters(
+				'poseidon_custom_logo_args',
+				array(
+					'height'      => 50,
+					'width'       => 250,
+					'flex-height' => true,
+					'flex-width'  => true,
+				)
+			)
+		);
 
 		// Set up the WordPress core custom header feature.
-		add_theme_support( 'custom-header', apply_filters( 'poseidon_custom_header_args', array(
-			'header-text' => false,
-			'width'       => 2500,
-			'height'      => 625,
-			'flex-height' => true,
-		) ) );
+		add_theme_support(
+			'custom-header',
+			apply_filters(
+				'poseidon_custom_header_args',
+				array(
+					'header-text' => false,
+					'width'       => 2500,
+					'height'      => 625,
+					'flex-height' => true,
+				)
+			)
+		);
 
 		// Add Theme Support for wooCommerce.
 		add_theme_support( 'woocommerce' );
@@ -104,25 +119,29 @@ add_action( 'after_setup_theme', 'poseidon_content_width', 0 );
  */
 function poseidon_widgets_init() {
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'poseidon' ),
-		'id'            => 'sidebar',
-		'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'poseidon' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title'   => '</h3></div>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar', 'poseidon' ),
+			'id'            => 'sidebar',
+			'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'poseidon' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+			'after_title'   => '</h3></div>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Magazine Homepage', 'poseidon' ),
-		'id'            => 'magazine-homepage',
-		'description'   => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'poseidon' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title'   => '</h3></div>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Magazine Homepage', 'poseidon' ),
+			'id'            => 'magazine-homepage',
+			'description'   => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'poseidon' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+			'after_title'   => '</h3></div>',
+		)
+	);
 }
 add_action( 'widgets_init', 'poseidon_widgets_init' );
 
@@ -175,8 +194,8 @@ add_action( 'wp_enqueue_scripts', 'poseidon_scripts' );
 
 
 /**
-* Enqueue theme fonts.
-*/
+ * Enqueue theme fonts.
+ */
 function poseidon_theme_fonts() {
 	$fonts_url = poseidon_get_fonts_url();
 
@@ -230,12 +249,15 @@ add_action( 'after_setup_theme', 'poseidon_add_image_sizes' );
  * Make custom image sizes available in Gutenberg.
  */
 function poseidon_add_image_size_names( $sizes ) {
-	return array_merge( $sizes, array(
-		'post-thumbnail'            => esc_html__( 'Poseidon Blog Post', 'poseidon' ),
-		'poseidon-thumbnail-single' => esc_html__( 'Poseidon Single Post', 'poseidon' ),
-		'poseidon-thumbnail-large'  => esc_html__( 'Poseidon Magazine Post', 'poseidon' ),
-		'poseidon-thumbnail-small'  => esc_html__( 'Poseidon Thumbnail', 'poseidon' ),
-	) );
+	return array_merge(
+		$sizes,
+		array(
+			'post-thumbnail'            => esc_html__( 'Poseidon Blog Post', 'poseidon' ),
+			'poseidon-thumbnail-single' => esc_html__( 'Poseidon Single Post', 'poseidon' ),
+			'poseidon-thumbnail-large'  => esc_html__( 'Poseidon Magazine Post', 'poseidon' ),
+			'poseidon-thumbnail-small'  => esc_html__( 'Poseidon Thumbnail', 'poseidon' ),
+		)
+	);
 }
 add_filter( 'image_size_names_choose', 'poseidon_add_image_size_names' );
 

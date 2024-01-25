@@ -23,8 +23,8 @@ class Poseidon_Magazine_Posts_Columns_Widget extends WP_Widget {
 			'poseidon-magazine-posts-columns', // ID.
 			esc_html__( 'Magazine (Columns)', 'poseidon' ), // Name.
 			array(
-				'classname' => 'poseidon-magazine-columns-widget',
-				'description' => esc_html__( 'Displays your posts from two selected categories.', 'poseidon' ),
+				'classname'                   => 'poseidon-magazine-columns-widget',
+				'description'                 => esc_html__( 'Displays your posts from two selected categories.', 'poseidon' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -106,8 +106,10 @@ class Poseidon_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 			<div class="magazine-posts-columns-content clearfix">
 
-				<?php // Display Category Title.
-					$this->category_title( $args, $settings, $settings['category_one'], $settings['category_one_title'] ); ?>
+				<?php
+				// Display Category Title.
+					$this->category_title( $args, $settings, $settings['category_one'], $settings['category_one_title'] );
+				?>
 
 				<div class="magazine-posts-columns-post-list clearfix">
 					<?php $this->magazine_posts( $settings, $post_ids_category_one, $settings['number'] ); ?>
@@ -121,8 +123,10 @@ class Poseidon_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 			<div class="magazine-posts-columns-content clearfix">
 
-				<?php // Display Category Title.
-					$this->category_title( $args, $settings, $settings['category_two'], $settings['category_two_title'] ); ?>
+				<?php
+				// Display Category Title.
+					$this->category_title( $args, $settings, $settings['category_two'], $settings['category_two_title'] );
+				?>
 
 				<div class="magazine-posts-columns-post-list clearfix">
 					<?php $this->magazine_posts( $settings, $post_ids_category_two, $settings['number'] ); ?>
@@ -152,7 +156,7 @@ class Poseidon_Magazine_Posts_Columns_Widget extends WP_Widget {
 			'ignore_sticky_posts' => true,
 			'no_found_rows'       => true,
 		);
-		$posts_query = new WP_Query( $query_arguments );
+		$posts_query     = new WP_Query( $query_arguments );
 
 		// Check if there are posts.
 		if ( $posts_query->have_posts() ) :
@@ -220,13 +224,13 @@ class Poseidon_Magazine_Posts_Columns_Widget extends WP_Widget {
 	 */
 	function update( $new_instance, $old_instance ) {
 
-		$instance = $old_instance;
+		$instance                       = $old_instance;
 		$instance['category_one_title'] = sanitize_text_field( $new_instance['category_one_title'] );
-		$instance['category_one'] = (int) $new_instance['category_one'];
+		$instance['category_one']       = (int) $new_instance['category_one'];
 		$instance['category_two_title'] = sanitize_text_field( $new_instance['category_two_title'] );
-		$instance['category_two'] = (int) $new_instance['category_two'];
-		$instance['number'] = (int) $new_instance['number'];
-		$instance['highlight_post'] = ! empty( $new_instance['highlight_post'] );
+		$instance['category_two']       = (int) $new_instance['category_two'];
+		$instance['number']             = (int) $new_instance['number'];
+		$instance['highlight_post']     = ! empty( $new_instance['highlight_post'] );
 
 		poseidon_flush_magazine_post_ids();
 
@@ -252,17 +256,18 @@ class Poseidon_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'category_one' ); ?>"><?php esc_html_e( 'Left Category:', 'poseidon' ); ?></label><br/>
-			<?php // Display Category One Select.
+			<?php
+			// Display Category One Select.
 				$args = array(
-					'show_option_all'    => esc_html__( 'All Categories', 'poseidon' ),
-					'show_count' 		 => true,
-					'hide_empty'		 => false,
-					'selected'           => $settings['category_one'],
-					'name'               => $this->get_field_name( 'category_one' ),
-					'id'                 => $this->get_field_id( 'category_one' ),
+					'show_option_all' => esc_html__( 'All Categories', 'poseidon' ),
+					'show_count'      => true,
+					'hide_empty'      => false,
+					'selected'        => $settings['category_one'],
+					'name'            => $this->get_field_name( 'category_one' ),
+					'id'              => $this->get_field_id( 'category_one' ),
 				);
 				wp_dropdown_categories( $args );
-			?>
+				?>
 		</p>
 
 		<p>
@@ -273,17 +278,18 @@ class Poseidon_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'category_two' ); ?>"><?php esc_html_e( 'Right Category:', 'poseidon' ); ?></label><br/>
-			<?php // Display Category One Select.
+			<?php
+			// Display Category One Select.
 				$args = array(
-					'show_option_all'    => esc_html__( 'All Categories', 'poseidon' ),
-					'show_count' 		 => true,
-					'hide_empty'		 => false,
-					'selected'           => $settings['category_two'],
-					'name'               => $this->get_field_name( 'category_two' ),
-					'id'                 => $this->get_field_id( 'category_two' ),
+					'show_option_all' => esc_html__( 'All Categories', 'poseidon' ),
+					'show_count'      => true,
+					'hide_empty'      => false,
+					'selected'        => $settings['category_two'],
+					'name'            => $this->get_field_name( 'category_two' ),
+					'id'              => $this->get_field_id( 'category_two' ),
 				);
 				wp_dropdown_categories( $args );
-			?>
+				?>
 		</p>
 
 		<p>
