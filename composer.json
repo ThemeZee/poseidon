@@ -1,0 +1,17 @@
+{
+    "name": "themezee/poseidon",
+    "type": "wordpress-theme",
+    "description": "The Poseidon WordPress Theme",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "ThemeZee",
+            "email": "contact@themezee.com",
+            "homepage": "https://themezee.com/",
+            "role": "Company"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    }
+}
